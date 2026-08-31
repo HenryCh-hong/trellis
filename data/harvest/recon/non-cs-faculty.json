@@ -1,0 +1,359 @@
+[
+  {
+    "name": "Dora Demszky",
+    "title": "Assistant Professor",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/ddemszky",
+    "topics": [
+      "Artificial intelligence (AI)",
+      "Human-Computer Interaction",
+      "Data Science",
+      "Learning Sciences",
+      "Learning Technologies",
+      "Classroom Discourse and Interaction",
+      "natural language processing methods to support equitable and student-centered instruction",
+      "tools to give feedback to teachers on dialogic instructional practices"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/ddemszky"
+  },
+  {
+    "name": "Nicholas Haber",
+    "title": "Assistant Professor",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/nhaber",
+    "topics": [
+      "Artificial intelligence (AI)",
+      "Human-Computer Interaction",
+      "Data Science",
+      "Learning Sciences",
+      "Cognitive Development",
+      "artificial intelligence systems meant to mimic and model the ways people learn early in life",
+      "computer vision in learning and therapeutic tools",
+      "Autonomous Agents Lab"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/nhaber"
+  },
+  {
+    "name": "Hariharan Subramonyam",
+    "title": "Assistant Professor (Research)",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/harihars",
+    "topics": [
+      "augmenting critical human tasks (learning, creativity, sensemaking) with AI",
+      "support tools for multidisciplinary teams to co-design AI experiences",
+      "human-computer interaction (HCI Group at Stanford)",
+      "Learning Technologies",
+      "Learning Sciences",
+      "Data Science",
+      "Faculty Fellow at Stanford's Institute for Human-Centered AI"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/harihars"
+  },
+  {
+    "name": "Victor R. Lee",
+    "title": "Associate Professor",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/vrlee",
+    "topics": [
+      "Artificial intelligence (AI)",
+      "Human-Computer Interaction",
+      "Data Science Education",
+      "Learning Technologies",
+      "Learning Sciences",
+      "artificial intelligence literacy for both students and teachers",
+      "faculty lead for the Stanford Accelerator for Learning's initiative on AI and Education",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/vrlee"
+  },
+  {
+    "name": "Candace Thille",
+    "title": "Associate Professor (Teaching)",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/cthille",
+    "topics": [
+      "Artificial intelligence (AI)",
+      "Human-Computer Interaction",
+      "Data Science",
+      "Learning Technologies",
+      "Learning Sciences",
+      "Assessment & Evaluation",
+      "building learning environments and data systems",
+      "open web-based learning environments for college level courses"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/cthille"
+  },
+  {
+    "name": "Roy Pea",
+    "title": "Professor",
+    "department": "Graduate School of Education",
+    "profile_url": "https://ed.stanford.edu/faculty/roypea",
+    "topics": [
+      "Artificial intelligence (AI)",
+      "Human-Computer Interaction",
+      "Data Science",
+      "Learning Sciences",
+      "Collaborative Learning",
+      "technology-enhanced learning of complex domains",
+      "Director, H-STAR Institute",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://ed.stanford.edu/faculty/roypea"
+  },
+  {
+    "name": "Noah Goodman",
+    "title": "Professor of Psychology and of Computer Science",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/noah-goodman",
+    "topics": [
+      "Artificial Intelligence",
+      "Cognitive Science",
+      "Decision Making and Rationality",
+      "Learning",
+      "Natural Language",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)",
+      "Computation & Cognition Lab"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/noah-goodman"
+  },
+  {
+    "name": "Daniel Yamins",
+    "title": "Associate Professor of Psychology and of Computer Science",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/daniel-yamins",
+    "topics": [
+      "Artificial Intelligence",
+      "Neurosciences",
+      "NeuroAILab",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/daniel-yamins"
+  },
+  {
+    "name": "Johannes C. Eichstaedt",
+    "title": "Assistant Professor (Research) of Psychology",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/johannes-c-eichstaedt",
+    "topics": [
+      "Artificial Intelligence",
+      "Computational Social Science",
+      "Human-Computer Interaction",
+      "uses Natural Language Processing and LLMs to measure and improve mental health",
+      "co-directs the $11M Stanford CREATE Center for AI therapy",
+      "Shriram faculty fellow at the Institute for Human-Centered A.I."
+    ],
+    "source_url": "https://symsys.stanford.edu/people/johannes-c-eichstaedt"
+  },
+  {
+    "name": "Tobias Gerstenberg",
+    "title": "Assistant Professor of Psychology and, by courtesy, of Computer Science",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/tobias-gerstenberg",
+    "topics": [
+      "Cognitive Science",
+      "Decision Making and Rationality",
+      "Learning",
+      "Causality in Cognition Lab",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/tobias-gerstenberg"
+  },
+  {
+    "name": "Hyowon Gweon",
+    "title": "Associate Professor of Psychology",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/hyowon-gweon",
+    "topics": [
+      "Cognitive Science",
+      "Learning",
+      "Neurosciences",
+      "how humans learn from others and help others learn",
+      "interdisciplinary approach combining developmental, computational, and neuroimaging methods",
+      "Social Learning Lab",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/hyowon-gweon"
+  },
+  {
+    "name": "Judith Ellen Fan",
+    "title": "Assistant Professor of Psychology",
+    "department": "Psychology",
+    "profile_url": "https://symsys.stanford.edu/people/judith-ellen-fan-0",
+    "topics": [
+      "Cognitive Science",
+      "Human-Computer Interaction",
+      "Learning",
+      "combines approaches from cognitive science, computational neuroscience, and artificial intelligence",
+      "developing technologies that augment human agency and creativity",
+      "Cognitive Tools Lab"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/judith-ellen-fan-0"
+  },
+  {
+    "name": "Christopher Potts",
+    "title": "Professor of Linguistics",
+    "department": "Linguistics (Symbolic Systems affiliated faculty)",
+    "profile_url": "https://symsys.stanford.edu/people/christopher-potts",
+    "topics": [
+      "Artificial Intelligence",
+      "Natural Language",
+      "Cognitive Science",
+      "Applied Logic",
+      "Philosophical Foundations",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/christopher-potts"
+  },
+  {
+    "name": "Cory Shain",
+    "title": "Assistant Professor of Linguistics",
+    "department": "Linguistics (Symbolic Systems affiliated faculty)",
+    "profile_url": "https://symsys.stanford.edu/people/cory-shain",
+    "topics": [
+      "Human-Centered Artificial Intelligence",
+      "Natural Language",
+      "Cognitive Science",
+      "Learning"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/cory-shain"
+  },
+  {
+    "name": "Robert Hawkins",
+    "title": "Assistant Professor of Linguistics and, by courtesy, of Psychology",
+    "department": "Linguistics (Symbolic Systems affiliated faculty)",
+    "profile_url": "https://symsys.stanford.edu/people/robert-hawkins",
+    "topics": [
+      "Cognitive Science",
+      "Natural Language",
+      "computational models of language and social reasoning",
+      "large-scale, multi-player web experiments",
+      "Social Interaction & Language (SoIL) Lab"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/robert-hawkins"
+  },
+  {
+    "name": "Pamela Hinds",
+    "title": "Rodney H. Adams Professor in the School of Engineering, Fortinet Founders Chair of the Department of Management Science and Engineering and Professor of Management Science and Engineering",
+    "department": "Management Science and Engineering",
+    "profile_url": "https://msande.stanford.edu/people/pamela-hinds",
+    "topics": [
+      "Human-Computer Interaction",
+      "human-robot interaction in the work environment and the dynamics of human-robot teams",
+      "effect of technology on teams, collaboration, and innovation",
+      "changing nature of work in the face of emerging technologies",
+      "Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)"
+    ],
+    "source_url": "https://symsys.stanford.edu/people/pamela-hinds"
+  },
+  {
+    "name": "Melissa Valentine",
+    "title": "Associate Professor of Management Science and Engineering and Senior Fellow at the Stanford Institute for Human-Centered AI",
+    "department": "Management Science and Engineering",
+    "profile_url": "https://msande.stanford.edu/people/melissa-valentine",
+    "topics": [
+      "how emerging technologies, including artificial intelligence and algorithms, are transforming work and organizations",
+      "flash teams",
+      "AI-powered organizations",
+      "algorithmic management",
+      "interdisciplinary research on the intersection of AI and organizational design"
+    ],
+    "source_url": "https://msande.stanford.edu/people/melissa-valentine"
+  },
+  {
+    "name": "Ramesh Johari",
+    "title": "Professor of Management Science and Engineering, Senior Fellow at the Stanford Institute for Human-Centered Artificial Intelligence (HAI) and, by courtesy, of Electrical Engineering",
+    "department": "Management Science and Engineering",
+    "profile_url": "https://msande.stanford.edu/people/ramesh-johari",
+    "topics": [
+      "design, economic analysis, and operation of online platforms",
+      "statistical and machine learning techniques used by these platforms",
+      "search, recommendation, matching, and pricing algorithms"
+    ],
+    "source_url": "https://msande.stanford.edu/people/ramesh-johari"
+  },
+  {
+    "name": "Arvind Karunakaran",
+    "title": "Assistant Professor of Management Science & Engineering and, by courtesy, of Sociology",
+    "department": "Management Science and Engineering",
+    "profile_url": "https://msande.stanford.edu/people/arvind-karunakaran",
+    "topics": [
+      "human-AI augmentation in the workplace",
+      "authority and accountability in the workplace, especially in the context of technological change",
+      "impact of AI on workplace inequality",
+      "faculty affiliate of the Stanford Institute for Human-centered Artificial Intelligence (HAI) and the Digital Economy Lab"
+    ],
+    "source_url": "https://msande.stanford.edu/people/arvind-karunakaran"
+  },
+  {
+    "name": "Madeleine Udell",
+    "title": "Associate Professor of Management Science and Engineering",
+    "department": "Management Science and Engineering",
+    "profile_url": "https://msande.stanford.edu/people/madeleine-udell",
+    "topics": [
+      "machine learning: data preprocessing, interpretability, and causality",
+      "large-scale data analysis and optimization",
+      "faster and more memory-efficient optimization algorithms",
+      "user-friendly optimization solvers and modeling languages"
+    ],
+    "source_url": "https://msande.stanford.edu/people/madeleine-udell"
+  },
+  {
+    "name": "Mert Pilanci",
+    "title": "Assistant Professor",
+    "department": "Electrical Engineering",
+    "profile_url": "https://profiles.stanford.edu/mert-pilanci",
+    "topics": [
+      "AI, machine learning, optimization",
+      "Signal processing and control",
+      "Information and coding theory, communications, signal processing"
+    ],
+    "source_url": "https://ee.stanford.edu/people/faculty?areas=7ce2fdfb-453a-42c3-9dc9-4e63411895bd&limit=150&type=active"
+  },
+  {
+    "name": "Gordon Wetzstein",
+    "title": "Associate Professor",
+    "department": "Electrical Engineering",
+    "profile_url": "http://www.computationalimaging.org/",
+    "topics": [
+      "AI, machine learning, optimization",
+      "Computational Sensing, Imaging, and Display",
+      "Information and coding theory, communications, signal processing"
+    ],
+    "source_url": "https://ee.stanford.edu/people/faculty?areas=7ce2fdfb-453a-42c3-9dc9-4e63411895bd&limit=150&type=active"
+  },
+  {
+    "name": "Shuran Song",
+    "title": "Assistant Professor",
+    "department": "Electrical Engineering",
+    "profile_url": "https://shurans.github.io/",
+    "topics": [
+      "AI, machine learning, optimization",
+      "Robotics, control",
+      "Computational Sensing, Imaging, and Display"
+    ],
+    "source_url": "https://ee.stanford.edu/people/faculty?areas=7ce2fdfb-453a-42c3-9dc9-4e63411895bd&limit=150&type=active"
+  },
+  {
+    "name": "Stephen P. Boyd",
+    "title": "Professor",
+    "department": "Electrical Engineering",
+    "profile_url": "http://web.stanford.edu/~boyd/",
+    "topics": [
+      "AI, machine learning, optimization",
+      "Robotics, control",
+      "Energy, environment, and sustainability"
+    ],
+    "source_url": "https://ee.stanford.edu/people/faculty?areas=7ce2fdfb-453a-42c3-9dc9-4e63411895bd&limit=150&type=active"
+  },
+  {
+    "name": "Benjamin Van Roy",
+    "title": "Professor",
+    "department": "Electrical Engineering",
+    "profile_url": "http://web.stanford.edu/~bvr/",
+    "topics": [
+      "AI, machine learning, optimization",
+      "Information and coding theory, communications, signal processing"
+    ],
+    "source_url": "https://ee.stanford.edu/people/faculty?areas=7ce2fdfb-453a-42c3-9dc9-4e63411895bd&limit=150&type=active"
+  }
+]

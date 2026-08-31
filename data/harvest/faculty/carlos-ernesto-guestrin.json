@@ -1,0 +1,168 @@
+{
+  "slug": "carlos-ernesto-guestrin",
+  "name": "Carlos Ernesto Guestrin",
+  "title": "Fortinet Founders Professor and Senior Fellow at the Stanford Institute for Human-Centered AI",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/carlos-guestrin",
+  "lab_name": null,
+  "lab_url": "https://guestrin.su.domains/group/",
+  "email": "guestrin@stanford.edu",
+  "email_source_url": "https://guestrin.su.domains/contact/",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Human-Centered and Creative AI",
+    "Empirical Machine Learning"
+  ],
+  "research_topics": [
+    "Machine Learning Methods",
+    "Explainability, Fairness & Ethics of AI",
+    "Machine Learning Systems",
+    "LLM alignment auditing and reasoning faithfulness",
+    "Test-time training and test-time reinforcement learning",
+    "LLM-powered data systems (semantic operators, LOTUS)",
+    "Relational foundation models over multi-table databases",
+    "Textual-gradient optimization of LLM programs (TextGrad)",
+    "Benchmarks and evaluation for societal impacts of LLMs"
+  ],
+  "current_direction": [
+    "Test-time training / test-time RL so models keep learning on the specific problem at inference",
+    "Auditing what LLM alignment actually optimizes, and whether reasoning chains are causally faithful",
+    "Textual-gradient optimization of LLM programs (TextGrad, metaTextGrad)",
+    "LLM-native data systems: semantic operators with accuracy guarantees, relational foundation models",
+    "Evaluation and societal-impact benchmarks for generative models (creative composition, distributional alignment, explainability in deployment)"
+  ],
+  "current_direction_basis": "Driven by the 2025-2026 items collected here, not by his older graphical-models/GraphLab biography. Test-time direction: 'Learning to Discover at Test Time' (arXiv 2601.16175, Jan 2026, Guestrin confirmed on the arXiv author line) and 'End-to-End Test-Time Training for Long Context' (arXiv 2512.23675, Dec 2025, Guestrin confirmed on the arXiv author line). Alignment/reasoning auditing: 'Discovering Implicit Large Language Model Alignment Objectives' (arXiv 2602.15338, Feb 2026, first author is his PhD student Edward Chen) and 'Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning' (arXiv 2604.22074, Apr 2026, first author is his co-advised PhD student Qinan Yu). TextGrad direction: the Nature paper 'Optimizing generative AI by backpropagating language model feedback' (2025-03-19, OpenAlex/DOI 10.1038/s41586-025-08661-4) plus 'metaTextGrad' (2025), and TextGrad is listed first on his own Open-Source page. Data-systems direction: 'Semantic Operators and Their Optimization ... in LOTUS' (PVLDB, 2025-07, with his co-advised student Liana Patel and Matei Zaharia) and 'PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models' (arXiv 2602.04029, Feb 2026, with his co-advised student Rishabh Ranjan and Jure Leskovec). Evaluation/societal-impact direction: 'Societal Impacts Research Requires Benchmarks for Creative Composition Tasks' (arXiv 2504.06549, Apr 2025), 'Benchmarking Distributional Alignment of Large Language Models' (NAACL 2025) and 'Explainability in the Wild ... Predicting Tax Evasion' (Harvard Data Science Review, Feb 2026).",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning",
+      "summary": "Submitted 23 Apr 2026 (cs.CL). Authors: Qinan Yu, Alexa Tartaglini, Peter Hase, Carlos Guestrin, Christopher Potts. Challenges the assumption that RLVR-trained chain-of-thought reliably represents how a model reaches its answer, and introduces two metrics including Causal Importance of Reasoning (CIR). First author Qinan Yu is listed on his Group page as a PhD student co-advised with Chris Potts.",
+      "url": "https://arxiv.org/abs/2604.22074",
+      "venue": "arXiv preprint (cs.CL)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Discovering Implicit Large Language Model Alignment Objectives",
+      "summary": "Submitted 17 Feb 2026, revised 20 May 2026 (cs.LG; cs.CL). Authors: Edward Chen, Sanmi Koyejo, Carlos Guestrin. Argues LLM alignment relies on complex reward signals that obscure which behaviors are incentivized, creating misalignment and reward-hacking risk, and targets objectives that existing rubric-based interpretation methods miss. Edward Chen is listed as his PhD student on the Group page.",
+      "url": "https://arxiv.org/abs/2602.15338",
+      "venue": "arXiv preprint (cs.LG, cs.CL)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Learning to Discover at Test Time",
+      "summary": "Submitted 22 Jan 2026, revised 5 Feb 2026 (cs.LG; cs.AI). Authors include Mert Yuksekgonul, Daniel Koceja, Federico Bianchi, Jan Kautz, Yejin Choi, James Zou, Carlos Guestrin, Yu Sun. Performs reinforcement learning at test time so the LLM keeps training with experience specific to the test problem, rather than searching by prompting a frozen model as in AlphaEvolve. Mert Yuksekgonul (PhD student, co-advised with James Zou) and Yu Sun (postdoc) are both listed on his Group page.",
+      "url": "https://arxiv.org/abs/2601.16175",
+      "venue": "arXiv preprint (cs.LG, cs.AI)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models",
+      "summary": "Submitted 3 Feb 2026, revised 14 Jul 2026 (cs.DB; cs.AI; cs.LG). Authors: Vignesh Kothapalli, Rishabh Ranjan, Valter Hudovernik, Vijay Prakash Dwivedi, Johannes Hoffart, Carlos Guestrin, Jure Leskovec. Generates synthetic multi-table relational databases with schema structure and primary-foreign-key connectivity to train Relational Foundation Models, since real relational databases are rarely public. Rishabh Ranjan is listed on his Group page as a PhD student co-advised with Jure Leskovec.",
+      "url": "https://arxiv.org/abs/2602.04029",
+      "venue": "arXiv preprint (cs.DB, cs.AI, cs.LG)"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Optimizing generative AI by backpropagating language model feedback",
+      "summary": "Published in Nature, 2025-03-19 (DOI 10.1038/s41586-025-08661-4), per OpenAlex. Authors: Mert Yuksekgonul, Federico Bianchi, Joseph Boen, Sheng Liu, P. Y. Lu, Zhi Huang, Carlos Guestrin, James Zou. This is the TextGrad work, which his own Open-Source page lists first and describes as 'self-optimization of prompts and outputs of LLM programs'.",
+      "url": "https://doi.org/10.1038/s41586-025-08661-4",
+      "venue": "Nature"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS",
+      "summary": "Proceedings of the VLDB Endowment, 2025-07-01 (DOI 10.14778/3749646.3749685), per OpenAlex. Authors: Liana Patel, Siddharth Jha, Melissa Pan, Harshit Gupta, Parth Asawa, Carlos Guestrin, Matei Zaharia. LOTUS is listed on his Open-Source page as a 'query engine for processing structured and unstructured data with LLMs'. Liana Patel is on his Group page as a PhD student co-advised with Matei Zaharia.",
+      "url": "https://doi.org/10.14778/3749646.3749685",
+      "venue": "Proceedings of the VLDB Endowment (PVLDB)"
+    },
+    {
+      "kind": "news",
+      "year": 2025,
+      "title": "Carlos Guestrin named as new Director of the Stanford AI Lab (SAIL)",
+      "summary": "The SAIL homepage 'Latest News' reads: 'Carlos Guestrin named as new Director of the Stanford AI Lab! We thank Christopher Manning for being Director of the Stanford AI Lab during a period of enormous growth for AI and SAIL from 2018-2025 and today welcome Carlos Guestrin, Fortinet Founders Professor of Computer Science, as the new Director of SAIL.' His own About page independently lists 'Director, Stanford AI Lab (SAIL), since 2025'. A very strong activity signal, and also a demand on his time.",
+      "url": "https://ai.stanford.edu/",
+      "venue": null
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "2025-26 teaching: CS 229 Machine Learning (Aut) and CS 281 Ethics of Artificial Intelligence (Spr)",
+      "summary": "His Stanford Profiles page lists under '2025-26 Courses': 'Ethics of Artificial Intelligence, CS 281 (Spr)' and 'Machine Learning, CS 229, STATS 229 (Aut)'. He has taught this same pair every year listed back to 2022-23, so both are reliable, currently-active points of contact. CS 229 is co-taught with Moses Charikar and Andrew Ng per his Teaching page.",
+      "url": "https://profiles.stanford.edu/carlos-guestrin",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed as a supervising instructor for CS 195 Supervised Undergraduate Research in 2025-26",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/carlos-guestrin",
+      "note": "Under '2025-26 Courses' -> 'Independent Studies (9)', his profile lists verbatim: 'Supervised Undergraduate Research / CS 195 (Aut, Win, Spr, Sum)'. IMPORTANT CAVEAT: these independent-study listings are the standard Stanford CS catalog entries attached to most CS faculty, so this confirms the administrative mechanism for an undergraduate to do research with him exists and is open all four quarters -- it is NOT an advertised opening or a statement that he is taking undergraduates."
+    },
+    {
+      "signal": "Also listed for CS 191W Writing Intensive Senior Research Project and CS 199 Independent Work in 2025-26",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/carlos-guestrin",
+      "note": "Same '2025-26 Courses' independent-studies block, verbatim: 'Independent Work / CS 199 (Spr)' and 'Writing Intensive Senior Research Project / CS 191W (Aut, Win, Spr)'. CS 191W is the senior-project vehicle. Same caveat as CS 195: catalog-standard listing, not a posted opening."
+    },
+    {
+      "signal": "His group page lists no undergraduate members",
+      "status": "verified",
+      "evidence_url": "https://guestrin.su.domains/group/",
+      "note": "The Group page has exactly two sections, 'Graduate Students and Postdocs' (12 people: Edward Chen, Agata Foryciarz, Isabel Gallegos, Irena Gao, Nicole Meister, Liana Patel, Rishabh Ranjan, Yu Sun, Teddi Worledge, Qinan Yu, Mert Yuksekgonul, Marina Zhang) and 'Alumni'. No undergraduate is listed, and no undergraduate category exists on the page."
+    },
+    {
+      "signal": "No undergraduate-specific language anywhere on his personal site",
+      "status": "verified",
+      "evidence_url": "https://guestrin.su.domains/",
+      "note": "I grepped the raw HTML of all six pages of his personal site (Home, About, Group, Contact, Teaching, Open-Source) for 'undergraduate', 'undergrad', 'CURIS', 'prospective student', 'join the lab', 'we are recruiting', 'openings', 'senior project' and 'research assistant'. Zero matches on every page. The only undergraduate mentions I found anywhere came from the Stanford Profiles course catalog block, not from anything he wrote."
+    },
+    {
+      "signal": "Stanford Advisees list on his profile shows only PhD, postdoc and MS advisees",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/carlos-guestrin",
+      "note": "Categories listed are 'Postdoctoral Faculty Sponsor', 'Doctoral Dissertation Advisor (AC)', 'Orals Evaluator', 'Doctoral Dissertation Co-Advisor (AC)', 'Master's Program Advisor' (13 MS advisees) and 'Doctoral (Program)'. There is no undergraduate advisee category, which is consistent with a group that currently mentors at the grad level."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No formal opening was found, so this is not OPENING: his personal site has no 'join us', 'openings', or 'prospective students' page at all -- its entire navigation is Home, About, Open-Source, Google Scholar, Teaching, Group, Contact -- and a keyword grep across all six of those pages returned zero hits for undergraduate, CURIS, prospective student, recruiting or openings. The CS 195 'Supervised Undergraduate Research' and CS 191W senior-project listings on his Stanford Profiles page are the standard department catalog entries, not a posted position, so they do not meet the bar for OPENING. It is well above WATCH: the lab is unambiguously active, with four 2026 arXiv preprints (Apr, Feb, Feb, Jan 2026), a March 2025 Nature paper, a July 2025 PVLDB paper, and 23 works dated 2025-01-01 or later in OpenAlex. He became Director of the Stanford AI Lab in 2025, teaches CS 229 in Autumn and CS 281 in Spring of 2025-26, his group has 12 current PhD students and postdocs, and his email is published openly on his own contact page. The realistic route for an undergraduate is a cold email pegged to a specific recent paper, or taking CS 229 / CS 281 first and then asking about CS 195. Two tempering facts a student should know: no undergraduate appears anywhere on his group page, and as a new SAIL director with two industry Chief Scientist roles (Visual Layer, Virtue AI) his direct availability is likely limited -- approaching the relevant PhD student on a specific paper is probably the higher-yield move.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 8,
+    "active": true
+  },
+  "source_urls": [
+    "https://guestrin.su.domains/",
+    "https://guestrin.su.domains/about/",
+    "https://guestrin.su.domains/group/",
+    "https://guestrin.su.domains/contact/",
+    "https://guestrin.su.domains/teaching/",
+    "https://guestrin.su.domains/major-open-source-projects/",
+    "https://profiles.stanford.edu/carlos-guestrin",
+    "https://ai.stanford.edu/",
+    "https://ai.stanford.edu/outreach/",
+    "https://arxiv.org/abs/2604.22074",
+    "https://arxiv.org/abs/2602.15338",
+    "https://arxiv.org/abs/2602.04029",
+    "https://arxiv.org/abs/2601.16175",
+    "https://arxiv.org/abs/2512.23675",
+    "https://arxiv.org/abs/2504.06549",
+    "https://api.openalex.org/works?filter=author.id:A5090739892,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://api.openalex.org/works/doi:10.1038/s41586-025-08661-4"
+  ],
+  "fetch_notes": "FAILURES: The supplied directory link https://cs.stanford.edu/people/carlos-guestrin returned HTTP 404 ('The requested URL /people/carlos-guestrin was not found on this server'), as did https://cs.stanford.edu/people/carlos-ernesto-guestrin and https://cs.stanford.edu/directory/faculty. The Stanford News announcement of his SAIL directorship (https://news.stanford.edu/stories/2025/02/carlos-guestrin-to-lead-stanford-ai-lab-as-it-joins-forces-with-stanford-hai, linked from his own About page) returned HTTP 403 behind a Cloudflare JavaScript challenge and could NOT be read -- the directorship is therefore sourced from two pages I did read instead: the SAIL homepage news item and his own About page. The arXiv API query au:\"Guestrin_C\" returned zero entries, so I verified each preprint by fetching its arxiv.org/abs page individually instead. WHAT I FOUND INSTEAD OF THE DIRECTORY: his personal faculty site at https://guestrin.su.domains/ (linked as 'My faculty website' from Stanford Profiles) and the official https://profiles.stanford.edu/carlos-guestrin, which prints the exact title given in the task. LAB NAME: he has no branded lab -- his site simply calls the page 'Group' and it opens 'I've been very lucky to work with an exceptional group of people!', so lab_name is null and lab_url points at that Group page. He directs SAIL (ai.stanford.edu), but SAIL is the department-wide AI lab, not his research group, so I did not record it as his lab. EMAIL: guestrin@stanford.edu appears literally under 'Contact -> Email' on https://guestrin.su.domains/contact/, alongside office 'Gates 346' and assistant Eric Pineda (eric.pineda@stanford.edu). No email string appears on the Stanford Profiles page. PUBLICATIONS: taken from OpenAlex author A5090739892 (253 works, last known institutions Stanford Medicine / Stanford University; 23 works dated 2025-01-01 or later), then each item used as evidence was independently confirmed -- the four 2026 preprints and the 2025 TTT paper by fetching their arXiv abs pages (Guestrin confirmed on the author line of each, including 2512.23675 where OpenAlex had truncated the author list before reaching him), and the Nature paper by fetching its OpenAlex DOI record. A second OpenAlex author record exists for the same name (A5138547954, 18 works, Stanford University); I used only A5090739892, whose co-authors match the students named on his Group page. I did not use OpenAlex's 'Reinforcement Learning via Self-Distillation' (2601.20802) or the 4T diabetes exercise paper as evidence because I did not separately verify his authorship on them. UNDERGRAD: the only undergraduate-relevant text I found on any fetched page is the Stanford Profiles catalog block listing CS 195 Supervised Undergraduate Research, CS 191W Writing Intensive Senior Research Project and CS 199 Independent Work under his 2025-26 courses; these are catalog-standard entries carried by most Stanford CS faculty and are recorded as such, not as an opening. I also checked https://ai.stanford.edu/outreach/ in case his SAIL role surfaced an undergraduate program -- it covers only Stanford AI4ALL (a three-week online program for 9th graders, with 2024 dates listed) and Logic for All (secondary schools), so it is high-school outreach and irrelevant to an undergraduate. RECRUITING: no join/openings/prospective-students page exists on his site, so recruiting.status is 'unknown' with confidence 0.0 rather than 'closed' -- absence of a page is not evidence that he is closed to students."
+}

@@ -1,0 +1,163 @@
+{
+ "slug": "noah-goodman",
+ "name": "Noah Goodman",
+ "title": "Professor of Psychology and of Computer Science",
+ "department": "Department of Psychology; Department of Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://psychology.stanford.edu/people/noah-goodman",
+ "lab_name": "Computation & Cognition Lab (CoCoLab)",
+ "lab_url": "https://cocolab.stanford.edu/",
+ "email": "ngoodman@stanford.edu",
+ "email_source_url": "https://cocolab.stanford.edu/join",
+ "research_areas": [
+  "Artificial Intelligence",
+  "Natural Language Processing and Speech",
+  "computational-education"
+ ],
+ "research_topics": [
+  "computational models of cognition",
+  "probabilistic programming and Bayesian modeling",
+  "language pragmatics and non-literal meaning",
+  "reasoning in large language models",
+  "in-context learning and training dynamics",
+  "iterated learning and cultural transmission",
+  "social learning from language",
+  "LLM-assisted formal theorem proving",
+  "scaled behavioral methods (think-aloud) for cognitive science"
+ ],
+ "current_direction": [
+  "Using LLMs as stimulus-computable cognitive models of human thought",
+  "Mechanistic accounts of in-context learning and belief dynamics in LLMs",
+  "Scaling classic cognitive-science methods (think-aloud) with language models",
+  "Language-mediated social learning, iterated learning and cultural transmission",
+  "LLM reasoning applied to formal math / interactive theorem proving"
+ ],
+ "current_direction_basis": "Inferred from the 2025-2026 works verified via OpenAlex in this task, not from the biography on the (stale) personal page. Specifically: Frank & Goodman, 'Cognitive Modeling Using Artificial Intelligence' (Annual Review of Psychology, 2025-09-12) drove the 'LLMs as stimulus-computable cognitive models' phrase -- its abstract states current models 'are stimulus computable, meaning that they can operate over stimuli that are similar to those experienced by people'. Bigelow, Wurgaft, ... Goodman et al., 'Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering' (arXiv 2511.00617, 2025-11-01) drove the in-context-learning/belief-dynamics phrase, and matches current PhD student Daniel Wurgaft's stated interest on the lab People page. Wurgaft, Prystawski, Gandhi, ... Goodman, 'Scaling up the think-aloud method' (arXiv 2505.23931, 2025-05-29) drove the scaled-methods phrase. Prystawski, Arumugam & Goodman, 'Lossy communication constrains iterated learning' (arXiv 2511.18220, 2025-11-22) plus Colas et al. 'Language and Experience' (arXiv 2509.00074, 2025-08-26) and the 2026 Psychological Review paper 'Learning from generic language' drove the social-learning / iterated-learning phrase. Xin et al., 'Automated Discovery of Tactic Libraries for Interactive Theorem Proving' (PACMPL, 2025-10-09) drove the formal-math phrase, corroborated by the lab publications page entry 'A survey on large language model reasoning failures' (2nd AI for Math Workshop @ ICML 2025).",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Learning from generic language",
+   "summary": "Journal article with Michael Henry Tessler in Psychological Review, publication date 2026-08-27 per OpenAlex. Most recent peer-reviewed item found; continues the lab's long-running work on how generic statements convey generalizable knowledge.",
+   "url": "https://doi.org/10.1037/rev0000632",
+   "venue": "Psychological Review"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Lossy communication constrains iterated learning",
+   "summary": "arXiv preprint (2025-11-22) by Ben Prystawski, Dilip Arumugam and Noah D. Goodman. Abstract asks whether large differences in ability between humans and other animals must be posited to explain human iterated learning. Prystawski is listed as a current CoCoLab graduate student.",
+   "url": "http://arxiv.org/abs/2511.18220",
+   "venue": "arXiv"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering",
+   "summary": "arXiv preprint (2025-11-01) with Eric Bigelow, Daniel Wurgaft, YingQiao Wang, Tomer Ullman, Hidenori Tanaka and Ekdeep Singh Lubana. Interpretability-flavoured work on in-context learning; Wurgaft is a current CoCoLab graduate student whose People-page blurb names in-context learning and training dynamics.",
+   "url": "http://arxiv.org/abs/2511.00617",
+   "venue": "arXiv"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Cognitive Modeling Using Artificial Intelligence",
+   "summary": "Review article with Michael C. Frank in Annual Review of Psychology (2025-09-12). Abstract: 'Recent progress in artificial intelligence (AI) is exciting, but can AI models tell us about the human mind? ... one key difference in the current generation of models is that they are stimulus computable.' Signals the programmatic framing of the lab's current agenda.",
+   "url": "https://doi.org/10.1146/annurev-psych-030625-040748",
+   "venue": "Annual Review of Psychology"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Scaling up the think-aloud method",
+   "summary": "arXiv preprint (2025-05-29) with Daniel Wurgaft, Ben Prystawski, Kanishk Gandhi, Cedegao E. Zhang and Joshua B. Tenenbaum. Three current CoCoLab graduate students are co-authors. Behavioural-data-collection work of the kind undergraduate RAs are often involved in.",
+   "url": "http://arxiv.org/abs/2505.23931",
+   "venue": "arXiv"
+  },
+  {
+   "kind": "course",
+   "year": 2025,
+   "title": "2025-26 courses and undergraduate independent-study listings (Stanford Profiles)",
+   "summary": "Stanford Profiles lists his 2025-26 courses as 'Foundations of Cognition PSYCH 205 (Spr)' and 'Minds and Machines CS 24, LINGUIST 35, PHIL 99, PSYCH 35, SYMSYS 1, SYMSYS 200 (Win)', plus 20 independent-study listings including 'Supervised Undergraduate Research CS 195', 'Senior Project CS 191', 'Writing Intensive Senior Research Project CS 191W', 'Independent Work CS 199', 'Senior Honors Tutorial SYMSYS 190' and 'Special Laboratory Projects PSYCH 195'.",
+   "url": "https://profiles.stanford.edu/noah-goodman",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab 'Join Us' page has a dedicated paragraph inviting Stanford undergraduate research assistants to email the PI or a mentorship mailing list",
+   "status": "verified",
+   "evidence_url": "https://cocolab.stanford.edu/join",
+   "note": "Re-fetched 2026-08-31 (HTTP 200). Verbatim from the page: \"Potential research assistants (Stanford undergraduate or masters): Please send the PI or this mailing list (cocomentorship@lists.stanford.edu) an email with a current CV (including relevant research and programming experience), describe why you want to join the lab and what type of projects you are interested in. Please also indicate whether you are looking for a paid or a volunteer / course credit position.\" Present-tense imperative addressed to Stanford undergraduates specifically; it is NOT the graduate-applicant paragraph, which is separate."
+  },
+  {
+   "signal": "Both paid and volunteer / course-credit undergraduate RA positions are contemplated",
+   "status": "likely",
+   "evidence_url": "https://cocolab.stanford.edu/join",
+   "note": "Re-verified verbatim on https://cocolab.stanford.edu/join (fetched 2026-08-31): \"Please also indicate whether you are looking for a paid or a volunteer / course credit position.\" Downgraded from 'verified' to 'likely': that sentence only proves the intake form asks which type you want. Nowhere on the page (or anywhere else fetched) does the lab state that funded/paid RA slots currently exist, so the availability of a paid position is an inference, not a verified fact."
+  },
+  {
+   "signal": "Named undergraduate-research course numbers he supervises in 2025-26",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/noah-goodman",
+   "note": "Re-fetched https://profiles.stanford.edu/noah-goodman 2026-08-31 (HTTP 200, 181KB). Literal strings confirmed under the heading '2025-26 Courses' / 'Independent Studies (20)': 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Senior Honors Tutorial SYMSYS 190 (Aut, Win, Sum)', 'Special Laboratory Projects PSYCH 195 (Aut, Win, Spr, Sum)', plus CS 199 and SYMSYS 196. Stays 'verified' as to the literal listing; note this is the standard catalogue rendering of supervision channels and does not by itself prove he is supervising an undergraduate this quarter."
+  },
+  {
+   "signal": "Undergraduate-specific contact address exists: cocomentorship@lists.stanford.edu",
+   "status": "verified",
+   "evidence_url": "https://cocolab.stanford.edu/join",
+   "note": "Re-verified 2026-08-31 by grepping the raw /join HTML for email addresses: the only two addresses on the page are cocomentorship@lists.stanford.edu and ngoodman@stanford.edu. The mentorship address appears inside the 'Potential research assistants (Stanford undergraduate or masters)' paragraph as an alternative to emailing the PI directly."
+  },
+  {
+   "signal": "The lab People page lists no undergraduate members",
+   "status": "verified",
+   "evidence_url": "https://cocolab.stanford.edu/people",
+   "note": "Re-fetched https://cocolab.stanford.edu/people 2026-08-31 (HTTP 200). Section headings are exactly 'Principal Investigator', 'Graduate Students' (Ben Prystawski, Kanishk Gandhi, Michael Li, Joy He-Yueya, Daniel Wurgaft, Jason Goldberg, Steven Feng), 'Lab affiliates' (Megha Srivastava, Joy Hsu, Ali Malik) and 'Alumni'. No undergraduate or RA section exists, so current undergraduate headcount is not observable from the site even though /join recruits them. This cuts against the strength of the opening, and is why confidence is 0.85 rather than higher."
+  },
+  {
+   "signal": "CURIS is not mentioned anywhere on the lab site",
+   "status": "unknown",
+   "evidence_url": "https://cocolab.stanford.edu/join",
+   "note": "Re-grepped in this fact-check task (2026-08-31): 'CURIS' returns zero hits on https://cocolab.stanford.edu/ , /join , /publications and on https://profiles.stanford.edu/noah-goodman. The only recruiting language found anywhere on the lab site is the two 'research assistants' paragraphs on /join. No CURIS project posting was found. Status stays 'unknown' because this is an absence of evidence, not evidence of absence."
+  },
+  {
+   "signal": "Non-Stanford undergraduates are explicitly discouraged",
+   "status": "verified",
+   "evidence_url": "https://cocolab.stanford.edu/join",
+   "note": "Re-verified verbatim 2026-08-31: \"Potential research assistants (non-Stanford): We are generally unable to accommodate research assistants from outside Stanford, except in exceptional cases. We may not be able to respond to all inquiries.\" and \"High-school interns: We are unable to take high-school students at this time.\" Note the contrast: the page closes those two categories in explicit words while leaving the Stanford-undergraduate category open with an application procedure."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "Potential research assistants (Stanford undergraduate or masters): Please send the PI or this mailing list (cocomentorship@lists.stanford.edu) an email with a current CV (including relevant research and programming experience), describe why you want to join the lab and what type of projects you are interested in. Please also indicate whether you are looking for a paid or a volunteer / course credit position.  ||  Potential graduate students: We are accepting strong applicants in Computer Science or Psychology. Please apply through your respective department; there is no need to contact the PI before applying.",
+  "url": "https://cocolab.stanford.edu/join",
+  "confidence": 0.85
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "ADVERSARIAL RE-VERIFICATION 2026-08-31: OPENING is UPHELD. https://cocolab.stanford.edu/join was re-fetched live in this task (HTTP 200) and carries a present-tense statement addressed to undergraduates specifically, verbatim: \"Potential research assistants (Stanford undergraduate or masters): Please send the PI or this mailing list (cocomentorship@lists.stanford.edu) an email with a current CV (including relevant research and programming experience), describe why you want to join the lab and what type of projects you are interested in. Please also indicate whether you are looking for a paid or a volunteer / course credit position.\" This is not a PhD-applicant-only page: the graduate paragraph ('Potential graduate students: We are accepting strong applicants in Computer Science or Psychology. Please apply through your respective department...') is a separate paragraph, and the page explicitly CLOSES two other categories in its own words -- 'Potential research assistants (non-Stanford): We are generally unable to accommodate research assistants from outside Stanford' and 'High-school interns: We are unable to take high-school students at this time' -- while leaving the Stanford-undergraduate route open with a stated application procedure. Nothing on the page says the PI is not taking students. The URL resolves directly (no Google Doc, no form, no access wall). HONEST LIMITS, which is why confidence is 0.85 and not higher: (1) the page is undated -- there is no posting date, no deadline, no headcount, and the server returns no Last-Modified header, so the recency of the statement cannot be independently established, only that it is served today; (2) the lab People page, re-fetched in this task, has no undergraduate/RA section at all, so no current undergraduate is observable in the lab; (3) the page never states that funded/paid slots exist -- it only asks the applicant to say which they want, so the 'paid' signal was downgraded from 'verified' to 'likely'. Treat this as a standing, always-open application route with a real named intake channel, NOT as a posted funded vacancy for a specific quarter. Corroborating (not itself an opening): Stanford Profiles lists 'Supervised Undergraduate Research CS 195', 'Senior Project CS 191' and 'Special Laboratory Projects PSYCH 195' among his 2025-26 supervision listings, and the lab is demonstrably active (2026 Psychological Review article plus multiple 2025 preprints with current lab students). The stated ask is verbatim 'a current CV (including relevant research and programming experience)' plus a statement of why you want to join and what projects interest you; the page words nothing as REQUIRED versus PREFERRED, so no such split is recorded.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cocolab.stanford.edu/",
+  "https://cocolab.stanford.edu/join",
+  "https://cocolab.stanford.edu/people",
+  "https://cocolab.stanford.edu/publications",
+  "https://psychology.stanford.edu/people/noah-goodman",
+  "https://profiles.stanford.edu/noah-goodman",
+  "https://web.stanford.edu/~ngoodman/",
+  "https://cs.stanford.edu/people/noah-goodman",
+  "https://api.openalex.org/authors?search=Noah%20D.%20Goodman",
+  "https://api.openalex.org/works?filter=author.id:A5001961716,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://doi.org/10.1037/rev0000632",
+  "http://arxiv.org/abs/2511.18220",
+  "http://arxiv.org/abs/2511.00617",
+  "https://doi.org/10.1146/annurev-psych-030625-040748",
+  "http://arxiv.org/abs/2505.23931",
+  "https://doi.org/10.1145/3763121",
+  "http://arxiv.org/abs/2509.00074"
+ ],
+ "fetch_notes": "ADVERSARIAL FACT-CHECK PASS 2026-08-31 (curl + desktop UA). RE-FETCHED AND CONFIRMED IN THIS TASK: https://cocolab.stanford.edu/join (HTTP 200 -- undergraduate RA paragraph present verbatim as quoted in recruiting.statement and state_rationale); https://cocolab.stanford.edu/people (HTTP 200 -- sections are PI, Graduate Students, Lab affiliates, Alumni; no undergraduate section); https://cocolab.stanford.edu/ and /publications (HTTP 200); https://profiles.stanford.edu/noah-goodman (HTTP 200 -- '2025-26 Courses' and 'Independent Studies (20)' blocks confirmed, including 'Supervised Undergraduate Research CS 195'). EMAIL CHECK: grepped the raw HTML of the email_source_url (https://cocolab.stanford.edu/join) for literal addresses; it returns exactly cocomentorship@lists.stanford.edu and ngoodman@stanford.edu. ngoodman@stanford.edu therefore appears literally on its own source page, so email and email_source_url are RETAINED unchanged. No email was guessed. FRESHNESS CHECK: HEAD on /join returns only 'Date: Mon, 31 Aug 2026 ...' with no Last-Modified or ETag, and https://cocolab.stanford.edu/sitemap.xml is a Stanford 404 page, so no lastmod is obtainable -- the join page cannot be dated, only confirmed live. CURIS: zero hits across the lab home, /join, /publications and the Stanford Profiles page. SIGNAL DOWNGRADE: 'Both paid and volunteer / course-credit undergraduate RA positions are contemplated' moved from 'verified' to 'likely' -- the page asks which type the applicant wants but never states that paid slots exist. CONFIDENCE: recruiting.confidence lowered 0.9 -> 0.85 to reflect the undated page and the absence of any undergraduate on the People page. --- PRIOR HARVEST NOTES (retained) --- FETCHED OK (curl + desktop UA): cocolab.stanford.edu/ , /join , /people , /publications ; psychology.stanford.edu/people/noah-goodman ; profiles.stanford.edu/noah-goodman ; web.stanford.edu/~ngoodman/ . FAILED: the supplied directory link https://cs.stanford.edu/people/noah-goodman returned HTTP 404 ('The requested URL /people/noah-goodman was not found on this server'), so faculty_url is set to the live Psychology department profile instead. FAILED: the arXiv API (export.arxiv.org/api/query) returned an empty body on three attempts with different queries, so no evidence was drawn from arXiv directly; the arXiv IDs recorded here come from OpenAlex records that were each re-fetched individually to confirm title, date, venue and author list. OPENALEX NOTE: the ROR-filtered query in the task instructions (?search=Noah Goodman&filter=last_known_institutions.ror:00f54p054) returned 0 results; the unfiltered author search found A5001961716 'Noah D. Goodman', 419 works, last known institution Stanford University. That author profile returned 16 works dated 2025-01-01 or later. DISAMBIGUATION: one of those 16, 'Leveling the Playing Field--U.S. Court Jurisdiction Over Disputes Between American Professional Athletes and Foreign Sports Teams' (SSRN, 2025), was re-fetched and its authors are all affiliated with Temple University -- a different Noah D. Goodman. It is excluded. Two other entries were duplicate preprint/journal pairs of 'Relevant answers to polar questions' and were not double-counted. EMAIL: ngoodman@stanford.edu appears literally on the lab site as both display text and a mailto: href (mailto:ngoodman@stanford.edu) on the home and Join pages; cocomentorship@lists.stanford.edu appears literally in the undergraduate RA paragraph on /join. No email was guessed. The Psychology profile page rendered no email address in its fetched text. STALE SOURCE WARNING: web.stanford.edu/~ngoodman/ is out of date -- it still calls him 'Assistant Professor of Psychology' and its Publications section reads 'Under construction...', pointing readers to the CoCoLab site. Nothing in current_direction was taken from it. LAB PUBLICATIONS PAGE: its year headings run 2025 down to 2006 with no 2026 section, so the lab's own page lags the 2026 Psychological Review article found via OpenAlex. Its 2025 entries include 'A survey on large language model reasoning failures' (2nd AI for Math Workshop @ ICML 2025), 'Emergent Symbol-like Number Variables in Artificial Neural Networks' (TMLR) and 'Non-literal understanding of number words by language models' (CogSci 2025). NOT FOUND: no dated news/blog page exists on the lab site (nav is only Home / People / Publications / Join Us), no grant information, and no CURIS posting."
+}

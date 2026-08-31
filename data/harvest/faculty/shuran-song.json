@@ -1,0 +1,130 @@
+{
+ "slug": "shuran-song",
+ "name": "Shuran Song",
+ "title": "Assistant Professor of Electrical Engineering and, by courtesy, of Computer Science",
+ "department": "Electrical Engineering (courtesy: Computer Science)",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/shuran-song",
+ "lab_name": "Robotics and Embodied Artificial Intelligence Lab (REAL@Stanford)",
+ "lab_url": "https://real.stanford.edu/",
+ "email": "shuran@stanford.edu",
+ "email_source_url": "https://shurans.github.io/",
+ "research_areas": [
+  "computer-vision",
+  "Robotics"
+ ],
+ "research_topics": [
+  "robot learning and manipulation",
+  "visuomotor policy learning",
+  "dexterous manipulation",
+  "compliance, force and tactile sensing for contact-rich manipulation",
+  "whole-body and mobile manipulation",
+  "video generation / world models for robotics",
+  "humanoid loco-manipulation",
+  "teleoperation and scalable demonstration data collection"
+ ],
+ "current_direction": [
+  "Compliant, force/tactile-aware contact-rich manipulation",
+  "Whole-body mobile and bimanual manipulation",
+  "Human hands and demonstrations as a universal manipulation interface",
+  "Video / 4D generative world models as priors for robot policies",
+  "Dexterous hands and cross-embodiment skill transfer"
+ ],
+ "current_direction_basis": "Inferred from the 2025-2026 items on https://real.stanford.edu/research.html, each cross-checked against its arXiv abs page. Compliance/force: 'In-the-Wild Compliant Manipulation with UMI-FT' (ICRA 2026, arXiv 2601.09988), 'Minimalist Compliance Control' (RSS 2026, arXiv 2603.00913), 'Compliant Residual DAgger' (NeurIPS 2025). Whole-body/mobile/bimanual: 'HoMMI' (RSS 2026, arXiv 2603.03243), 'Mixture of Frames Policy' (arXiv 2026), 'RoboPanoptes' (RSS 2025). Human-demonstration interfaces: 'DexUMI' (CoRL 2025 Oral), 'Vision in Action' (CoRL 2025), HoMMI. Video/world models: 'Geometry-aware 4D Video Generation for Robot Manipulation' (ICLR 2026), 'Unified Video Action Model' (RSS 2025), and 'World Simulation with Video Foundation Models for Physical AI' (2025-10-28, seen in OpenAlex). Dexterity/cross-embodiment: 'DexMachina' (ICML 2026), DexUMI, 'GET-Zero' (ICRA 2025). This reflects current output, not the older biography.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations",
+   "summary": "RSS 2026 paper (Xiaomeng Xu, Jisang Park, Han Zhang, Eric Cousineau, Aditya Bhat, Jose Barreiros, Dian Wang, Jeannette Bohg, Shuran Song) on learning whole-body mobile manipulation from human demonstrations. arXiv abs page confirms title and a 2026/03/03 date.",
+   "url": "https://hommi-robot.github.io/",
+   "venue": "Robotics: Science and Systems (RSS) 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Minimalist Compliance Control",
+   "summary": "RSS 2026 paper (Haochen Shi*, Songbo Hu*, Yifan Hou, Weizhuo Wang, C. Karen Liu, Shuran Song) on compliance control. arXiv abs page (2603.00913) confirms title and a 2026/03/01 date.",
+   "url": "https://minimalist-compliance-control.github.io/",
+   "venue": "Robotics: Science and Systems (RSS) 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "In-the-Wild Compliant Manipulation with UMI-FT",
+   "summary": "ICRA 2026 paper (Hojung Choi*, Yifan Hou*, Chuer Pan, Seongheon Hong, Austin Patel, Xiaomeng Xu, Mark Cutkosky, Shuran Song) adding force-torque sensing to the UMI handheld data-collection interface for in-the-wild compliant manipulation. arXiv abs page (2601.09988) confirms title and a 2026/01/15 date.",
+   "url": "https://umi-ft.github.io/",
+   "venue": "IEEE International Conference on Robotics and Automation (ICRA) 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Geometry-aware 4D Video Generation for Robot Manipulation",
+   "summary": "ICLR 2026 paper (Zeyi Liu, Shuang Li, Eric Cousineau, Siyuan Feng, Benjamin Burchfiel, Shuran Song) on geometry-aware 4D video generation for manipulation. Independently returned by OpenAlex with publication date 2025-07-01 and DOI 10.48550/arxiv.2507.01099.",
+   "url": "https://robotgen4d.github.io/",
+   "venue": "International Conference on Learning Representations (ICLR) 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation",
+   "summary": "CoRL 2025 Oral (Mengda Xu*, Han Zhang*, Yifan Hou, Zhenjia Xu, Linxi Fan, Manuela Veloso, Shuran Song) using the human hand directly as a data-collection interface for dexterous manipulation.",
+   "url": "https://dex-umi.github.io/",
+   "venue": "Conference on Robot Learning (CoRL) 2025 (Oral)"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab website has a current 'Undergraduate Student' group listing two named undergraduates: Jack Goler and Ryan Zhang.",
+   "status": "verified",
+   "evidence_url": "https://real.stanford.edu/lab.html",
+   "note": "The members data on lab.html contains: \"subgroup\": \"Undergraduate Student\", \"members\": [{ \"name\": \"Jack Goler\" ...}, { \"name\": \"Ryan Zhang\" ...}]. Undergraduates are currently embedded in the group, not just alumni."
+  },
+  {
+   "signal": "Lab website maintains a dedicated 'Undergrad/Master/Other Affiliated Alumni' section.",
+   "status": "verified",
+   "evidence_url": "https://real.stanford.edu/lab.html",
+   "note": "Heading on the page reads exactly: 'Undergrad/Master/Other Affiliated Alumni'. Commented-out alumni notes in the page source include trajectories such as 'Undergrad -> Masters @ Stanford' and 'Undergrad -> Undergrad', indicating a track record of hosting undergraduates."
+  },
+  {
+   "signal": "She is listed as supervising undergraduate-accessible independent study courses.",
+   "status": "likely",
+   "evidence_url": "https://profiles.stanford.edu/shuran-song",
+   "note": "Her 2025-26 Stanford Profiles listing includes 'Independent Studies (13)' with 'Independent Work CS 199 (Win, Spr)' and 'Independent Project CS 399 (Spr)'. Marked 'likely' rather than 'verified' because the fetched page does not itself state that these numbers are undergraduate-only; the course numbers are the basis for the inference."
+  },
+  {
+   "signal": "No CURIS, senior-project, or Stanford-undergraduate-specific invitation found.",
+   "status": "unknown",
+   "evidence_url": "https://real.stanford.edu/",
+   "note": "No mention of CURIS, senior projects, or any 'if you are a Stanford undergraduate...' statement appeared on real.stanford.edu (index/lab/research), shurans.github.io, or the linked Open Position document. The lab site has only three pages (index.html, lab.html, research.html) and no 'join us' page."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "POSTDOC ONLY - not an undergraduate opening. The lab's 'Open Position' document reads: 'Postdoctoral Researcher Positions ... Job Title: Postdoctoral Researcher - Robot Learning and Manipulation ... Expected Start Date: January 1, 2026 ... Date posted: Oct 30th 2025'. Minimum Requirements (stated as required): 'Ph.D. degree (or equivalent foreign degree) in Robotics, Computer Science, Mechanical Engineering, Electrical Engineering, or a closely related field'; 'Demonstrated expertise in robot learning, control, or manipulation'; 'Proficiency with teleoperation systems, multimodal sensing (vision, force, tactile), and data collection pipelines'; 'Strong programming skills in Python and experience with modern deep learning frameworks (e.g., PyTorch, TensorFlow)'. 'Applications will be reviewed on a rolling basis until the position is filled.' The document lists no preferred-only qualifications and no undergraduate role.",
+  "url": "https://docs.google.com/document/d/1XMmsNBXJeGtcXs5Vj1io1kcXOxk0gaQkKD0vLLtHHBk/edit?usp=sharing",
+  "confidence": 0.9
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "Not OPENING: the only explicit, currently-open position found on any fetched page is a Postdoctoral Researcher role that requires a Ph.D., so it is not undergraduate-relevant. No CURIS listing, senior-project note, or undergraduate call was found on the lab site or her personal site. OUTREACH is well supported: the lab is highly active (15+ distinct 2025-2026 papers listed on research.html, including RSS 2026, ICML 2026, ICLR 2026 and ICRA 2026 items verified against arXiv), and it demonstrably takes undergraduates - lab.html lists two current undergraduate members and keeps an 'Undergrad/Master/Other Affiliated Alumni' section. A direct cold email to shuran@stanford.edu, referencing a specific recent project, is the appropriate move.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 5,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/shuran-song",
+  "https://profiles.stanford.edu/shuran-song",
+  "https://real.stanford.edu/",
+  "https://real.stanford.edu/lab.html",
+  "https://real.stanford.edu/research.html",
+  "https://shurans.github.io/",
+  "https://docs.google.com/document/d/1XMmsNBXJeGtcXs5Vj1io1kcXOxk0gaQkKD0vLLtHHBk/edit?usp=sharing",
+  "https://api.openalex.org/works?filter=author.id:A5004644695,from_publication_date:2025-06-01&sort=publication_date:desc",
+  "https://arxiv.org/abs/2603.03243",
+  "https://arxiv.org/abs/2603.00913",
+  "https://arxiv.org/abs/2601.09988",
+  "https://arxiv.org/abs/2603.10263"
+ ],
+ "fetch_notes": "The supplied CS directory link https://cs.stanford.edu/people/shuran-song returned HTTP 404 ('The requested URL /people/shuran-song was not found on this server'), so faculty_url uses her Stanford Profiles page, which returned 200. Lab identified as REAL@Stanford via both Profiles ('Lab Site') and shurans.github.io. The lab site has no news page and no join-us page; it has only index.html, lab.html and research.html, plus an 'Open Position' link pointing to a Google Doc (fetched via /export?format=txt). EMAIL: shuran@stanford.edu is de-obfuscated from text that literally appears on https://shurans.github.io/ as 'Email: shuran [at] stanford [dot] edu' - it is NOT written in @-form on any fetched page. A second address, real.lab.001@gmail.com, appears verbatim in the Open Position document but is specifically the postdoc application address, so it was not used as the general contact. The arXiv API was unusable: the http:// endpoint returned HTTP 000 (connection failure) and the https:// endpoint returned HTTP 429 'Rate exceeded'. Publication verification was therefore done by fetching arxiv.org/abs/<id> pages directly and reading citation_title/citation_date/citation_author metadata; all four 2026 IDs checked (2603.03243, 2601.09988, 2603.00913, 2603.10263) matched the titles and authors claimed on the lab page. OpenAlex (author A5004644695) independently confirmed 'Geometry-aware 4D Video Generation', 'Vision in Action' and 'Robot Trains Robot'. The OpenAlex query filtered by Stanford ROR returned no results, so an unfiltered author search was used and the 196-work 'Shuran Song' record selected by matching titles against the lab page. api.github.com/orgs/real-stanford returned no usable fields, so GitHub activity was not used as evidence. Awards, prior institutions and course titles come from the fetched Profiles page."
+}

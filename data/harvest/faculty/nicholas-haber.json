@@ -1,0 +1,142 @@
+{
+  "slug": "nicholas-haber",
+  "name": "Nicholas Haber",
+  "title": "Assistant Professor of Education",
+  "department": "Graduate School of Education (and, by courtesy, Computer Science)",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/nicholas-haber",
+  "lab_name": "Stanford Autonomous Agents Lab",
+  "lab_url": "https://autonomousagents.stanford.edu",
+  "email": "nhaber@stanford.edu",
+  "email_source_url": "https://ed.stanford.edu/faculty/nhaber",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Human-Centered and Creative AI",
+    "reinforcement-learning",
+    "computational-education"
+  ],
+  "research_topics": [
+    "LLMs and mental health safety",
+    "human-AI interaction and user modeling",
+    "next-action prediction from multimodal screen data",
+    "vision-language-action models for 3D world generation",
+    "reinforcement learning for LLM reasoning",
+    "generative AI for tutoring and education",
+    "curiosity and intrinsically-motivated agents",
+    "digital phenotyping / screenomics"
+  ],
+  "current_direction": [
+    "LLM safety in mental-health and companionship settings (stigma, delusional spirals)",
+    "Predicting user next actions from longitudinal multimodal screen and sensor data",
+    "Vision-language-action models that generate and edit 3D worlds",
+    "Reinforcement learning for efficient LLM reasoning and math",
+    "Generative-AI tutoring and studying how students actually use AI tools"
+  ],
+  "current_direction_basis": "Driven by 2025-2026 items collected here, not the older curiosity/Autism-Glass biography. (1) LLM mental-health safety: 'Characterizing Delusional Spirals through Human-LLM Chat Logs' (FAccT '26, Jun 2026) plus 'Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers' (FAccT 2025), reinforced by the Feb 6 2026 TechCrunch interview describing him as 'a Stanford professor researching the therapeutic potential of LLMs'. (2) User modeling: 'Learning Next Action Predictors from Human-Computer Interaction' (arXiv 2603.05923, Mar 6 2026) and the Stanford Screenomics platform papers (medRxiv 2025; JMIR Formative Research 2026). (3) 3D VLA models: '3D-GENERALIST' (3DV 2026) and 'LayoutVLM' (CVPR 2025). (4) RL for reasoning: 'Big-Math' and 'Just Enough Thinking: Efficient Reasoning with Adaptive Length Penalties Reinforcement Learning' and 'Towards System 2 Reasoning in LLMs' (all 2025). (5) AI in education: 'CogGen' (2025) and 'Scaffold or Crutch? Examining College Students' Use and Views of Generative AI Tools for STEM Education' (2025), alongside his 2025-26 course listings.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Learning Next Action Predictors from Human-Computer Interaction",
+      "summary": "Preprint submitted 6 Mar 2026 formalizing 'next action prediction' (NAP): given a user's multimodal computer interactions (screenshots, clicks, sensor data), predict the next action. Labels 360K+ actions over one month of continuous phone usage from 20 users (1,800 hours of screen time) and introduces LongNAP, a user model trained via policy gradient methods that outperforms supervised finetuning and prompted baselines by 79% and 39%. Haber is a listed author alongside Omar Shaikh, Kanishk Gandhi, Michael S. Bernstein and Diyi Yang.",
+      "url": "https://arxiv.org/abs/2603.05923",
+      "venue": "arXiv preprint"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Characterizing Delusional Spirals through Human-LLM Chat Logs",
+      "summary": "Conference paper at FAccT '26 (issued 2026-06-25) analyzing human-LLM chat logs for delusional spirals. Crossref author list confirms Nick Haber as an author (with Jared Moore, Kevin Klyman, Stevie Chancellor, Desmond C. Ong and others). Continues his line of work on LLM behavior in mental-health-adjacent conversation.",
+      "url": "https://doi.org/10.1145/3805689.3806443",
+      "venue": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT '26)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "3D-GENERALIST: Vision-Language-Action Models for Crafting 3D Worlds",
+      "summary": "Conference paper at the 2026 International Conference on 3D Vision (3DV), issued March 2026, on self-improving vision-language-action models for generating 3D worlds. First author Fan-Yun Sun is listed on the lab's People page as a CS PhD student 'working on generating simulations for training embodied agents'. Earlier arXiv version appeared 2025-07-09.",
+      "url": "https://doi.org/10.1109/3dv69130.2026.00177",
+      "venue": "2026 International Conference on 3D Vision (3DV)"
+    },
+    {
+      "kind": "news",
+      "year": 2026,
+      "title": "The backlash over OpenAI's decision to retire GPT-4o shows how dangerous AI companions can be (TechCrunch)",
+      "summary": "TechCrunch article dated February 6, 2026 quoting him at length. The piece describes 'Dr. Nick Haber, a Stanford professor researching the therapeutic potential of LLMs' and quotes him: 'I try to withhold judgment overall... I think we're getting into a very complex world around the sorts of relationships that people can have with these technologies' and 'We are social creatures, and there's certainly a challenge that these systems can be isolating.' It also states his 'own research has shown that chatbots respond inadequately when faced with various mental health conditions'. Linked from his Stanford GSE faculty page news section.",
+      "url": "https://techcrunch.com/2026/02/06/the-backlash-over-openais-decision-to-retire-gpt-4o-shows-how-dangerous-ai-companions-can-be/",
+      "venue": "TechCrunch"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers",
+      "summary": "FAccT 2025 conference paper (Moore, Grabb, Agnew, Klyman, Chancellor, Ong, Haber) listed under 'Recent publications' on his Stanford GSE faculty page. This is the widely covered result underpinning his 2025-2026 press appearances on AI chatbots and mental health.",
+      "url": "https://doi.org/10.1145/3715275.3732039",
+      "venue": "Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency (FAccT 2025)"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "2025-26 teaching: Curiosity in Artificial Intelligence (EDUC 234 / PSYCH 240A) and Interactive and Embodied Learning (CS 422 / EDUC 234A)",
+      "summary": "Stanford Profiles lists his 2025-26 Courses as 'Curiosity in Artificial Intelligence EDUC 234, PSYCH 240A (Spr)', 'Interactive and Embodied Learning CS 422, EDUC 234A (Win)', and 'Learning Sciences and Technology Design Research Seminar and Colloquium EDUC 291 (Spr)'. CS 422 is cross-listed and reachable by CS undergraduates, making it a natural first point of contact.",
+      "url": "https://profiles.stanford.edu/nicholas-haber",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed as an instructor of record for CS 195 Supervised Undergraduate Research in the current 2025-26 academic year, all four quarters",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/nicholas-haber",
+      "note": "Stanford Profiles 'Independent Studies (21)' block for 2025-26 lists 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)'; the underlying link is scoped to academicYear=20252026. This is a standing course-catalog listing that many Stanford CS-affiliated faculty carry, so it shows undergraduate research is an available mechanism with him -- it is NOT an advertised open position."
+    },
+    {
+      "signal": "Listed for undergraduate senior-project and independent-work courses in 2025-26",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/nicholas-haber",
+      "note": "Same 2025-26 Independent Studies block lists 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Senior Honors Tutorial SYMSYS 190', 'Honors Research EDUC 140', 'Directed Research in Education EDUC 190', and 'Directed Reading in Education EDUC 180'. The EDUC 140/180/190 and SYMSYS 190 listings are undergraduate-level and notable given his primary GSE appointment."
+    },
+    {
+      "signal": "No undergraduate members listed on the lab People page",
+      "status": "verified",
+      "evidence_url": "https://autonomousagents.stanford.edu/people",
+      "note": "The People page lists only the PI, two postdoctoral fellows (Logan Cross, Isaac Kauvar), a research associate/lecturer (Xinjie Chen), a research scientist (Chris Doyle), a research coordinator (Samaher Radwan), six PhD students, and two Education Data Science master's students. No undergraduate category exists on the page. The only occurrence of the word 'undergraduate' is inside a staff bio ('Chris received his undergraduate degree in Mathematics from the University of Virginia')."
+    },
+    {
+      "signal": "No CURIS listing, senior-project pitch, or 'if you are a Stanford undergraduate' text anywhere on the lab site",
+      "status": "verified",
+      "evidence_url": "https://autonomousagents.stanford.edu",
+      "note": "Grepped the fetched HTML of the lab home, People, and Publications pages for 'undergrad', 'CURIS', 'prospective student', 'we are recruiting', 'join us', 'openings', and 'rotation'. Zero matches on the home and publications pages. The site's Wix route table contains only six pages (home-1, people, publications, and three research pages) -- there is no join/openings/news page, and /join, /opportunities and /news all return HTTP 404."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": "CONTACT US  Interested in our work? Interested in working with us?  nhaber at stanford dot edu",
+    "url": "https://autonomousagents.stanford.edu",
+    "confidence": 0.3
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "Very active researcher with strong 2026 evidence: three 2026 publications (arXiv Mar 2026, FAccT '26, 3DV 2026), six 2026-dated works in OpenAlex, and a February 6, 2026 TechCrunch interview. He is also listed on Stanford Profiles for CS 195 Supervised Undergraduate Research and CS 191 Senior Project in the current 2025-26 year, and the lab home page invites contact ('Interested in working with us? nhaber at stanford dot edu'). However, no explicit currently-open undergraduate position or program was found on any page fetched: the lab website has no join/openings page (404s), lists no undergraduate members, carries a '©2020' footer, and its publications page stops at 2022. The CS 195/CS 191 entries are standard catalog listings carried by many Stanford CS faculty, not a recruiting statement, so they do not meet the bar for OPENING. A cold email from a Stanford undergraduate is well-founded here -- the recent LLM-mental-health, next-action-prediction, and 3D-VLA lines are all live, and the contact-us line plus the CS 195/191 listings give a concrete mechanism to propose.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 6,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/nick-haber",
+    "https://ed.stanford.edu/faculty/nhaber",
+    "https://profiles.stanford.edu/nicholas-haber",
+    "https://cs.stanford.edu/~nhaber",
+    "https://autonomousagents.stanford.edu",
+    "https://autonomousagents.stanford.edu/people",
+    "https://autonomousagents.stanford.edu/publications",
+    "https://techcrunch.com/2026/02/06/the-backlash-over-openais-decision-to-retire-gpt-4o-shows-how-dangerous-ai-companions-can-be/",
+    "https://arxiv.org/abs/2603.05923",
+    "https://api.openalex.org/works?filter=author.id:A5069105490,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://api.crossref.org/works/10.1145/3805689.3806443",
+    "https://api.crossref.org/works/10.1109/3dv69130.2026.00177",
+    "https://api.crossref.org/works/10.18653/v1/2026.eacl-long.362",
+    "https://api.semanticscholar.org/graph/v1/author/search?query=Nicholas+Haber"
+  ],
+  "fetch_notes": "The supplied CS directory link https://cs.stanford.edu/people/nick-haber returns HTTP 404 ('The requested URL /people/nick-haber was not found on this server'). Found him instead via https://ed.stanford.edu/faculty/nhaber (his primary appointment is the Graduate School of Education, CS by courtesy) and https://profiles.stanford.edu/nicholas-haber, both HTTP 200. https://cs.stanford.edu/~nhaber returns 200 but redirects to https://www.autonomousagents.stanford.edu/ -- it is the lab site, not a separate personal page. Email nhaber@stanford.edu appears literally on the GSE faculty page; the lab home page carries the obfuscated form 'nhaber at stanford dot edu'. Lab site is a Wix/thunderbolt SPA with no href-based navigation, so page routes were recovered from the embedded 'pageUriSEO' fields: only home-1, people, publications, building-learning-tools, engineering-interactive-learning-in, modeling-human-learning-and-develop exist. /join, /opportunities and /news all 404. The lab site is materially stale: '©2020 by Autonomous Agents Lab' footer and a publications page whose newest entry is 2022 -- so all 2025-2026 evidence comes from Stanford Profiles, the GSE faculty page, OpenAlex, arXiv, Crossref and the TechCrunch article, NOT from the lab site. OpenAlex author disambiguation: the ROR-filtered query (last_known_institutions.ror:00f54p054) returned zero results; the correct record is A5069105490 'Nick Haber' (Stanford University, 121 works), found by unfiltered search -- note a different, unrelated 'Nicholas Haber' (A5062315839, Stony Brook) also exists. OpenAlex reports 27 works from 2025-01-01 onward and 6 dated 2026. Venues for the three 2026 conference papers were confirmed against Crossref rather than trusted from OpenAlex, which returned null venues for all three. Haber's authorship on the FAccT '26 delusional-spirals paper was confirmed in the Crossref author list (he is 13th of 14 authors). One transient artifact: an early read of the saved Stanford Profiles HTML surfaced text from James Landay's profile; a clean re-fetch was verified (67 'Haber' matches, 0 'Landay') and only the re-fetched copy was used. Semantic Scholar author search returned three low-count records (8, 2 and 5 papers) with no affiliations, none of which matched the real publication volume, so Semantic Scholar was not used as a source. No grants, no lab news page, and no CURIS or undergraduate-specific posting were found anywhere."
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Trellis settings</title>
+<style>
+  body { font: 13px/1.5 -apple-system, system-ui, sans-serif; padding: 20px; max-width: 460px; }
+  label { display: block; font-size: 12px; color: #6b6b76; margin-bottom: 4px; }
+  input { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #d8d8de; border-radius: 6px; font: inherit; }
+  button { margin-top: 10px; padding: 6px 12px; border-radius: 6px; border: 1px solid #4b4ddb; background: #4b4ddb; color: #fff; font: inherit; cursor: pointer; }
+  p { font-size: 12px; color: #6b6b76; }
+</style>
+<h1 style="font-size:15px">Trellis</h1>
+<label for="api">Your local Trellis API</label>
+<input id="api" placeholder="http://127.0.0.1:8000" />
+<button id="save">Save</button>
+<p id="saved"></p>
+<p>Imported jobs go only to this address. Trellis stores no Handshake credentials.</p>
+<script src="options.js"></script>

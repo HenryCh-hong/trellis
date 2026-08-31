@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+
+# Secrets and local config
+.env
+.env.local
+.secret_key
+
+# Uploaded resumes: the student's own documents, never committed
+apps/api/storage/
+
+# OS
+.DS_Store
+
+# NOTE: data/harvest/ is deliberately NOT ignored. That corpus is the product's
+# real, cited data and belongs in the repository.
+
+# Never commit a real resume. The audit generates its own fixture:
+# scripts/audit/make-fixture-resume.sh
+scripts/audit/*.pdf
+/fac.html

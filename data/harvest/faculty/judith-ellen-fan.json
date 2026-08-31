@@ -1,0 +1,170 @@
+{
+  "slug": "judith-ellen-fan",
+  "name": "Judith Ellen Fan",
+  "title": "Assistant Professor of Psychology, by courtesy, of Education and of Computer Science",
+  "department": "Psychology (courtesy appointments in Graduate School of Education and Computer Science)",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/judith-fan",
+  "lab_name": "Cognitive Tools Lab",
+  "lab_url": "https://cogtoolslab.github.io/",
+  "email": "jefan@stanford.edu",
+  "email_source_url": "https://cogtoolslab.github.io/prospective.html",
+  "research_areas": [
+    "Artificial Intelligence",
+    "computer-vision",
+    "Human-Centered and Creative AI",
+    "computational-education"
+  ],
+  "research_topics": [
+    "drawing and sketching as cognitive tools",
+    "visual abstraction and visual communication",
+    "data visualization literacy and its assessment",
+    "physical assembly, construction, and problem-solving",
+    "human-AI collaboration and co-design",
+    "cognitive science of learning and statistics education",
+    "cognitive-AI benchmarking / evaluating machine visual abstraction",
+    "developmental and cross-cultural studies of children's drawing"
+  ],
+  "current_direction": [
+    "Generative behaviors (drawing, sketching, gesture) as primary targets for cognitive models",
+    "AI in undergraduate statistics and data-science teaching at Stanford",
+    "Measuring and teaching data visualization / data literacy",
+    "Human-AI thought partnership and co-design of novel mechanisms",
+    "Cross-cultural developmental work on children's drawing and visual media"
+  ],
+  "current_direction_basis": "Driven by 2026 evidence: (1) Fan's single-author 2026 Current Directions in Psychological Science piece 'Generative Behaviors as Key Targets for Cognitive Models' plus the 2026 'Drawings of THINGS' dataset paper and the 2025/2026 SIGGRAPH 'Drawing & Sketching' / 'Lines and Minds' workshops she co-organized -> generative-behavior framing; (2) two Aug 6, 2026 'AI in Teaching and Learning at Stanford' grants announced on the lab news page ('Rethinking Introductory Statistics in the Age of AI' and 'Translating Instructor Expertise and Learning Science Knowledge into Individualized Course Companions') plus her Autumn teaching of PSYCH 10/STATS 60 -> AI-in-statistics-education direction; (3) the Apr 2025 Cognitive Research paper on convergence between two data visualization literacy assessments, the July 2025 'Nightingale' data & visualization literacy workshop, and the co-organized CHI 2026 'Data Literacy for the 21st Century' workshop -> data-literacy measurement thread; (4) the Mar 20, 2026 Stanford HAI seed grant 'Why didn't I think of that? Accelerating discovery of novel mechanisms by transforming human-AI co-design processes' and the Mar 2026 'Meaningful Long-Term Thought Partnerships of Minds and Machines' paper -> human-AI partnership thread; (5) 2026 OpenAlex preprints with Rebecca Zhu, Bria Long and Michael Frank on children's drawing and vocabulary in Kisumu, Kenya, plus the Dec 2025 Topics in Cognitive Science paper -> cross-cultural developmental thread. Not based on her older biography.",
+  "evidence": [
+    {
+      "kind": "grant",
+      "year": 2026,
+      "title": "AI in Teaching and Learning at Stanford Course & Curriculum Grant: \"Rethinking Introductory Statistics in the Age of AI\"",
+      "summary": "Lab news (August 6, 2026): \"Tselil Schramm, Judy Fan, Dennis Sun, Julia Palacios, and Jonathan Taylor were awarded an AI in Teaching and Learning at Stanford Course & Curriculum Grant from the Office of the Vice Provost for Undergraduate Education for the project, 'Rethinking Introductory Statistics in the Age of AI.'\" Directly tied to undergraduate statistics instruction.",
+      "url": "https://cogtoolslab.github.io/news.html",
+      "venue": "Stanford Office of the Vice Provost for Undergraduate Education (announcement: https://ctl.stanford.edu/news/ai-education-grants-2026)"
+    },
+    {
+      "kind": "grant",
+      "year": 2026,
+      "title": "Stanford HAI 2026-27 seed grant: \"Why didn't I think of that? Accelerating discovery of novel mechanisms by transforming human-AI co-design processes\"",
+      "summary": "Lab news (March 20, 2026): \"Allison Okamura, Judy Fan, Shuran Song, and Tania Morimoto received a 2026-27 seed grant from the Stanford HAI for the project, 'Why didn't I think of that? Accelerating discovery of novel mechanisms by transforming human-AI co-design processes.'\"",
+      "url": "https://cogtoolslab.github.io/news.html",
+      "venue": "Stanford Institute for Human-Centered AI (HAI)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Generative Behaviors as Key Targets for Cognitive Models",
+      "summary": "Single-authored theoretical piece by Fan arguing that generative behaviors should be central targets for cognitive models. Listed first on the lab papers page and retrieved from OpenAlex (publication date 2026-02-22).",
+      "url": "https://doi.org/10.1177/09637214261416790",
+      "venue": "Current Directions in Psychological Science"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Drawings of THINGS: A large-scale drawing dataset of 1,854 object concepts",
+      "summary": "Mukherjee, Huey, Stoinski, Hebart, Fan, & Bainbridge. Large-scale drawing dataset spanning 1,854 object concepts; published version dated 2026-01-30 per OpenAlex and listed on the lab papers page.",
+      "url": "https://doi.org/10.3758/s13428-025-02887-w",
+      "venue": "Behavior Research Methods"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Meaningful Long-Term Thought Partnerships of Minds and Machines",
+      "summary": "Collins, Wong, Tenenbaum, & Fan (2026-03-30 per OpenAlex). Frames long-horizon human-AI thought partnership, matching the lab's human-AI co-design direction.",
+      "url": "https://doi.org/10.1177/09637214251412712",
+      "venue": "Current Directions in Psychological Science"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "SketchAgent: Language-Driven Sequential Sketch Generation",
+      "summary": "Vinker, Rott Shaham, Zheng, Zhao, Fan, & Torralba, CVPR 2025 (OpenAlex publication date 2025-06-10). Language-driven sequential sketch generation - the computer-vision/creative-AI side of the lab's drawing work.",
+      "url": "https://doi.org/10.1109/cvpr52734.2025.02175",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Evaluating convergence between two data visualization literacy assessments",
+      "summary": "Brockbank, Verma, Lloyd, Huey, Padilla, & Fan (2025). Administered two widely used graph comprehension assessments to N=1,113 participants and found the tests probe somewhat distinct components of data visualization literacy, motivating more comprehensive assessments.",
+      "url": "https://doi.org/10.1186/s41235-025-00622-9",
+      "venue": "Cognitive Research: Principles and Implications, 10(1), 15"
+    },
+    {
+      "kind": "news",
+      "year": 2026,
+      "title": "Lila R. Gleitman Prize for Early-Career Contributions to Cognitive Science",
+      "summary": "Lab news (March 10, 2026): \"Judy Fan received the Lila R. Gleitman Prize for Early-Career Contributions to Cognitive Science!\" Also listed under Honors & Awards on her Stanford Profiles page as \"Lila R. Gleitman Prize, Cognitive Science Society (2026)\".",
+      "url": "https://cogtoolslab.github.io/news.html",
+      "venue": "Cognitive Science Society"
+    },
+    {
+      "kind": "talk",
+      "year": 2026,
+      "title": "2nd \"Lines and Minds\" workshop at SIGGRAPH 2026; invited talks at CVPR 2026 Workshop on Visual Concepts and the Harvard Kempner Institute",
+      "summary": "Lab news: July 19, 2026 - \"Yael Vinker, Mia Tang, Judy Fan, Kartik Chandra, Maneesh Agrawala, and Aaron Hertzmann co-organized the 2nd Lines and Minds workshop at SIGGRAPH in Los Angeles!\"; June 3, 2026 - invited talk at the Workshop on Visual Concepts at CVPR 2026 in Denver; April 10, 2026 - invited talk at the Harvard University Kempner Institute.",
+      "url": "https://cogtoolslab.github.io/news.html",
+      "venue": "SIGGRAPH 2026 / CVPR 2026"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Lab people page has a dedicated \"Undergraduate Students\" section currently listing two undergraduates: David Tomz and Avery Yue.",
+      "status": "verified",
+      "evidence_url": "https://cogtoolslab.github.io/people.html",
+      "note": "Section header reads \"Undergraduate Students\" followed by \"David Tomz\" and \"Avery Yue\". Confirms undergraduates are active members right now."
+    },
+    {
+      "signal": "Prospective-lab-members page explicitly invites current Stanford students (including undergraduates) to get involved.",
+      "status": "verified",
+      "evidence_url": "https://cogtoolslab.github.io/prospective.html",
+      "note": "Quote: \"Current Stanford students are also welcome to get involved in research in the lab, even if you are not affiliated with the Psychology department.\" Followed by: \"In the past, we have hosted PhD, Masters, and undergraduate students hailing from several academic units on campus, including Psychology, Computer Science, Education, and Symbolic Systems.\" This is a standing welcome, not a posted position."
+    },
+    {
+      "signal": "Lab supervises undergraduate honors theses; a 2026 honors thesis student is named in news and alumni lists.",
+      "status": "verified",
+      "evidence_url": "https://cogtoolslab.github.io/news.html",
+      "note": "News, June 14, 2026: \"Honors thesis student Nora Dee and GSE Master's student Vryan Feliciano have graduated from Stanford! Nora is joining the Computational Clinical Science Lab at Yale University as a lab manager.\" People page alumni list: \"Nora Dee (2026 Honors Thesis, Firestone Medal...)\" and \"Justin Yang (2022 Lab Manager, 2022 Honors Thesis, 2021 TRELS Scholar...)\"."
+    },
+    {
+      "signal": "Undergraduate co-authorship: Nora Dee appears as second author on a 2026 CogSci paper listed on the lab papers page.",
+      "status": "likely",
+      "evidence_url": "https://cogtoolslab.github.io/papers.html",
+      "note": "Papers page lists \"Brockbank, E., Dee, N., O'Keeffe, M., Mahaphanit, W., Gerstenberg, T., Fan, J. E., and Hawkins, R. (2026). Asking the right questions? What people learn about strangers in conversation. Proceedings of the 48th Annual Meeting of the Cognitive Science Society.\" Marked 'likely' because the papers page does not itself state Dee's undergraduate status; the honors-thesis label comes from the news and people pages."
+    },
+    {
+      "signal": "CURIS, senior projects, or a formal Stanford undergraduate application pathway.",
+      "status": "unknown",
+      "evidence_url": null,
+      "note": "No mention of CURIS, senior projects, or a Stanford undergraduate application form was found on any fetched lab page. The only formal undergraduate research application described on the prospective page is a UCSD one (PSYURACA), and that entire section is inside an HTML comment (commented out, left over from Fan's UC San Diego appointment, 2019-2023). Do not treat it as current."
+    }
+  ],
+  "recruiting": {
+    "status": "closed",
+    "statement": "From https://cogtoolslab.github.io/prospective.html (live text): \"Dr. Fan is not currently recruiting PhD students intending to start in Fall 2027 as primary advisees, though there is some possibility of exploring co-advising arrangements with other faculty at Stanford. The lab is also not currently recruiting postdocs during AY 2026-27.\" The same page nevertheless keeps an open door for people already on campus: \"Current Stanford students are also welcome to get involved in research in the lab, even if you are not affiliated with the Psychology department.\" Status is recorded as 'closed' because the only explicit recruiting declarations on the page are negative and no position is currently posted; the Stanford-student welcome is a standing invitation to make contact, not an advertised opening.",
+    "url": "https://cogtoolslab.github.io/prospective.html",
+    "confidence": 0.9
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No live, formal, undergraduate-relevant opening exists on any page fetched. The prospective-lab-members page states \"Dr. Fan is not currently recruiting PhD students intending to start in Fall 2027 as primary advisees\" and \"The lab is also not currently recruiting postdocs during AY 2026-27.\" The AY 2026-27 Lab Manager and IRiSS Predoctoral Researcher postings are present in the page source only inside HTML comments (not displayed), their stated deadlines (May 1 and May 5, 2026) have passed, and the Sept 15, 2026 news item \"We welcome new IRiSS predoc fellow and Lab Manager Idil Sahin to the lab!\" indicates both were filled. That rules out OPENING. But the lab is unmistakably active - two Aug 2026 Stanford AI-in-teaching grants, a Mar 2026 HAI seed grant, 2026 journal and CogSci papers, the Mar 2026 Gleitman Prize, and new 2026 lab members - and it demonstrably involves undergraduates right now (a live \"Undergraduate Students\" section naming David Tomz and Avery Yue, a 2026 honors thesis student, and the standing line \"Current Stanford students are also welcome to get involved in research in the lab, even if you are not affiliated with the Psychology department\"). A well-prepared cold email from a Stanford undergraduate is therefore reasonable, following the prospective page's instruction to read that page in full first.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 9,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/judith-fan",
+    "https://profiles.stanford.edu/judith-fan",
+    "https://ed.stanford.edu/faculty/jefan",
+    "https://cogtoolslab.github.io/",
+    "https://cogtoolslab.github.io/news.html",
+    "https://cogtoolslab.github.io/people.html",
+    "https://cogtoolslab.github.io/papers.html",
+    "https://cogtoolslab.github.io/research.html",
+    "https://cogtoolslab.github.io/prospective.html",
+    "https://cogtoolslab.github.io/outreach.html",
+    "https://api.openalex.org/authors?search=Judith%20E.%20Fan",
+    "https://api.openalex.org/works?filter=author.id:A5003160263,from_publication_date:2025-01-01&sort=publication_date:desc"
+  ],
+  "fetch_notes": "Fetched 2026-08-31 with curl + browser UA. The supplied CS directory link https://cs.stanford.edu/people/judith-fan returns HTTP 404 (\"The requested URL /people/judith-fan was not found on this server\"); https://cs.stanford.edu/people/judith-ellen-fan and https://cs.stanford.edu/~jefan also 404. https://psychology.stanford.edu/people/judith-fan redirects to a Drupal login page (no public content). Working pages used instead: https://profiles.stanford.edu/judith-fan (HTTP 200, used as faculty_url; carries the exact printed title, appointments, honors, courses and publication list) and https://ed.stanford.edu/faculty/jefan (HTTP 200, GSE courtesy-appointment page). Lab site cogtoolslab.github.io returned 200 on all subpages; cognitivetoolslab.github.io 404s. Email jefan@stanford.edu was read from live (non-commented) text on the prospective page - raw HTML line 302, <a href=\"mailto:jefan@stanford.edu\">email</a> - and independently from https://ed.stanford.edu/faculty/jefan; an older jefan@ucsd.edu also appears on the prospective page but only inside an HTML comment, so it was not used. IMPORTANT: several recruiting blocks on the prospective page (\"Open Positions for AY 2026-2027\" with Lab Manager and IRiSS Predoctoral Researcher, a Fall 2025 Master's RA opening, a 2023 lab manager search, and the UCSD undergraduate PSYURACA pathway) exist only as commented-out HTML and are NOT displayed to visitors; their deadlines have passed and none were counted as current openings. Recent publications came from OpenAlex author A5003160263 (Judith E. Fan, Stanford; 115 works, 28 works dated 2025-01-01 or later) cross-checked against the lab papers page. Semantic Scholar returned HTTP 429 (rate limited) and was not used. arXiv was not separately queried because OpenAlex already surfaced the arXiv preprints. No lab members, grants, papers, or emails were written from memory."
+}

@@ -1,0 +1,161 @@
+{
+ "slug": "diyi-yang",
+ "name": "Diyi Yang",
+ "title": "Assistant Professor of Computer Science",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://cs.stanford.edu/~diyiy/",
+ "lab_name": "Stanford Social and Language Technologies (SALT) Lab",
+ "lab_url": "https://saltlab.stanford.edu/",
+ "email": "diyiy@cs.stanford.edu",
+ "email_source_url": "https://cs.stanford.edu/~diyiy/getinvolved.html",
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Natural Language Processing and Speech",
+  "Human-Centered and Creative AI",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "Socially Aware NLP",
+  "Large Language Models (LLMs) and Human-AI Interaction",
+  "Computational Social Science",
+  "LLM agents and human-agent collaboration",
+  "Generative interfaces and generative user modeling",
+  "Large audio / speech models and their evaluation",
+  "Social skill training via LLMs",
+  "AI, culture and society; dialects and low-resource contexts"
+ ],
+ "current_direction": [
+  "Auditing what AI agents actually do to human work (automation vs. augmentation across occupations)",
+  "LLM agents that autonomously ideate and execute research, judged on execution outcomes rather than proposals",
+  "Generative interfaces and user modeling that let LLMs adapt the UI to the person",
+  "Open audio/speech foundation models plus benchmarks for evaluating them",
+  "Human wellbeing and community-centered auditing: AI companions, sycophancy, whose knowledge counts"
+ ],
+ "current_direction_basis": "Driven by the 2025-2026 items collected here: 'Future of Work with AI Agents' (arXiv 2506.06576) and 'How Do AI Agents Do Human Work?' (arXiv 2510.22780) for the work/agent auditing thread; 'The Ideation-Execution Gap' (ICLR 2026) and 'Towards Execution-Grounded Automated AI Research' (ICML 2026) for autonomous-research agents; 'Generative Interfaces for Language Models' (arXiv 2508.19227) plus the homepage's 'Generative Interaction: Generative UI, Generative User Modeling (GUM)' project list for generative interfaces; 'Scaling Open Discrete Audio Foundation Models' (arXiv 2602.16687, submitted 18 Feb 2026) and 'AudioJudge' (arXiv 2507.12705) for the audio thread; 'Interaction with AI companions and psychological well-being' (Nature Human Behaviour, Aug 2026), 'Whose Knowledge Counts?' (CHI 2026) and 'Verbalizing LLMs' Assumptions About the User ... Reduce Sycophancy' (CHI 2026) for the wellbeing/auditing thread. The SALT lab news line for 1/2026 ('actively making progress on both the AI and HCI side of human-centered AI') corroborates the split.",
+ "evidence": [
+  {
+   "kind": "news",
+   "year": 2026,
+   "title": "Four papers from SALT accepted to ICML 2026",
+   "summary": "SALT Lab news item dated 5/2026: 'Four papers from SALT are accepted by ICML 2026. See you in Seoul!' Most recent dated news on the lab site.",
+   "url": "https://saltlab.stanford.edu/",
+   "venue": "ICML 2026"
+  },
+  {
+   "kind": "news",
+   "year": 2026,
+   "title": "Three CHI 2026 and seven ICLR 2026 acceptances",
+   "summary": "SALT Lab news item dated 1/2026: 'SALT lab has three papers accepted to CHI 2026 and seven papers accepted to ICLR 2026. We are actively making progress on both the AI and HCI side of human-centered AI!'",
+   "url": "https://saltlab.stanford.edu/",
+   "venue": "CHI 2026 / ICLR 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Interaction with AI companions and psychological well-being",
+   "summary": "Journal paper published 2026-08-04 in Nature Human Behaviour (preprint 'The Rise of AI Companions', arXiv 2506.12605, June 2025). Studies the wellbeing effects of AI companion use.",
+   "url": "https://doi.org/10.1038/s41562-026-02516-2",
+   "venue": "Nature Human Behaviour"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Towards Execution-Grounded Automated AI Research",
+   "summary": "ICML 2026 paper with Chenglei Si, Zitong Yang, Yejin Choi, Emmanuel Candes, Tatsunori Hashimoto. Listed under 2026 on the SALT publications page; part of a line of work with 'The Ideation-Execution Gap' (ICLR 2026) on evaluating LLM-generated research ideas by what happens when they are actually executed.",
+   "url": "https://saltlab.stanford.edu/publication",
+   "venue": "ICML 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
+   "summary": "arXiv:2602.16687, submitted 18 Feb 2026. Authors: Potsawee Manakul, Woody Haosheng Gan, Martijn Bartelds, Guangzhi Sun, William Held, Diyi Yang. Linked from her homepage's 'LLMs and Large Audio Models' project group.",
+   "url": "https://arxiv.org/abs/2602.16687",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Future of Work with AI Agents: Auditing Automation and Augmentation Potential across the U.S. Workforce",
+   "summary": "arXiv:2506.06576 (June 2025), Yijia Shao*, Humishka Zope*, Yucheng Jiang, Jiaxin Pei, David Nguyen, Erik Brynjolfsson, Diyi Yang. Featured as a 'Recent Project' on her homepage with its own project site (futureofwork.saltlab.stanford.edu) and listed under Recent Preprints on the lab site.",
+   "url": "https://arxiv.org/abs/2506.06576",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 teaching incl. CS 195 Supervised Undergraduate Research and CS 191 Senior Project",
+   "summary": "Stanford Profiles lists her 2025-26 courses (Human Centered NLP CS 329X, CS 224N Natural Language Processing with Deep Learning, CS 547 HCI Seminar) and independent studies she supervises, including 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W' and 'Independent Work CS 199'.",
+   "url": "https://profiles.stanford.edu/diyi-yang",
+   "venue": "Stanford Computer Science"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab site has a dedicated 'Stanford Undergraduate and Masters' section inviting undergraduates to apply",
+   "status": "verified",
+   "evidence_url": "https://saltlab.stanford.edu/",
+   "note": "Re-fetched 2026-08-31, HTTP 200. Verbatim from the Contact Us section: 'Stanford Undergraduate and Masters -- We are happy to work with masters or undergraduate students. Please apply via CLiPS if you are interested in research positions at the Stanford NLP Group. Alternatively, you can also fill this form before we fully migrate to CLiPS. We expect applicants to have some prior experience in NLP or ML (prior research experience is not required), and a minimum of 10 hours per week commitment to research. After completing the form, please email Prof. Yang via diyiy@cs.stanford.edu.' The same text appears in first person on her personal getinvolved page: 'I am happy to work with masters or undergraduate students.' REQUIRED as the source words it: 'some prior experience in NLP or ML' and 'a minimum of 10 hours per week commitment to research'. Explicitly NOT required, as worded: 'prior research experience is not required'. Freshness: response header 'last-modified: Sun, 09 Aug 2026 22:06:44 GMT' (22 days before today); the personal page is older at 'Last-Modified: Sat, 17 May 2025 22:53:00 GMT'. Scope limit: the heading says 'Stanford', so this channel is for current Stanford students."
+  },
+  {
+   "signal": "A current undergraduate is listed as a lab member",
+   "status": "verified",
+   "evidence_url": "https://saltlab.stanford.edu/people",
+   "note": "Re-fetched 2026-08-31, HTTP 200. The People page has a 'Master & Undergraduate Students' heading listing 'Yutong Zhang -- Master' and 'Will Fang -- Undergraduate'. CORRECTED COUNT: the Alumni section lists 15 former 'Undergraduate Students' (Yujiao Gao, Vincent Lieng, Jon Saad-Falcon, Anish Thite, Irene Lee, Omar Shaikh, Oscar Liu, Taiwei Shi, Hongxin Zhang, Aryan Pariani, Faye Holt, Sachin Allums, Kwame Nyarkoh-Ocran, Chiji Mgbahurike, Ashna Khetan), not 16 as previously recorded; several list PhD or master's destinations alongside their names."
+  },
+  {
+   "signal": "Supervises undergraduate research and senior-project course numbers",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/diyi-yang",
+   "note": "Re-fetched 2026-08-31. Literal from the Independent Studies (14) block: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)' and 'Independent Work CS 199P (Aut, Win, Spr, Sum)'. CAVEAT ADDED: the page heads this block '2025-26 Courses' and lists nothing for 2026-27, so as of 2026-08-31 this documents the academic year just ended, not a published 2026-27 listing."
+  },
+  {
+   "signal": "CURIS named as the summer alternative to CLiPS",
+   "status": "verified",
+   "evidence_url": "https://nlp.stanford.edu/clips/",
+   "note": "Re-fetched 2026-08-31, HTTP 200. Verbatim CLiPS FAQ: 'Are applications reviewed in the Summer quarter? No, CLiPS will not review applications in the Summer quarter. Students interested in working over the Summer can instead consider applying to CURIS.' Timing note: today (2026-08-31) sits in that excluded summer window, so a CLiPS application now is effectively an Autumn-quarter application. This is a Stanford NLP Group page (the group SALT belongs to), not a SALT-specific page."
+  },
+  {
+   "signal": "Application form access is restricted to Stanford affiliates",
+   "status": "verified",
+   "evidence_url": "https://nlp.stanford.edu/clips/",
+   "note": "Re-fetched 2026-08-31. Verbatim CLiPS FAQ: 'Access to the application form is restricted to Stanford affiliates. If you're a Stanford affiliate and want to access the form, you need to be logged into your Stanford account on Google.' Also verbatim on deadlines: 'Applications are reviewed on a rolling basis, but it's best to get applications in by the second Wednesday of each quarter' and 'we only have a limited number of openings each quarter'. Non-Stanford students are pointed instead to the visitor route: 'We take visitors on a rolling basis, and generally prefer visitors to stay for at least 6 months for high-quality work.'"
+  },
+  {
+   "signal": "The undergraduate/masters application form itself could not be opened",
+   "status": "inferred",
+   "evidence_url": "https://saltlab.stanford.edu/",
+   "note": "CORRECTION to the prior record, which said the form-to-section mapping was 'inferred from adjacent text order and is not confirmed'. Mapping is now CONFIRMED by reading the hrefs in document order on both getinvolved.html and the lab Contact section: 'Prospective Postdocs' -> forms.gle/uFkqBzGChtrVDURb7; 'Stanford Undergraduate and Masters' -> forms.gle/GFVH25xzfwtYXdbs8; 'Outside of Stanford' (visitors) -> forms.gle/PTbH1vVqWMpEgDgVA. (The prior fetch_notes listed these in an order that would have assigned the undergrad form to the postdoc slot.) What remains UNVERIFIED: all three forms.gle short links resolve client-side, so curl returns only a Google JS interstitial (~34.9KB, no form payload) rather than the form -- the questions and whether the forms still accept responses could not be checked. The CLiPS 'Application form' link (forms.gle/D8q1PzpG8c4Yfide7) is likewise unresolvable server-side and is Stanford-login-gated. Status is 'inferred', not 'verified', for exactly this reason. The opening does not depend on these forms: the same paragraph gives a direct, verified email route."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "We are actively looking for students and postdocs. SALT Lab welcomes applicants from diverse backgrounds. Students with backgrounds that are underrepresented or underserved in AI/NLP are especially encouraged to apply. ... Stanford Undergraduate and Masters: We are happy to work with masters or undergraduate students. Please apply via CLiPS if you are interested in research positions at the Stanford NLP Group. Alternatively, you can also fill this form before we fully migrate to CLiPS. We expect applicants to have some prior experience in NLP or ML (prior research experience is not required), and a minimum of 10 hours per week commitment to research. After completing the form, please email Prof. Yang via diyiy@cs.stanford.edu.",
+  "url": "https://saltlab.stanford.edu/",
+  "confidence": 0.9
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "UPHELD on adversarial re-check (2026-08-31). Re-fetched https://saltlab.stanford.edu/ (HTTP 200) and confirmed the required statement exists verbatim, is present-tense, and is undergraduate-specific: the Contact Us section carries a dedicated heading 'Stanford Undergraduate and Masters' followed by 'We are happy to work with masters or undergraduate students. Please apply via CLiPS if you are interested in research positions at the Stanford NLP Group. Alternatively, you can also fill this form before we fully migrate to CLiPS.' The same section opens with 'We are actively looking for students and postdocs.' This is a separate, named channel from the PhD paragraph, which is the disqualifying case ('Please do not email me regarding the PhD admission') and is NOT what this classification rests on. NEW FRESHNESS EVIDENCE that resolves the prior agent's main caveat: the HTTP response for saltlab.stanford.edu carries 'last-modified: Sun, 09 Aug 2026 22:06:44 GMT' -- the page serving this recruiting language was rebuilt 22 days before today, so it is not a stale posting. (It is a Wowchemy static site, so that header reflects the last site build rather than proof this specific sentence was edited then.) The professor's own getinvolved.html repeats it in the first person ('I am happy to work with masters or undergraduate students.') but is itself older -- 'Last-Modified: Sat, 17 May 2025 22:53:00 GMT'. Corroborating and live: a current undergraduate (Will Fang) under 'Master & Undergraduate Students' on /people; CS 195 Supervised Undergraduate Research and CS 191 Senior Project on Stanford Profiles; ICML 2026 news dated 5/2026 on the lab home page. HONEST LIMITS kept rather than assumed away: (1) the opening is scoped to Stanford students -- the heading says 'Stanford Undergraduate and Masters', and non-Stanford students are routed to the 6-month visitor track instead; (2) the three forms.gle application links could NOT be opened -- forms.gle short links now resolve client-side and curl returns only a Google JS interstitial, so the intake forms' contents and whether they still accept responses are UNVERIFIED; (3) the CLiPS application form is Stanford-login-gated and was not opened; (4) today falls inside the window CLiPS excludes -- 'No, CLiPS will not review applications in the Summer quarter' -- so a CLiPS application submitted now would be reviewed for Autumn, where 'it's best to get applications in by the second Wednesday of each quarter'; (5) this is a standing open-door invitation, not a specific funded or numbered position. The email route stated in the same paragraph ('please email Prof. Yang via diyiy@cs.stanford.edu') is verified live and is actionable regardless of the unverifiable forms. Confidence held at 0.9 rather than raised: the new timestamp removes the staleness doubt, but the unopenable intake forms and the standing-door (rather than specific-slot) nature of the offer are newly surfaced reasons not to go higher.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/diyi-yang",
+  "https://profiles.stanford.edu/diyi-yang",
+  "https://cs.stanford.edu/~diyiy/",
+  "https://cs.stanford.edu/~diyiy/getinvolved.html",
+  "https://saltlab.stanford.edu/",
+  "https://saltlab.stanford.edu/people",
+  "https://saltlab.stanford.edu/publication",
+  "https://nlp.stanford.edu/clips/",
+  "https://arxiv.org/abs/2602.16687",
+  "https://arxiv.org/abs/2508.19227",
+  "https://api.openalex.org/authors?search=Diyi+Yang",
+  "https://api.openalex.org/works?filter=author.id:A5089413311,from_publication_date:2025-06-01&sort=publication_date:desc"
+ ],
+ "fetch_notes": "All values come from pages fetched via curl in this task on 2026-08-31. FAILURES: the supplied CS directory link https://cs.stanford.edu/people/diyi-yang returned HTTP 404 ('The requested URL /people/diyi-yang was not found on this server'); https://cs.stanford.edu/person/diyi-yang also 404'd; https://web.stanford.edu/~diyiy/ 404'd; https://saltlab.stanford.edu/publications/ 404'd (correct path is /publication, singular). WORKED: profiles.stanford.edu/diyi-yang (title, bio, 2025-26 courses, links), cs.stanford.edu/~diyiy/ (personal homepage, reached from the Personal Site link on Profiles), cs.stanford.edu/~diyiy/getinvolved.html, saltlab.stanford.edu (home + Contact section), /people, /publication, nlp.stanford.edu/clips/, two arXiv abs pages. EMAIL: diyiy@cs.stanford.edu appears literally in the fetched text of cs.stanford.edu/~diyiy/, its getinvolved.html, and the SALT Contact section — not guessed. OPENALEX: author search returned six 'Diyi Yang' entities; A5089413311 (354 works, last known institutions Stanford Medicine / Stanford University) is the match used, disambiguated by title overlap with the SALT publications page. 18 works dated 2025-06-01 or later. NOT VERIFIED: the three application links on getinvolved.html and the lab Contact section are Google Forms (forms.gle/GFVH25xzfwtYXdbs8, /PTbH1vVqWMpEgDgVA, /uFkqBzGChtrVDURb7) which were not opened, so which form maps to postdoc vs. undergrad/masters vs. visitor is inferred from adjacent text order and is not confirmed; the CLiPS application form itself is Stanford-login-gated and was not opened. The SALT lab pages carry no 'last updated' date, so the recruiting language could not be independently timestamped. No grant records were fetched — the lab lists sponsors (NSF, ONR, Stanford HAI, and others) on its home page but with no award numbers, so no grant evidence item was created. Awards on the personal homepage (e.g. 'Best Paper Honorable Mention, SIGCHI, 2026', 'Best Paper Honorable Mention, UIST, 2025') were read but recorded only as context, not as evidence items, since no per-award source page was fetched. || ADVERSARIAL RE-CHECK 2026-08-31 (all curl, this task). VERDICT: OPENING UPHELD. (1) https://saltlab.stanford.edu/ HTTP 200 -- the required statement exists verbatim, present-tense and undergraduate-specific under its own heading 'Stanford Undergraduate and Masters': 'We are happy to work with masters or undergraduate students. Please apply via CLiPS...'. Not a PhD-only page: the PhD paragraph is separate and explicitly says 'Please do not email me regarding the PhD admission', and the classification does not rest on it. Not a generic contact page: the section opens 'We are actively looking for students and postdocs.' (2) EMAIL RE-VERIFIED: curl of the email_source_url https://cs.stanford.edu/~diyiy/getinvolved.html (HTTP 200) piped to grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+' returned exactly diyiy@cs.stanford.edu (and the same string with a trailing period) -- the address literally appears on its source page, so email and email_source_url are kept, not nulled. (3) NEW FRESHNESS DATA the prior pass lacked: response header 'last-modified: Sun, 09 Aug 2026 22:06:44 GMT' on saltlab.stanford.edu (22 days old) and 'Last-Modified: Sat, 17 May 2025 22:53:00 GMT' on getinvolved.html. This resolves the prior note that the recruiting language 'could not be independently timestamped'; caveat that Wowchemy rebuilds stamp the whole site. (4) NEW FAILURE: the three forms.gle links return a Google client-side JS interstitial under curl, not the form, so their contents and open/closed state are UNVERIFIED; the docs.google.com/forms link found on the CLiPS page (19uyf5YSiQd9PGkl26Lnbpze3Ab_ipTSoMNIctrVQG2o) resolves to a form titled 'New NLP Website Comments / Bug Reports' and is NOT the CLiPS application form -- the application form is forms.gle/D8q1PzpG8c4Yfide7, which is also unresolvable server-side and Stanford-login-gated. (5) CORRECTED: form-to-section mapping now read from href document order (undergrad = GFVH25xzfwtYXdbs8, postdoc = uFkqBzGChtrVDURb7, visitor = PTbH1vVqWMpEgDgVA); alumni undergraduate count corrected from 16 to 15; a 2025-26-vs-2026-27 caveat added to the Stanford Profiles course signal. (6) All five prior 'verified' undergrad_signals were re-fetched and each is backed by a literal quote from a page fetched in this task, so all five keep status 'verified'; a sixth signal recording the unverifiable forms was added at status 'inferred'. (7) recruiting.confidence held at 0.90 -- not raised despite the new timestamp, because the intake forms could not be opened and the offer is a standing open door rather than a specific funded slot."
+}

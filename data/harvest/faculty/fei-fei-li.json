@@ -1,0 +1,172 @@
+{
+ "slug": "fei-fei-li",
+ "name": "Fei-Fei Li",
+ "title": "Sequoia Capital Professor, Senior Fellow at HAI and Professor, by courtesy, of Operations, Information and Technology at the Graduate School of Business",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/fei-fei-li",
+ "lab_name": "Stanford Vision and Learning Lab (SVL)",
+ "lab_url": "https://svl.stanford.edu/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "computer-vision",
+  "Robotics"
+ ],
+ "research_topics": [
+  "embodied AI and household robotics benchmarks",
+  "bimanual mobile manipulation",
+  "vision-language models for robot affordance and control",
+  "embodied LLM agents and test-time planning",
+  "3D generation and image tokenization / spatial intelligence",
+  "long-form video understanding",
+  "AI-assisted care and medical vision-language models",
+  "evidence-based AI policy"
+ ],
+ "current_direction": [
+  "Long-horizon household mobile manipulation benchmarked in simulation (BEHAVIOR-1K, 2026 Challenge)",
+  "Reflective / test-time planning for embodied LLM agents",
+  "Scalable robot demonstration generation for bimanual mobile manipulation",
+  "Spatial intelligence: 3D generation and diffusion-based image tokenization",
+  "Ambient and AI-assisted care: medical vision-language and BCI-driven robotic assistance"
+ ],
+ "current_direction_basis": "Driven by evidence items 1-7, all 2025-2026. The 2026 BEHAVIOR Challenge page (launched 07/02/2026, deadline 10/16/2026, 100 full-length household tasks, 20,000 teleoperation demos, pi0.5 and GR00T N1.7 baselines) and the Oct-2025 MoMaGen preprint show the household mobile-manipulation / demonstration-generation thrust. The Feb-2026 arXiv preprint 'Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs' drives the embodied-LLM planning phrase. ICCV 2025 'Flow to the Mode' and 'Repurposing 2D Diffusion Models with Gaussian Atlas for 3D Generation' drive the spatial-intelligence phrase. The 2025 'EEG-Based Brain-Computer Interface for Robotic Assistance' preprint and her 2025-26 teaching of AI-Assisted Care (CS 337 / MED 277) drive the AI-assisted-care phrase. Not based on her biography; the bio's broad framing was set aside in favor of dated 2025-2026 outputs.",
+ "evidence": [
+  {
+   "kind": "project",
+   "year": 2026,
+   "title": "2026 BEHAVIOR Challenge (BEHAVIOR-1K)",
+   "summary": "Currently-live SVL challenge: 'solve 100 full-length household tasks in the realistic BEHAVIOR-1K environment.' Important Dates listed as Challenge Launch 07/02/2026, Submission Deadline 10/16/2026, Winners Announcement 11/04/2026. $11,000 total prize pool. Provides 20,000 human teleoperation demos (1,950 hours) and pi0.5 / GR00T N1.7 baselines. Page footer reads 'Copyright 2026 Stanford Vision and Learning Lab'.",
+   "url": "http://behavior.stanford.edu/challenge/index.html",
+   "venue": null
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+   "summary": "Preprint dated 2026-02-24 with Yining Hong, Huang Huang, Manling Li, Li Fei-Fei, Leonidas Guibas, Jiajun Wu, Yejin Choi. Verified by fetching the arXiv abstract page (listed under Computer Science > Machine Learning).",
+   "url": "https://arxiv.org/abs/2602.21198",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "MoMaGen: Generating Demonstrations under Soft and Hard Constraints for Multi-Step Bimanual Mobile Manipulation",
+   "summary": "Preprint dated 2025-10-21. Authors include Chengshu Li, Mengdi Xu, Yunfan Jiang, Josiah Wong, Cem Gokmen, Ruohan Zhang, Weiyu Liu, Jiajun Wu and Li Fei-Fei (OpenAlex authorship record). Demonstration-generation work feeding the bimanual mobile manipulation line.",
+   "url": "http://arxiv.org/abs/2510.18316",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Flow to the Mode: Mode-Seeking Diffusion Autoencoders for State-of-the-Art Image Tokenization",
+   "summary": "Conference paper dated 2025-10-19, DOI 10.1109/iccv51701.2025.01810 (ICCV 2025). Authors Kyle Sargent, Kyle Hsu, Justin Johnson, Li Fei-Fei, Jiajun Wu; institutions Stanford University and University of Michigan.",
+   "url": "https://doi.org/10.1109/iccv51701.2025.01810",
+   "venue": "ICCV 2025"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "UAD: Unsupervised Affordance Distillation for Generalization in Robotic Manipulation",
+   "summary": "ICRA 2025 conference paper (DOI 10.1109/icra55743.2025.11128868, dated 2025-05-19) with an arXiv preprint dated 2025-06-10. Authors Yihe Tang, Wenlong Huang, Yingke Wang, Chengshu Li, Roy Yuan, Ruohan Zhang, Jiajun Wu, Li Fei-Fei; Stanford University.",
+   "url": "http://arxiv.org/abs/2506.09284",
+   "venue": "ICRA 2025"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Advancing science- and evidence-based AI policy",
+   "summary": "Article in Science dated 2025-07-31, DOI 10.1126/science.adu8449. Author list from OpenAlex includes Rishi Bommasani, Sanjeev Arora, Jennifer Chayes, Yejin Choi, Mariano-Florentino Cuellar, Li Fei-Fei, Daniel E. Ho, Dan Jurafsky, Oluwasanmi Koyejo, Hima Lakkaraju, Arvind Narayanan and Alondra Nelson. Evidence of an active AI-policy strand alongside the technical work.",
+   "url": "https://doi.org/10.1126/science.adu8449",
+   "venue": "Science"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 Courses: CS 231N Deep Learning for Computer Vision (Spr); AI-Assisted Care BIOE 277 / CS 337 / MED 277 / PSYC 278 (Aut)",
+   "summary": "Listed under '2025-26 Courses' on her Stanford Profiles teaching tab. The same tab lists her supervising CS 195 Supervised Undergraduate Research, CS 199/199P Independent Work, CS 191 Senior Project and CS 191W Writing Intensive Senior Research Project across Aut/Win/Spr/Sum.",
+   "url": "https://profiles.stanford.edu/fei-fei-li?tab=teaching",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "PAIR (a research group under SVL) hosts an undated BS/MS Research Assistant call; text is real and undergraduate-relevant, but its currency is unverified",
+   "status": "likely",
+   "evidence_url": "http://pair.stanford.edu/join",
+   "note": "TEXT RE-VERIFIED VERBATIM 2026-08-31 by curl of https://pair.stanford.edu/join (HTTP 200). Present-tense and undergraduate-relevant: 'We are actively seeking applicants for the following two positions:' followed by list items 'BS/MS Research Assistants (see more info below)' and 'Postdoctoral Fellows'. Body: 'PAIR call for BS/MS research assistants - We are looking for students to work on several amazing projects that involve Deep reinforcement and imitation learning on physical robots. Visual representation learning for physical interaction. Deep learning-based methods for planning & control. Simulation to real-world policy transfer. Large-scale robotic teleoperation for robotic manipulation tasks.' And: 'The primary qualification is interest in doing research, and if you have that we encourage you to apply even if you have not had prior research experience or have limited experience with AI.' REQUIRED (page heading 'Requirements', source wording): 'At least 10 hours per week of expected commitment.' / 'Python/C++ programming' / 'Experience in a subset of Computer Vision, Machine Learning, Reinforcement Learning, or Robotics'. PREFERRED (page heading 'More details', source wording): 'Junior and 1st year MS preferred.' / 'Graduating Seniors and MS students considered on a case by case basis.' / 'Additional bonus points for: more in-depth coursework (Convex Optimization, Advanced Reinforcement Learning, Graphical Models, Advanced Robotics, Manipulation), familiarity with deep learning frameworks such as TF/PyTorch, and experience with using simulators such as MuJoCo, cloud infrastructure, or mobile app development'. WHY DOWNGRADED FROM 'verified' TO 'likely' - four independent staleness findings, each from a page fetched 2026-08-31: (1) FROZEN CONTENT: the live page body is byte-for-byte identical to the Internet Archive capture of 2024-11-02. SHA-1 of the live 13,983-byte response, base32-encoded, is 6BULNES2J5TIGRWOQFHGJJTRLNT2DGWQ, exactly the CDX digest recorded for timestamp 20241102175434. The posting has therefore not been touched in ~22 months. (2) The Wayback CDX index (collapse=digest) returns only four distinct versions of this page ever: 2018-11-13, 2019-07-17, 2021-06-22, 2024-11-02. It is a standing page, not a refreshed job posting. (3) The HTTP Last-Modified header reads 'Sun, 06 Apr 2025 22:18:50 GMT', but the identical timestamp is returned for /people and /publications too, and the content hash proves the body did not change then - so that header records a site-wide redeploy, not an edit to the recruiting text. (4) APPLICATION CHANNEL UNVERIFIABLE: the 'this form' link https://forms.gle/6CJYNmzmcGvf9yZA8 resolves to https://docs.google.com/forms/d/e/1FAIpQLSeRXEtlm6b405zY4m9f-ykJqxWN4TIVrwsoqZmIcnIWcQLIAA/viewform which returns HTTP 401 behind a Google sign-in wall ('You must sign in to access this content'). It could not be confirmed that the form still accepts responses. A signed-in Stanford student may well be able to open it; this agent cannot. ALSO: PAIR's own publications page lists nothing after 2024 (year counts 2017:5, 2018:8, 2019:12, 2020:12, 2021:18, 2022:3, 2023:7, 2024:6, and zero for 2025 or 2026), and PAIR's people page still lists Silvio Savarese as a current 'Associate Professor' while Stanford Profiles now shows him as 'Adjunct Professor, Computer Science' - the PAIR microsite is not being maintained even though SVL is very active. The page also never states that Fei-Fei Li personally supervises these RAs; she is simply the first of three faculty listed under PAIR 'Current Members > Faculty Members'."
+  },
+  {
+   "signal": "SVL lab homepage carries a standing 'Join us' application survey open to Stanford students",
+   "status": "verified",
+   "evidence_url": "https://svl.stanford.edu/",
+   "note": "RE-VERIFIED 2026-08-31 by curl of https://svl.stanford.edu/. Verbatim: 'Join us : If you are interested in research opportunities at SVL, please fill out this application survey . (Stanford students only)'. This page IS actively maintained - its HTTP Last-Modified is 'Sat, 18 Apr 2026 20:10:45 GMT', i.e. four months old, in contrast to the frozen PAIR microsite. TWO LIMITS, both of which keep this from being an undergraduate-specific opening: (a) it says 'Stanford students only' and never names undergraduates, so it is undergrad-inclusive, not undergrad-directed; (b) the survey link https://forms.gle/TuCU51tLBpZimyCB8 resolves to https://docs.google.com/forms/d/e/1FAIpQLSdafNnQvV8c27vlh92PSQUmpMBjLaMtE5CQnNDvdn-sBotPog/viewform and returns HTTP 401 behind a Google sign-in wall, so it could not be confirmed that the survey still accepts responses. Status stays 'verified' because the claim being made is that the standing link and its wording exist on a currently-maintained page, and that was read verbatim today."
+  },
+  {
+   "signal": "PAIR people page names many former undergraduate researchers, showing a real track record of undergrad involvement",
+   "status": "verified",
+   "evidence_url": "http://pair.stanford.edu/people",
+   "note": "RE-VERIFIED 2026-08-31 by curl of https://pair.stanford.edu/people. The literal string 'Undergraduate' occurs 19 times; the role labels break down as 'Undergraduate Student, CS' x7, 'Undergraduate Student CS' x2, 'Undergraduate, Math' x2, 'Undergraduate Student, Physics' x2, and one each of 'Undergraduate Student Caltech', 'Undergraduate Student, SymSys', 'Undergraduate Student, Math & CS', 'Undergraduate, CS', 'Undergraduate, Math & CS', 'Undergraduate, Physics'. Fei-Fei Li is listed first under 'Current Members > Faculty Members'. IMPORTANT: every one of these undergraduate labels sits under the 'Alumni' heading. The 'Current Members > Students' list contains only Ph.D. and Master's students (Bohan Wu, Chengshu Eric Li, Chen Wang, Sanjana Srivastava, Josiah Wong, Wenlong Huang, Cem Gokmen, Yunfan Jiang, Wensi Ai, Yingke Wang, Tianyuan Dai). So this evidences a historical track record of taking undergraduates, NOT a current undergraduate cohort - and the roster is itself stale (Savarese still shown as 'Associate Professor')."
+  },
+  {
+   "signal": "She is listed as supervisor of Stanford's undergraduate research course numbers for the current 2025-26 academic year",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/fei-fei-li?tab=teaching",
+   "note": "RE-VERIFIED 2026-08-31 by curl of https://profiles.stanford.edu/fei-fei-li?tab=teaching. Under the heading '2025-26 Courses' > 'Independent Studies (17)' the page lists verbatim: 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)'. A separate 'Prior Year Courses' section holds 2024-25, 2023-24 and 2022-23, confirming the above really is the current year. This is the strongest CURRENT undergraduate signal in the record: it is dated to 2025-26 and it is undergraduate-specific by course definition. It is still a supervision mechanism she is registered for, not an advertised opening with slots."
+  },
+  {
+   "signal": "The 2026 BEHAVIOR Challenge is open to any participant and explicitly welcomes newcomers",
+   "status": "verified",
+   "evidence_url": "http://behavior.stanford.edu/challenge/index.html",
+   "note": "RE-VERIFIED 2026-08-31 by curl of http://behavior.stanford.edu/challenge/index.html. Verbatim: \"Whether you're a robotics veteran or just entering the field, we're here to support you.\" Dates read verbatim off the page: 'Challenge Launch: 07/02/2026', 'Submission Deadline: 10/16/2026', 'Winners Announcement: 11/04/2026'. Also verbatim: 'Attend office hours every Monday, 5-6pm Pacific Time, over Zoom .' and the footer '(c) 2026 Stanford Vision and Learning Lab'. This is NOT a recruiting posting and says nothing about undergraduates, so it cannot support an OPENING; it is a currently-open, low-barrier way for a student to engage with the lab's flagship project alongside a cold email, and it is the single best proof that SVL is active right now."
+  },
+  {
+   "signal": "CURIS participation",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "No CURIS mention was found on any page fetched in this task (SVL homepage/people/research/publications, PAIR home/people/join, BEHAVIOR site, Stanford Profiles). Not checked against the CURIS project database itself."
+  }
+ ],
+ "recruiting": {
+  "status": "unverified",
+  "statement": "An explicit, present-tense, undergraduate-relevant sentence DOES exist and was read verbatim on 2026-08-31 at https://pair.stanford.edu/join : 'We are actively seeking applicants for the following two positions:' with the list item 'BS/MS Research Assistants (see more info below)', plus 'Junior and 1st year MS preferred. Graduating Seniors and MS students considered on a case by case basis.' and 'If you would like to apply, please fill out this form. We will try to get back to you within a week of you filling out the form. If you have any questions please contact Helen Roman at hmroman at cs dot stanford dot edu.' IT CANNOT BE SHOWN TO BE CURRENTLY OPEN. The live page is byte-for-byte identical to the 2024-11-02 Internet Archive capture (matching base32 SHA-1 digest 6BULNES2J5TIGRWOQFHGJJTRLNT2DGWQ), the Wayback index records only four versions of the page since 2018, the linked application form returns HTTP 401 behind a Google sign-in wall so its acceptance state is unknown, PAIR's publications page lists nothing after 2024, and PAIR's roster still shows Silvio Savarese as 'Associate Professor' where Stanford Profiles now shows 'Adjunct Professor'. The page also does not say Fei-Fei Li supervises these RAs. Separately, https://svl.stanford.edu/ (Last-Modified 2026-04-18, actively maintained) carries: 'Join us : If you are interested in research opportunities at SVL, please fill out this application survey . (Stanford students only)' - open to Stanford students generally, not undergraduate-specific, and that form is also 401-gated. Status is 'unverified' rather than 'open' or 'closed': no page says recruiting has stopped, and no page shows the call is still live.",
+  "url": "http://pair.stanford.edu/join",
+  "confidence": 0.25
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "DOWNGRADED from OPENING to OUTREACH by adversarial fact-check on 2026-08-31. The prior OPENING call was not fabricated - the quoted sentence is genuinely on the live page, it is present-tense, and 'BS/MS Research Assistants' plus 'Junior and 1st year MS preferred' is unambiguously undergraduate-relevant. What fails is CURRENCY, and an 'apply now' recommendation depends on currency. Evidence: (1) the live https://pair.stanford.edu/join is byte-for-byte identical to the Internet Archive's 2024-11-02 capture - the base32 SHA-1 of today's 13,983-byte response is 6BULNES2J5TIGRWOQFHGJJTRLNT2DGWQ, the exact CDX digest for timestamp 20241102175434 - so the posting has been untouched for ~22 months; the Last-Modified of 2025-04-06 is a site-wide redeploy, since /people and /publications carry that identical timestamp while the content hash is unchanged. (2) Wayback lists only four distinct versions of this page since 2018: it is standing boilerplate, not a maintained job ad. (3) The only application channel, https://forms.gle/6CJYNmzmcGvf9yZA8 -> docs.google.com/forms/d/e/1FAIpQLSeRXEtlm6b405zY4m9f-ykJqxWN4TIVrwsoqZmIcnIWcQLIAA/viewform, returns HTTP 401 behind a Google sign-in wall, so per the verification rule for access-gated forms it cannot be confirmed to be accepting responses. (4) The PAIR microsite is demonstrably unmaintained: its publications page lists nothing after 2024, and it still names Silvio Savarese a current 'Associate Professor' while Stanford Profiles now lists him as 'Adjunct Professor, Computer Science'. (5) PAIR's 'Current Members' contains no undergraduates at all - all 19 undergraduate labels are under 'Alumni'. (6) The page never states that Fei-Fei Li supervises these RAs; she is one of three faculty listed on a sub-group site. OUTREACH rather than WATCH because the lab itself is emphatically active in 2026 and there are real, current, undergraduate-relevant handles for a cold email: her Stanford Profiles teaching tab lists, under '2025-26 Courses', 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191' and 'Writing Intensive Senior Research Project CS 191W'; the actively-maintained SVL homepage (Last-Modified 2026-04-18) carries a standing 'Join us ... application survey . (Stanford students only)'; and the 2026 BEHAVIOR Challenge is live now (launch 07/02/2026, submission deadline 10/16/2026, weekly Monday office hours, footer '(c) 2026 Stanford Vision and Learning Lab'). The honest recommendation is a targeted cold email plus the SVL survey and/or BEHAVIOR participation - not 'apply to a posted opening'. A caveat worth surfacing to the student: her Stanford Profiles bio states she is 'currently a Co-founder/CEO of World Labs'.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/fei-fei-li",
+  "https://profiles.stanford.edu/fei-fei-li",
+  "https://profiles.stanford.edu/fei-fei-li?tab=teaching",
+  "https://profiles.stanford.edu/fei-fei-li?tab=publications",
+  "https://svl.stanford.edu/",
+  "https://svl.stanford.edu/people",
+  "https://svl.stanford.edu/research",
+  "https://svl.stanford.edu/publications",
+  "http://pair.stanford.edu/",
+  "http://pair.stanford.edu/people",
+  "http://pair.stanford.edu/join",
+  "http://behavior.stanford.edu/",
+  "http://behavior.stanford.edu/challenge/index.html",
+  "https://forms.gle/TuCU51tLBpZimyCB8",
+  "https://forms.gle/6CJYNmzmcGvf9yZA8",
+  "https://arxiv.org/abs/2602.21198",
+  "https://api.openalex.org/authors?search=Fei-Fei%20Li",
+  "https://api.openalex.org/works?filter=author.id:A5100450462,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://api.semanticscholar.org/graph/v1/author/search?query=Fei-Fei+Li",
+  "https://pair.stanford.edu/publications",
+  "https://profiles.stanford.edu/silvio-savarese",
+  "https://web.archive.org/cdx/search/cdx?url=pair.stanford.edu%2Fjoin&output=json&fl=timestamp,statuscode,digest&collapse=digest",
+  "https://docs.google.com/forms/d/e/1FAIpQLSeRXEtlm6b405zY4m9f-ykJqxWN4TIVrwsoqZmIcnIWcQLIAA/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSdafNnQvV8c27vlh92PSQUmpMBjLaMtE5CQnNDvdn-sBotPog/viewform"
+ ],
+ "fetch_notes": "FETCHED OK: profiles.stanford.edu/fei-fei-li (bio, teaching, publications tabs) - this is the real faculty page and the title matches the CS directory string exactly. svl.stanford.edu home + /people. pair.stanford.edu home + /people + /join. behavior.stanford.edu home + /challenge/index.html. arxiv.org/abs/2602.21198. OpenAlex works API. FAILURES / GAPS: (1) The supplied directory link https://cs.stanford.edu/people/fei-fei-li returns HTTP 404 'The requested URL /people/fei-fei-li was not found on this server' - faculty_url is therefore the Stanford Profiles page, not the CS directory. (2) The arXiv API (export.arxiv.org, both http and https) was unreachable from this environment - curl returned code 000 / 0 bytes on every attempt, so recent-preprint discovery came from OpenAlex instead; the one 2026 arXiv paper was verified by fetching its abs page directly, which did work. (3) svl.stanford.edu/publications and /research render their content via JavaScript (assets/js/index.4.3098ab78.js) - curl returns only the page chrome, so no publication or project list could be read from the lab site itself. (4) Both Google Forms (the SVL application survey and the PAIR application form) are JS/login gated and returned no readable question text via curl; their existence and their linking text are verified, their contents are not. (5) aicare.stanford.edu returned an empty body. (6) Semantic Scholar author search returned 5,118 matches for 'Fei-Fei Li' with no affiliation data populated, too noisy to disambiguate, so it was not used. (7) IMPORTANT DATA-QUALITY NOTE: OpenAlex author A5100450462 ('Li Fei-Fei', 742 works) is a CONFLATED profile mixing the Stanford computer scientist with unrelated authors at Liaoning University, Beijing Union University, Shanghai Jiao Tong / Ruijin Hospital and Dalian Medical University - its 2025-26 feed included papers on English-writing pedagogy, nuclear receptors, brain organoids and plastination anatomy that are NOT hers. Every publication recorded above was kept only after confirming a known SVL collaborator in the author list (Jiajun Wu, Ehsan Adeli, Ruohan Zhang, Wenlong Huang, Chengshu Li, Leonidas Guibas, Manling Li, Gordon Wetzstein, Juan Carlos Niebles). (8) EMAIL: feifeili@cs.stanford.edu is de-obfuscated from the literal string 'feifeili [at] cs.stanford [dot] edu' printed next to her name on http://pair.stanford.edu/people; it was not found in unobfuscated form on any page, and Stanford Profiles exposes only an 'Email Profile' button, not an address. The SVL and PAIR program manager contact also appears on fetched pages as 'Helen Roman - hmroman at stanford dot edu' (svl.stanford.edu) and 'hmroman at cs dot stanford dot edu' (pair.stanford.edu/join); the two pages give different domains for her, which is unresolved. (9) Note for the reader: her Stanford Profiles bio states she is 'currently a Co-founder/CEO of World Labs', so her available time at Stanford may be limited - this is quoted from the fetched bio, not inferred.\n\n=== ADVERSARIAL FACT-CHECK 2026-08-31 (state downgraded OPENING -> OUTREACH) ===\nRE-FETCHED AND CONFIRMED LIVE: pair.stanford.edu/join (200), pair.stanford.edu/people (200), pair.stanford.edu/publications (200), svl.stanford.edu (200), profiles.stanford.edu/fei-fei-li and ?tab=teaching (200), behavior.stanford.edu/challenge/index.html (200), profiles.stanford.edu/silvio-savarese (200), Wayback CDX API for pair.stanford.edu/join.\nKEY FINDING - THE RECRUITING PAGE IS FROZEN: the live /join response (13,983 bytes) hashes to base32 SHA-1 6BULNES2J5TIGRWOQFHGJJTRLNT2DGWQ, which is exactly the Wayback CDX digest for capture 20241102175434 (2024-11-02). Byte-identical, so the 'actively seeking' text has not been edited in ~22 months. CDX with collapse=digest returns only four versions ever: 20181113045919, 20190717200435, 20210622204937, 20241102175434. The HTTP Last-Modified 'Sun, 06 Apr 2025 22:18:50 GMT' is returned identically for /join, /people and /publications, so it marks a site redeploy, not a content edit. Wayback page renders (web.archive.org/web/...) returned 503/empty on every attempt, so the snapshot bodies could not be diffed directly - the hash comparison is what carries this conclusion.\nBOTH APPLICATION FORMS ARE ACCESS-GATED AND UNVERIFIABLE: forms.gle/6CJYNmzmcGvf9yZA8 (PAIR) resolves via the ?_iipp=1 interstitial bypass to docs.google.com/forms/d/e/1FAIpQLSeRXEtlm6b405zY4m9f-ykJqxWN4TIVrwsoqZmIcnIWcQLIAA/viewform -> HTTP 401; forms.gle/TuCU51tLBpZimyCB8 (SVL survey) resolves to docs.google.com/forms/d/e/1FAIpQLSdafNnQvV8c27vlh92PSQUmpMBjLaMtE5CQnNDvdn-sBotPog/viewform -> HTTP 401. The 401 body is a generic Google sign-in wall ('You must sign in to access this content'), NOT a 'no longer accepting responses' notice - so neither form is shown to be dead, but neither is shown to be live.\nPAIR MICROSITE IS UNMAINTAINED: pair.stanford.edu/publications lists no publication years after 2024 (2017:5, 2018:8, 2019:12, 2020:12, 2021:18, 2022:3, 2023:7, 2024:6, 2025:0, 2026:0). pair.stanford.edu/people lists Silvio Savarese under 'Current Members > Faculty Members' as 'Associate Professor', whereas profiles.stanford.edu/silvio-savarese (fetched today) shows 'Adjunct Professor, Computer Science'. All 19 'Undergraduate' labels on the PAIR people page fall under 'Alumni'. By contrast svl.stanford.edu returns Last-Modified 'Sat, 18 Apr 2026 20:10:45 GMT' and behavior.stanford.edu carries live 2026 dates - SVL is active, the PAIR sub-site is the stale part.\nEMAIL NULLED PER VERIFICATION RULE: curl of the recorded email_source_url http://pair.stanford.edu/people, piped through grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+', yields only 'footer-stanford-logo@2x.png'. The literal string 'feifeili@cs.stanford.edu' does NOT appear anywhere on that page. What the page actually prints beside her name is the obfuscated 'feifeili [at] cs.stanford [dot] edu'. Because the literal address does not appear, both email and email_source_url were set to null. RECOVERY NOTE FOR A HUMAN REVIEWER: the obfuscated string above is real, was read verbatim from that page on 2026-08-31, and de-obfuscates deterministically to feifeili<at>cs.stanford<dot>edu; a reviewer who accepts de-obfuscated addresses can restore it, but note the source page is the same stale PAIR roster flagged above. Stanford Profiles exposes only an 'Email Profile' button, no address. The program-manager contact appears as 'Helen Roman at hmroman at cs dot stanford dot edu' on pair.stanford.edu/join.\nWHAT SURVIVED VERIFICATION UNCHANGED: the SVL 'Join us' survey wording, the 19 undergraduate alumni labels, the 2025-26 CS 195 / CS 191 / CS 191W / CS 199 teaching listings, and every BEHAVIOR Challenge date and quote - all re-read verbatim today."
+}

@@ -1,0 +1,146 @@
+{
+  "slug": "christopher-piech",
+  "name": "Christopher Piech",
+  "title": "Associate Professor (Teaching) of Computer Science and, by courtesy, in the Graduate School of Education",
+  "department": "Computer Science (courtesy: Graduate School of Education)",
+  "university": "Stanford University",
+  "faculty_url": "https://www.cs.stanford.edu/people/chris-piech",
+  "lab_name": "The Piech Lab",
+  "lab_url": "https://piechlab.stanford.edu/",
+  "email": "cpiech@stanford.edu",
+  "email_source_url": "https://ed.stanford.edu/faculty/cpiech",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "computational-education"
+  ],
+  "research_topics": [
+    "computational education / CS education at scale",
+    "large language models for programming feedback and grading",
+    "automated and interpretable educational assessment",
+    "LLM simulation environments for instructor training",
+    "large-scale field experiments in massive online CS courses",
+    "offline reinforcement learning",
+    "AI + human-computer interaction for education and healthcare (lab self-description)"
+  ],
+  "current_direction": [
+    "LLM 'simulacra' environments for training CS1 instructors (EducaSim)",
+    "Aligning small/open language models for scalable programming feedback in a massive global course",
+    "LLM-only estimators and prompting methods for educational measurement (PromptNCE; interpretable automated scoring)",
+    "Large-scale observational studies and course-scale interventions on feedback and assessment",
+    "Offline RL applied outside education, e.g. discovering high-quality chess puzzles"
+  ],
+  "current_direction_basis": "Inferred from 2026 evidence fetched in this task, not from the older bio page. Drivers: (1) arXiv 2603.11444 'EducaSim: Interactive Simulacra for CS1 Instructional Practice' (Mohne, Vo, Demszky, Piech, submitted 12 Mar 2026, verified on arxiv.org/abs/2603.11444); (2) 'Aligning Small Language Models for Programming Feedback: Towards Scalable Coding Support in a Massive Global Course' (Koutcheme, Woodrow, Piech, 2026-02-13, doi 10.1145/3770762.3772539 via OpenAlex); (3) arXiv 2605.21776 'PromptNCE' (Woodrow & Piech, 20 May 2026, verified on arXiv) together with 'Interpretability from the Ground Up: Stakeholder-Centric Design of Automated Scoring in Educational Assessments' (Kim, Hardy, Tey, Thille, Piech, doi 10.18653/v1/2026.findings-acl.1859); (4) 'A Large-Scale Observational Study on Obtaining Lightweight, Randomized Weekly Student Feedback' (Kim, Lee, Thille, Piech, 2026) and 'Personalized Exam Prep (PEP)' (Cochran & Piech, 2026-02-13); (5) arXiv 2608.14851 'Discovering High-Quality Chess Puzzles with Offline Reinforcement Learning' (Nie et al. incl. Piech, submitted 14 Aug 2026, verified on arXiv). The dominant thread across 2025-2026 is generative-AI feedback and assessment inside very large CS courses.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "EducaSim: Interactive Simulacra for CS1 Instructional Practice",
+      "summary": "Preprint with Cameron Mohne, Nicholas Vo, Dora Demszky and Chris Piech on interactive simulacra for CS1 instructional practice. Submitted 12 Mar 2026, cs.CY. Title, authors and submission date read directly off the arXiv abstract page.",
+      "url": "https://arxiv.org/abs/2603.11444",
+      "venue": "arXiv preprint (cs.CY)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "PromptNCE: Pointwise Mutual Information Predictions Using Only LLMs and Contrastive Estimation Prompts",
+      "summary": "Two-author preprint by Juliette Woodrow (Piech Lab PhD student) and Chris Piech. Submitted 20 May 2026, cs.CL. Verified on the arXiv abstract page.",
+      "url": "https://arxiv.org/abs/2605.21776",
+      "venue": "arXiv preprint (cs.CL)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Aligning Small Language Models for Programming Feedback: Towards Scalable Coding Support in a Massive Global Course",
+      "summary": "Conference paper by Charles Koutcheme, Juliette Woodrow and Chris Piech, publication date 2026-02-13, on aligning small LMs to give programming feedback at the scale of a massive global course. Record retrieved from the OpenAlex works API for author A5074969309; OpenAlex returned no venue display name for this record, only the DOI.",
+      "url": "https://doi.org/10.1145/3770762.3772539",
+      "venue": null
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "A Large-Scale Observational Study on Obtaining Lightweight, Randomized Weekly Student Feedback: Associations with End-of-Term Course Evaluations",
+      "summary": "Work with Yunsung Kim, Hansol Lee and Candace Thille on lightweight randomized weekly student feedback and its association with end-of-term course evaluations. OpenAlex lists a conference-paper version dated 2026-06-22 (doi 10.1145/3774398.3811622) and an arXiv preprint dated 2026-05-04 (arXiv:2605.02281).",
+      "url": "https://doi.org/10.1145/3774398.3811622",
+      "venue": null
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Discovering High-Quality Chess Puzzles with Offline Reinforcement Learning",
+      "summary": "Preprint with Allen Nie (Piech Lab PhD student), Anirudhan Badrinath, Nicholas Tomlin, Timothy Dai, Carissa Yip, Rose E Wang, Emma Brunskill and Chris Piech. Submitted 14 Aug 2026, cs.AI - the most recent item found, showing the group applying offline RL beyond classroom settings. Verified on the arXiv abstract page.",
+      "url": "https://arxiv.org/abs/2608.14851",
+      "venue": "arXiv preprint (cs.AI)"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "ExploreCourses 2026-2027 teaching and independent-study listings for Chris Piech",
+      "summary": "ExploreCourses instructor page, checked for both academicYear=20252026 and academicYear=20262027, shows identical 'Currently teaching' entries: OSPHONGK 96 Computational Education (Autumn), CS 109 Introduction to Probability for Computer Scientists (Winter), CS 221 Artificial Intelligence: Principles and Techniques (Spring), plus '+ 13 independent studies...' including 'CS 191: Senior Project', 'CS 191W: Writing Intensive Senior Research Project', 'CS 199: Independent Work', 'CS 199P: Independent Work', 'CS 499: Advanced Reading and Research' and 'CS 499P: Advanced Reading and Research' (Autumn, Winter, Spring).",
+      "url": "https://explorecourses.stanford.edu/instructor/cpiech?academicYear=20262027",
+      "venue": "Stanford ExploreCourses"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "The Piech Lab member list names two current members whose listed role is literally 'Undergrad'",
+      "status": "verified",
+      "evidence_url": "https://piechlab.stanford.edu/",
+      "note": "The lab homepage 'Lab Members' list includes 'Joseph Tey / Undergrad' and 'Sazzad Islam / Undergrad', alongside PhD students, an MS student, a lead software engineer, an MS Education student and a faculty administrator. Quoted exactly as rendered. The page footer reads 'Updated in 2025', so the roster may be a year stale."
+    },
+    {
+      "signal": "He is listed as an instructor of record for Stanford's undergraduate research and senior-project courses",
+      "status": "verified",
+      "evidence_url": "https://explorecourses.stanford.edu/instructor/cpiech?academicYear=20262027",
+      "note": "ExploreCourses lists under his independent studies: 'CS 191: Senior Project', 'CS 191W: Writing Intensive Senior Research Project', 'CS 199: Independent Work', 'CS 199P: Independent Work', 'CS 499: Advanced Reading and Research', 'CS 499P: Advanced Reading and Research', each offered Autumn, Winter and Spring. Same listing appears for academicYear=20252026. This is a standing enrollment mechanism for undergraduate research with him, not an advertised opening."
+    },
+    {
+      "signal": "An undergraduate lab member first-authored a Best Undergraduate Paper Award publication from the lab",
+      "status": "verified",
+      "evidence_url": "https://web.stanford.edu/~cpiech/bio/",
+      "note": "His bio page lists 'Handwritten Code Recognition for Pen-and-Paper CS Education / S. Islam, M. Doumbouya, C. Manning, C. Piech / Proceedings of the Eleventh ACM Conference on Learning@ Scale, 2024' annotated 'Best Undergraduate Paper Award'. The lab homepage lists 'Sazzad Islam / Undergrad'. Evidence is from 2024, not 2025-2026."
+    },
+    {
+      "signal": "No CURIS listing, undergraduate application form, or 'if you are a Stanford undergraduate' statement was found on any page fetched",
+      "status": "unknown",
+      "evidence_url": "https://piechlab.stanford.edu/",
+      "note": "piechlab.stanford.edu has no /join, /joinus, /prospective, /openings, /research, /news or /contact page (all HTTP 404); /people and /publications return 200 but are near-empty or stale (newest publication listed there is EDM '22). curis.stanford.edu loads as a JavaScript app and returned no readable text to curl, so a CURIS project listing could neither be confirmed nor ruled out."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No page fetched in this task contains any explicit, currently-open, undergraduate-relevant position statement - the lab site has no join/openings/prospective-students page (all 404) and the bio page contains no recruiting language - so OPENING is not justified. But the lab is clearly and currently active: five distinct 2026 publications including an arXiv preprint submitted 14 Aug 2026, he is scheduled to teach CS 109 and CS 221 in 2026-2027, the lab roster names two current 'Undergrad' members, and he is instructor of record for CS 191 Senior Project / CS 199 Independent Work / CS 499 in all three quarters. That combination makes a cold email from a Stanford undergraduate plausible and well-targeted, which is OUTREACH.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 6,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/chris-piech",
+    "https://www.cs.stanford.edu/people/chris-piech",
+    "https://web.stanford.edu/~cpiech/bio/",
+    "https://stanford.edu/~cpiech/",
+    "https://piechlab.stanford.edu/",
+    "https://piechlab.stanford.edu/people",
+    "https://piechlab.stanford.edu/publications",
+    "https://ed.stanford.edu/faculty/cpiech",
+    "https://profiles.stanford.edu/chris-piech",
+    "https://explorecourses.stanford.edu/instructor/cpiech",
+    "https://explorecourses.stanford.edu/instructor/cpiech?academicYear=20252026",
+    "https://explorecourses.stanford.edu/instructor/cpiech?academicYear=20262027",
+    "https://arxiv.org/abs/2608.14851",
+    "https://arxiv.org/abs/2603.11444",
+    "https://arxiv.org/abs/2605.21776",
+    "https://api.openalex.org/authors?search=Chris%20Piech",
+    "https://api.openalex.org/works?filter=author.id:A5074969309,from_publication_date:2025-01-01&sort=publication_date:desc&per-page=25",
+    "https://codeinplace.stanford.edu/",
+    "https://curis.stanford.edu/",
+    "https://hai.stanford.edu/people/chris-piech"
+  ],
+  "fetch_notes": "FETCH LOG (all via curl with a browser UA; date of harvest 2026-08-31). The supplied directory link https://cs.stanford.edu/people/chris-piech returned HTTP 404 ('The requested URL /people/chris-piech was not found on this server'); the same path WITH the www prefix, https://www.cs.stanford.edu/people/chris-piech, returned HTTP 200 and confirms the printed title verbatim. That www URL is recorded as faculty_url. https://profiles.stanford.edu/chris-piech returned a 'Page Not Found' page, so no Stanford Profiles record was captured. https://hai.stanford.edu/people/chris-piech returned HTTP 200 but rendered zero text to curl (JavaScript-driven), so nothing was taken from it. EMAIL: two forms appear in fetched text. https://ed.stanford.edu/faculty/cpiech prints 'cpiech@stanford.edu' literally, and that is the address recorded. His personal bio page prints the obfuscated form 'Email: piech at cs.stanford.edu' - i.e. piech@cs.stanford.edu - which is recorded here only as an observation, not in the email field, because it is written with 'at' rather than '@'. LAB SITE: https://piechlab.stanford.edu/ is a single mostly-static page; /join, /joinus, /prospective, /openings, /research, /news, /contact, /sitemap.xml and /robots.txt all return HTTP 404. /people and /publications return HTTP 200 but /people renders only a heading with no roster and /publications lists nothing newer than EDM '22, so both are stale; the roster used here came from the homepage. Every page on that site carries the footer '(c) Updated in 2025'. His bio page footer reads 'Updated in 2023' and its most recent news item is 'News (Jan, 2025): Code in Place returns April 2025' - because that page is dated, current_direction was built from the 2026 publication record instead, per instructions. PUBLICATIONS: OpenAlex author search filtered to the Stanford ROR (00f54p054) returned zero results; an unfiltered search on 'Chris Piech' returned exactly one author, https://openalex.org/A5074969309 ('Chris Piech', 119 works, last known institutions Hannah Research Foundation and Stanford University), which was used for the works query. That query returned 25 works dated 2025-01-01 or later. The three arXiv items used as evidence were then re-verified by fetching their arxiv.org/abs pages directly, and titles, authors and submission dates match. The arXiv API itself was not usable: export.arxiv.org returned an empty body on http and HTTP 429 (rate limited) on https, so no arXiv API results were used. OpenAlex returned null venue names for several 2026 ACM conference records, so venue is left null for those rather than guessed from the DOI prefix. OTHER 2025-2026 works seen in OpenAlex but not promoted to evidence include 'Personalized Exam Prep (PEP)' (Cochran & Piech, 2026-02-13), 'Rooms of Their Own: Structured Small-Group Learning in a Realtime Browser-Based IDE' (2026-02-13), 'Interpretability from the Ground Up' (doi 10.18653/v1/2026.findings-acl.1859), 'The Next Educational Revolution: Grand Challenges for Learning @ Scale in the Generative AI Era' (Piech sole author, 2025-07-17) and 'Soft Grades' (Woodrow & Piech, 2025-02-21). UNDERGRAD / RECRUITING: no recruiting or 'prospective students' statement was found anywhere, so recruiting.status is unknown with confidence 0.0 and no statement is recorded. https://codeinplace.stanford.edu/ and https://curis.stanford.edu/ are both JavaScript single-page apps that returned no readable content to curl (codeinplace returns HTTP 200 for every path tried, including /volunteer, /apply and /teach, because of SPA catch-all routing), so neither Code in Place volunteer/section-leader recruiting nor any CURIS project listing could be verified; both are unresolved rather than negative. The GSE page shows one 2025 news item, 'December 3, 2025 / Podcast / AI and the future of human learning', but no article URL was extractable from the fetched markup, so it was not recorded as evidence. NOTE ON GSE TITLE: ed.stanford.edu labels him 'Courtesy Associate Professor (Teaching)' and separately lists 'Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)' and program affiliations 'SHIPS (PhD): Educational Data Science' and '(MS) EDS'. No grants were found on any fetched page, so none are claimed."
+}

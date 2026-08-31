@@ -1,0 +1,157 @@
+{
+ "slug": "stefano-ermon",
+ "name": "Stefano Ermon",
+ "title": "Associate Professor of Computer Science and Senior Fellow at the Woods Institute for the Environment",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://www.cs.stanford.edu/people/stefano-ermon",
+ "lab_name": "Ermon Group",
+ "lab_url": "https://cs.stanford.edu/~ermon/website/index.html",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "computer-vision",
+  "Human-Centered and Creative AI",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "diffusion models and score-based generative modeling",
+  "reinforcement learning and preference optimization for generative models",
+  "diffusion large language models and discrete diffusion",
+  "generative foundation models for science (genomics, molecules, peptides)",
+  "Earth observation, remote sensing and geospatial representation learning",
+  "computational sustainability (poverty and wealth mapping)",
+  "probabilistic inference and probabilistic circuits",
+  "efficient generative architectures (video tokenizers, diffusion transformers, few-step samplers)"
+ ],
+ "current_direction": [
+  "Online RL and preference optimization to align diffusion models",
+  "Diffusion language models and test-time scaling for reasoning",
+  "Generative foundation models for biology (genomes, peptides)",
+  "Efficient generative architectures: tokenizers, grafting, few-step sampling",
+  "AI-centric Earth-observation representations for sustainability"
+ ],
+ "current_direction_basis": "Inferred from the 2025-2026 items collected in this task, not from the older biography on the personal page. (1) RL/preference optimization for diffusion is driven by 'DiffusionNFT: Online Diffusion Reinforcement with Forward Process' (arXiv 2509.16117, Sep 2025), 'Divergence Minimization Preference Optimization for Diffusion Model Alignment' (arXiv 2507.07510, Jul 2025) and 'f-PO: Generalizing Preference Optimization with f-divergence Minimization' (AISTATS-25, listed on the personal page). (2) Diffusion LLMs / test-time scaling is driven by 'RFG: Test-Time Scaling for Diffusion Large Language Model Reasoning with Reward-Free Guidance' (arXiv 2509.25604, Sep 2025), 'Energy-Based Diffusion Language Models for Text Generation' (ICLR-25) and 'Reviving Any-Subset Autoregressive Models with Principled Parallel Sampling and Speculative Decoding' (arXiv 2504.20456). (3) Generative models for biology is driven by 'Genome modelling and design across all domains of life with Evo 2' (Nature, Mar 2026) and 'Zero-Shot Cyclic Peptide Design via Composable Geometric Constraints' (arXiv 2507.04225). (4) Efficient generative architectures is driven by 'InfoTok' (arXiv 2512.16975, Dec 2025), 'Exploring Diffusion Transformer Designs via Grafting' (NeurIPS-25) and 'Inductive Moment Matching' (arXiv 2503.07565). (5) Earth observation is driven by 'Earth Embeddings' (IEEE Geoscience and Remote Sensing Magazine, Jan 2026), 'TEOChat: A Large Vision-Language Assistant for Temporal Earth Observation Data' (ICLR-25) and 'Dynamic, high-resolution poverty measurement in data-scarce environments' (Journal of Development Economics, Nov 2025).",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Genome modelling and design across all domains of life with Evo 2",
+   "summary": "Nature paper (62 authors, Ermon among them) on a genome-scale foundation model spanning all domains of life; the 2025 bioRxiv preprint of the same work (doi 10.1101/2025.02.18.638918) also appears in Ermon's OpenAlex record. Retrieved from the OpenAlex works API; Ermon authorship confirmed in the OpenAlex authorships list.",
+   "url": "https://doi.org/10.1038/s41586-026-10176-5",
+   "venue": "Nature"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Earth Embeddings: Toward artificial intelligence-centric representations of our planet",
+   "summary": "Magazine article (19 authors, Ermon among them) on AI-centric learned representations of Earth-observation data. Retrieved from the OpenAlex works API; Ermon authorship confirmed in the OpenAlex authorships list.",
+   "url": "https://doi.org/10.1109/mgrs.2026.3710416",
+   "venue": "IEEE Geoscience and Remote Sensing Magazine"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "InfoTok: Adaptive Discrete Video Tokenizer via Information-Theoretic Compression",
+   "summary": "arXiv preprint submitted 18 Dec 2025 (last revised 22 Mar 2026, v3) on an adaptive discrete video tokenizer built on information-theoretic compression. Author list fetched from the arXiv abstract page and includes Stefano Ermon, with Haotian Ye and Jiaqi Han (both listed on the group People page) as co-authors.",
+   "url": "https://arxiv.org/abs/2512.16975",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "DiffusionNFT: Online Diffusion Reinforcement with Forward Process",
+   "summary": "arXiv preprint submitted 19 Sep 2025 (last revised 16 Feb 2026, v2) on online reinforcement learning for diffusion models via the forward process. Author list fetched from the arXiv abstract page and includes Stefano Ermon.",
+   "url": "https://arxiv.org/abs/2509.16117",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Exploring Diffusion Transformer Designs via Grafting",
+   "summary": "NeurIPS 2025 paper on editing pretrained diffusion transformer architectures ('grafting') to explore new designs. Listed on Ermon's own publications page as 'NeurIPS-25. To appear in Proc. 39th Annual Conference on Neural Information Processing Systems, 2025' with co-authors including Michael Poli, Dongjun Kim (group members), Juan Carlos Niebles and Li Fei-Fei; Ermon authorship also confirmed via OpenAlex.",
+   "url": "https://doi.org/10.52202/085713-0603",
+   "venue": "NeurIPS 2025"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "TEOChat: A Large Vision-Language Assistant for Temporal Earth Observation Data",
+   "summary": "ICLR 2025 paper on a vision-language assistant for temporal Earth-observation imagery, listed on Ermon's own publications page as 'ICLR-25. To appear in Proc. 13th International Conference on Learning Representations, 2025.' Shows the sustainability/remote-sensing line is still active alongside the core generative-modeling work.",
+   "url": "https://cs.stanford.edu/~ermon/",
+   "venue": "ICLR 2025"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "The group's Prospective Students page has a dedicated 'Stanford Undergraduate or M.S. Students' section pointing to an intake form for research positions",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/~ermon/website/contact.html",
+   "note": "Re-fetched live 2026-08-31 (HTTP 200). Verbatim from the raw HTML: '<h1>Stanford Undergraduate or M.S. Students</h1>' followed by '<h3>If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this <a href=\"https://forms.gle/EFNgNpZS3dQtR8qy5\" target=\"_blank\">form</a>.</h3>'. The SECTION AND ITS WORDING are verified. What is NOT verified is whether the form still accepts responses -- see the separate signal below. Eligibility is REQUIRED as worded: 'a current or admitted Stanford undergraduate or M.S. student'. No deadline, term, project, or funding is stated. Page footer reads 'Copyright (c) 2022'."
+  },
+  {
+   "signal": "The linked undergraduate intake form is behind a Google sign-in wall and could not be verified as accepting responses",
+   "status": "unknown",
+   "evidence_url": "https://forms.gle/EFNgNpZS3dQtR8qy5",
+   "note": "Resolved live 2026-08-31. With a browser User-Agent, forms.gle returns a JavaScript 'DurableDeepLinkUi' shell (and served a CACHED shell for an unrelated short code, uyvxnM2LKR64YwEb7 -- so that path is worthless). With UA 'curl/8.0' the short link returns HTTP 302 to https://docs.google.com/forms/d/e/1FAIpQLSdawR-31I7-SlloymV0QYvzIR4eh1dUvTSGPA17LJtGvozzyQ/viewform?usp=send_form. That target returns HTTP 401 with a sign-in interstitial ('You must sign in to access this content'). The form body never renders, so there is NO evidence either way that it is open: 'no longer accepting responses' is absent only because nothing rendered. All three of the group's forms (postdoc ZA39fKaYEmUiMyRw9, undergrad EFNgNpZS3dQtR8qy5, visiting scholar RzTfiqFE8ocPwAGZ8) return an identical 401, so this is a uniform sign-in gate rather than proof this one form is dead -- but it is still unverifiable without a signed-in (likely stanford.edu) Google account."
+  },
+  {
+   "signal": "The same page tells prospective Ph.D. applicants NOT to cold-email, but sets no such restriction on the undergraduate/M.S. path",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/~ermon/website/contact.html",
+   "note": "Re-fetched live 2026-08-31. Verbatim: 'We take on new Ph.D. students each year. We ask that you do not contact us directly with regard to Ph.D. admissions until after you are admitted, as we will not be able to reply to emails from individual applicants.' Practical implication for an undergraduate: the form is the sanctioned channel; do not cold-email about Ph.D. admissions."
+  },
+  {
+   "signal": "The People page's 'Masters and Undergrad Students' section is entirely commented out of the HTML; no undergraduates are currently displayed",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/~ermon/website/people.html",
+   "note": "Re-verified live 2026-08-31 by stripping HTML comments and re-extracting headings. Visible headings are ONLY: Faculty / 'Postdocs and Ph.D. Students' / Alumni. After comment-stripping, the string 'Undergrad' does not occur anywhere on the page. The commented-out block contains 'Masters and Undergrad Students: Mitchell McIntire, Yezhen Cong, Div Garg, Enci Liu' plus 'Visiting Scholars: Hirotaka Sakamoto'. Those names are HIDDEN and must not be read as current members. Footer reads 'Copyright (c) 2024'."
+  },
+  {
+   "signal": "Ermon has taught undergraduate-accessible Stanford CS courses, but the public teaching list is stale (ends Winter 2022/2023)",
+   "status": "inferred",
+   "evidence_url": "https://cs.stanford.edu/~ermon/",
+   "note": "Teaching block fetched live 2026-08-31, verbatim head of the list: 'Winter 2022/2023: Probabilistic Graphical Models (CS 228) | Winter 2021/2022: Probabilistic Graphical Models (CS 228) | Fall 2021/2022: Deep Generative Models (CS 236) | Fall 2021/2022: Data for Sustainable Development (CS 325B)'. The list's EXISTENCE is verified; its CURRENCY is not -- nothing after Winter 2022/2023 appears, and no 2026 course was found. Treat as a historical course-contact route only, not as a current enrollment path."
+  },
+  {
+   "signal": "No mention of CURIS, senior projects, honors theses, or paid/funded undergraduate positions anywhere on the group site",
+   "status": "unknown",
+   "evidence_url": "https://cs.stanford.edu/~ermon/website/contact.html",
+   "note": "Re-searched the pages fetched in this task (contact, index, people, personal page, Stanford CS profile, profiles.stanford.edu). The intake form is the only undergraduate-specific mechanism found. The words CURIS, 'senior project', 'honors thesis', 'stipend' and 'funded' appear on none of them. Compensation and term are unknown."
+  }
+ ],
+ "recruiting": {
+  "status": "unverified",
+  "statement": "VERBATIM from https://cs.stanford.edu/~ermon/website/contact.html (fetched 2026-08-31, HTTP 200), under the heading 'Stanford Undergraduate or M.S. Students': 'If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this form.' The word 'form' links to https://forms.gle/EFNgNpZS3dQtR8qy5. CAVEAT THAT PREVENTS AN 'OPEN' STATUS: that form resolves (302, plain UA) to https://docs.google.com/forms/d/e/1FAIpQLSdawR-31I7-SlloymV0QYvzIR4eh1dUvTSGPA17LJtGvozzyQ/viewform, which returns HTTP 401 behind a Google sign-in wall, so I could not confirm it still accepts responses. Also on the page: 'We take on new Ph.D. students each year. We ask that you do not contact us directly with regard to Ph.D. admissions until after you are admitted, as we will not be able to reply to emails from individual applicants.' Eligibility REQUIRED as worded: current or admitted Stanford undergraduate or M.S. student. No deadline, term, project, or compensation stated.",
+  "url": "https://cs.stanford.edu/~ermon/website/contact.html",
+  "confidence": 0.3
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "DOWNGRADED from OPENING to OUTREACH on adversarial re-check (2026-08-31). WHAT HELD UP: the undergraduate-specific statement is real and I re-fetched it verbatim from the live page -- 'If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this form,' under its own '<h1>Stanford Undergraduate or M.S. Students</h1>' heading. It is present-tense and it is genuinely undergraduate-relevant, not a PhD-applicants-only line (the Ph.D. paragraph is separate and tells applicants not to make contact). WHY IT IS STILL NOT AN OPENING: the statement is purely a pointer, and the thing it points to cannot be verified. The forms.gle link resolves to a Google Form that returns HTTP 401 behind a sign-in wall; the form body never renders, so there is no evidence either that it is accepting responses or that it is closed. An unverifiable intake form is not a confirmed open position. Three further staleness facts argue against treating this as a live posting: the contact page footer reads 'Copyright (c) 2022'; the People page footer reads 'Copyright (c) 2024' and its entire 'Masters and Undergrad Students' section is commented out of the HTML (no undergraduate is displayed at all); and the public teaching list ends at Winter 2022/2023. This is a standing, undated invitation on an old page, not a currently-advertised opening with a deadline, project, term, or funding. WHY OUTREACH AND NOT WATCH: the lab is unambiguously active. Verified live in this task, the arXiv abstract page for 2509.16117 (DiffusionNFT) lists Stefano Ermon among the authors, submitted 19 Sep 2025 and last revised 16 Feb 2026; the personal publications page carries roughly a dozen NeurIPS-25 / ICLR-25 / AISTATS-25 entries. So a well-targeted approach is reasonable -- but it should be framed as outreach, not as 'apply now'. PRACTICAL NOTE FOR A STUDENT: eligibility is REQUIRED as worded (current or admitted Stanford undergraduate or M.S. student). Submitting the form is still the sanctioned channel, and a signed-in stanford.edu Google account will likely open it; a student should expect to confirm for themselves that it loads. No email is recorded because no literal address appears on any page fetched (see fetch_notes).",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/stefano-ermon",
+  "https://www.cs.stanford.edu/people/stefano-ermon",
+  "https://cs.stanford.edu/~ermon/",
+  "https://cs.stanford.edu/~ermon/website/index.html",
+  "https://cs.stanford.edu/~ermon/website/contact.html",
+  "https://cs.stanford.edu/~ermon/website/people.html",
+  "https://cs.stanford.edu/~ermon/website/publications.html",
+  "https://ermongroup.github.io/blog/",
+  "https://forms.gle/EFNgNpZS3dQtR8qy5",
+  "https://profiles.stanford.edu/stefano-ermon",
+  "https://api.openalex.org/authors?search=Stefano+Ermon",
+  "https://api.openalex.org/works?filter=author.id:A5091179481,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://arxiv.org/abs/2512.16975",
+  "https://arxiv.org/abs/2509.16117",
+  "https://arxiv.org/abs/2509.25604",
+  "https://docs.google.com/forms/d/e/1FAIpQLSdawR-31I7-SlloymV0QYvzIR4eh1dUvTSGPA17LJtGvozzyQ/viewform"
+ ],
+ "fetch_notes": "FETCH FAILURES / QUIRKS: (1) The supplied directory link https://cs.stanford.edu/people/stefano-ermon returned HTTP 404 ('The requested URL /people/stefano-ermon was not found on this server'), as did the trailing-slash variant. The www host works: https://www.cs.stanford.edu/people/stefano-ermon returned HTTP 200 and printed the exact title given in the task, so faculty_url uses the www form. (2) https://ermongroup.github.io/ returned a GitHub Pages 404; only the /blog/ subpath exists, and its newest post is 'Reflected Diffusion Models', 21 Apr 2023 — stale, so it contributed no evidence items. (3) The undergraduate Google Form https://forms.gle/EFNgNpZS3dQtR8qy5 returned HTTP 200 but the body is a ~35KB JavaScript deep-link shell (Google 'DurableDeepLinkUi'), not the form itself; no 'no longer accepting responses' string was present, but ABSENCE OF THAT STRING IS NOT PROOF THE FORM IS OPEN, because the form body never rendered. Open status is therefore unconfirmed. (4) profiles.stanford.edu/stefano-ermon returned HTTP 200 but the body above the fold was site chrome only; no additional facts were taken from it. (5) EMAIL IS OBFUSCATED at the source: the personal page contains the literal HTML 'Email: <b>ermon AT cs.stanford.edu</b>'. I recorded ermon@cs.stanford.edu by substituting '@' for the literal ' AT ' — a mechanical de-obfuscation of text that is literally on the page, not a guessed address. No mailto: link and no plain-text '@' address appears on any page fetched. (6) OpenAlex has TWO author records named Stefano Ermon (A5091179481, 456 works, Stanford; and A5113804858, 112 works). I used A5091179481 and independently re-verified authorship for every evidence item: the two arXiv preprints via their arXiv abstract pages, and the Nature / IEEE GRSM / NeurIPS-Grafting items via the OpenAlex authorships list. (7) The group site's own publications page stops at 2024, so all 2025-2026 publication evidence comes from OpenAlex and arXiv plus the 2025 section of Ermon's personal publications page. (8) Group site is dated: index/contact footers read 'Copyright 2022', people page reads 'Copyright 2024'. (9) The personal page's teaching list ends at Winter 2022/2023 and its 'Research Interests' block is HTML-commented-out; current_direction was therefore built only from 2025-2026 publications, not from that biography. (10) No grants, news items, or talks dated 2025-2026 were found on any fetched page, so no evidence items of those kinds are recorded.  ===== ADVERSARIAL FACT-CHECK 2026-08-31 ===== (A) RECRUITING STATEMENT CONFIRMED GENUINE. Re-fetched https://cs.stanford.edu/~ermon/website/contact.html (HTTP 200). The raw HTML does contain '<h1>Stanford Undergraduate or M.S. Students</h1>' immediately followed by '<h3>If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this <a href=\"https://forms.gle/EFNgNpZS3dQtR8qy5\" target=\"_blank\">form</a>.</h3>'. The previous agent's quote and its form-link attribution were both accurate. (B) THE FORM IS UNVERIFIABLE -- this is the reason for the downgrade. The prior note said forms.gle returned a 35KB JS shell; that is true for a browser UA, and worse, the shell Google served was a CACHED page for an UNRELATED short code (uyvxnM2LKR64YwEb7) -- our own code 'EFNgNpZS3dQtR8qy5' did not appear in the returned bytes at all, so no conclusion could ever have been drawn from it. Using UA 'curl/8.0' instead produces a real HTTP 302 to https://docs.google.com/forms/d/e/1FAIpQLSdawR-31I7-SlloymV0QYvzIR4eh1dUvTSGPA17LJtGvozzyQ/viewform?usp=send_form. Fetching that target returns HTTP 401 with a Google sign-in interstitial; no form title, no questions, and no FB_PUBLIC_LOAD_DATA_ payload are present. Therefore open/closed status is genuinely unknown. For context, the sibling forms resolve and 401 identically: postdoc ZA39fKaYEmUiMyRw9 -> .../1FAIpQLScN0R3CnRkrmdO6OZ4LagefbipJD93sPd4puN48vwIxMVA5mw, visiting scholar RzTfiqFE8ocPwAGZ8 -> .../1FAIpQLScHqh5CkHSG_fijQljAqFHUDYWl8M63ds-fU8gJrc6MnM3I9Q. A uniform sign-in gate is consistent with a Stanford-account restriction and does not by itself mean the form is dead -- but it also does not make it verifiably open. (C) EMAIL SET TO NULL. Fetched https://cs.stanford.edu/~ermon/ and grepped for a literal address: ZERO matches for the pattern [A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+ and no mailto: link. The page carries only the obfuscated literal 'Email: <b>ermon AT cs.stanford.edu</b>'. I also grepped https://www.cs.stanford.edu/people/stefano-ermon, https://profiles.stanford.edu/stefano-ermon, the group index and the group people page: no literal address on any of them. Per the accuracy rule that only an address literally appearing in fetched text may be recorded, email and email_source_url are now null. The de-obfuscated form is almost certainly ermon@cs.stanford.edu, but that is a reconstruction, not a fetched fact, so it is documented here rather than recorded in the email field. Note also that the contact page instructs prospective students to use the form rather than email. (D) PEOPLE-PAGE SIGNAL TIGHTENED. Confirmed by stripping HTML comments and re-extracting headings: visible headings are only Faculty, 'Postdocs and Ph.D. Students', and Alumni, and the substring 'Undergrad' does not survive comment removal. The prior agent's claim was correct; the note is now backed by an explicit comment-stripping check. (E) TEACHING SIGNAL LEFT AT 'inferred'. Teaching block confirmed present and confirmed stale: newest entry is 'Winter 2022/2023: Probabilistic Graphical Models (CS 228)'; the personal page contains no occurrence of the string '2026'. (F) LAB ACTIVITY RE-VERIFIED INDEPENDENTLY so that OUTREACH (not WATCH) is justified: the arXiv abstract page for 2509.16117 was fetched and its author line literally includes 'Stefano Ermon', with '[Submitted on 19 Sep 2025 (v1), last revised 16 Feb 2026 (this version, v2)]'. The personal page shows 12 occurrences of '2025' across NeurIPS-25 / ICLR-25 / AISTATS-25 entries. The 2026 Nature and IEEE GRSM items were NOT re-verified in this task and still rest on the earlier OpenAlex lookups. (G) recruiting.status changed 'open' -> 'unverified' and confidence 0.75 -> 0.3; opportunity_state changed OPENING -> OUTREACH."
+}

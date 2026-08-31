@@ -1,0 +1,153 @@
+{
+ "slug": "emma-brunskill",
+ "name": "Emma Brunskill",
+ "title": "Associate Professor of Computer Science",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/emma-brunskill",
+ "lab_name": null,
+ "lab_url": "https://cs.stanford.edu/people/ebrun/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Human-Centered and Creative AI",
+  "reinforcement-learning",
+  "computational-education"
+ ],
+ "research_topics": [
+  "reinforcement learning with few samples",
+  "off-policy / batch policy evaluation and selection",
+  "contextual bandits and adaptive experiment design",
+  "RL and LLMs for education and tutoring",
+  "causal inference for treatment and intervention policies",
+  "AI for health behavior change and clinical decision-making",
+  "fairness, safety and constraint satisfaction in learned decision policies"
+ ],
+ "current_direction": [
+  "statistical tests for whether personalization actually helps",
+  "RL to optimize conversation-level outcomes of LLM tutors",
+  "large-scale field evaluation of AI/edtech in real classrooms",
+  "LLM-simulated practice and behavior-change interaction design",
+  "active learning and cost-aware policy learning in contextual bandits"
+ ],
+ "current_direction_basis": "Driven by the 2025-2026 evidence collected here, not by her (older) research.html narrative. (1) The Science 2026 paper 'A statistical test for the benefits of personalizing interventions' (Li & Brunskill, 2026-07-09) is a two-author paper with a current postdoc and is the clearest signal of the personalization-testing thrust. (2) 'Efficient RL for optimizing conversation level outcomes with an LLM-based tutor' (2025-07-22, NeurIPS 2025 workshop) plus 'Repairing Reward Functions with Feedback to Mitigate Reward Hacking' (2025-10-14) show RL now being applied on top of LLM systems. (3) PNAS 2026 'Computer-assisted learning in the real world: How Khan Academy influences student math learning', 'Assessing the Quality of AI-Generated Exams: A Large-Scale Field Study' (AAAI 2026) and 'The GPT Surprise' (L@S 2025) are all large-scale real-world field evaluations. (4) Two CHI 2026 papers ('Bloom: Designing for LLM-Augmented Behavior Change Interactions' and 'Can LLM-Simulated Practice and Feedback Upskill Human Counselors?') plus SYNAPSE (2026-08-07) show the LLM-simulation / behavior-change line. (5) 'Active Learning for Stochastic Contextual Linear Bandits' (AISTATS 2026, with current lab members Karmarkar and Li) and 'Cost-Aware Near-Optimal Policy Learning' (AAAI 2025) carry the theory line forward.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "A statistical test for the benefits of personalizing interventions",
+   "summary": "Two-author paper by Zhaoqi Li (a postdoc currently listed on Brunskill's group page) and Emma Brunskill, published in Science (publication date 2026-07-09 per OpenAlex). Brunskill's affiliation on the record is Stanford University. This is the single strongest recent signal of the lab's current focus on deciding when personalization is actually justified.",
+   "url": "https://doi.org/10.1126/science.aeb9506",
+   "venue": "Science"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Computer-assisted learning in the real world: How Khan Academy influences student math learning",
+   "summary": "Eames, Brunskill, Yamkovenko, Weatherholtz and Oreopoulos, in Proceedings of the National Academy of Sciences (publication date 2026-01-02 per OpenAlex). Also listed under the '2026' heading on Brunskill's own publications page. A real-world field study of an at-scale edtech platform.",
+   "url": "https://doi.org/10.1073/pnas.2507708123",
+   "venue": "Proceedings of the National Academy of Sciences"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Active Learning for Stochastic Contextual Linear Bandits",
+   "summary": "Listed on Brunskill's own publications page under '2026' as: 'Emma Brunskill, Ishani Karmarkar, and Zhaoqi Li (alphabetical ordering), Artificial Intelligence and Statistics (AISTATS) 2026'. Both co-authors appear as current group members (PhD student and postdoc) on the group page, so this is active in-lab theory work. No arXiv or DOI link was printed next to this entry on the page.",
+   "url": "https://cs.stanford.edu/people/ebrun/publications.html",
+   "venue": "AISTATS 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Bloom: Designing for LLM-Augmented Behavior Change Interactions",
+   "summary": "Jörke, Genç, Teutschbein, Sapkota, Chung, Schmiedmayer, Campero, King, Brunskill and Landay (OpenAlex publication date 2026-04-13). Brunskill's publications page lists it as 'Conference on Human Factors in Computing Systems (CHI) 2026'. Part of the lab's LLM + health-behavior-change line.",
+   "url": "https://doi.org/10.1145/3772318.3790506",
+   "venue": "CHI 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Efficient RL for optimizing conversation level outcomes with an LLM-based tutor",
+   "summary": "Nam, Gottesman, Zhang, Foster, Brunskill and Ungar; arXiv preprint dated 2025-07-22 in OpenAlex, and listed on Brunskill's publications page under 2025 as 'NeurIPS 2025 Workshop on Multi-Turn Interactions in Large Language Models'. Directly connects the lab's RL theory to LLM tutoring systems.",
+   "url": "https://arxiv.org/abs/2507.16252",
+   "venue": "arXiv preprint / NeurIPS 2025 Workshop on Multi-Turn Interactions in Large Language Models"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Assessing the Quality of AI-Generated Exams: A Large-Scale Field Study",
+   "summary": "Isley, Gilbert, Kassos, Kocher, Nie, Brunskill, Domingue, Hofman, Legewie, Svoronos, Tuminelli and Goel; arXiv preprint dated 2025-08-09 in OpenAlex, listed on Brunskill's publications page as 'Association for the Advancement of AI (AAAI) Conference 2026'. Another at-scale evaluation of generative AI in education.",
+   "url": "https://arxiv.org/abs/2508.08314",
+   "venue": "arXiv preprint / AAAI 2026"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 teaching, including CS 195 Supervised Undergraduate Research and CS 191W Writing Intensive Senior Research Project",
+   "summary": "Stanford Profiles lists under '2025-26 Courses': 'Counterfactuals: The Science of What Ifs? CS 31N (Spr)' and 'Reinforcement Learning CS 234 (Win)', and under Independent Studies for 2025-26: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)' and 'Independent Work CS 199P (Aut, Win, Spr, Sum)'. These are the formal undergraduate research vehicles she is currently listed as supervising.",
+   "url": "https://profiles.stanford.edu/emma-brunskill",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Explicit standing invitation addressed to undergraduates on the lab group page: \"If you're an undergraduate or graduate already enrolled at Stanford interested in helping us transform and scale personalized learning, or tackling new challenges in sequential decision making under uncertainty, please get in touch!\"",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/people/ebrun/students.html",
+   "note": "RE-VERIFIED a second time on 2026-08-31 by an independent adversarial curl pass (HTTP 200, Last-Modified Thu, 02 Jul 2026 18:06:23 GMT). An exact fixed-string grep for the full sentence against the freshly downloaded HTML returns exactly 1 match, so the quote in this record is byte-for-byte page text and not a paraphrase. It is the final <p> of the page body, immediately after the alumni list. It is present tense with an imperative ask ('please get in touch!'), names 'undergraduate' as its first addressee, and carries no deadline, no application form, no stipend and no slot count. The same July 2026 edit that the Last-Modified reflects also refreshed the roster (Matthew Joerke now carries 'next: Anthropic'), so the invitation sits on a maintained page."
+  },
+  {
+   "signal": "Listed on Stanford Profiles under '2025-26 Courses' -> 'Independent Studies (13)' as supervising: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)' and 'Independent Work CS 199P (Aut, Win, Spr, Sum)'.",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/emma-brunskill",
+   "note": "RE-VERIFIED 2026-08-31 on a fresh fetch of https://profiles.stanford.edu/emma-brunskill (HTTP 200, 59045 bytes). Literal matches in the downloaded HTML: 'Supervised Undergraduate Research' x2, 'Writing Intensive Senior Research Project' x2, 'Independent Work' x4, the heading '2025-26 Courses' x1, and 'CS 195 (Aut, Win, Spr, Sum)', 'CS 191W (Aut, Win, Spr)', 'CS 199 (Aut, Win, Spr, Sum)', 'CS 199P (Aut, Win, Spr, Sum)'; the course links carry academicYear=20252026 (15 occurrences). SCOPE LIMIT, restated because it is easy to overread: this is the set of independent-study numbers she is listed as authorized to supervise this academic year. It is NOT evidence of an open slot, of available funding, or that she is accepting new CS 195 students right now. It corroborates that a formal undergraduate research vehicle exists; the opening claim itself rests solely on signal 1."
+  },
+  {
+   "signal": "Track record of undergraduate and senior-thesis mentees on the group page: 'Joseph Rollinson (advised Honors senior thesis, now at Duolingo)' appears in the visible alumni list, and an HTML-commented-out line reads 'Alex Nam (ugrad, next: Scale.ai/Stanford CS PhD)'.",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/people/ebrun/students.html",
+   "note": "RE-VERIFIED 2026-08-31 in the raw HTML fetched this task. 'Joseph Rollinson (advised Honors senior thesis, now at Duolingo)' is rendered page text at the end of the alumni list. The line 'Alex Nam (ugrad, next: Scale.ai/Stanford CS PhD)' is present only inside an HTML comment ('<!-- ... -->'), so a human visitor never sees it, and it is superseded on the same page where 'Alex Nam (advisor: Dora Demszky)' appears under the current Ph.D. list. Two summer interns are listed with outcomes ('Jadon Gaethers ... next: incoming Cornell PhD student', 'Deonna Owens ... next: incoming Stanford Masters student'). None of these entries is dated on the page, so this establishes a pattern of taking undergraduates and interns over the lab's history -- it does NOT establish that any such placement happened recently."
+  },
+  {
+   "signal": "No named undergraduate summer program (CURIS, REU) is mentioned on any of the seven lab HTML pages fetched (index, students, research, teaching, news, awards, publications).",
+   "status": "likely",
+   "evidence_url": "https://cs.stanford.edu/people/ebrun/students.html",
+   "note": "DOWNGRADED from 'verified' to 'likely' on 2026-08-31. This is an ABSENCE claim, and an absence cannot be backed by a literal quote, which is the bar this record holds 'verified' to. The evidence is a case-insensitive grep for 'curis' and a word-boundary grep for 'REU' over all seven lab HTML pages downloaded this task: zero hits on every page. The remaining gap is that her CV (brunskill_cv_June_2020.pdf, linked from the site nav) was NOT fetched, so the claim covers the HTML site only. The only 'undergrad' string on the site outside the group-page invitation is on teaching.html -- 'Previously at CMU I regularly taught undergraduate and graduate ...' -- which is historical and sits on a page whose Last-Modified is 02 Jul 2020. Practical reading: the undergraduate route here is the open 'get in touch' invitation plus the CS 195/191W/199 vehicles, not a named program with an application and a deadline."
+  },
+  {
+   "signal": "A separate, PhD-scoped note on the homepage limits pre-admission contact: 'Prospective PhD student applicants: Thank you for your interest! I generally take on new PhD students every year. Admission decisions are made at the departmental level. Please don't hesitate to reach out to me after you are admitted. Unfortunately I generally won't be able to talk to prospective students until after admissions decisions have been made.'",
+   "status": "verified",
+   "evidence_url": "https://cs.stanford.edu/people/ebrun/",
+   "note": "RE-VERIFIED 2026-08-31 by a fresh curl of https://cs.stanford.edu/people/ebrun/ (HTTP 200, Last-Modified Thu, 02 Jul 2026 18:12:53 GMT); the passage appears in full in the rendered body text and is quoted here without ellipsis. SCOPE IS THE WHOLE POINT: this restriction is addressed to 'Prospective PhD student applicants' and to people who are not yet admitted, while the group-page invitation is addressed to people 'already enrolled at Stanford'. The two do not conflict. A current Stanford undergraduate is covered by the invitation and is NOT covered by this restriction. A non-Stanford undergraduate is covered by neither: nothing on this site invites them."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "If you're an undergraduate or graduate already enrolled at Stanford interested in helping us transform and scale personalized learning, or tackling new challenges in sequential decision making under uncertainty, please get in touch!",
+  "url": "https://cs.stanford.edu/people/ebrun/students.html",
+  "confidence": 0.85
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "OPENING -- UPHELD under a second, independent adversarial re-verification on 2026-08-31. Every claim below was fetched fresh in that pass; nothing is carried on trust from the prior harvest.\n\nSTEP 1 (the load-bearing check). https://cs.stanford.edu/people/ebrun/students.html returns HTTP 200 with Last-Modified Thu, 02 Jul 2026 18:06:23 GMT. The final paragraph of the page body reads, verbatim: \"If you're an undergraduate or graduate already enrolled at Stanford interested in helping us transform and scale personalized learning, or tackling new challenges in sequential decision making under uncertainty, please get in touch!\" An exact fixed-string grep for that whole sentence against the freshly downloaded HTML returns exactly one match, so this is page text, not a reconstruction. It clears both bars the check demands: (a) present tense with a direct imperative ask, no past tense, no 'previously', no closed or filled language anywhere on the page; and (b) undergraduate-relevant by its own first word of address -- it literally says 'undergraduate', so it is not a PhD-applicant notice being stretched to cover undergrads. The page was touched about two months before this check, and that same edit refreshed the alumni roster, so this is live text on a maintained page rather than a fossil.\n\nTHE OBVIOUS COUNTERARGUMENT, CHECKED AND REJECTED. The site does carry discouraging recruiting language: the homepage says 'Unfortunately I generally won't be able to talk to prospective students until after admissions decisions have been made.' That sentence is explicitly scoped -- its own heading is 'Prospective PhD student applicants' and it concerns people not yet admitted. The group-page invitation is scoped to people 'already enrolled at Stanford'. The two address disjoint audiences, so the homepage note does not close the undergraduate door and should not be quoted to a Stanford student as a reason not to write.\n\nWHAT THIS OPENING IS NOT -- read this before recommending 'apply now'. There is no application form, no deadline, no stipend or funding statement, no slot count, and no named program. A grep for 'CURIS' and for the word 'REU' across all seven lab HTML pages returns zero hits on every page. This is a standing open-door invitation to email her, backed by the CS 195 / CS 191W / CS 199 / CS 199P independent-study vehicles she is listed to supervise for 2025-26 on Stanford Profiles (all four strings verified literally on a fresh fetch, links carrying academicYear=20252026). Being listed to supervise those numbers is authorization, not proof of a free slot. The honest action for a student is a well-targeted cold email, not an application to a posted position.\n\nELIGIBILITY CAVEAT, LOAD-BEARING. The invitation's own wording limits it to students 'already enrolled at Stanford'. A current Stanford undergraduate is squarely inside it. A non-Stanford undergraduate is outside its wording, is also outside the PhD-applicant note, and has no statement on this site inviting them -- for that reader this lab is WATCH, not an opening.\n\nLAB ACTIVITY (re-confirmed this pass). publications.html (HTTP 200, Last-Modified 27 Feb 2026) carries a '2026' heading followed by 'Artificial Intelligence and Statistics (AISTATS) 2026', 'Association for the Advancement of AI (AAAI) Conference 2026' and two 'Conference on Human Factors in Computing Systems (CHI) 2026' entries, and the group page lists three current post-docs and four current Ph.D. students. The lab is unambiguously active.\n\nCONTACT CAVEAT. email and email_source_url are null and stay null: the literal string 'ebrun@cs.stanford.edu' does not appear on its recorded source page or on any other fetched page. The only address-like text on publications.html is the deliberately obfuscated 'email me at ebrun AT cs dot stanford dot edu', quoted in fetch_notes for a human to de-obfuscate. A student acting on this opening should use that sentence or the Stanford Profiles contact route, not a value from this record.\n\nCONFIDENCE 0.85, and the 0.15 is not doubt about the sentence -- that is certain. It is doubt about whether a standing, undated, unfunded open-door invitation converts into an actual undergraduate position on any given month.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/emma-brunskill",
+  "https://profiles.stanford.edu/emma-brunskill",
+  "https://cs.stanford.edu/people/ebrun/",
+  "https://cs.stanford.edu/people/ebrun/students.html",
+  "https://cs.stanford.edu/people/ebrun/research.html",
+  "https://cs.stanford.edu/people/ebrun/news.html",
+  "https://cs.stanford.edu/people/ebrun/teaching.html",
+  "https://cs.stanford.edu/people/ebrun/publications.html",
+  "https://api.openalex.org/authors?search=Emma%20Brunskill",
+  "https://api.openalex.org/works?filter=author.id:A5084989076,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://api.crossref.org/works/10.1126/science.aeb9506"
+ ],
+ "fetch_notes": "=== SECOND ADVERSARIAL RE-VERIFICATION 2026-08-31 (independent pass; Bash + curl with desktop UA; WebFetch not used) ===\nVERDICT: OPENING UPHELD. One signal downgraded, no other claim changed.\nSTEP 1 (opening). students.html -> HTTP 200, Last-Modified Thu, 02 Jul 2026 18:06:23 GMT. Exact fixed-string grep for the full invitation sentence against the freshly downloaded HTML: 1 match. The sentence names 'undergraduate' explicitly and is present tense with an imperative ask, so it satisfies both the present-tense and the undergraduate-relevance bars. Cross-checked the homepage (HTTP 200, Last-Modified Thu, 02 Jul 2026 18:12:53 GMT) for contradicting language: the only discouraging passage is scoped to 'Prospective PhD student applicants' and to not-yet-admitted students, a disjoint audience, so it does not override the invitation. No 'not taking students', 'closed', 'filled' or 'no positions' language exists on any fetched page.\nSTEP 2 (email). CONFIRMED NULL -- the prior pass's downgrade was correct and is left in place. Ran the prescribed grep '[a-z0-9._%+-]+@[a-z0-9.-]+' over a fresh fetch of the recorded source page https://cs.stanford.edu/people/ebrun/publications.html (HTTP 200, Last-Modified Fri, 27 Feb 2026 23:28:25 GMT, 53394 bytes): the ONLY hits are 'L@S' and 'L@S2017.pdf', both fragments of a venue name (ACM Learning @ Scale). A literal grep for 'ebrun@cs.stanford.edu' on that page returns 0. No mailto: link exists on the page. A fresh fetch of https://profiles.stanford.edu/emma-brunskill (HTTP 200) yields zero address matches from the same grep. What does exist on publications.html is the obfuscated sentence: 'See google scholar. or email me at ebrun AT cs dot stanford dot edu for any papers listed without links)'. De-obfuscating that would almost certainly produce the right address, but that is inference, not a literal address on a fetched page, so both fields remain null and the raw sentence is preserved here for a human to resolve.\nSTEP 3 (undergrad_signals). Signal 4 DOWNGRADED 'verified' -> 'likely': it is an absence claim (no CURIS/REU program named), and an absence cannot be backed by a literal quote. Its grep basis is solid -- case-insensitive 'curis' and word-boundary 'REU' over all seven lab HTML pages, zero hits each -- but the linked CV PDF (brunskill_cv_June_2020.pdf) was not fetched, so the claim is scoped to the HTML site and its wording was narrowed to say so. Signals 1, 2, 3 and 5 each survive as 'verified', and each was re-matched literally in HTML downloaded during THIS pass: signal 1 by exact-sentence grep on students.html; signal 2 by literal matches on profiles.stanford.edu for 'Supervised Undergraduate Research' (x2), 'Writing Intensive Senior Research Project' (x2), 'Independent Work' (x4), the '2025-26 Courses' heading, the four 'CS 19x (Aut, Win, Spr...)' strings and academicYear=20252026 (x15); signal 3 by the Rollinson, commented-out Alex Nam, Gaethers and Owens lines in the raw students.html; signal 5 by the full PhD-applicant passage in the rendered homepage text. Scope caveats were tightened in the notes of signals 2, 3 and 5 (authorization != open slot; the mentee list is undated so it shows pattern not recency; the PhD restriction and the undergrad invitation address disjoint audiences).\nPAGE FRESHNESS re-read this pass: index.html 02 Jul 2026, students.html 02 Jul 2026, publications.html 27 Feb 2026 (all current); teaching.html 02 Jul 2020 and still describes her prior CMU teaching. No claim in this record rests on teaching.html.\nNOT CHECKED THIS PASS (unchanged from the prior pass, and still unverified): the SYNAPSE and 'Repairing Reward Functions' evidence items, which appear nowhere on publications.html and trace only to the original OpenAlex pull; the individual DOIs for the PNAS, CHI and Science items; and the CV PDF.\n\n=== ADVERSARIAL RE-VERIFICATION 2026-08-31 (curl + desktop UA; WebFetch not used) ===\nOPENING: UPHELD. https://cs.stanford.edu/people/ebrun/students.html returned HTTP 200 and the undergraduate invitation is present verbatim in the fetched HTML (Last-Modified Thu, 02 Jul 2026 18:06:23 GMT). Quoted in recruiting.statement and undergrad_signals[0].\nEMAIL: DOWNGRADED TO NULL. The literal string 'ebrun@cs.stanford.edu' does NOT appear on its recorded source page or anywhere else on the site. Running the prescribed grep '[a-z0-9._%+-]+@[a-z0-9.-]+' over https://cs.stanford.edu/people/ebrun/publications.html (HTTP 200, Last-Modified 2026-02-27) yields only 'L@S' and 'L@S2017.pdf' from a venue name. The same grep over index.html, students.html, research.html, teaching.html, news.html and awards.html yields nothing, and https://profiles.stanford.edu/emma-brunskill exposes no address in its HTML either. No mailto: link exists on any fetched page. What DOES appear, on publications.html line 32, is the obfuscated sentence: 'See google scholar. or email me at ebrun AT cs dot stanford dot edu for any papers listed without links)'. The prior harvest's value was a mechanical de-obfuscation of that sentence rather than a guessed pattern, and it is very likely correct -- but it is not a literal address on a fetched page, so under the no-guessed-email rule both email and email_source_url are set to null. A human can de-obfuscate the quoted sentence themselves.\nUNDERGRAD_SIGNALS: all five re-checked against live pages this task and all five survive as 'verified', each now carrying the literal quote that backs it. Two scope corrections were written into the notes: (1) the Stanford Profiles CS 195/191W/199 listing is authorization to supervise independent study for 2025-26, not proof of open slots; (2) the commented-out 'Alex Nam (ugrad...)' line is superseded on the same page, where Alex Nam now appears under the current Ph.D. list. CURIS/REU absence re-confirmed by grep: zero hits on all seven lab pages.\nEVIDENCE SPOT-CHECKS: five of the seven evidence items were re-confirmed directly on the live publications page (PNAS Khan Academy, AISTATS 2026 Active Learning, AAAI 2026 AI-generated exams, CHI 2026 Bloom, NeurIPS 2025 workshop LLM-tutor RL). The Science 2026 paper is absent from that page -- explainable, since the page was last modified 2026-02-27 and the paper issued 2026-07-09 -- so it was verified instead via Crossref (api.crossref.org/works/10.1126/science.aeb9506), which returns title 'A statistical test for the benefits of personalizing interventions', container 'Science', issued 2026-07-09, authors Zhaoqi Li and Emma Brunskill both affiliated 'Computer Science Department, Stanford University'. The science.org landing page itself returns HTTP 403 to this client. NOT RE-VERIFIED this task: the SYNAPSE and 'Repairing Reward Functions' items (neither appears on publications.html; both trace only to the prior harvest's OpenAlex pull), and the DOIs for the PNAS and CHI items were not resolved individually.\nPAGE FRESHNESS (HTTP Last-Modified, re-read this task; the site mixes fresh and very stale pages): index.html = 2026-07-02, students.html = 2026-07-02, publications.html = 2026-02-27 (all current); research.html and news.html remain stale, teaching.html = 2020-07-02 with content still describing her prior CMU teaching. Nothing in current_direction or the opening claim rests on those stale pages.\n\n=== NOTES CARRIED FORWARD FROM THE ORIGINAL HARVEST (2026-08-31) ===\n(1) The supplied directory link https://cs.stanford.edu/people/emma-brunskill returns HTTP 404; the real personal site is https://cs.stanford.edu/people/ebrun/ (also at https://cs.stanford.edu/~ebrun/ and https://ai.stanford.edu/~ebrun/), and https://profiles.stanford.edu/emma-brunskill returns HTTP 200. (2) The OpenAlex query filtered by last_known_institutions.ror:00f54p054 returned count 0 -- OpenAlex records her main author record A5084989076 with a stale last-known institution; the harvest fell back to unfiltered author search and verified Stanford affiliation per work. (3) The arXiv API was unreachable from this environment (HTTP 000). (4) A Semantic Scholar paper-search call returned an empty body. NO LAB NAME: the site presents no branded lab name -- the homepage says only 'My lab is part of the Stanford AI Lab, the Stanford Statistical ML group, and AI Safety @Stanford', and the group page is titled simply 'Group', so lab_name is null rather than invented. The CV link points to brunskill_cv_June_2020.pdf and was not fetched."
+}

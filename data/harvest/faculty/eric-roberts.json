@@ -1,0 +1,137 @@
+{
+  "slug": "eric-roberts",
+  "name": "Eric Roberts",
+  "title": "The Charles Simonyi Professor in the School of Engineering, Emeritus",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://cs.stanford.edu/people/eroberts/",
+  "lab_name": null,
+  "lab_url": null,
+  "email": "eroberts@cs.stanford.edu",
+  "email_source_url": "https://cs.stanford.edu/people/eroberts/",
+  "research_areas": [
+    "computational-education"
+  ],
+  "research_topics": [
+    "computer science education",
+    "introductory programming curriculum (CS1/CS2)",
+    "CS textbook and curriculum design",
+    "undergraduate CS enrollment capacity / the 'CS capacity crisis'",
+    "programming languages and programming environments",
+    "social implications of computing and computing public policy",
+    "multiprocessor systems (earlier career)"
+  ],
+  "current_direction": [
+    "Curating evidence on the undergraduate CS enrollment/capacity crisis",
+    "Designing CS1 assignments for classroom use (SIGCSE Nifty Assignments)",
+    "Writing a free-access Python CS1 textbook (listed as in preparation)",
+    "Broad-audience book 'The Intellectual Excitement of Computer Science' (forthcoming)",
+    "Teaching-focused CS at small liberal-arts institutions (Reed, Willamette)"
+  ],
+  "current_direction_basis": "No 2025-2026 evidence of any kind was found, so this direction is inferred from the most recent items actually fetched, and it is older than the 2025-2026 window the brief asked for. Drivers: (1) the 'Resources for the CS Capacity Crisis' page on his Stanford site, dated 'May 4, 2024' in its byline and returning Last-Modified: Sat, 04 May 2024 GMT - the newest dated artifact anywhere on his Stanford site; (2) the SIGCSE 2023 paper 'Nifty Assignments: Enigma Machine Simulator' with J. Jedediah Rembold, the newest publication on his disambiguated DBLP record (pid 13/336, 'Eric Roberts 0001'); (3) the SIGCSE 2022 'Nifty Assignments' panel paper; (4) his CV (Last-Modified January 2022) listing 'Programming in Python, in preparation ... 485 pages ... refined over eight semesters at Reed College and Willamette University and will be soon be released for free public access' and 'The Intellectual Excitement of Computer Science, under contract to Pearson, in progress'; and (5) the Willamette University directory page (fetched with a 2026 copyright footer) listing him as 'Affiliated Scholar' in Comp & Info Sci. I could NOT verify that the Python textbook was ever released - that claim comes from a 2022-vintage CV page, not from a release page.",
+  "evidence": [
+    {
+      "kind": "project",
+      "year": 2024,
+      "title": "Resources for the CS Capacity Crisis",
+      "summary": "Curated resource site he authored and maintains on his Stanford page, bylined 'Eric Roberts / May 4, 2024' (server Last-Modified: Sat, 04 May 2024 14:34:32 GMT). It opens: 'Computer science classrooms are overflowing at colleges and universities across the United States... the number of open faculty positions in computer science exceeds the number of candidates by about a factor of five.' Collects the National Academies enrollment-growth report, CRA Generation CS, the NSF-CMU summit, and his own capacity papers. This is the newest dated item on his Stanford site.",
+      "url": "https://cs.stanford.edu/people/eroberts/ResourcesForTheCSCapacityCrisis/",
+      "venue": null
+    },
+    {
+      "kind": "publication",
+      "year": 2023,
+      "title": "Nifty Assignments: Enigma Machine Simulator",
+      "summary": "Co-authored with J. Jedediah Rembold. Newest publication on his disambiguated DBLP record (dblp pid 13/336, 'Eric Roberts 0001', affiliations Willamette University and Stanford University). A CS1-level assignment contribution to the SIGCSE Nifty Assignments session. Title/year/venue/DOI taken from the DBLP XML record, not from a publisher page I opened.",
+      "url": "https://doi.org/10.1145/3545947.3573220",
+      "venue": "SIGCSE 2023 (Technical Symposium on Computer Science Education)"
+    },
+    {
+      "kind": "publication",
+      "year": 2022,
+      "title": "Nifty Assignments",
+      "summary": "Multi-author SIGCSE 2022 Nifty Assignments panel paper listing 'Eric S. Roberts' among the authors (with Nick Parlante, Julie Zelenski, Jed Rembold, and others). From the same DBLP record. This is also the only work listed on his ORCID record (0000-0003-3860-8436), which contains just one entry.",
+      "url": "https://doi.org/10.1145/3478432.3499268",
+      "venue": "SIGCSE 2022 (Technical Symposium on Computer Science Education)"
+    },
+    {
+      "kind": "project",
+      "year": 2022,
+      "title": "Programming in Python (CS1 textbook, listed as in preparation)",
+      "summary": "His CV page states: 'Programming in Python, in preparation. This textbook, which currently has 485 pages, presents the standard CS1 material using Python, which is now the leading language for introductory courses. This material has been refined over eight semesters at Reed College and Willamette University and will be soon be released for free public access.' The same page lists 'The Intellectual Excitement of Computer Science, under contract to Pearson, in progress'. CAVEAT: this CV page returns Last-Modified: Tue, 04 Jan 2022, so 'in preparation' reflects early-2022 status; I found no page confirming release.",
+      "url": "https://cs.stanford.edu/people/eroberts/cv.html",
+      "venue": null
+    },
+    {
+      "kind": "news",
+      "year": 2026,
+      "title": "Willamette University directory listing: Affiliated Scholar, Comp & Info Sci",
+      "summary": "Current Willamette directory entry reading 'Eric S Roberts / Affiliated Scholar / Departments: Comp & Info Sci Staff, School of Comp & Info Sciences, Computer Science' with contact 'esroberts@willamette.edu / 503-375-5314'. Page footer reads '(c)2026 Willamette University'. NOTE: this is a static directory listing confirming an ongoing affiliated-scholar title, NOT a dated 2026 research output - which is why lab_activity.last_evidence_year is set to 2024, the newest dated artifact.",
+      "url": "https://my.willamette.edu/people/esroberts/",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "No lab, research group, lab members page, CURIS listing, or undergraduate research opportunity exists on his Stanford site",
+      "status": "verified",
+      "evidence_url": "https://cs.stanford.edu/people/eroberts/",
+      "note": "His Stanford home page links only to: Courses, Books, Papers, Talks, Biographical sketch, CV, plus personal pages (English county rambles, house in Portland, family memorial pages, Obama inauguration notes, political film series). I probed /lab/, /people/, /join/, /news/, /students/, /prospective/, /curis/, /research/ and /group/ under his directory - all returned HTTP 404. Grepping the home page for 'CURIS', 'undergraduate', 'research assistant', 'join' and 'opening' returned zero matches. There is no research group for an undergraduate to join."
+    },
+    {
+      "signal": "He retired from teaching at Stanford in 2017, so there is no current Stanford course through which an undergraduate would meet him",
+      "status": "verified",
+      "evidence_url": "https://cs.stanford.edu/people/eroberts/bio.html",
+      "note": "His bio page states: 'In September 1990, Roberts joined the Stanford faculty, where he remained until he retired from teaching in 2017. He is now the Charles Simonyi Professor of Computer Science, emeritus, and a Bass University Fellow in Undergraduate Education.' His Stanford courses page (Last-Modified August 2021) lists past seminars such as CS 10SC and CS 68N, the latter marked 'Last offered in 2004-05.'"
+    },
+    {
+      "signal": "Career-long orientation toward undergraduate CS education (historical, not a current opening)",
+      "status": "verified",
+      "evidence_url": "https://cs.stanford.edu/people/eroberts/bio.html",
+      "note": "Bio: 'From 1990 to 2002, Professor Roberts was Associate Chair and Director of Undergraduate Studies for Computer Science. In that capacity, he was the principal architect of Stanford's introductory programming sequence... His current research focuses on computer science education, particularly for underserved communities.' Stanford Profiles lists the Perin Award for Undergraduate Engineering Education (1995), the Dinkelspiel Award (1998) and the Hoagland Prize for Excellence in Undergraduate Teaching (2004). This establishes topical fit with an undergraduate, but it is biography, not an available position."
+    },
+    {
+      "signal": "His active institutional home is Willamette University, not Stanford; Willamette's CS department advertises undergraduate research generally but does not name him",
+      "status": "verified",
+      "evidence_url": "https://willamette.edu/academics/college/computer-science/",
+      "note": "The Willamette CS department page says 'Pursue research opportunities. Our computer science program emphasizes research. Students gain professional experience through courses and research by working closely with faculty.' However, that page's faculty highlights name Professors Cheng, Cordova and Agbo - not Roberts - and his own Willamette listing is 'Affiliated Scholar'. This undergraduate-research language belongs to the Willamette department, applies to Willamette students, and is NOT an offer from Roberts or from Stanford."
+    },
+    {
+      "signal": "No CURIS, senior project, or 'if you are a Stanford undergraduate' statement found anywhere",
+      "status": "verified",
+      "evidence_url": null,
+      "note": "Nothing of this kind appeared on any of the pages fetched for this profile."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "WATCH",
+  "state_rationale": "WATCH, and a student should treat this as a low-probability research lead. Three findings drive it. (1) There is no lab: his Stanford page has no group, people, join, or CURIS page (all such paths 404), so there is no undergraduate research position to apply for. (2) He is emeritus and, per his own bio page, 'retired from teaching in 2017' - his Stanford courses page has not changed since 2021 and lists seminars last offered as far back as 2004-05. (3) There is no 2025-2026 evidence at all: the newest dated artifact on his Stanford site is the 'Resources for the CS Capacity Crisis' page of May 4, 2024, and the newest publication on his disambiguated DBLP record is SIGCSE 2023. His active affiliation is Willamette University as an 'Affiliated Scholar', not a Stanford research group. He remains a genuinely distinguished figure in CS education and would be a reasonable person to approach for mentorship, curriculum advice, or a conversation about CS-education work - but that is informational outreach, not a research placement, and the state is NOT upgraded to OUTREACH because no active lab and no 2025-2026 activity could be verified.",
+  "lab_activity": {
+    "last_evidence_year": 2024,
+    "evidence_count": 5,
+    "active": false
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/eroberts/",
+    "https://cs.stanford.edu/people/eroberts/bio.html",
+    "https://cs.stanford.edu/people/eroberts/cv.html",
+    "https://cs.stanford.edu/people/eroberts/papers/index.html",
+    "https://cs.stanford.edu/people/eroberts/talks/index.html",
+    "https://cs.stanford.edu/people/eroberts/courses/index.html",
+    "https://cs.stanford.edu/people/eroberts/ResourcesForTheCSCapacityCrisis/",
+    "https://profiles.stanford.edu/eric-roberts",
+    "https://profiles.stanford.edu/eric-roberts?tab=publications",
+    "https://engineering.stanford.edu/people/eric-roberts",
+    "https://my.willamette.edu/people/esroberts/",
+    "https://willamette.edu/academics/college/computer-science/",
+    "https://dblp.org/pid/13/336.xml",
+    "https://api.openalex.org/authors?search=Eric%20Roberts",
+    "https://pub.orcid.org/v3.0/0000-0003-3860-8436/record"
+  ],
+  "fetch_notes": "FETCH PROBLEMS AND DISAMBIGUATION. (1) The supplied directory link https://cs.stanford.edu/people/eric-roberts returned HTTP 404 ('The requested URL /people/eric-roberts was not found on this server'). The real page is https://cs.stanford.edu/people/eroberts/, found via WebSearch and then curled directly. (2) https://cs.stanford.edu/~eric/ is NOT him - it is a stub reading 'I have moved to a new location' pointing at http://www.best.com/~ekchen/ (a different person). Discarded. (3) OpenAlex is badly conflated for this name. The CS-education cluster A5085826862 mixes in affiliations for California Department of Public Health, Loughborough University and Palo Alto University. Its only post-2023 work, 'Object oriented programming with a limited instruction set' (2026-03-13, DOI 10.25316/g0hr-dw63), is a student poster hosted at VIUSpace, Vancouver Island University Library, about a compiler for a simple stack-based computer - a DIFFERENT Eric Roberts. I deliberately EXCLUDED it. Attributing that 2026 paper to Stanford's Eric Roberts would have been the easy wrong answer here. (4) Semantic Scholar author search returned 75 undifferentiated 'E. Roberts' entries with no affiliations and was not usable for disambiguation. (5) Publications were therefore taken from DBLP pid 13/336 ('Eric Roberts 0001', affiliations 'Willamette University, Salem, OR, USA' and 'Stanford University, CA, USA'), which is hand-disambiguated: 55 records, newest 2023. His ORCID (0000-0003-3860-8436) contains only one work, so it confirms little. (6) NO 2025 OR 2026 PUBLICATION EXISTS in any source I checked. The 2025-2026 window the brief prefers is genuinely empty for this person; evidence is 2022-2024. (7) His Stanford site is largely frozen. Server Last-Modified headers: home page 2024-10-24, cv.html 2022-01-04, papers/index.html 2021-06-21, talks/index.html 2021-06-21, courses/index.html 2021-08-14. The papers page's newest item is 2017 and the talks page's newest is 2017. Treat the CV as a 2022 snapshot. (8) EMAILS - two literally appear in fetched text. 'eroberts@cs.stanford.edu' appears on https://cs.stanford.edu/people/eroberts/ (both as visible text and as a mailto: href); it is recorded in the email field because it matches faculty_url. 'esroberts@willamette.edu' appears on BOTH https://my.willamette.edu/people/esroberts/ and his Stanford CV page (the CV's work address block reads 'Department of Computer Science / Willamette University / Ford 210 / 900 State Street / Salem, OR 97301 / esroberts@willamette.edu'). Given that he is Stanford emeritus and his active listing is at Willamette, THE WILLAMETTE ADDRESS IS THE MORE LIKELY LIVE MAILBOX and is the better one to actually write to. Neither address was guessed. (9) No lab or research group website exists, so the requested lab news/publications/people/ 'join us' page sweep had nothing to fetch; the 404 probes are documented in undergrad_signals. (10) https://willamette.edu/search/?q=Eric+Roberts returned HTTP 404; the Willamette listing was reached via https://willamette.edu/people/esroberts/ which redirects to my.willamette.edu. (11) The Stanford Profiles publications tab lists nothing newer than the 1980s plus 'The Intellectual Excitement of Computer Science ... forthcoming', consistent with the CV."
+}

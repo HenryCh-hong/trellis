@@ -1,0 +1,53 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Trellis</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    width: 380px; margin: 0; padding: 12px;
+    font: 13px/1.45 -apple-system, "Segoe UI", system-ui, sans-serif;
+    color: #1c1c22; background: #fff;
+  }
+  h1 { font-size: 13px; margin: 0 0 2px; font-weight: 600; }
+  p.sub { margin: 0 0 10px; font-size: 11px; color: #6b6b76; }
+  .row { display: flex; gap: 6px; margin-bottom: 8px; }
+  button {
+    font: inherit; font-size: 12px; padding: 5px 10px; border-radius: 6px;
+    border: 1px solid #d8d8de; background: #fff; cursor: pointer;
+  }
+  button.primary { background: #4b4ddb; border-color: #4b4ddb; color: #fff; }
+  button:disabled { opacity: .55; cursor: default; }
+  label { display: block; font-size: 11px; color: #6b6b76; margin: 6px 0 2px; }
+  input, textarea {
+    width: 100%; box-sizing: border-box; font: inherit; font-size: 12px;
+    padding: 4px 6px; border: 1px solid #d8d8de; border-radius: 5px; background: #fff;
+  }
+  textarea { min-height: 56px; resize: vertical; }
+  .muted { color: #9a9aa4; font-style: italic; }
+  .note {
+    font-size: 11px; color: #6b6b76; background: #f6f6f8;
+    border: 1px solid #e8e8ee; border-radius: 6px; padding: 7px 8px; margin-top: 10px;
+  }
+  .err { color: #b3261e; font-size: 11px; margin-top: 8px; }
+  .ok { color: #1a7f52; font-size: 11px; margin-top: 8px; }
+  .count { font-size: 11px; color: #6b6b76; }
+</style>
+<h1>Import to Trellis</h1>
+<p class="sub">Reads the page you are already looking at. Nothing is submitted.</p>
+<div class="row">
+  <button id="read-job" class="primary">Read this job</button>
+  <button id="read-list">Scan this results page</button>
+</div>
+<div id="status"></div>
+<form id="form" hidden>
+  <div id="fields"></div>
+  <div class="row" style="margin-top:10px">
+    <button type="submit" class="primary" id="submit">Import</button>
+    <button type="button" id="cancel">Discard</button>
+  </div>
+</form>
+<div class="note">
+  Trellis never signs in for you, never bypasses Duo, and never clicks Apply or
+  Quick Apply. You review everything before it is imported.
+</div>
+<script type="module" src="popup.js"></script>

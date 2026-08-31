@@ -1,0 +1,147 @@
+{
+ "slug": "jeannette-bohg",
+ "name": "Jeannette Bohg",
+ "title": "Associate Professor of Computer Science",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/jeannette-bohg",
+ "lab_name": "Interactive Perception and Robot Learning Lab (IPRL)",
+ "lab_url": "http://iprl.stanford.edu",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "computer-vision",
+  "Robotics",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "robotic manipulation and grasping",
+  "vision-language-action (VLA) policies",
+  "imitation learning from in-the-wild human video",
+  "whole-body and mobile manipulation",
+  "dexterous / contact-rich manipulation with force sensing",
+  "sim-to-real transfer",
+  "data curation for robot learning",
+  "interactive perception",
+  "active perception from human demonstrations"
+ ],
+ "current_direction": [
+  "Diagnosing and repairing vision-language-action (VLA) policy failures, especially steerability loss under low-data post-training",
+  "Training manipulation policies from in-the-wild human video instead of robot teleoperation data",
+  "Data-centric robot learning: curating, editing and pretraining on the right data rather than scaling blindly",
+  "Whole-body and bimanual mobile manipulation via hybrid imitation plus whole-body control",
+  "Zero-shot dexterous and contact-rich tool manipulation through object-centric sim-to-real policies"
+ ],
+ "current_direction_basis": "Driven by the 2026 preprints and accepted papers listed on the IPRL publications page and cross-confirmed in OpenAlex: 'Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them' (arXiv Aug 2026), 'Breaking Lock-In: Preserving Steerability under Low-Data VLA Post-Training' (arXiv Apr 2026) and 'CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy' (arXiv Jun 2026) drive the VLA line; 'Masquerade: Learning from In-the-wild Human Videos using Data-Editing' (ICRA 2026) and 'Phantom: Training Robots Without Robots Using Only Human Videos' (CoRL 2025) drive the human-video line; 'CUPID: Curating Data your Robot Loves with Influence Functions' (CoRL 2025), 'Play2Perfect: What Matters in Dexterous Play Pretraining' (arXiv Jul 2026) and 'Robot-Powered Data Flywheels' (arXiv Nov 2025) drive the data-centric line; 'HoMeR' (ICRA 2026), 'HoMMI' (RSS 2026) and 'Mixture of Frames Policy' (arXiv Jul 2026) drive the mobile-manipulation line; 'SimToolReal' (RSS 2026) and 'Gentle Object Retraction in Dense Clutter Using Multimodal Force Sensing' (RA-L 2025) drive the dexterous/contact-rich line. Deliberately NOT based on her biography, which on both her personal site and the Stanford Profiles bio still describes older multi-modal scene-understanding-for-grasping work.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+   "summary": "Preprint (arXiv, August 2026) by Carlota Pares-Morlans, Nils Kuhn, Isabel Liu, Alberta Longhini, Jeannette Bohg. Most recent item listed under Preprints on the IPRL publications page; analyzes failure modes of vision-language-action policies on contact-rich manipulation.",
+   "url": "http://iprl.stanford.edu/publications",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?",
+   "summary": "Preprint by Tyler Ga Wei Lum*, Kushal Kedia*, C. Karen Liu†, Jeannette Bohg† on dexterous play-based pretraining for precise assembly. Listed as 'arXiv, July 2026' on the IPRL publications page; OpenAlex records publication_date 2026-06-24.",
+   "url": "https://arxiv.org/abs/2606.26428",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
+   "summary": "Preprint by Ria Doshi, Tian Gao, Annie Chen, Chelsea Finn, Jeannette Bohg on running decentralized multi-embodiment collaboration from a single vision-language-action policy. Cross-confirmed on the IPRL publications page (arXiv, June 2026) and OpenAlex (2026-06-10).",
+   "url": "https://arxiv.org/abs/2606.12352",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
+   "summary": "Accepted to Robotics: Science and Systems (RSS) 2026; authors Kushal Kedia*, Tyler Ga Wei Lum*, Jeannette Bohg†, C. Karen Liu†. Listed under the 2026 section of the IPRL publications page and announced in the lab's April 2026 news item; OpenAlex records the preprint at 2026-02-18.",
+   "url": "https://simtoolreal.github.io/",
+   "venue": "Robotics: Science and Systems (RSS) 2026"
+  },
+  {
+   "kind": "news",
+   "year": 2026,
+   "title": "IPRL lab news: RSS 2026 acceptances and two new PhD graduates",
+   "summary": "Lab news feed shows sustained 2026 activity: 'Apr, 2026 — Two papers have been accepted to RSS 2026. See you in Sydney! (SimToolReal, HoMMI)'; 'March, 2026 — Congratulations to Dr. Priya Sundaresan on successfully defending her PhD thesis!'; 'February, 2026 — Two papers have been accepted to ICRA 2026. See you in Vienna! (HoMeR, Masquerade)'; 'January, 2026 — We are excited to welcome Dr. Alberta Longhini to join IPRL as a new postdoctoral researcher!'",
+   "url": "http://iprl.stanford.edu/index.html#news",
+   "venue": null
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 independent-study listings include CS 195 Supervised Undergraduate Research",
+   "summary": "Stanford Profiles lists Bohg's 2025-26 independent studies, which include undergraduate-facing research courses: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)' and 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)'. These are the standard mechanisms for enrolling a Stanford undergraduate in her lab for credit.",
+   "url": "https://profiles.stanford.edu/jeannette-bohg",
+   "venue": "Stanford University"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab publicly directs Stanford undergraduates to a dedicated research-interest intake form",
+   "status": "verified",
+   "evidence_url": "http://iprl.stanford.edu/index.html#contact",
+   "note": "Re-verified by curl on 2026-08-31 (HTTP 200, https://iprl.stanford.edu/index.html). Verbatim from the section headed 'Prospective Lab Members': \"If you are a Stanford undergraduate, masters, or co-term interested in research opportunities, please complete this form: Link\" (link href=https://forms.gle/REQhjJY44CgnELYGA). The DIRECTIVE is verified verbatim; the FORM ITSELF IS NOT. forms.gle/REQhjJY44CgnELYGA 302s to docs.google.com/forms/d/e/1FAIpQLSduUAhbBBcS1VbNjnJ40HysGo4Cu0VyU1TbZxnuMNCFrevGlw/viewform, which returns HTTP 401 with a Google sign-in wall ('You must sign in to access this content'). That is consistent with a domain-restricted (stanford.edu) form rather than a deleted one -- it is not a 404 and shows no 'no longer accepting responses' page -- but whether it is still accepting responses could not be verified from this environment."
+  },
+  {
+   "signal": "Lab roster lists seven current undergraduate members by name",
+   "status": "verified",
+   "evidence_url": "http://iprl.stanford.edu/index.html#people",
+   "note": "Re-verified by curl on 2026-08-31 from the People section of iprl.stanford.edu/index.html. Seven undergraduate entries, name followed by role: Timothy Yu (Undergraduate Student), Yufei Ding (Visiting Undergrad), Kenneth Llontop (Visiting Undergrad), Thomas Deng (Undergraduate Student), Frankie Marquez (Visiting Undergrad), Jeremy Bao (Visiting Undergrad), Aaryan Doshi (Undergraduate Student). The roster carries no dates, so it proves the lab hosts undergraduates, not that any of these appointments started recently."
+  },
+  {
+   "signal": "Teaches the for-credit undergraduate research courses (CS 195, CS 199, CS 191/191W)",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/jeannette-bohg",
+   "note": "Re-verified by curl on 2026-08-31 (https://profiles.stanford.edu/jeannette-bohg, HTTP 200). Verbatim from the block headed '2025-26 Courses ... Independent Studies (12)': 'Senior Project CS 191 (Aut, Win, Spr) Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum) Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)' and 'Independent Work CS 199 (Aut, Win, Spr, Sum)'. CAVEAT: the page still labels this block '2025-26', the academic year that has just ended as of 2026-08-31; the 2026-27 listing had not been posted at fetch time. This shows she is set up to supervise undergraduate research for credit, not that a seat is open."
+  },
+  {
+   "signal": "An undergraduate lab member appears as a paper co-author",
+   "status": "likely",
+   "evidence_url": "http://iprl.stanford.edu/publications",
+   "note": "Re-verified by curl on 2026-08-31 from iprl.stanford.edu/publications: 'Robot-Powered Data Flywheels: Deploying Robots in the Wild for Continual Data Collection and Foundation Model Adaptation / Jennifer Grannen, Michelle Pan, Kenneth Llontop, Cherie Ho, Mark Zolotas, Jeannette Bohg, Dorsa Sadigh / arXiv, November 2025'. Kept 'likely', not 'verified': the match rests only on an identical name appearing in two sections of the same site, with no stated undergraduate affiliation in the paper itself."
+  },
+  {
+   "signal": "No mention of CURIS specifically",
+   "status": "unknown",
+   "evidence_url": "http://iprl.stanford.edu",
+   "note": "Re-checked on 2026-08-31 against the fetched HTML of iprl.stanford.edu/index.html and iprl.stanford.edu/publications: the strings 'CURIS', 'REU' (as a standalone term) and 'senior project' appear zero times, and 'summer' appears zero times. Undergraduate involvement is routed through the general research-interest form, not a named summer program."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "If you are a Stanford undergraduate, masters, or co-term interested in research opportunities, please complete this form: Link [href=https://forms.gle/REQhjJY44CgnELYGA]",
+  "url": "http://iprl.stanford.edu/index.html#contact",
+  "confidence": 0.8
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "OPENING UPHELD on adversarial re-check (all fetches 2026-08-31). The lab's own live contact page, iprl.stanford.edu/index.html#contact (HTTP 200), carries a present-tense, undergraduate-specific invitation, quoted verbatim from the fetched HTML under the heading 'Prospective Lab Members': \"If you are a Stanford undergraduate, masters, or co-term interested in research opportunities, please complete this form: Link\" (href=https://forms.gle/REQhjJY44CgnELYGA). This is not a generic contact page and not a PhD-only notice: undergraduates are named explicitly and given their own route, separate from the PhD paragraph (\"We may take on new PhD students each year. If you are a prospective PhD student, we ask that you do not contact us directly with regard to PhD admissions until after you are admitted...\"), the post-doc route and the visiting-researcher route. No closure language ('not taking students', 'positions filled', 'closed') appears anywhere on the page. WHAT COULD NOT BE VERIFIED: the intake form itself. forms.gle/REQhjJY44CgnELYGA 302s to a docs.google.com/forms/d/e/1FAIpQLSdu... viewform URL that returns HTTP 401 behind a Google sign-in wall, so its accepting/closed state is unknown from this environment. It does NOT 404 and does not render the standard 'no longer accepting responses' page; the sign-in wall is what a stanford.edu-restricted form looks like, which a Stanford undergraduate would be able to open. Confidence 0.8 rather than 0.9 for exactly this reason. Supporting evidence, all re-fetched today: seven undergraduates on the People roster; CS 195 / CS 199 / CS 191 / CS 191W listed under '2025-26 Courses' on Stanford Profiles (note: that is the year just ended, 2026-27 not yet posted); and an unambiguously active lab (preprint 'Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them', arXiv August 2026; RSS 2026 and ICRA 2026 acceptances; new postdoc January 2026). ACTION FOR A STUDENT: submit the form, do not cold-email. The email previously on record has been nulled -- bohg@stanford.edu appears nowhere as literal text on web.stanford.edu/~bohg/ or any other fetched page (it is JavaScript-assembled), and no email address of any kind appears on the IPRL site.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/jeannette-bohg",
+  "https://profiles.stanford.edu/jeannette-bohg",
+  "https://web.stanford.edu/~bohg/",
+  "http://iprl.stanford.edu",
+  "http://iprl.stanford.edu/index.html#news",
+  "http://iprl.stanford.edu/index.html#people",
+  "http://iprl.stanford.edu/index.html#contact",
+  "http://iprl.stanford.edu/publications",
+  "https://forms.gle/REQhjJY44CgnELYGA",
+  "https://api.openalex.org/authors?search=Jeannette%20Bohg",
+  "https://api.openalex.org/works?filter=author.id:A5021676288,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://docs.google.com/forms/d/e/1FAIpQLSduUAhbBBcS1VbNjnJ40HysGo4Cu0VyU1TbZxnuMNCFrevGlw/viewform"
+ ],
+ "fetch_notes": "=== ADVERSARIAL FACT-CHECK, 2026-08-31 (all claims below re-fetched with curl in this pass) ===\nRECRUITING URL: http://iprl.stanford.edu/index.html#contact -> 200 (redirects to https). The undergraduate sentence exists verbatim in the served HTML and is present tense and undergraduate-specific. OPENING upheld.\nFORM NOT VERIFIABLE: https://forms.gle/REQhjJY44CgnELYGA returns 302 -> https://docs.google.com/forms/d/e/1FAIpQLSduUAhbBBcS1VbNjnJ40HysGo4Cu0VyU1TbZxnuMNCFrevGlw/viewform?usp=send_form, which returns HTTP 401 and a Google sign-in interstitial ('You must sign in to access this content'). No 404, no 'no longer accepting responses' page. Its live accept/close state is therefore UNKNOWN; recruiting.confidence lowered 0.9 -> 0.8 for this reason.\nEMAIL NULLED: curl of https://web.stanford.edu/~bohg/ (HTTP 200) grepped for any address matching [a-z0-9._%+-]+@[a-z0-9.-]+ returned ZERO matches. The same grep over the fetched iprl.stanford.edu index, iprl.stanford.edu/publications and profiles.stanford.edu pages also returned zero matches. 'bohg@stanford.edu' is only reconstructible from JavaScript on web.stanford.edu/~bohg/ (var part1=\"bohg\"; part2=Math.pow(2,6); part4=\"stanford.edu\"; document.write of a mailto link). Because it never appears as literal text on a fetched page, email and email_source_url are set to null rather than recorded as a reconstruction. The IPRL site publishes no email for Bohg at all -- only a JS-obfuscated admin contact (Kassie Rodriguez) -- and explicitly routes undergraduates to the form instead.\nLAB ACTIVITY CONFIRMED: iprl.stanford.edu/publications (200) lists 'Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them' (arXiv, August 2026), 'Play2Perfect' and 'Mixture of Frames Policy' (arXiv, July 2026), 'CHORUS' (arXiv, June 2026), 'SimToolReal' and 'HoMMI' (RSS 2026), 'HoMeR' and 'Masquerade' (ICRA 2026), 'Robot-Powered Data Flywheels' (arXiv, November 2025). News feed: 'Apr, 2026 Two papers have been accepted to RSS 2026'; 'March, 2026' two PhD defenses (Priya Sundaresan, Chris Agia); 'February, 2026' two ICRA 2026 acceptances; 'January, 2026' new postdoc Alberta Longhini.\nUNDERGRAD SIGNALS RE-CHECKED: signals 1-3 keep 'verified' -- each is now backed by a literal quote from a page fetched in this pass (contact sentence, People roster of seven undergrads, Stanford Profiles independent-study block). Signal 3 carries a new staleness caveat: the course block is labelled '2025-26', the year that ended before today's date. Signal 4 stays 'likely' (name-only match). Signal 5 stays 'unknown' (CURIS/REU/senior project/summer all absent).\n\n=== NOTES CARRIED FORWARD FROM THE ORIGINAL HARVEST ===\nFETCH FAILURES: The supplied directory link https://cs.stanford.edu/people/jeannette-bohg returns HTTP 404; https://cs.stanford.edu/person/jeannette-bohg and https://cs.stanford.edu/people/faculty also 404. faculty_url therefore points to Stanford Profiles, which resolved HTTP 200 again today. The arXiv API returned zero entries for every query attempted, including a control query, so it appears unavailable from this environment; recent publications come from OpenAlex plus the lab's own publications page instead, which agree with each other on every overlapping paper.\nTITLE DISCREPANCY (re-confirmed today): profiles.stanford.edu renders the header 'Jeannette Bohg Associate Professor of Computer Science', but the free-text bio on that same page and web.stanford.edu/~bohg/ both still say 'Assistant Professor of Computer Science'. The structured header/appointment field was kept; the prose bios look stale.\nOPENALEX NOTE: two author records exist -- A5021676288 (213 works, the real one) and A5144419813 (1 work). The institution-filtered query using ror:00f54p054 returned zero results and the filter had to be dropped. Several 2026 'dissertation' records in the Stanford Digital Repository are her students' theses, not her own papers, so they were excluded from evidence."
+}

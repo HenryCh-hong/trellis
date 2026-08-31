@@ -1,0 +1,154 @@
+{
+  "slug": "ron-fedkiw",
+  "name": "Ron Fedkiw",
+  "title": "Canon Professor in the School of Engineering",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/ron-fedkiw",
+  "lab_name": null,
+  "lab_url": "https://physbam.stanford.edu/",
+  "email": "fedkiw@cs.stanford.edu",
+  "email_source_url": "https://physbam.stanford.edu/",
+  "research_areas": ["Artificial Intelligence", "computer-vision"],
+  "research_topics": [
+    "physically based simulation",
+    "computer graphics",
+    "facial animation, facial rigs and face capture",
+    "hair strand modeling and generation",
+    "neural-network cloth and clothing simulation",
+    "3D reconstruction of clothed humans",
+    "level set methods",
+    "computational fluid dynamics",
+    "optimization and automatic differentiation for machine learning",
+    "biomechanics / muscle and flesh simulation"
+  ],
+  "current_direction": [
+    "generative AI for hair strand texture creation and groom editing",
+    "facial rig semantics for markerless tracking and retargeting",
+    "differentiable trajectory optimization for collision creation and avoidance",
+    "fixing correctness failures in software automatic differentiation",
+    "neural-network cloth and sparse-view reconstruction of clothed humans"
+  ],
+  "current_direction_basis": "Driven by the five 2025-2026 items I actually fetched: (1) the arXiv abstract for 'Detangled' (arXiv:2607.09811, submitted 10 Jul 2026), which describes a five-dimensional hair-texture parameter space and 'a generative artificial intelligence approach supervised by a separate neural network trained to label candidate strands'; (2) 'Improving Facial Rig Semantics for Tracking and Retargeting', Computer Graphics Forum e70417 (2026), listed first under the 'Faces - Simulation/Vision/Learning' heading on his own homepage and confirmed via OpenAlex DOI 10.1111/cgf.70417; (3) 'On devising more competitive strategies for creating and avoiding collisions along differentiable trajectories', J. Comp. Phys. (OpenAlex publication date 2025-10-15, printed as vol. 545 #114451 (2026) on his homepage); (4) 'Software-based automatic differentiation is flawed', J. Comp. Phys. 114319 (OpenAlex publication date 2025-09-02); (5) 'Sparse-View 3D Reconstruction of Clothed Humans via Normal Maps', WACV 2025, plus the Computer Graphics Forum 2026 reissue of 'Skinning a Parameterization of Three-Dimensional Space for Neural Network Cloth' (DOI 10.1111/cgf.70556). His homepage bio also states he 'is currently working at the interface between physical simulation and machine learning - having joined the Stanford Artificial Intelligence Laboratory (SAIL) in 2017', and tags newer work with the keywords 'NEURAL NETWORKS, OPTIMIZATION, DATA DRIVEN'. NOT based on his Stanford Profiles publication list, which is stale and stops at 2013.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Detangled: A Framework for Creating, Editing, and Inferencing Feature Rich Hair Strands",
+      "summary": "arXiv abs page fetched: submitted 10 Jul 2026; authors Sarah Jobalia, Yitong Deng, Carolyn Smith, Ronald Fedkiw (Jobalia and Deng are both listed as current Ph.D. students on physbam.stanford.edu). Abstract proposes a five-dimensional parameter space for hair strand texture, separates strand texture from overall style via centerline geometry, and generates new strands 'via a generative artificial intelligence approach supervised by a separate neural network trained to label candidate strands according to our five-parameter description.' Most recent item found for this group.",
+      "url": "https://arxiv.org/abs/2607.09811",
+      "venue": "arXiv preprint"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Improving Facial Rig Semantics for Tracking and Retargeting",
+      "summary": "Omens, D., Thurman, A., Yu, J. and Fedkiw, R., Computer Graphics Forum e70417 (2026). Listed as the newest entry under the 'Faces - Simulation/Vision/Learning...' section of his own homepage; independently confirmed via OpenAlex (publication date 2026-04-15, DOI 10.1111/cgf.70417). Dalton Omens is listed on his homepage as a Ph.D. 2025 graduate.",
+      "url": "https://doi.org/10.1111/cgf.70417",
+      "venue": "Computer Graphics Forum"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "On devising more competitive strategies for creating and avoiding collisions along differentiable trajectories",
+      "summary": "Maxfield, T. and Fedkiw, R., Journal of Computational Physics, DOI 10.1016/j.jcp.2025.114451. OpenAlex records publication date 2025-10-15; his own homepage prints it as 'J. Comp. Phys. 545 #114451 (2026)' under the 'Computational Physics' section, so the volume year is 2026. Trevor Maxfield is listed on the homepage as a Ph.D. 2025 graduate.",
+      "url": "https://doi.org/10.1016/j.jcp.2025.114451",
+      "venue": "Journal of Computational Physics"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Software-based automatic differentiation is flawed",
+      "summary": "Johnson, D., Maxfield, T., Jin, Y. and Fedkiw, R., Journal of Computational Physics, DOI 10.1016/j.jcp.2025.114319, OpenAlex publication date 2025-09-02. Journal version of arXiv:2305.03863, which his homepage tags 'NEURAL NETWORKS, OPTIMIZATION'. Signals ongoing work on the numerical foundations under machine-learning tooling.",
+      "url": "https://doi.org/10.1016/j.jcp.2025.114319",
+      "venue": "Journal of Computational Physics"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Sparse-View 3D Reconstruction of Clothed Humans via Normal Maps",
+      "summary": "Wu, J. Y., Thomas, D. and Fedkiw, R., IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2025, DOI 10.1109/wacv61041.2025.00012 (OpenAlex publication date 2025-02-26). His homepage lists this under 'Cloth - Simulation/Vision/Learning...' tagged 'NEURAL NETWORKS', paired with arXiv:2311.16042. This is the clearest computer-vision-side 2025 output.",
+      "url": "https://doi.org/10.1109/wacv61041.2025.00012",
+      "venue": "IEEE/CVF WACV 2025"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "A review of level-set modeling in epitaxial growth and alloys solidification",
+      "summary": "Gibou, F., Fedkiw, R., Caflisch, R. E. and Osher, S., Modelling and Simulation in Materials Science and Engineering 34, 013001, DOI 10.1088/1361-651x/ae3593 (OpenAlex publication date 2026-01-08). Also printed on his homepage under 'Computational Physics' as 'Modelling Simul. Mater. Sci. Eng. 34, 013001 (2026)'. Shows the classical level-set / computational-physics thread is still live alongside the learning work.",
+      "url": "https://doi.org/10.1088/1361-651x/ae3593",
+      "venue": "Modelling and Simulation in Materials Science and Engineering"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "CS 148 Introduction to Computer Graphics and Imaging (Aut) and CS 205L Continuous Mathematical Methods with an Emphasis on Machine Learning (Win), 2025-26",
+      "summary": "Stanford Profiles lists under '2025-26 Courses': 'Continuous Mathematical Methods with an Emphasis on Machine Learning CS 205L (Win)' and 'Introduction to Computer Graphics and Imaging CS 148 (Aut)'. He has taught the same pair every year listed back to 2022-23. His homepage hosts the CS205L slide deck publicly and describes it as 'A survey of numerical approaches to the continuous mathematics used throughout computer science with an emphasis on machine and deep learning.' Both are undergraduate-accessible entry points to him.",
+      "url": "https://profiles.stanford.edu/ron-fedkiw",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed as instructor of record for CS 195 Supervised Undergraduate Research in 2025-26",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/ron-fedkiw",
+      "note": "Stanford Profiles, under '2025-26 Courses' > 'Independent Studies (17)', lists verbatim: 'Supervised Undergraduate Research CS 195 (Win, Spr)'. This is an administrative course listing, not an advertised opening, but it confirms he is set up to supervise undergraduate research for credit in Winter and Spring."
+    },
+    {
+      "signal": "Listed for undergraduate senior-project and independent-work course numbers in 2025-26",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/ron-fedkiw",
+      "note": "Same '2025-26 Courses' block lists verbatim: 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P (Aut, Win, Spr, Sum)', and 'Programming Service Project CS 192 (Aut, Win, Spr, Sum)'. CS 191/191W/199 are the standard Stanford CS undergraduate research/senior-project vehicles."
+    },
+    {
+      "signal": "Teaches CS 148 (Introduction to Computer Graphics and Imaging), an undergraduate-facing course, every Autumn",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/ron-fedkiw",
+      "note": "Listed under 2025-26, 2024-25, 2023-24 and 2022-23 Courses. Taking CS 148 in Autumn is the most concrete, currently-scheduled way for an undergraduate to get in front of him. He also posts the CS205L slide deck openly at https://physbam.stanford.edu/."
+    },
+    {
+      "signal": "No undergraduate members listed on the group website",
+      "status": "verified",
+      "evidence_url": "https://physbam.stanford.edu/",
+      "note": "The 'Students' section of physbam.stanford.edu contains exactly three sub-lists: 'Ph.D. Students' (Kevin (Kevli) Li, Sarah Jobalia, Demi Guo, Haodi He, Yitong Deng, Sharon Lee), 'Former Ph.D. Students' (42 named), and 'Former Postdoctoral Scholars' (7 named). There is no undergraduate, master's, or research-assistant category. A case-insensitive grep of the full page HTML for 'undergrad' returned zero hits."
+    },
+    {
+      "signal": "No CURIS project listing confirmed",
+      "status": "unknown",
+      "evidence_url": "https://curis.stanford.edu/",
+      "note": "curis.stanford.edu is a JavaScript single-page app that renders no content to curl, and its data endpoint https://curis.stanford.edu/api/projects returns HTTP 401 {\"detail\":\"Authentication credentials were not provided.\"}. I could neither confirm nor rule out a Fedkiw CURIS project. A student with Stanford SSO should check CURIS directly."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "OUTREACH, not OPENING: I found no 'join', 'openings', 'prospective students', or 'we are recruiting' statement anywhere on physbam.stanford.edu (his only group site, a single long HTML page) or on his Stanford Profiles page, and CURIS project data is behind authentication, so nothing meets the bar for OPENING. Not WATCH either: the lab is unambiguously active, with a July 2026 arXiv submission co-authored by two current Ph.D. students, a 2026 Computer Graphics Forum paper, two 2025 Journal of Computational Physics papers, a WACV 2025 paper, and a 2026 journal review. He is also listed for 'Supervised Undergraduate Research CS 195 (Win, Spr)' and 'Senior Project CS 191' in 2025-26, and teaches CS 148 each Autumn, so an undergraduate has both a credit pathway and a course-based introduction. His email fedkiw@cs.stanford.edu is printed directly on his homepage, which makes a cold email straightforward. One caution worth flagging to a student: his homepage carries a long public note naming three recent Ph.D. graduates by name over unfinished publication obligations and stating 'Many faculty require that Ph.D. students have significant first author publications completed before graduating, and I have now changed my policy as well.' That is a real signal about how he runs the group and is worth reading before making contact.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 7,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/ron-fedkiw",
+    "https://profiles.stanford.edu/ron-fedkiw",
+    "https://engineering.stanford.edu/people/ron-fedkiw",
+    "https://physbam.stanford.edu/",
+    "https://arxiv.org/abs/2607.09811",
+    "https://api.openalex.org/authors?search=Ron%20Fedkiw",
+    "https://api.openalex.org/works?filter=author.id:A5076561653,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://api.openalex.org/works?filter=author.id:A5046653951,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://api.semanticscholar.org/graph/v1/author/1688994/papers?fields=title,year,venue,externalIds,url,authors&limit=100",
+    "https://curis.stanford.edu/api/projects",
+    "https://doi.org/10.1111/cgf.70417",
+    "https://doi.org/10.1016/j.jcp.2025.114451",
+    "https://doi.org/10.1016/j.jcp.2025.114319",
+    "https://doi.org/10.1109/wacv61041.2025.00012",
+    "https://doi.org/10.1088/1361-651x/ae3593"
+  ],
+  "fetch_notes": "FETCHED OK: (1) https://profiles.stanford.edu/ron-fedkiw - HTTP 200, gave the printed title 'Canon Professor in the School of Engineering', department 'Computer Science', 'PhD, UCLA (1996)', honors, 2025-26 course list including the undergraduate independent-study numbers, and a Stanford Advisees list. Its publication list is STALE - the newest entry is 2013 - so I used it only for title/courses/advisees, never for recent work. (2) https://physbam.stanford.edu/ - HTTP 200, his real personal/group homepage, a single large hand-written HTML page containing the bio, full topic-grouped publication list, the Students roster, a Ph.D. thesis policy note, a 'Note on Rejected Papers' section, and the CS205L slide deck. (3) https://engineering.stanford.edu/people/ron-fedkiw - HTTP 200, same title and bio, no email, no lab link. (4) https://arxiv.org/abs/2607.09811 - HTTP 200, verified the Detangled title, authors and 10 Jul 2026 submission date directly. FAILED / BLOCKED: the supplied directory link https://cs.stanford.edu/people/ron-fedkiw returned HTTP 404 'The requested URL /people/ron-fedkiw was not found on this server', so I used the Stanford Profiles page as faculty_url instead; https://cs.stanford.edu/person/ron-fedkiw and several cs.stanford.edu directory paths also 404'd; https://cs.stanford.edu/~fedkiw/ and http://physbam.stanford.edu/~fedkiw/ both redirect to a GitHub Pages 404 (only the bare physbam.stanford.edu root works). The arXiv API returned HTTP 429 (rate limited) on both attempts, so arXiv coverage comes from Semantic Scholar plus the one abs page I fetched directly. curis.stanford.edu renders nothing without JavaScript and its /api/projects endpoint returns HTTP 401. EMAIL: fedkiw@cs.stanford.edu appears literally on https://physbam.stanford.edu/ next to the postal address 'Gates Computer Science Bldg., Room 310' and again as a mailto: link; not guessed. A second address, alexisw@stanford.edu (Alexis Wing, Administrative Associate), appears on the Stanford Profiles page under 'Contact > Administrator' - recorded here for completeness but NOT used as his email. LAB NAME: physbam.stanford.edu is titled simply 'Ron Fedkiw' and prints no group or lab name anywhere, so lab_name is null rather than an invented 'PhysBAM Lab'; PhysBAM is the name of the simulation library, not a lab name printed on the page. There are no separate news, publications, people, or join-us pages on that site - it is one page. OPENALEX: 'Ron Fedkiw' and 'Ronald Fedkiw' resolve to TWO separate author records (A5046653951, 26 works; A5076561653, 205 works); I queried both for 2025+ works, getting 7 and 1 results respectively. The A5076561653 2025+ set also included a 2026 Stanford Digital Repository dissertation, 'Generating dynamic 3D scenes with foundation models' by Zhengfei Kuang (Fedkiw listed among the committee alongside Gordon Wetzstein and Jiajun Wu); Stanford Profiles independently lists Fedkiw as 'Doctoral Dissertation Co-Advisor' for Zhengfei Kuang. I left it out of evidence because it is a committee/co-advising artifact rather than a lab output, but it is real and fetched. DATE CAVEAT: the collisions paper has OpenAlex publication date 2025-10-15 while his own homepage prints the volume year as 2026; I recorded year 2025 and noted the discrepancy in the item summary. RECRUITING: set to unknown with confidence 0.0 - there is genuinely no recruiting statement on any page I fetched, in either direction (no 'not taking students' notice either)."
+}

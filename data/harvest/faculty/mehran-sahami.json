@@ -1,0 +1,144 @@
+{
+  "slug": "mehran-sahami",
+  "name": "Mehran Sahami",
+  "title": "Tencent Chair of the of the Computer Science Department, James and Ellenor Chesebrough Professor and Senior Fellow, by courtesy, at the Freeman Spogli Institute for International Studies",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/mehran-sahami",
+  "lab_name": null,
+  "lab_url": null,
+  "email": "sahami@cs.stanford.edu",
+  "email_source_url": "https://web.stanford.edu/class/cs182/staff.html",
+  "research_areas": ["computational-education"],
+  "research_topics": [
+    "computer science education",
+    "generative AI / LLMs in introductory programming courses",
+    "learning at scale and large-scale randomized education experiments",
+    "CS curriculum design and assessment",
+    "ethics, public policy and technological change",
+    "equity and global access in computing education"
+  ],
+  "current_direction": [
+    "Building generative AI into intro CS assignments rather than banning it (CS 106A 'Infinite Story')",
+    "Randomized-trial evidence on what LLM chat access does to engagement and exam outcomes at scale",
+    "Rethinking what CS fundamentals and assessment should look like in the AI era",
+    "Ethics, public policy and societal impact of technology (CS 182 / CS 182W, co-taught with Rob Reich)",
+    "Global-scale, human-centered CS teaching via the Code in Place model"
+  ],
+  "current_direction_basis": "Driven by four fetched 2025-2026 items: (1) the May 13, 2026 Stanford GSE / Stanford Report story in which Sahami is quoted as the CS 106A instructor defending AI use in the course ('rather than attempting to forbid use of AI until graduation, why not try to figure out what form of instruction creates a solid understanding of the material while taking advantage of these tools?') and on senior projects and equity of access; (2) the live CS 182 course site whose announcements page opens 'Welcome to the CS182 web site for Winter 2025-26!' with assignments running through March 17, 2026; (3) the 2025 ACM L@S paper 'The GPT Surprise', a 5,831-student / 146-country randomized control trial of GPT-4 access in an online coding class; (4) the 2025 SIGCSE paper 'Infinite Story', which is the same-named CS 106A assignment described in the 2026 news story. The Code in Place strand comes from the Stanford Engineering article naming Sahami as co-creator with Chris Piech. NOT based on his older biography (search/IR work at Google, CS2013 curriculum task force).",
+  "evidence": [
+    {
+      "kind": "news",
+      "year": 2026,
+      "title": "Stanford education experts put AI into perspective",
+      "summary": "Stanford GSE / Stanford Report feature (May 13, 2026) built around Sahami's approach to generative AI in CS 106A. Quotes him directly: 'The tools do add productivity, industries are expecting students to use them, and students are going to use them, even if they are ‘banned’... So, rather than attempting to forbid use of AI until graduation, why not try to figure out what form of instruction creates a solid understanding of the material while taking advantage of these tools?' Also: 'By the time students get to their senior project, there's an expectation that they're using some AI tools to help produce that larger piece of work. That said, they have to have some fundamental knowledge to be able to assure that the code is doing the right thing.' Notes that CS 106A's AI lessons include ethics, bias and fairness, and that Sahami is an HAI faculty affiliate. Opens by describing the 'Infinite Story' assignment (code an adventure game from scratch, then use ChatGPT to keep it going).",
+      "url": "https://ed.stanford.edu/news/stanford-education-experts-put-ai-perspective",
+      "venue": "Stanford Graduate School of Education / Stanford Report (also mirrored at acceleratelearning.stanford.edu)"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "CS 182 / CS 182W: Ethics, Public Policy, and Technological Change (Winter 2025-26)",
+      "summary": "Live course website, fetched Aug 2026. Announcements page reads 'Welcome to the CS182 web site for Winter 2025-26!' and logs assignments through the take-home final released the week of March 9 and due March 17, 2026. Staff page lists Sahami and Rob Reich as the two professors, a head TA and seven TAs. Cross-listed per Stanford Profiles as COMM 180, CS 182, PHIL 82, POLISCI 182, PUBLPOL 182, plus the WIM version CS 182W.",
+      "url": "https://web.stanford.edu/class/cs182/announcements.html",
+      "venue": "Stanford CS 182 course site"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances",
+      "summary": "Randomized control trial with 5,831 students from 146 countries in an online coding class, giving some students access to a GPT-4 chat interface. Per the OpenAlex abstract: estimates positive exam benefits for adopters, but 'the advertisement of GPT-4 led to a significant average decrease in exam participation,' with the effect modulated by country — 'Offering access to LLMs to students from low human development index countries increased their exam participation rate on average.' Authors: Nie, Chandak, Suzara, Malik, Woodrow, Peng, Sahami, Brunskill, Piech.",
+      "url": "https://doi.org/10.1145/3698205.3733960",
+      "venue": "ACM Conference on Learning @ Scale (L@S) 2025"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Infinite Story",
+      "summary": "SIGCSE Technical Symposium 2025 paper (published 2025-02-18) by Piech, Sahami, Alonso, Liu, Arifov, Sreenivas, Webber, Zheng, Nguyen, Mlauzi, Woodrow — an 11-author paper with a large student author list. 'Infinite Story' is also the name of a current CS 106A assignment (visible on the CS 106A assignment list and described in the May 2026 Stanford GSE story) in which students code an adventure game from scratch and then use ChatGPT to extend it. No abstract was available from OpenAlex; the ACM DL landing page was not fetched.",
+      "url": "https://doi.org/10.1145/3641555.3705037",
+      "venue": "SIGCSE TS 2025 (ACM Technical Symposium on Computer Science Education)"
+    },
+    {
+      "kind": "project",
+      "year": 2024,
+      "title": "Code in Place — free global online CS106A-based course",
+      "summary": "Stanford Engineering article: 'Chris Piech... co-created the project with colleague Mehran Sahami, professor and the Tencent Chair of the Computer Science Department.' Model is Stanford-led lectures plus ~10-student sections led by volunteer teachers; 'more than 30,000 learners have gone through Code in Place, which has had the support of about 3,000 section leaders.' The article is dated April 10, 2024 — this is the most recent Stanford-hosted page I could fetch about the program. The live site codeinplace.stanford.edu (fetched Aug 31, 2026) is a JavaScript app whose bundle enumerates course ids 'cip3','public','cip4','cip5','pylatino-25','cip6','cip7', indicating the program has continued past the 2024 article, but I could not fetch any rendered page text confirming the current cohort or its status.",
+      "url": "https://engineering.stanford.edu/news/stanfords-code-place-introductory-programming-course-offers-new-model-large-scale-interactive",
+      "venue": "Stanford University School of Engineering news"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed instructor of record for undergraduate independent-study and senior-project courses",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/mehran-sahami",
+      "note": "His Stanford Profiles 'Independent Studies (16)' list includes 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P', 'Programming Service Project CS 192', and 'Independent Study SYMSYS 196'. These are the undergraduate-facing research/project course numbers, so an undergraduate can formally work with him for credit."
+    },
+    {
+      "signal": "Bass Fellow in Undergraduate Education; undergraduate teaching is his primary appointment",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/mehran-sahami",
+      "note": "Profiles bio: 'As a Professor (Teaching) in the Computer Science department, he is also a Bass Fellow in Undergraduate Education and previously served as the Associate Chair for Education in Computer Science.' He teaches CS 106A (Programming Methodology, Spr) and CS 182/182W (Win) in the 2025-26 listing."
+    },
+    {
+      "signal": "Department-level undergraduate research pathways (CURIS, CS 191/195/199) that explicitly tell students to email professors",
+      "status": "verified",
+      "evidence_url": "https://cs.stanford.edu/bachelors/research-opportunities",
+      "note": "Stanford CS undergraduate research page: 'Throughout the year, professors have openings for undergrads to do work in their labs. They post descriptions of these projects on the site for your perusal.' and 'It's always a good idea to email a professor and let them know that you will be coming in.' CURIS is described as 'The program for CS undergrad Summer research... paid a stipend for living expenses.' This is a department-wide page, NOT a Sahami-specific opening — I could not confirm whether he currently has a CURIS project listed (see fetch_notes)."
+    },
+    {
+      "signal": "Undergraduates volunteer as Code in Place section leaders",
+      "status": "likely",
+      "evidence_url": "https://engineering.stanford.edu/news/stanfords-code-place-introductory-programming-course-offers-new-model-large-scale-interactive",
+      "note": "The 2024 Stanford Engineering article profiles section leader Sara Thomas, 'a third-year double major in computer science and environmental science at the University of Toronto Scarborough.' This shows undergraduates serve as volunteer section leaders in the program Sahami co-created, but it is a 2024 source, the role is teaching rather than research, and it is open worldwide rather than being a Stanford-undergraduate research position."
+    },
+    {
+      "signal": "Large student co-author lists on his 2025 education papers",
+      "status": "inferred",
+      "evidence_url": "https://doi.org/10.1145/3641555.3705037",
+      "note": "The 2025 SIGCSE 'Infinite Story' paper has 11 authors, most of them students (Alonso, Liu, Arifov, Sreenivas, Webber, Zheng, Nguyen, Mlauzi, Woodrow). I could NOT verify from any fetched page whether any of them were undergraduates at the time, so this is inference from author-list shape only, not a confirmed fact."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.15
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No fetched page contains a currently-open, undergraduate-relevant position for Sahami: he has no lab or group website (his old personal page at robotics.stanford.edu/~sahami/bio.html 404s, and the CS directory link cs.stanford.edu/people/mehran-sahami also 404s), the CURIS project API returned HTTP 401 so I could not check whether he has a 2026 project listed, and the only recruiting language I could actually fetch is department-wide advice on the CS undergraduate research page plus a 2024 Code in Place notice that says 'Applications for volunteer section leaders are closed.' At the same time the activity signal is strong and current: a May 13, 2026 Stanford GSE/Stanford Report feature built around his AI-in-CS106A approach, a live CS 182 site running through March 2026, and two 2025 peer-reviewed education papers. He is formally listed as instructor for CS 191/191W (senior project) and CS 199 (independent work), which is exactly the channel an undergraduate would use. That makes a cold email a reasonable, well-founded move — hence OUTREACH, not OPENING.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 5,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/mehran-sahami",
+    "https://profiles.stanford.edu/mehran-sahami",
+    "https://engineering.stanford.edu/people/mehran-sahami",
+    "https://cs.stanford.edu/people-cs/faculty-research/computational-education",
+    "https://cs.stanford.edu/bachelors/research-opportunities",
+    "https://cs.stanford.edu/research/independent-study-research",
+    "https://web.stanford.edu/class/cs182/",
+    "https://web.stanford.edu/class/cs182/announcements.html",
+    "https://web.stanford.edu/class/cs182/staff.html",
+    "https://web.stanford.edu/class/cs182/tableOfContents.html",
+    "https://web.stanford.edu/class/cs106a/",
+    "https://ed.stanford.edu/news/stanford-education-experts-put-ai-perspective",
+    "https://acceleratelearning.stanford.edu/story/stanford-education-experts-put-ai-into-perspective/",
+    "https://engineering.stanford.edu/news/stanfords-code-place-introductory-programming-course-offers-new-model-large-scale-interactive",
+    "https://engineering.stanford.edu/news/period-transition-stanford-computer-science-rethinks-core-curriculum",
+    "https://engineering.stanford.edu/news/mehran-sahami-evolution-computer-science-education",
+    "https://codeinplace.stanford.edu/",
+    "https://curis.stanford.edu/",
+    "https://api.openalex.org/authors?search=Mehran%20Sahami",
+    "https://api.openalex.org/works?filter=author.id:A5054695014,from_publication_date:2025-01-01",
+    "https://api.semanticscholar.org/graph/v1/author/1764547/papers",
+    "https://dblp.org/search/publ/api?q=author:Mehran_Sahami:",
+    "https://doi.org/10.1145/3698205.3733960",
+    "https://doi.org/10.1145/3641555.3705037",
+    "https://robotics.stanford.edu/~sahami/bio.html"
+  ],
+  "fetch_notes": "Fetched Aug 31, 2026 via curl with a browser UA. DEAD/BLOCKED: the supplied directory link https://cs.stanford.edu/people/mehran-sahami returned HTTP 404; https://cs.stanford.edu/people/sahami/ returns HTTP 200 but is only a 1997-era meta-refresh stub pointing at http://robotics.stanford.edu/~sahami/bio.html, which itself 404s — so he has NO working personal or lab website. news.stanford.edu returned HTTP 403 (Cloudflare interstitial) for both 2026 stories, so I used the Stanford GSE mirror (ed.stanford.edu) and the Stanford Accelerator for Learning mirror, which carry the same text and the May 13/14, 2026 date. The CURIS project API (https://curis.stanford.edu/api/projects) returned HTTP 401 and the CURIS site is a login-gated JS app, so I could NOT check whether Sahami has a current CURIS undergraduate project — a student should check CURIS directly. codeinplace.stanford.edu is a JS single-page app that renders no server-side text; I read its JS bundle only far enough to see it enumerates course ids including 'cip6' and 'cip7', and I did NOT find any fetchable statement about whether section-leader or student applications are currently open, so I did not claim one. hai.stanford.edu/people/mehran-sahami returned no matching content. The ACM DL landing pages for both 2025 papers were not fetched directly; their titles, dates, venues and the GPT Surprise abstract come from the OpenAlex and DBLP APIs. NO 2026 publications exist in OpenAlex (count 0 for from_publication_date:2026-01-01), DBLP, or Semantic Scholar as of this fetch — his two most recent papers are both 2025. EMAIL: sahami@cs.stanford.edu appears literally, as both link text and a mailto href, on the CS 182 staff page (https://web.stanford.edu/class/cs182/staff.html), which belongs to the live Winter 2025-26 course site; it was NOT guessed. Note that Rob Reich (reich@stanford.edu) co-teaches CS 182 with him. No lab name or lab members list exists to record; Code in Place is a teaching program he co-created, not a research lab, so lab_name and lab_url are left null."
+}

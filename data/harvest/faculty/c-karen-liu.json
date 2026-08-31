@@ -1,0 +1,202 @@
+{
+ "slug": "c-karen-liu",
+ "name": "C. Karen Liu",
+ "title": "Professor of Computer Science",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/c-karen-liu",
+ "lab_name": "The Movement Lab (TML)",
+ "lab_url": "https://tml.stanford.edu/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Human-Centered and Creative AI",
+  "Robotics",
+  "reinforcement-learning"
+ ],
+ "research_topics": [
+  "Building generative models for motion synthesis or control",
+  "Experimenting with humanoids, robot arms, exoskeletons and dexterous hands",
+  "Training virtual agents using RL and transfer to real robots",
+  "Collecting data with different motion capture systems",
+  "Pre-training or fine-tuning VLMs for policy development",
+  "Developing and using multibody simulators",
+  "Designing and building 3D-printable humanoids",
+  "Solving both convex and non-convex optimization problems",
+  "Analyzing, simulating and understanding human interaction with assistive devices and robots"
+ ],
+ "current_direction": [
+  "Humanoid whole-body loco-manipulation learned from motion tracking",
+  "Motion retargeting and scalable teleoperated humanoid data collection",
+  "Diffusion- and flow-based generative policies for real robot control",
+  "Muscle-driven and dexterous hand manipulation",
+  "Generative foundation models for human gait and clinical biomechanics"
+ ],
+ "current_direction_basis": "Driven by the 2026 items collected here, not the older graphics-centric bio. Humanoid loco-manipulation + motion tracking: BeyondMimic (2026), RPL (2026), and the 2025 OmniRetarget/ResMimic/VisualMimic arXiv line in OpenAlex. Retargeting + data collection: 'Retargeting Matters' (ICRA 2026) and TWIST2 (ICRA 2026), both first-listed on the lab's own publications feed. Generative/flow policies: 'Flow Policy Gradients for Robot Control' (2026) and BeyondMimic's guided-diffusion controller. Dexterous/muscle control: MUSIC (ACM TOG, 2026) and the lab's SimToolReal highlight. Biomechanics: GaitDynamics in Nature Biomedical Engineering (2026) plus the 2026 IEEE TBME balance-perturbation paper. The two open recruitment postings (2026-04-16, 2026-06-09) independently confirm the push toward long-horizon reasoning and human-robot physical collaboration.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "BeyondMimic: From motion tracking to versatile humanoid control via guided diffusion",
+   "summary": "Liao*, Truong*, Huang*, Gao, Tevet, Sreenath†, Liu† - turns motion tracking into general-purpose humanoid control using guided diffusion. Featured as a lab highlight; OpenAlex records a Science Robotics version dated 2026-08-26 (DOI 10.1126/scirobotics.adx8924) while the lab's own feed lists it as 'arXiv Preprint 2026' dated 2026-07-12.",
+   "url": "https://beyondmimic.github.io/",
+   "venue": "Science Robotics (lab site lists arXiv preprint 2026)"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
+   "summary": "Ze, Zhao, Wang, Kanazawa, Duan, Abbeel, Shi, Wu, C. Karen Liu. Lab-listed date 2026-06-01. A whole-body teleoperation/data-collection system for humanoids; also carried as a front-page lab highlight.",
+   "url": "https://yanjieze.com/TWIST2/",
+   "venue": "ICRA 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
+   "summary": "Araujo*, Ze*, Xu*, Wu†, Liu†. Lab-listed date 2026-06-01. Shows retargeting quality is a first-order factor in humanoid motion tracking. Also on OpenAlex as an arXiv preprint dated 2025-10-02.",
+   "url": "https://jaraujo98.github.io/retargeting_matters/",
+   "venue": "ICRA 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Flow Policy Gradients for Robot Control",
+   "summary": "Yi*, Choi*, Singh, Huang, Truong, Sferrazza, Ma, Duan†, Abbeel†, Shi†, Liu†, Kanazawa†. Lab-listed date 2026-07-13. Policy-gradient learning with flow-based generative policies for robot control.",
+   "url": "https://hongsukchoi.github.io/fpo-control/",
+   "venue": "arXiv Preprint 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "RPL: Learning Robust Humanoid Perceptive Locomotion on Challenging Terrains",
+   "summary": "Zhang, Seo, Chen, Yuan, Sreenath, Abbeel†, Sferrazza†, Liu†, Shi†. Lab-listed date 2026-07-13. Perception-driven humanoid locomotion over difficult terrain.",
+   "url": "https://rpl-humanoid.github.io/",
+   "venue": "arXiv Preprint 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "GaitDynamics: A Generative Foundation Model for Analyzing Human Walking and Running",
+   "summary": "Tan, Van Wouwe, Werling, Liu, Delp, Hicks, Chaudhari. Lab-listed date 2026-02-01. A generative foundation model for human gait analysis - the biomechanics/clinical arm of the lab.",
+   "url": "https://www.nature.com/articles/s41551-025-01565-8",
+   "venue": "Nature Biomedical Engineering 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "MUSIC: Learning Muscle-Driven Dexterous Hand Control",
+   "summary": "Xu, Ye, Sun, Ding, Schumann, C. Karen Liu. OpenAlex publication date 2026-07-03, DOI 10.1145/3811402. Muscle-actuated dexterous hand control; also a lab front-page highlight. Note co-author Yu Ding is listed on the lab site as an Undergrad.",
+   "url": "https://pei-xu.github.io/MUSIC",
+   "venue": "ACM Transactions on Graphics"
+  },
+  {
+   "kind": "project",
+   "year": 2026,
+   "title": "Gesture-Based Physical Collaboration with Humanoid Robots (open recruitment posting)",
+   "summary": "Open project listing on the lab's Join page, posted 2026-06-09, contact Takara Truong. Opens with '[Looking for students this summer continuing through the school year]'. Covers HRI, loco-manipulation, perception, control, simulation, and vision-language-action models.",
+   "url": "https://tml.stanford.edu/#join",
+   "venue": null
+  },
+  {
+   "kind": "project",
+   "year": 2026,
+   "title": "Reasoning and Planning for Long-Horizon Robotic Tasks (open recruitment posting)",
+   "summary": "Second open project listing on the Join page, posted 2026-04-16, contact Guy Tevet. Goal is 'an end-to-end controller that integrates high-level reasoning, scene understanding, and motor control to accomplish such complex, long-horizon tasks in the real world.'",
+   "url": "https://tml.stanford.edu/#join",
+   "venue": null
+  },
+  {
+   "kind": "course",
+   "year": 2025,
+   "title": "CS 123: A Hands-On Introduction to Building AI-Enabled Robots",
+   "summary": "Undergraduate-accessible robotics course taught by Liu; students build a quadruped from scratch and train it with RL. Lab course record marks active=false, last_offered 'Fall 2025', but Stanford Profiles lists CS 123 among her 2025-26 courses (Aut).",
+   "url": "https://profiles.stanford.edu/c-karen-liu",
+   "venue": "Stanford CS"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab People page lists nine current members with the explicit role 'Undergrad', each paired with a graduate-student mentor",
+   "status": "verified",
+   "evidence_url": "https://tml.stanford.edu/#people",
+   "note": "Re-verified 2026-08-31 in the live bundle. Exactly nine role:\"Undergrad\" records, names quoted literally from the fetched JS: Bodo Wirth (mentor Takara), Yuming (Matt) Chen (co-advisor Shuran Song, mentor Haochen Shi), Archer Date (mentor Keenon/Six/Jonathan), Cayden Gu (mentor Takara), Connor Hoffman (mentor Keenon/Six/Jonathan), Delfino Li (mentor Keenon/Six/Jonathan), Justin Gu (mentor Takara), Karen Vo, Yu Ding (mentor Guy/Pei). A literal count of the token 'Undergrad' in the bundle returns 9. The people component's role sorter is present verbatim and ranks postdoc>phd>master/coterm>undergrad, so 'undergrad' is a first-class category in the lab's own roster model. This is the strongest undergraduate evidence on the site."
+  },
+  {
+   "signal": "Open recruitment posting solicits 'students' for summer plus academic year, with no degree level named",
+   "status": "likely",
+   "evidence_url": "https://tml.stanford.edu/#join",
+   "note": "DOWNGRADED from 'verified'. The quote is literal and was re-fetched at HTTP 200: 'Gesture-Based Physical Collaboration with Humanoid Robots' (date 2026-06-09) begins '[Looking for students this summer continuing through the school year]'. What is verified is the posting and its open status - NOT its undergraduate applicability. It says 'students' with no degree level anywhere in the posting, so undergraduate relevance is inferred from non-exclusion plus the nine-undergrad roster, not stated."
+  },
+  {
+   "signal": "Standing research application form gated only by Stanford email address",
+   "status": "likely",
+   "evidence_url": "https://tml.stanford.edu/#join",
+   "note": "DOWNGRADED from 'verified'. The Join-page sentence is literal and re-verified in the bundle: 'If you are interested in working at TML, please fill out the research application form (Stanford email required).' The inference that this admits any Stanford undergraduate is reasonable - it is the only stated eligibility gate and names no degree level - but it is an inference. The form itself could NOT be opened: https://docs.google.com/forms/d/e/1FAIpQLSco1zVV16lgR7W8PYC6yv9ENUUNyB0VYxYyGt7us_VddDDmYA/viewform returns HTTP 401 behind a Google sign-in wall, so neither its contents nor whether it is still accepting responses could be confirmed."
+  },
+  {
+   "signal": "Undergraduate co-authorship on a 2026 lab paper",
+   "status": "likely",
+   "evidence_url": "https://tml.stanford.edu/content/publications/music-learning-muscle-driven-dexterous-hand-control.json",
+   "note": "Both halves re-fetched from the lab's own site this task. The MUSIC publication JSON (HTTP 200) gives the author string verbatim: 'Pei Xu*, Yufei Ye*, Shuchun Sun, Yu Ding, Elizabeth Schumann, C. Karen Liu', date 2026-07-19, venue 'ACM TOG (Proceedings of SIGGRAPH 2026)'. The People roster lists 'Yu Ding' with role 'Undergrad'. Same-name match across two feeds of the same lab site - strong, but identity is still not independently confirmed, so 'likely' rather than 'verified'."
+  },
+  {
+   "signal": "PI teaches an intro-level robotics course and offers independent-study/research units in 2025-26",
+   "status": "likely",
+   "evidence_url": "https://profiles.stanford.edu/c-karen-liu",
+   "note": "DOWNGRADED from 'verified'. Re-fetched at HTTP 200; the page literally lists for 2025-26: 'CS 123: A Hands-On Introduction to Building AI-Enabled Robots' (Aut), 'CS 248B: Fundamentals of Computer Graphics: Animation and Simulation' (Aut), 'CS 399: Independent Project' (Aut, Win, Spr, Sum), 'CS 399P', 'CS 499: Advanced Reading and Research' (Aut, Win, Spr, Sum), 'CS 499P'. The course titles and terms are verified verbatim; the characterization 'undergraduate-facing' is NOT on the page and is inferred from Stanford course numbering, hence 'likely'. The page also confirms the title 'Professor of Computer Science' verbatim."
+  },
+  {
+   "signal": "CURIS, senior/honors thesis, or a dedicated 'Stanford undergraduate' paragraph",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-confirmed absent 2026-08-31: a case-insensitive search of the full lab bundle for 'CURIS', 'senior thesis', 'honors thesis' and 'senior project' returns 0 matches. No sentence anywhere on the lab site is addressed to undergraduates specifically."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "VERIFIED 2026-08-31 by re-fetch. tml.stanford.edu is a JS SPA (empty <div id=\"root\">), so the Join copy was read from the site's own Vite bundle /assets/index-CCVDOZ9A.js and the two recruitment JSONs were fetched directly at HTTP 200. Verbatim, present-tense open-recruiting text: (1) 'We are looking for researchers, engineers, and dreamers who want to shape the future of embodied intelligence.' (2) 'Thanks for your interest in joining TML! Research in our lab typically involves:' (3) 'If you are interested in working at TML, please fill out the research application form (Stanford email required).' (4) Heading 'Open Project Opportunities:' followed by two live postings. The newer, 'Gesture-Based Physical Collaboration with Humanoid Robots' (date 2026-06-09, contact Takara Truong), opens verbatim: '[Looking for students this summer continuing through the school year]' and continues 'Students will work on problems at the intersection of human-robot interaction, loco-manipulation, perception, control, simulation, and vision-language-action models'. The older is 'Reasoning and Planning for Long-Horizon Robotic Tasks' (date 2026-04-16, contact Guy Tevet). RENDER CONFIRMED: the bundle's recruitment loader statically imports exactly these two JSONs (gesture-based-physical-collaboration-with-humanoid-robots.json, reasoning-and-planning-for-long-horizon-robotic-tasks.json), sorts them by date descending, and applies NO expiry/date filter; the fallback string 'No specific projects are actively recruiting at this exact moment, but we are always looking for great talent.' is guarded by length===0 and therefore does NOT render today. LIMIT ON DEGREE LEVEL: neither posting, and no sentence in the Join copy, contains the word 'undergraduate' or any degree level. The word 'undergrad' occurs 9 times in the whole bundle and every occurrence is a People-roster role value, never recruiting copy. The only stated eligibility gate is 'Stanford email required'. UNVERIFIABLE CHANNEL: the linked research application form (https://docs.google.com/forms/d/e/1FAIpQLSco1zVV16lgR7W8PYC6yv9ENUUNyB0VYxYyGt7us_VddDDmYA/viewform) returns HTTP 401 behind a Google sign-in wall ('You must sign in to access this content'), consistent with a Stanford-domain restriction but NOT openable by this check - so it could not be confirmed to be still accepting responses. Both postings also name a direct human contact, which does not depend on that form. Application caveat quoted verbatim: 'Your submission will be reviewed by current TML members-typically those you indicate in the form. We will contact you in two weeks if your background interests align with ongoing projects. Due to the high volume of applications received, we regret that we are unable to respond to all submissions.'",
+  "url": "https://tml.stanford.edu/#join",
+  "confidence": 0.7
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "OPENING upheld on adversarial re-check 2026-08-31, but at reduced confidence (0.9 -> 0.7). WHAT IS PROVEN: the lab is unambiguously and present-tense recruiting. Two dated project postings were fetched directly at HTTP 200 today, and the site bundle's recruitment loader was read to confirm they are the entire collection, are sorted by date with no expiry filter, and therefore actually render - the 'no specific projects are actively recruiting' fallback is guarded by length===0 and does not display. The newer posting (2026-06-09, contact Takara Truong) states verbatim '[Looking for students this summer continuing through the school year]'; the older is dated 2026-04-16 (contact Guy Tevet). The Join page additionally carries a standing open call: 'If you are interested in working at TML, please fill out the research application form (Stanford email required).' None of the failure modes that force a downgrade are present: there is no PhD-only funnel, no 'not taking students' statement, and this is not a bare contact page. WHAT IS NOT PROVEN: no statement anywhere on the site is addressed to undergraduates. The postings say 'students' with no degree level, and the word 'undergrad' appears in the bundle only as a People-roster role, never in recruiting copy. Undergraduate relevance therefore rests on non-exclusion (the sole stated gate is a Stanford email, which an undergraduate has) plus strong circumstantial roster evidence: nine current members carry the role 'Undergrad', each with a named graduate mentor, and one of them (Yu Ding) appears in the author string of the lab's 2026 MUSIC paper. OUTSTANDING CAVEAT: the linked Google application form returns HTTP 401 behind a sign-in wall, consistent with the advertised Stanford-domain restriction but not openable here, so it could not be confirmed to be still accepting responses. Both postings name a direct human contact, so the opportunity does not depend solely on that form. A student should treat this as a real, currently-open lab-level call that welcomes undergraduates in practice, not as an undergraduate-specific program, and should expect the lab's own stated caveat that it 'cannot respond to all submissions'.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 10,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/karen-liu",
+  "https://profiles.stanford.edu/c-karen-liu",
+  "https://profiles.stanford.edu/c-karen-liu?tab=publications",
+  "https://cs.stanford.edu/~karenliu",
+  "https://tml.stanford.edu/",
+  "https://tml.stanford.edu/assets/index-CCVDOZ9A.js",
+  "https://tml.stanford.edu/#join",
+  "https://tml.stanford.edu/#people",
+  "https://tml.stanford.edu/#publications",
+  "https://tml.stanford.edu/#courses",
+  "https://tml.stanford.edu/content/recruitment/gesture-based-physical-collaboration-with-humanoid-robots.json",
+  "https://tml.stanford.edu/content/recruitment/reasoning-and-planning-for-long-horizon-robotic-tasks.json",
+  "https://tml.stanford.edu/content/publications/2026-twist2-scalable-portable-and-holistic-humanoid-data-collecti.json",
+  "https://tml.stanford.edu/content/publications/2026-retargeting-matters-general-motion-retargeting-for-humanoid-.json",
+  "https://tml.stanford.edu/content/publications/2026-flow-policy-gradients-for-robot-control.json",
+  "https://tml.stanford.edu/content/publications/2026-rpl-learning-robust-humanoid-perceptive-locomotion-on-challe.json",
+  "https://tml.stanford.edu/content/publications/2026-gaitdynamics-a-generative-foundation-model-for-analyzing-hum.json",
+  "https://tml.stanford.edu/content/publications/2026-anylift-scaling-motion-reconstruction-from-internet-videos-v.json",
+  "https://tml.stanford.edu/content/publications/2026-romo-a-large-scale-richly-organized-dataset-and-semantic-tax.json",
+  "https://tml.stanford.edu/content/publications/2025-beyondmimic-from-motion-tracking-to-versatile-humanoid-contr.json",
+  "https://tml.stanford.edu/content/publications/2025-toddlerbot-open-source-ml-compatible-humanoid-platform-for-l.json",
+  "https://tml.stanford.edu/content/courses/a-hands-on-introduction-to-building-ai-enabled-robots.json",
+  "https://tml.stanford.edu/content/courses/computer-graphics-in-the-era-of-ai.json",
+  "https://tml.stanford.edu/content/highlights/beyondmimic-from-motion-tracking-to-versatile-humanoid-control-via-guided-diffusion.json",
+  "https://tml.stanford.edu/content/highlights/omniretarget-interaction-preserving-data-generation-for-humanoid-whole-body-loco-manipulation-and-scene-interaction.json",
+  "https://tml.stanford.edu/content/highlights/simtoolreal-an-object-centric-policy-for-zero-shot-dexterous-tool-manipulation.json",
+  "https://tml.stanford.edu/content/highlights/music-learning-muscle-driven-dexterous-hand-control.json",
+  "https://api.openalex.org/authors?search=Karen%20Liu",
+  "https://api.openalex.org/works?filter=author.id:A5048338914,from_publication_date:2025-01-01&sort=publication_date:desc&per-page=25"
+ ],
+ "fetch_notes": "DIRECTORY LINK DEAD: the supplied https://cs.stanford.edu/people/karen-liu returns HTTP 404 ('The requested URL /people/karen-liu was not found on this server'). https://cs.stanford.edu/people/c-karen-liu and /person/c-karen-liu also 404. Used https://profiles.stanford.edu/c-karen-liu (HTTP 200) as faculty_url; it confirms the title 'Professor of Computer Science' verbatim. LAB DISCOVERY: the Links section of that profile gives https://cs.stanford.edu/~karenliu, which 302-redirects to https://tml.stanford.edu/ - The Movement Lab. LAB SITE IS A JAVASCRIPT SPA: tml.stanford.edu serves an empty <div id=\"root\"> shell for every path (including /robots.txt and /sitemap.xml, which return the same HTML), so curling page URLs yields only the title 'The Movement Lab'. Content was recovered two ways: (a) downloading the Vite bundle /assets/index-CCVDOZ9A.js (1.8 MB) and reading the inlined content modules, and (b) fetching the underlying JSON files directly at https://tml.stanford.edu/content/<collection>/<slug>.json, which the server does return as raw JSON. Both were used and agree. Routes are hash-based (#people, #publications, #courses, #join), so the '#'-anchored URLs above are the correct human-visitable addresses. RECRUITING NUANCE: the bundle contains the string 'No specific projects are actively recruiting at this exact moment, but we are always looking for great talent.' I checked the render guard before relying on it - it is wrapped in 'n.length===0 && ...', i.e. it only displays when the recruitment collection is empty. The collection currently has two entries (dated 2026-04-16 and 2026-06-09), so that message does not render for a visitor today. I did not treat it as evidence of a closed lab, and the state_rationale records both readings. NO EMAIL FOUND: regex search for email addresses returned zero hits across the full lab JS bundle, the Stanford Profiles HTML, and the profile's publications tab. email and email_source_url are therefore null - no address was guessed. OPENALEX NAME COLLISION: the filtered query authors?search=C. Karen Liu&filter=last_known_institutions.ror:00f54p054 returned count=0, so an unfiltered search was used. Five distinct 'Karen Liu' records exist; A5048338914 (143 works, Stanford) is the right one, but it is a dirty merge - its display_name_alternatives include 'Cheng Liu'/'Chengbing Liu' and its 2025+ works include 'Simulation Analysis of Thermal Deformation and Extruded Profile Formability of Al-10Mg-3Zn Aluminum Alloy' (Materials, 2026) affiliated to the Institute of New Materials. That paper is NOT hers and was excluded; every evidence item below was cross-checked against the lab's own publications feed or its explicit author list. DATE DISCREPANCY: BeyondMimic is dated 2026-07-12 / 'arXiv Preprint 2026' on the lab feed but 2026-08-26 in Science Robotics per OpenAlex (DOI 10.1126/scirobotics.adx8924); both are recorded in the evidence summary rather than silently picking one. COURSE CAVEAT: the lab's CS 123 record carries active:false with last_offered 'Fall 2025', while Stanford Profiles lists CS 123 (Aut) under 2025-26 courses - noted in the evidence item rather than resolved. RoMo (CVPR 2026) was found but its link field reads 'Coming Soon', so it was not used as an evidence item. WebSearch/WebFetch were not needed; all fetches were curl with a browser UA."
+}

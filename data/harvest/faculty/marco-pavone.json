@@ -1,0 +1,150 @@
+{
+ "slug": "marco-pavone",
+ "name": "Marco Pavone",
+ "title": "Associate Professor of Aeronautics and Astronautics, Senior Fellow at the Precourt Institute for Energy and Associate Professor, by courtesy, of Electrical Engineering & of Computer Science",
+ "department": "Aeronautics and Astronautics (courtesy appointments in Electrical Engineering and Computer Science)",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/marco-pavone",
+ "lab_name": "Autonomous Systems Laboratory (ASL)",
+ "lab_url": "https://asl.stanford.edu/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Human-Centered and Creative AI",
+  "Robotics",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "Robot foundation models / vision-language-action (VLA) policies",
+  "Embodied AI agents and grounded reasoning",
+  "Physical AI safety, monitoring and guardrailing",
+  "Data flywheels for robotics (automated evaluation and data curation)",
+  "Optimal and learning-based control and planning",
+  "Autonomous vehicles and end-to-end driving",
+  "Space robotics and spacecraft trajectory optimization",
+  "Future mobility systems and fleet coordination"
+ ],
+ "current_direction": [
+  "Making vision-language-action models reliable via test-time sampling, verification and scaling",
+  "Reasoning-centric end-to-end autonomous driving (world models, chain-of-thought, long-tail cases)",
+  "Runtime out-of-distribution failure detection and guardrailing for deployed embodied systems",
+  "Data flywheels: influence-function data curation and closed-loop retraining of robot policies",
+  "Transformer-based spacecraft trajectory generation and space rendezvous mission design"
+ ],
+ "current_direction_basis": "Driven by (a) the lab's own 2026-dated research page, which organizes work into six thrusts led by 'Robot Foundation Models', 'Embodied AI Agents', 'Physical AI Safety' and 'Data Flywheels for Robotics', and cites RSS 2026 / ICRA 2026 / CoRL 2025 papers as representative; (b) 2025-2026 publications retrieved from OpenAlex and the ASL publications page: 'RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models' (CoRL 2025), 'Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning' (CoRL 2025), 'CUPID: Curating Data your Robot Loves with Influence Functions' (CoRL 2025), 'Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail' (arXiv, Oct 2025), 'Latent Chain-of-Thought World Modeling for End-to-End Driving' (arXiv, Dec 2025), 'Generative AI for Autonomous Driving: Frontiers and Opportunities' (ACM Computing Surveys, Aug 2026), and 'Agile Tradespace Exploration for Space Rendezvous Mission Design via Transformers' (IEEE Aerospace Conference 2026). NOT based on the older biography text on the Stanford Profiles page.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Generative AI for Autonomous Driving: Frontiers and Opportunities",
+   "summary": "Survey of generative AI methods for autonomous driving, published 2026-08-07 per OpenAlex; most recent indexed work with Pavone as an author.",
+   "url": "https://doi.org/10.1145/3838726",
+   "venue": "ACM Computing Surveys"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Agile Tradespace Exploration for Space Rendezvous Mission Design via Transformers",
+   "summary": "Transformer-based mission design for spacecraft rendezvous, by Y. Takubo, D. Gammelli, M. Pavone and S. D'Amico. Listed under '2026' on the ASL publications page and indexed by OpenAlex (2026-03-07).",
+   "url": "https://doi.org/10.1109/aero66936.2026.11519905",
+   "venue": "IEEE Aerospace Conference"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models",
+   "summary": "J. Kwok, C. Agia, R. Sinha, M. Foutter, S. Li, I. Stoica, A. Mirhoseini, M. Pavone. Marked 'In Press' under 2025 on the ASL publications page and named a representative paper of Thrust 1 (Robot Foundation Models) on the ASL research page.",
+   "url": "https://asl.stanford.edu/publications/",
+   "venue": "Conference on Robot Learning (CoRL)"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail",
+   "summary": "Preprint posted 2025-10-30 per OpenAlex; couples reasoning with action prediction for long-tail autonomous driving.",
+   "url": "https://doi.org/10.48550/arxiv.2511.00088",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "project",
+   "year": 2026,
+   "title": "ASL research thrusts: Robot Foundation Models, Embodied AI Agents, Physical AI Safety, Data Flywheels for Robotics, Optimal & Learning-based Control, Applied Autonomy",
+   "summary": "The lab research page (footer '© 2026 Autonomous Systems Lab') states the work is 'organized around six core thrusts that together span the full autonomy stack' and lists RSS 2026, ICRA 2026 and CoRL 2025 papers as representative, confirming the current agenda.",
+   "url": "https://asl.stanford.edu/research/",
+   "venue": null
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 teaching, including Supervised Undergraduate Research (CS 195) and Independent Study in Aero/Astro (AA 199)",
+   "summary": "Stanford Profiles lists his '2025-26 Courses' as AA 203 Optimal and Learning-based Control (Spr), AA 174A / CS 137A / EE 160A Principles of Robot Autonomy I (Aut) and ENGR 319 Robotics and Autonomous Systems Seminar (Aut, Win, Spr), plus 23 independent-study listings that include 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Independent Work CS 199', 'Independent Study in Aero/Astro AA 199' and 'Directed Research and Writing in Aero/Astro AA 190'.",
+   "url": "https://profiles.stanford.edu/marco-pavone",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab FAQ (the page the site's 'Join' nav link points to) explicitly says undergraduates may do a research rotation",
+   "status": "verified",
+   "evidence_url": "https://asl.stanford.edu/faq/",
+   "note": "RE-VERIFIED 2026-08-31 (second adversarial pass) by live curl of https://asl.stanford.edu/faq/, which 307-redirects to https://stanfordasl.github.io//faq/ and returns HTTP 200, <title>FAQ - Stanford ASL</title>, footer '© 2026 Autonomous Systems Lab, Stanford University'. The page was fetched THREE times with byte-identical results (39498 bytes each) to rule out a transient bad response, because one earlier download in this pass came back truncated and carrying an unrelated lab's content. Matched literally in the raw HTML as a <dt>/<dd> pair: \"I'm an undergrad/MS student interested in gaining some research experience from the ASL, but not looking to stay for the PhD. Can I still do a research rotation?\" — \"Yes! Please take a look at our research areas and our recent publications to see which areas you are most interested in.\". The site's top-nav 'Join' item resolves to href=\"/faq/\" (re-confirmed by parsing every anchor on the fetched page: Research -> /research/, Hardware -> /hardware/, Publications -> /publications/, Team -> /team/, Join -> /faq/, Contact Us -> /contact/), so this is the lab's designated recruiting page, not a generic contact page. PLACEMENT CAVEAT, re-confirmed: this Q&A is the final item under the <h2>Admitted Students</h2> section, immediately before <h2>Prospective Students</h2> — so it addresses students already at Stanford, which fits a current Stanford undergraduate but is not an open call to outside applicants."
+  },
+  {
+   "signal": "Currently registered to supervise undergraduate research courses in 2025-26",
+   "status": "likely",
+   "evidence_url": "https://profiles.stanford.edu/marco-pavone",
+   "note": "Status stays 'likely' (downgraded from 'verified' in the prior pass; downgrade re-affirmed 2026-08-31). Literally verified on https://profiles.stanford.edu/marco-pavone (HTTP 200, 320796 bytes): a section headed '2025-26 Courses' contains 'Independent Studies (23)', and that list literally includes 'Supervised Undergraduate Research' / 'CS 195 (Aut, Win, Spr, Sum)', 'Independent Study in Aero/Astro' / 'AA 199 (Aut, Win, Spr, Sum)', 'Independent Work' / 'CS 199 (Aut, Win, Spr, Sum)', 'CS 199P (Aut, Win, Spr, Sum)' and 'AA 190 (Aut, Win, Spr, Sum)'. NOT verified, and why this is only 'likely': (1) each entry is a generated ExploreCourses catalog link (academicYear=20252026), which is how Stanford Profiles lists independent-study numbers a faculty member is eligible to sponsor — nothing on the page states he is actively supervising an undergraduate, names a student, or reports enrolment; (2) NEW STALENESS CAVEAT found in this pass — the only academic-year headings on the page are '2022-23 Courses', '2023-24 Courses', '2024-25 Courses' and '2025-26 Courses' (raw academicYear params 20222023, 20232024, 20242025, 20252026). As of today, 2026-08-31, 2025-26 is the academic year that has just ENDED and no 2026-27 listing has appeared yet, so this is not evidence about the upcoming year. It is read as 'likely' rather than 'inferred' only because the same independent-study numbers recur across all four consecutive listed years, which is a standing pattern rather than a one-off."
+  },
+  {
+   "signal": "Recommended course pathway into the lab, which is open to undergraduates",
+   "status": "likely",
+   "evidence_url": "https://asl.stanford.edu/faq/",
+   "note": "Re-verified verbatim on https://asl.stanford.edu/faq/ 2026-08-31: 'Usually, Master's students are advised to first take AA 274A: Principles of Robotic Autonomy I (Fall), and AA 203: Introduction to Optimal Control Theory (Spring), and perform well in them, before rotating in the lab. The summer is a particularly good time to do a rotation because this allows students to focus more of their efforts on research and stress less about taking time away from courses.' Status stays 'likely' because that sentence is explicitly scoped to Master's students ('Usually, Master's students are advised...') and the FAQ states NO course prerequisite for undergraduates anywhere on the page. A separate answer offers coursework only as a way to learn about the lab: 'Another way to learn more about the ASL is to take AA274: Principles of Robotic Autonomy, and AA203: Introduction to Optimal Control Theory.' So for an undergraduate this coursework is PREFERRED preparation exactly as the source words it, and is never stated as a REQUIREMENT."
+  },
+  {
+   "signal": "Team page lists no undergraduate members",
+   "status": "verified",
+   "evidence_url": "https://asl.stanford.edu/team/",
+   "note": "RE-VERIFIED 2026-08-31 by live curl of https://asl.stanford.edu/team/ (HTTP 200, 280990 bytes, <title>Team - Stanford ASL</title>): a case-insensitive grep for 'undergrad' returns ZERO matches on the page, and the roster was additionally enumerated from the raw <h2>/<h3> headings rather than trusted. <h2> sections are 'Postdoctoral Scholars', 'PhD Students' and 'Our Values'; <h3> headings add 'Prof. Marco Pavone' (Director), 'Research Team', 'External Research Affiliates', 'Alumni' and 'Visiting Students'. Counted from those headings: 5 postdoctoral scholars (Amo Alonso, Frey, Gammelli, Luo, Thumm) and 14 PhD students (Agia, Bauer, Buurmeijer, Dao, Foutter, Ganai, Hübel, Kwok, Liang, Mohnot, Morton, Pabon, Sinha, Zhang). The only Stanford-based current member who is not a PhD student or postdoc is \"Arpit Dwivedi (Master's Student)\" under Visiting Students. Undergraduates are therefore invited by the FAQ but appear nowhere on the public roster. This signal argues AGAINST the opening and is kept at 'verified' because it rests on a literal zero-match search plus a complete enumeration of the fetched page."
+  },
+  {
+   "signal": "CURIS or senior/capstone project participation",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-confirmed 2026-08-31: a word-boundary, case-insensitive grep for CURIS, REU, capstone, 'senior project', 'summer research' and SURF over the freshly fetched faq, team, contact, research and publications pages plus the Stanford Profiles page returned ZERO matches on every page. The only hit for any recruiting-adjacent keyword anywhere in the set was the single word 'position' on the FAQ, which belongs to the postdoctoral answer ('How can I apply for a postdoctoral position in the ASL?') and is not undergraduate-relevant. The ASL site has no news page and no dedicated openings page, so no structured undergraduate programme can be evidenced either way."
+  },
+  {
+   "signal": "Lab meetings are open and announced on a mailing list",
+   "status": "likely",
+   "evidence_url": "https://asl.stanford.edu/faq/",
+   "note": "Re-verified verbatim on https://asl.stanford.edu/faq/ 2026-08-31: 'The easiest way is to check out our projects page and attend our lab meetings. Information about the lab meetings will be announced on this mailing list. You will get to learn about topics that the lab is interested in, and an opportunity to meet students in the lab.' Status stays 'likely': inspection of the raw HTML in this pass confirms the <dd> reads '...will be announced on this mailing list.' with NO <a href> around 'this mailing list' (the same bare string also appears in the page's embedded Next.js payload), so the subscription URL genuinely cannot be recovered from the page. The answer also never states that lab meetings are open to non-members — that remains an inference from 'attend our lab meetings'."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "I'm an undergrad/MS student interested in gaining some research experience from the ASL, but not looking to stay for the PhD. Can I still do a research rotation? — Yes! Please take a look at our research areas and our recent publications to see which areas you are most interested in.",
+  "url": "https://asl.stanford.edu/faq/",
+  "confidence": 0.65
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "UPHELD on a second, independent adversarial re-verification (2026-08-31). STEP 1 (the only test that can sustain OPENING) PASSED on live fetches. https://asl.stanford.edu/faq/ 307-redirects to https://stanfordasl.github.io//faq/ and returns HTTP 200 with <title>FAQ - Stanford ASL</title> and the footer '© 2026 Autonomous Systems Lab, Stanford University'. It literally contains, as a <dt>/<dd> question-and-answer pair: \"I'm an undergrad/MS student interested in gaining some research experience from the ASL, but not looking to stay for the PhD. Can I still do a research rotation?\" — \"Yes! Please take a look at our research areas and our recent publications to see which areas you are most interested in.\". That satisfies both required conditions: it is present-tense affirmative ('Yes!') with no expiry, condition or closure language, and it is undergraduate-specific BY NAME ('I'm an undergrad/MS student'), not a PhD-applicant-only statement. None of the four downgrade triggers fired: (a) it is not a 'prospective PhD students should apply to the PhD program' line — the answer explicitly covers students 'not looking to stay for the PhD', and the PhD-admissions disclaimer ('The lab does not partake in the admissions process') sits in a separate 'Prospective Students' section that does not govern it; (b) there is no 'I am not taking new students' language anywhere on the page; (c) it is not a generic contact page — every anchor on the page was parsed and the top-nav 'Join' item resolves to href=\"/faq/\", making this the lab's designated recruiting page (the actual contact page, /contact/, is a separate address-and-parking page with no recruiting language at all); (d) nothing depends on a Google Doc or form. FETCH INTEGRITY: one download early in this pass returned truncated content belonging to an unrelated Stanford lab, so the FAQ was re-fetched three further times and returned byte-identical 39498-byte responses carrying the ASL content quoted above; the quote is taken from those consistent fetches, not the bad one. CAVEATS THE STUDENT MUST WEIGH, each independently re-checked in this pass and each a reason the confidence is 0.65 and not higher: (1) the undergrad Q&A is the LAST item under the 'Admitted Students' heading, not 'Prospective Students' — it is addressed to students already at Stanford, so it reads as an invitation to current Stanford undergraduates and NOT as an open call to outside applicants; (2) it is an undated standing FAQ answer, not a dated posting — there is no deadline, no application form, and no stated number of slots; (3) it supplies no application channel, pointing only to the research and publications pages, and an email regex over the fetched faq, team, contact, research, publications and Profiles pages returned no address for Pavone, so there is no published address to write to; (4) the team page contains the string 'undergrad' zero times and its enumerated roster (5 postdocs, 14 PhD students, and one Master's visiting student) includes no undergraduates. CORROBORATION re-verified rather than taken on trust: https://profiles.stanford.edu/marco-pavone (HTTP 200) shows a '2025-26 Courses' section whose 'Independent Studies (23)' list literally includes 'Supervised Undergraduate Research' / 'CS 195 (Aut, Win, Spr, Sum)', 'AA 199', 'CS 199' and 'AA 190' — though note that 2025-26 is the academic year that has just ended as of today and no 2026-27 listing has appeared yet. https://asl.stanford.edu/publications/ (HTTP 200) confirms the lab is unambiguously active, listing under '2026' both 'Agile Tradespace Exploration for Space Rendezvous Mission Design via Transformers' (IEEE Aerospace Conference) and 'Semantic Trajectory Generation for Goal-Oriented Spacecraft Rendezvous' (AIAA Scitech Forum), plus the 2025 In-Press CoRL set (RoboMonkey, CUPID, Real-Time OOD Failure Prevention) and totals 'Preprints 19, Publications 339, Theses 31'. REALISTIC NEXT STEP, unchanged: enrol in CS 195 / AA 199 for research credit, or attend lab meetings and approach a PhD student naming a specific 2025-26 paper. The FAQ frames entry as a quarter-long rotation supervised by one or more PhD students and culminating in 'a research report as well as a presentation to the lab members'; it warns 'we get a lot of interest and we cannot accept every student' (said of the Master's-to-PhD path) and declines individual lab tours.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/marco-pavone",
+  "https://profiles.stanford.edu/marco-pavone",
+  "https://asl.stanford.edu/",
+  "https://asl.stanford.edu/research/",
+  "https://asl.stanford.edu/publications/",
+  "https://asl.stanford.edu/team/",
+  "https://asl.stanford.edu/faq/",
+  "https://asl.stanford.edu/contact/",
+  "https://api.openalex.org/authors?search=Marco+Pavone",
+  "https://api.openalex.org/works?filter=author.id:A5050003000,from_publication_date:2025-01-01&sort=publication_date:desc"
+ ],
+ "fetch_notes": "FETCH FAILURES: (1) The supplied CS directory link https://cs.stanford.edu/people/marco-pavone returned HTTP 404 'The requested URL /people/marco-pavone was not found on this server.' (2) https://aa.stanford.edu/people/marco-pavone redirected to https://aa.stanford.edu/user/login?destination=/people/marco-pavone (login wall, no content). (3) https://profiles.stanford.edu/api/cap/v1/search?q=Marco%20Pavone returned a 'Page Not Found' HTML page. (4) The arXiv Atom API (export.arxiv.org) returned HTTP 000 / empty body on two attempts, so no arXiv-native records were used; arXiv preprints below were obtained through OpenAlex instead. WHAT WORKED: https://profiles.stanford.edu/marco-pavone resolved directly (HTTP 200) and is used as faculty_url. asl.stanford.edu is a Next.js app that renders no text without script stripping; all lab text was extracted by removing <script>/<style> blocks from the raw HTML. SITE STRUCTURE: the ASL nav is Research / Hardware / Publications / Team / Join / Contact Us — 'Join' resolves to href=\"/faq/\"; there is NO news page, NO separate openings/prospective-students page, and no press or blog section, so no news evidence items exist. EMAIL: deliberately left null. The team page prints Pavone's address obfuscated as '[last name]@stanford.edu' with phone +1 (650) 723 4432 — the literal address is not on the page, so it was not reconstructed. The Stanford Profiles page lists only an administrator contact, 'Renee Quiroz, Administrative Associate, rnquiroz@stanford.edu, (650) 723-2867 (office)', which is the department admin and NOT the professor's own address, so it was not recorded in the email field. PUBLICATIONS: OpenAlex author A5050003000 (Marco Pavone, 659 works, Stanford University / NVIDIA) reports 65 works with publication_date >= 2025-01-01; the ASL publications page independently reports 'Preprints 19, Publications 339, Theses 31'. Note that OpenAlex publication_date values for journal 'article' records reflect issue dates that can run ahead of first release. AFFILIATION CAVEAT: the Stanford Profiles bio states he 'is also a Distinguished Research Scientist at NVIDIA where he leads autonomous vehicle research', and several 2025-2026 works (e.g. Alpamayo-R1, Describe Anything) are NVIDIA-affiliated rather than purely Stanford ASL projects. || ADVERSARIAL FACT-CHECK 2026-08-31. VERDICT: OPENING UPHELD. Pages re-fetched live in this pass, all HTTP 200: https://asl.stanford.edu/faq/ (follows a redirect to https://stanfordasl.github.io//faq/), /team/, /research/, /contact/, /publications/, and https://profiles.stanford.edu/marco-pavone. The FAQ's undergraduate rotation Q&A was matched literally in the raw HTML and is present-tense affirmative and undergrad-specific by name, so none of the downgrade triggers applied: it is not a PhD-applicants-only statement, there is no 'not taking new students' language, the page is not a generic contact page (the 'Join' nav item resolves to href=\"/faq/\"), and nothing depends on a Google Doc or form. Confidence set to 0.65 rather than higher because the statement is an undated standing FAQ answer with no deadline, no application form, and no application channel. EMAIL: re-checked and deliberately left null. An email regex over the fetched faq, team, contact, research and publications pages returned ZERO addresses (the team page renders the address obfuscated as '[last name]@stanford.edu' with phone +1 (650) 723 4432, so the literal string is absent and was NOT reconstructed). The only address anywhere in the fetched set is 'rnquiroz@stanford.edu' on Stanford Profiles, which belongs to Renee Quiroz, Administrative Associate — the department admin, not the professor — so it was not recorded. SIGNAL CHANGES: 'Currently registered to supervise undergraduate research courses in 2025-26' downgraded verified -> likely, because the literal CS 195 / AA 199 / CS 199 / AA 190 listings are generated ExploreCourses catalog links showing eligibility to sponsor, and no fetched page states active supervision. The two remaining 'verified' signals (FAQ undergraduate invitation; team page lists no undergraduates) are each backed by a literal quote or a zero-match grep reproduced in this pass. LAB ACTIVITY re-confirmed independently of OpenAlex: the publications page itself lists 2026 entries ('Agile Tradespace Exploration for Space Rendezvous Mission Design via Transformers'; 'Semantic Trajectory Generation for Goal-Oriented Spacecraft Rendezvous') and the 2025 CoRL In-Press papers, and reports 'Preprints 19, Publications 339, Theses 31'. || ADVERSARIAL FACT-CHECK #2, 2026-08-31. VERDICT: OPENING UPHELD; no field downgraded, one note sharpened. Pages re-fetched live in this pass, all HTTP 200 with on-disk byte counts matching curl's reported size: https://asl.stanford.edu/faq/ (39498 B, follows a 307 to https://stanfordasl.github.io//faq/), /team/ (280990 B), /contact/ (36322 B), /research/ (130083 B), /publications/ (2046008 B), and https://profiles.stanford.edu/marco-pavone (320796 B). FETCH ANOMALY WORTH RECORDING: the first request for /faq/ wrote a 37637-byte file even though curl reported size_download 39498, and that truncated body contained the FAQ of a DIFFERENT Stanford lab (SISL, canonical https://sisl.stanford.edu/faq/) rather than ASL's. Three subsequent fetches of the same URL — plus direct fetches of https://stanfordasl.github.io/faq/ and the double-slash redirect target — all returned byte-identical 39498-byte ASL content, so the first response was a transient proxy/download corruption and was discarded. Every quote in this record comes from the consistent fetches. Flagging it because a single unverified fetch of this URL could have produced a completely wrong lab's recruiting language. STEP 1: PASSED — the undergraduate rotation Q&A was matched literally in the raw HTML, is present-tense affirmative and undergrad-specific by name, and the 'Join' nav item was re-confirmed to resolve to href=\"/faq/\" by parsing all anchors. Confidence held at 0.65 (not raised) because the statement is an undated standing FAQ answer with no deadline, no form, no slot count and no application channel. STEP 2: EMAIL re-checked and correctly left null. An email regex over the fetched faq, team, contact, research and publications pages returned ZERO addresses. The team page renders Pavone's contact line literally as the placeholder '[last name]@stanford.edu +1 (650) 723 4432' — the real local-part is absent from the page and was NOT reconstructed. The only address in the entire fetched set is 'rnquiroz@stanford.edu' on Stanford Profiles, belonging to Renee Quiroz, Administrative Associate (department admin, not the professor), so it was not recorded. email and email_source_url both remain null. STEP 3: undergrad_signals audited. Both 'verified' entries survive on literal evidence reproduced in this pass — the FAQ invitation on a verbatim <dt>/<dd> quote, and 'team page lists no undergraduate members' on a zero-match 'undergrad' grep plus a full enumeration of the roster headings (5 postdocs, 14 PhD students, 1 Master's visiting student, no undergraduates); that second signal argues against the opening, so retaining it inflates nothing. The three 'likely' signals and the one 'unknown' were each re-checked and left as they were. The only substantive change in this pass is a sharpened note on the courses signal: the most recent academic-year heading on Stanford Profiles is still '2025-26 Courses' (academicYear=20252026, alongside 2022-23, 2023-24 and 2024-25), which as of 2026-08-31 is the year that has just ENDED, with no 2026-27 listing yet published — so the CS 195 / AA 199 listing evidences eligibility to sponsor across four consecutive years, not confirmed supervision in the upcoming year. LAB ACTIVITY re-confirmed from the lab's own publications page independently of OpenAlex: two 2026 entries and the 2025 In-Press CoRL set are listed. NEGATIVE FINDINGS: word-boundary greps for CURIS, REU, capstone, 'senior project', 'summer research' and SURF returned ZERO matches on every fetched page; 'this mailing list' on the FAQ remains a bare string with no <a href>, so the subscription URL is still unrecoverable."
+}

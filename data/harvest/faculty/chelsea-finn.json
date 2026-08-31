@@ -1,0 +1,157 @@
+{
+ "slug": "chelsea-finn",
+ "name": "Chelsea Finn",
+ "title": "Assistant Professor of Computer Science and of Electrical Engineering",
+ "department": "Computer Science and Electrical Engineering",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/chelsea-finn",
+ "lab_name": "IRIS (Intelligence through Robotic Interaction at Scale)",
+ "lab_url": "https://irislab.stanford.edu/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Robotics",
+  "reinforcement-learning",
+  "computational-education",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "vision-language-action (VLA) models",
+  "robot manipulation",
+  "reinforcement learning from real-world experience",
+  "generative world models",
+  "real-to-sim evaluation of robot policies",
+  "reward models for robotics",
+  "LLM reasoning and RL post-training",
+  "autonomous surgical robotics",
+  "meta-learning"
+ ],
+ "current_direction": [
+  "Vision-language-action (VLA) models for generalist robot control",
+  "Robot policies that self-improve from real-world experience via RL",
+  "Scalable evaluation and general-purpose reward models for robot policies",
+  "Controllable generative world models for manipulation",
+  "RL for LLM reasoning: abstraction discovery and adaptive-length reasoning"
+ ],
+ "current_direction_basis": "Inferred from the 2025-2026 publication record retrieved via OpenAlex (author A5005431772, 39 works dated 2025-01-01 or later) and verified individually on arXiv/Crossref. The VLA thread is driven by 'Emergence of Human to Robot Transfer in Vision-Language-Action Models' (Dec 2025), 'pi*_0.6: a VLA That Learns From Experience' (Nov 2025), 'FAST: Efficient Action Tokenization for VLA Models' and 'Fine-Tuning Vision-Language-Action Models' (RSS 2025). The learning-from-experience thread comes from pi*_0.6 explicitly and from 'EXPO: Stable Reinforcement Learning with Expressive Policies' and 'Reinforcement Learning via Implicit Imitation Guidance' (2025). Evaluation/reward modeling comes from 'RoboReward: General-Purpose Vision-Language Reward Models for Robotics' (Jan 2026) and 'PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies' (Dec 2025). World models come from 'Ctrl-World: A Controllable Generative World Model for Robot Manipulation' (Oct 2025, revised Mar 2026). The LLM-reasoning thread comes from 'RLAD: Training LLMs to Discover Abstractions for Solving Reasoning Problems' (Oct 2025), 'Just Enough Thinking: Efficient Reasoning with Adaptive Length Penalties' (Jun 2025), and 'Feedback Descent' (Nov 2025). A surgical-robotics line is also active (SRT-H in Science Robotics, Jul 2025; SutureBot, Oct 2025) but was not among the top 5 phrases. NOT based on her biography, which emphasizes older meta-learning work.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "RoboReward: General-Purpose Vision-Language Reward Models for Robotics",
+   "summary": "Most recent work found. Vision-language reward models intended to be general-purpose for robotics. Submitted 2 Jan 2026, revised 8 Jan 2026 (v2). Chelsea Finn confirmed in the arXiv author list.",
+   "url": "https://arxiv.org/abs/2601.00675",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Emergence of Human to Robot Transfer in Vision-Language-Action Models",
+   "summary": "Studies how transfer from human data to robot control emerges in VLA models. Submitted 27 Dec 2025. Chelsea Finn confirmed in the arXiv author list.",
+   "url": "https://arxiv.org/abs/2512.22414",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies",
+   "summary": "Scalable real-to-sim evaluation methodology for generalist robot policies. Submitted 18 Dec 2025, revised 30 Dec 2025 (v2). Chelsea Finn confirmed in the arXiv author list.",
+   "url": "https://arxiv.org/abs/2512.16881",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "pi*_0.6: a VLA That Learns From Experience",
+   "summary": "Vision-language-action model that improves from its own experience; large multi-author paper led by Physical Intelligence. Submitted 18 Nov 2025, revised 19 Nov 2025 (v2). Chelsea Finn confirmed in the arXiv author list. Her personal page states she is a co-founder of Pi.",
+   "url": "https://arxiv.org/abs/2511.14759",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "SRT-H: A hierarchical framework for autonomous surgery via language-conditioned imitation learning",
+   "summary": "Peer-reviewed journal article on autonomous surgery via language-conditioned imitation learning. Verified via Crossref: issued 2025-07-09, Science Robotics, Finn confirmed in the author list. Shows an active surgical-robotics collaboration alongside the core VLA work.",
+   "url": "https://doi.org/10.1126/scirobotics.adt5254",
+   "venue": "Science Robotics"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "CS 224R: Deep Reinforcement Learning, Spring 2026",
+   "summary": "Course site lists 'Prof. Chelsea Finn - Instructor', office hours Wed 11-12pm in Huang Basement, class Wed/Fri 09:30-11:00am at NVIDIA Auditorium, and is footer-dated 'Chelsea Finn 2026'. Confirms she is actively teaching at Stanford in the current academic year.",
+   "url": "https://cs224r.stanford.edu",
+   "venue": "Stanford University"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab contact page carries a dedicated 'Stanford Undergraduate or MS Students' section that points undergrads to an intake form (the form itself could not be read)",
+   "status": "verified",
+   "evidence_url": "https://irislab.stanford.edu/contact.html",
+   "note": "INDEPENDENTLY RE-FETCHED 2026-08-31 (second adversarial pass), HTTP 200. The section exists verbatim in the served HTML: heading '<h3>Stanford Undergraduate or MS Students</h3>' followed by 'If you are a current or admitted Stanford undergraduate or MS student interested in research positions, please read this form.' The word 'form' is an anchor to https://goo.gl/forms/uJuYOfIBQVPhEEDy1. The section text is confirmed; the form behind it is NOT. That shortlink 302s to docs.google.com/forms/d/e/1FAIpQLSf8-OBYUHyoZ7qqWuNKUW08gksYg8e3WskysApE_fuSqwHRJQ/viewform?usp=send_form and returns HTTP 401 with a Google sign-in interstitial ('You must sign in to access this content'). The sibling postdoc form (goo.gl/forms/aKL2gnq8T80FNVMb2) and visiting-researcher form (goo.gl/forms/9scJRH3hw6z7GNbj2) return the identical 401, so this is a generic sign-in requirement and not a deleted form - but either way I could not read the form, confirm it still accepts responses, or see any deadline, role description, or eligibility criteria. Note also that the sentence is undated conditional routing language ('if you are interested... please read this form'), NOT an assertion that positions are currently available. Corroboration found this pass: her personal page https://ai.stanford.edu/~cbfinn/ reads 'Prospective students and post-docs, please see this page.' where 'this page' hyperlinks to this same contact.html - confirming it is the canonical intake channel, but adding no openness or recency signal."
+  },
+  {
+   "signal": "Lab people page lists 11 undergraduate members by name under an 'Undergrad' role",
+   "status": "verified",
+   "evidence_url": "https://irislab.stanford.edu/people.html",
+   "note": "INDEPENDENTLY RE-FETCHED AND RECOUNTED 2026-08-31, HTTP 200. Exactly 11 entries carry a standalone 'Undergrad' role label, and the name immediately preceding each was extracted programmatically: Andy Tang, Swetha Yogeswaran, Logan Mondal Bhamidipaty, Rhea Malhotra, Olivia Lee, Sergio Charles, Niveditha S. Iyer, Patricia Strutz, Kaien Yang, Isabel Sieh, Johnathan Xie. Undergraduates are a standing, sizeable part of the group. CURRENCY CAVEAT: the site presents this as the current roster, but the site is demonstrably stale (index.html's newest news item is dated 5/23/2023), so I cannot confirm all 11 are still active in the 2026-27 academic year that is about to begin."
+  },
+  {
+   "signal": "Large undergraduate alumni track record with documented PhD placement",
+   "status": "verified",
+   "evidence_url": "https://irislab.stanford.edu/people.html",
+   "note": "INDEPENDENTLY RE-FETCHED 2026-08-31, HTTP 200. The 'Lab Alumni > Undergrads' block was read in full this pass and lists 17 names, more than the previous pass recorded: Annie Chen (PhD student at Stanford), Tom Knowles (Aurora), HyunJi (Alex) Nam (PhD student at Stanford), Bezhad Haghgoo (Co-founder and CEO of Tym), Rayan Krishnan, Leo Dong, Nikhil Sardana, Caroline Choi (PhD student at Stanford), Maximilian Du (PhD student at Stanford), Moritz Stephan (Cognition), Nathan Hu (PhD student at Stanford, after working at Anthropic), Govind Chada (Cofounder of a startup), Takao Yatagai (Crusoe), Rehaan Ahmad (Cofounder of alphaXiv), David Yuan (Cofounder of IntBot), Charles Lin (Medra). Five former undergrads are listed as having progressed to PhD programs at Stanford, so the lab demonstrably invests in undergraduate researchers. This is a track-record signal, not evidence of a current opening."
+  },
+  {
+   "signal": "Listed on Stanford Profiles to supervise undergraduate research courses for the 2025-26 academic year",
+   "status": "likely",
+   "evidence_url": "https://profiles.stanford.edu/chelsea-finn",
+   "note": "DOWNGRADED from 'verified' to 'likely' on 2026-08-31. The literal text is confirmed - profiles.stanford.edu/chelsea-finn re-fetched today, HTTP 200, and under the heading '2025-26 Courses' it lists 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 / CS 199P (Aut, Win, Spr, Sum)' and 'Independent Project CS 399 / CS 399P (Aut, Win, Spr, Sum)'. The downgrade is because this signal is used to infer CURRENT undergraduate supervision availability, and it no longer supports that: (1) as of today, 2026-08-31, the 2025-26 academic year has ENDED, and the page's only other course headings are 'Prior Year Courses', '2024-25 Courses', '2023-24 Courses' and '2022-23 Courses' - no '2026-27 Courses' section has been published yet, so this is last year's listing; (2) these independent-study course numbers are standard Stanford catalog entries indicating the professor is authorized to supervise undergraduate research credit, not that any specific position is open. No plain-text email appears anywhere on this page either (regex for addresses returned zero matches; 'Email Profile' is a link label only)."
+  },
+  {
+   "signal": "CURIS participation",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "RE-CHECKED INDEPENDENTLY 2026-08-31: fetched https://curis.stanford.edu/ and https://curis.stanford.edu/projects (both HTTP 200); case-insensitive grep for 'finn' and for 'iris' returned ZERO hits on both. No mention of CURIS appears on the IRIS lab pages or Stanford Profiles either. This is weak negative evidence only - the CURIS project list may be posted seasonally or rendered client-side, so non-participation is NOT established."
+  }
+ ],
+ "recruiting": {
+  "status": "unknown",
+  "statement": "Stanford Undergraduate or MS Students\nIf you are a current or admitted Stanford undergraduate or MS student interested in research positions, please read this form.",
+  "url": "https://irislab.stanford.edu/contact.html",
+  "confidence": 0.3
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "'OPENING' NOT UPHELD - CONFIRMED AS OUTREACH BY A SECOND, INDEPENDENT ADVERSARIAL RE-VERIFICATION ON 2026-08-31. Every page below was fetched fresh in this pass; nothing here is carried over on trust.\n\nWHAT IS REAL: an explicitly undergraduate-addressed statement does exist verbatim on the live IRIS contact page (https://irislab.stanford.edu/contact.html, HTTP 200). Under the heading 'Stanford Undergraduate or MS Students' it reads, in full: 'If you are a current or admitted Stanford undergraduate or MS student interested in research positions, please read this form.' That sentence was not fabricated by any earlier pass. It is also genuinely undergraduate-scoped rather than PhD-only: the page carries a separate 'Prospective PhD Students' section, and the instruction not to make contact is confined to that section ('We ask that you do not contact us directly with regard to PhD admissions until after you are admitted'). Her personal page corroborates the channel - https://ai.stanford.edu/~cbfinn/ says 'Prospective students and post-docs, please see this page.' with 'this page' linking to this same contact.html.\n\nWHY IT IS STILL NOT AN OPENING - three independent failures:\n(1) THE OPERATIVE ARTIFACT IS UNVERIFIABLE. The only actionable element is the word 'form', linking to https://goo.gl/forms/uJuYOfIBQVPhEEDy1, which 302s to a docs.google.com viewform and returns HTTP 401 behind a Google sign-in wall. I cannot confirm it still accepts responses, and I cannot read any deadline, role, project, or eligibility criterion. The lab's postdoc and visiting-researcher forms return the identical 401, so this is a generic sign-in requirement rather than a deleted form - but an unreadable form cannot substantiate an 'apply now' recommendation either way.\n(2) THE LANGUAGE IS NOT PRESENT-TENSE OPEN. It is undated conditional routing language for triaging inbound interest ('if you are... interested, please read this form'), not an announcement that positions are available. Nowhere does the page say the lab is currently recruiting undergraduates, name a term, or give a deadline.\n(3) THE PAGE IS STALE AND ITS TIMESTAMP IS MEANINGLESS. HTTP Last-Modified is identical - 'Wed, 24 Sep 2025 21:07:26 GMT' - on index.html, people.html, publications.html AND contact.html, so it is a site-wide static rebuild timestamp and is NOT evidence the recruiting text was reviewed or refreshed. The surrounding site is visibly out of date: the newest item in the News section is dated 5/23/2023.\n\nWHY OUTREACH RATHER THAN WATCH: the lab is unambiguously active and demonstrably undergraduate-friendly, on evidence verified live today. cs224r.stanford.edu returns HTTP 200 showing 'Spring 2026, Class: Wed, Fri 09:30am-11:00am @ NVIDIA Auditorium', 'Prof. Chelsea Finn / Instructor' and a '(c) Chelsea Finn 2026' footer. arxiv.org/abs/2601.00675 confirms 'RoboReward: General-Purpose Vision-Language Reward Models for Robotics', '[Submitted on 2 Jan 2026 (v1), last revised 8 Jan 2026 (this version, v2)]', with Chelsea Finn in the author list. The lab people page names 11 current undergraduates and 17 undergraduate alumni, five of whom went on to Stanford PhD programs.\n\nRECOMMENDED ACTION FOR A STUDENT: a prepared, specific approach through the contact-page form - and only that channel - understanding that no confirmed opening has been verified and that the intake form could not be read. This is not an 'apply now'. No email should be used: see the email note below.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/chelsea-finn",
+  "https://ai.stanford.edu/~cbfinn/",
+  "https://profiles.stanford.edu/chelsea-finn",
+  "https://irislab.stanford.edu/",
+  "https://irislab.stanford.edu/people.html",
+  "https://irislab.stanford.edu/contact.html",
+  "https://irislab.stanford.edu/publications.html",
+  "https://cs224r.stanford.edu",
+  "https://api.openalex.org/authors?search=Chelsea%20Finn",
+  "https://api.openalex.org/works?filter=author.id:A5005431772,from_publication_date:2025-01-01&sort=publication_date:desc",
+  "https://arxiv.org/abs/2601.00675",
+  "https://arxiv.org/abs/2512.22414",
+  "https://arxiv.org/abs/2512.16881",
+  "https://arxiv.org/abs/2511.14759",
+  "https://arxiv.org/abs/2510.10125",
+  "https://api.crossref.org/works/10.1126/scirobotics.adt5254",
+  "https://goo.gl/forms/uJuYOfIBQVPhEEDy1",
+  "https://curis.stanford.edu/",
+  "https://curis.stanford.edu/projects",
+  "https://web.archive.org/cdx/search/cdx?url=irislab.stanford.edu/contact.html"
+ ],
+ "fetch_notes": "FAILURES: The supplied directory link https://cs.stanford.edu/people/chelsea-finn returned HTTP 404 ('The requested URL /people/chelsea-finn was not found on this server'), so faculty_url was set to https://profiles.stanford.edu/chelsea-finn, which returned HTTP 200 and carries the printed title verbatim. The arXiv Atom API (export.arxiv.org/api/query) returned an empty body over http and 'Rate exceeded' with HTTP 429 over https, so every arXiv paper was instead verified by fetching its /abs/ page directly and grepping the title, submission date, and author list for 'Chelsea Finn'. EMAIL: the address is NOT written in plain form anywhere I fetched. Her personal page literally prints 'cbfinn at cs dot stanford dot edu'; I de-obfuscated that to cbfinn@cs.stanford.edu. A regex for plain-text addresses found none on the personal page or Stanford Profiles. Treat the email as de-obfuscated-by-me, not literally transcribed. STALENESS: the IRIS site is out of date relative to the actual research output - the News section's newest item is dated 5/23/2023 and the publications page's newest entries are 2024, so recent-publication evidence was sourced from OpenAlex and verified on arXiv/Crossref rather than from the lab site. VERIFICATION: OpenAlex author id A5005431772 (390 works, 26,826 citations) was matched by name; the institution-filtered OpenAlex query (ror:00f54p054) returned zero results, so the unfiltered query was used, and the identity was then corroborated by confirming 'Chelsea Finn' in the author list of each cited paper on arXiv or Crossref. Semantic Scholar author search returned six fragmented low-count profiles and was not used. OpenAlex reported 39 works dated 2025-01-01 or later, some appearing as duplicate preprint records. The undergrad form link (a goo.gl shortlink) was followed and does resolve to a live Google Form, but it sits behind a Google sign-in, so I could not read the form's questions, deadlines, or any stated requirements. NO REQUIRED-VS-PREFERRED QUALIFICATIONS were stated on any fetched page - the contact page gives no eligibility criteria beyond being 'a current or admitted Stanford undergraduate or MS student', so none are recorded. PhD applicants are explicitly told NOT to email: 'We ask that you do not contact us directly with regard to PhD admissions until after you are admitted' - that restriction is scoped to PhD admissions only and does not appear in the undergraduate section.  === ADVERSARIAL VERIFICATION PASS 2026-08-31 === RECRUITING: https://irislab.stanford.edu/contact.html re-fetched, HTTP 200. The undergraduate sentence exists verbatim as quoted in recruiting.statement, so the prior agent did not fabricate it. However the linked Google Form returns HTTP 401 behind a sign-in wall (final URL docs.google.com/forms/d/e/1FAIpQLSf8-OBYUHyoZ7qqWuNKUW08gksYg8e3WskysApE_fuSqwHRJQ/viewform); the lab's postdoc form (1FAIpQLSfOV5IYIbznVV-ra7bV4i2QH7k5uKEk5cIfUQROPKqFyrZXfg) and visiting-researcher form (1FAIpQLSf7ylPCsuQjZTAngLVVym9Os_EXrg8lHOZeDXm5XA6OfBmpzg) return the same 401, indicating a generic Google sign-in requirement rather than a deleted form - but the form is unreadable to me either way, so the opening cannot be verified and recruiting.status was set to 'unknown' with confidence 0.3. STALENESS TEST: HTTP Last-Modified is 'Wed, 24 Sep 2025 21:07:26 GMT' on ALL of index.html, people.html, publications.html and contact.html - a site-wide rebuild timestamp, not a content edit, so it cannot be cited as evidence the recruiting text is current. Wayback CDX for contact.html shows real captures at 20240912, 20250411 and 20251220 sharing a single content digest (IQMX56XDJOI2NAJRF5CJRW65HCZGPJ7G), so the recruiting wording is unchanged for at least two years. The 20211202 and other captures carrying digest 4CFAT2TB5CSWNSOAZAKV7Y6FAYWCI5ZX were confirmed to be Internet Archive error/interstitial pages, not lab content, and were discarded. EMAIL: per instruction I curled the email_source_url https://ai.stanford.edu/~cbfinn/ (HTTP 200) and grepped for a literal address. A regex for plain-text addresses returned ZERO matches, and a grep for 'cbfinn@cs.stanford.edu' returned 0 hits. The page prints only the obfuscated string 'cbfinn at cs dot stanford dot edu'. The prior value was a de-obfuscation by the previous agent, not a literal transcription, so email and email_source_url were both set to null. No plain-text address was found on https://profiles.stanford.edu/chelsea-finn either. The de-obfuscated address is recorded here in prose only, as an unverified lead: 'cbfinn at cs dot stanford dot edu'. CORROBORATION RE-VERIFIED TODAY: people.html HTTP 200, exactly 11 entries labelled 'Undergrad' counted programmatically; profiles.stanford.edu HTTP 200 with '2025-26 Courses' listing CS 195 / CS 191 / CS 191W / CS 199 / CS 399 (note 2025-26 has now ended and no 2026-27 section is published yet); cs224r.stanford.edu shows 'Spring 2026' and 'Prof. Chelsea Finn / Instructor'; arxiv.org/abs/2601.00675 confirms 'RoboReward', '[Submitted on 2 Jan 2026 (v1), last revised 8 Jan 2026 (this version, v2)]', Chelsea Finn in the author list. curis.stanford.edu and curis.stanford.edu/projects were fetched (both HTTP 200) and contain zero mentions of 'Finn' or 'IRIS'. NO REQUIRED-VS-PREFERRED QUALIFICATIONS are stated on any page fetched in this pass; the only eligibility language is the contact page's own 'a current or admitted Stanford undergraduate or MS student', which is reproduced above exactly as the source words it.  === SECOND ADVERSARIAL VERIFICATION PASS 2026-08-31 (independent re-fetch; prior pass's conclusions were re-derived from scratch, not trusted) === VERDICT: 'OPENING' NOT UPHELD; state remains OUTREACH. RECRUITING URL: https://irislab.stanford.edu/contact.html re-fetched, HTTP 200. The undergraduate sentence is present verbatim in the raw served HTML ('<h3>Stanford Undergraduate or MS Students</h3>' + 'If you are a current or admitted Stanford undergraduate or MS student interested in research positions, please read this form.'), so it is not fabricated - but it is undated conditional routing language with no stated deadline, role, or eligibility, and the linked form is unreadable. FORM CHECK (all three lab forms tested this pass): undergrad goo.gl/forms/uJuYOfIBQVPhEEDy1 -> docs.google.com/forms/d/e/1FAIpQLSf8-OBYUHyoZ7qqWuNKUW08gksYg8e3WskysApE_fuSqwHRJQ/viewform?usp=send_form = HTTP 401; postdoc goo.gl/forms/aKL2gnq8T80FNVMb2 -> .../1FAIpQLSfOV5IYIbznVV-ra7bV4i2QH7k5uKEk5cIfUQROPKqFyrZXfg = HTTP 401; visiting goo.gl/forms/9scJRH3hw6z7GNbj2 -> .../1FAIpQLSf7ylPCsuQjZTAngLVVym9Os_EXrg8lHOZeDXm5XA6OfBmpzg = HTTP 401. The 401 body is a Google sign-in interstitial ('You must sign in to access this content'). Uniform across all three => generic sign-in requirement, not a deleted form; but unreadable either way, so recruiting.status stays 'unknown' at confidence 0.3. STALENESS RE-TESTED: Last-Modified is 'Wed, 24 Sep 2025 21:07:26 GMT' on index.html, people.html, contact.html AND publications.html - byte-identical across all four, therefore a site-wide rebuild timestamp, NOT evidence of a content edit to the recruiting text. index.html's News section newest entry is 5/23/2023. EMAIL RE-CHECKED PER INSTRUCTION: curled the email_source_url https://ai.stanford.edu/~cbfinn/ (HTTP 200) and ran the literal-address regex [a-z0-9._%+-]+@[a-z0-9.-]+ over the raw HTML: ZERO matches. grep -c for the exact string 'cbfinn@cs.stanford.edu' returned 0. There is no mailto: link on the page. The page prints ONLY the obfuscated string 'cbfinn at cs dot stanford dot edu'. https://profiles.stanford.edu/chelsea-finn was also fetched (HTTP 200) and its literal-address regex likewise returned zero matches ('Email Profile' there is a link label, not an address). The on-record value cbfinn@cs.stanford.edu was therefore a de-obfuscation performed by an agent, not a literal transcription from any fetched page, so email and email_source_url are both null. The de-obfuscated address is preserved here in prose as an UNVERIFIED lead only: 'cbfinn at cs dot stanford dot edu'. CORROBORATION RE-VERIFIED FROM SCRATCH TODAY: people.html HTTP 200, exactly 11 standalone 'Undergrad' role labels counted programmatically with the 11 preceding names extracted, plus a 17-name 'Lab Alumni > Undergrads' list; profiles.stanford.edu HTTP 200 with '2025-26 Courses' listing CS 195 / CS 191 / CS 191W / CS 199 / CS 199P / CS 399 / CS 399P and NO '2026-27 Courses' section (2025-26 has now ended); cs224r.stanford.edu HTTP 200 showing 'Spring 2026', 'Prof. Chelsea Finn / Instructor' and '(c) Chelsea Finn 2026'; arxiv.org/abs/2601.00675 HTTP 200 confirming 'RoboReward', '[Submitted on 2 Jan 2026 (v1), last revised 8 Jan 2026 (this version, v2)]' and Chelsea Finn in the author list; curis.stanford.edu and curis.stanford.edu/projects both HTTP 200 with zero occurrences of 'finn' or 'iris'. NEW THIS PASS: https://ai.stanford.edu/~cbfinn/ states 'Prospective students and post-docs, please see this page.' and the anchor resolves to https://irislab.stanford.edu/contact.html - confirming the contact page is the canonical intake channel, but contributing no openness or recency evidence. SIGNAL DOWNGRADE: the Stanford Profiles undergraduate-course signal was moved from 'verified' to 'likely' because the academic year it covers (2025-26) has ended as of today and no 2026-27 listing is published; the literal quote is confirmed, but it no longer evidences CURRENT undergraduate supervision. REQUIRED VS PREFERRED: still NO qualifications of either kind are stated on any page fetched in this pass. The only eligibility language anywhere is the contact page's own 'a current or admitted Stanford undergraduate or MS student', reproduced exactly as the source words it; it is not labelled required or preferred by the source."
+}

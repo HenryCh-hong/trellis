@@ -1,0 +1,157 @@
+{
+  "slug": "christopher-gregg",
+  "name": "Christopher (Chris) Gregg",
+  "title": "Associate Professor (Teaching) of Computer Science; Associate Chair for Education, Computer Science Department",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/christopher-gregg",
+  "lab_name": "PinCS Lab",
+  "lab_url": "https://pincs.stanford.edu/",
+  "email": "cgregg@stanford.edu",
+  "email_source_url": "https://pincs.stanford.edu/posts/intro/",
+  "research_areas": ["computational-education"],
+  "research_topics": [
+    "computer science education / CS pedagogy",
+    "AI literacy and generative AI in CS and K-12 curricula",
+    "AI-assisted lesson authoring and code generation for teaching",
+    "new CS teacher training and the teaching-track faculty community",
+    "undergraduate TA / section-leader training and retention in teaching",
+    "browser-based tooling for CS1 (Pyodide / Python in the browser)",
+    "teaching introductory CS and CS systems at scale",
+    "computer architecture and GPGPU (earlier line of work)"
+  ],
+  "current_direction": [
+    "AI in CS education: benefits, harms, and classroom policy",
+    "AI code generation inside interdisciplinary lesson-authoring platforms",
+    "Building AI literacy curricula for K-12 and intro CS",
+    "Organizing and sustaining the CS teaching-track faculty community",
+    "Scaling intro CS instruction under Stanford undergraduate expansion"
+  ],
+  "current_direction_basis": "Driven by the 2025-2026 items only, not the older GPGPU biography. (1) CV publication C1, 'Interdisciplinary lesson platform with AI code generation', NeurIPS 2025 Education Program, December 2025 -- his most recent paper and the clearest signal of the AI-code-generation-for-lessons direction. (2) CV invited talk 'AI in CS Education: Boon, Bane, or Both?', Next-Generation AI & Machine Learning Conference, November 2025, plus the earlier 'Building AI Literacy in Schools' EARCOS talk noted on his homepage -- the AI-literacy thread. (3) The recurring 'Teaching Track Faculty in Computer Science' Birds of a Feather, run at SIGCSE TS 2025 (DOI 10.1145/3641555.3705088) and again at SIGCSE TS 2026, together with his SIGCSE Executive Board Member-at-Large role (2025-Present) -- the teaching-track community thread. (4) CV service entry 'President and Provost's Task Force on Undergraduate Expansion, Summer 2025' plus his 2025-26 and 2026-27 teaching load of CS 198/198B (Teaching Computer Science) and CS 109 -- the intro-CS-at-scale thread. His own homepage (updated January 2025) states his interests are 'primarily in the Computer Science Education arena... particularly interested in new teacher training', which corroborates rather than sources these phrases.",
+  "evidence": [
+    {
+      "kind": "talk",
+      "year": 2026,
+      "title": "Teaching Track Faculty in Computer Science (Birds of a Feather) + Associate Program Chair, SIGCSE TS 2026",
+      "summary": "His SIGCSE TS 2026 conference profile (conference held Wed 18 - Sat 21 February 2026, St. Louis, Missouri) lists two 2026 contributions: the Birds of a Feather session 'Teaching Track Faculty in Computer Science', and 'Committee Member in Program Committee: Associate Program Chairs'. This is the most recent activity found and shows the teaching-track-faculty community work is ongoing into 2026. Affiliation listed as Stanford University.",
+      "url": "https://sigcse2026.sigcse.org/profile/chrisgregg",
+      "venue": "SIGCSE Technical Symposium 2026"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "Instructor of record for CS 195 Supervised Undergraduate Research and CS 198/198B in the 2026-27 catalog",
+      "summary": "Stanford ExploreCourses lists him as 'Currently teaching' CS 198: Teaching Computer Science (Aut, Win, Spr), CS 198B: Additional Topics in Teaching Computer Science (Aut, Win, Spr), CS 109: Introduction to Probability for Computer Scientists (Autumn), plus 12 independent studies that include CS 195: Supervised Undergraduate Research (Aut, Win, Spr), CS 191: Senior Project, CS 191W: Writing Intensive Senior Research Project, CS 199: Independent Work, and CS 192: Programming Service Project. Verified against both the ?academicYear=20262027 and ?academicYear=20252026 views, which returned the same listing.",
+      "url": "https://explorecourses.stanford.edu/instructor/cgregg?academicYear=20262027",
+      "venue": null
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Interdisciplinary lesson platform with AI code generation",
+      "summary": "Listed as entry C1 (most recent) under 'Refereed conference / symposia publications' in his CV: 'Seay, P., Master, T., Song, H., & Gregg, C. Interdisciplinary lesson platform with AI code generation. NeurIPS 2025 Education Program. San Diego, CA, December 2025.' This is his newest paper and the clearest evidence of the AI-code-generation-for-teaching direction. Not yet indexed in OpenAlex at time of fetch.",
+      "url": "https://web.stanford.edu/~cgregg/chris-gregg/ChrisGregg-CV.pdf",
+      "venue": "NeurIPS 2025 Education Program"
+    },
+    {
+      "kind": "talk",
+      "year": 2025,
+      "title": "AI in CS Education: Boon, Bane, or Both?",
+      "summary": "Top entry under 'Selected Invited Talks' in his CV: 'AI in CS Education: Boon, Bane, or Both? Next-Generation AI & Machine Learning Conference, San Fransico, CA. November 2025.' (city spelled 'Fransico' in the source). The prior talk in the same list is 'Building AI Literacy in Schools', EARCOS Leadership Conference, Bangkok, Thailand, October 2024, which his homepage also announces.",
+      "url": "https://web.stanford.edu/~cgregg/chris-gregg/ChrisGregg-CV.pdf",
+      "venue": "Next-Generation AI & Machine Learning Conference"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Teaching Track Faculty in Computer Science",
+      "summary": "Birds of a Feather at the 56th SIGCSE Technical Symposium, St. Louis, MO, February 2025, with O. Glebova, M. McDaniel and L. Strange (authors per OpenAlex; CV entry C13 confirms the session and venue). Published 2025-02-18, DOI 10.1145/3641555.3705088. His homepage news for January 2025 also said 'I will be attending the SIGCSE Technical Symposium 2025 and will be presenting a Birds of a Feather on Teaching Track Faculty.'",
+      "url": "https://doi.org/10.1145/3641555.3705088",
+      "venue": "SIGCSE Technical Symposium 2025 (Birds of a Feather)"
+    },
+    {
+      "kind": "project",
+      "year": 2025,
+      "title": "PinCS Lab website published",
+      "summary": "The PinCS ('pinks') lab site was published/last built 26 March 2025 (per its RSS lastBuildDate and the date stamp on both posts). It describes 'a research lab focusing on pedagogy and education in the world of computer science... run by Chris Gregg' and says the lab has 'a number of ongoing projects'. Caveat: the site is currently a two-page stub -- the /posts/projects/ page has a title and date but no body content, and there is no people, publications, or news page.",
+      "url": "https://pincs.stanford.edu/posts/intro/",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Formally listed as a supervisor for CS 195: Supervised Undergraduate Research (Autumn, Winter, Spring) in the current Stanford catalog",
+      "status": "verified",
+      "evidence_url": "https://explorecourses.stanford.edu/instructor/cgregg?academicYear=20262027",
+      "note": "Appears under 'Currently teaching -> + 12 independent studies' on his ExploreCourses instructor page for both 2025-2026 and 2026-2027. Caveat for the student: these independent-study numbers are standard registrar listings that many Stanford CS faculty carry, so this shows he is set up to supervise undergraduate research, not that a specific slot is posted."
+    },
+    {
+      "signal": "Also listed for CS 191 Senior Project, CS 191W Writing Intensive Senior Research Project, CS 199 Independent Work, and CS 192 Programming Service Project",
+      "status": "verified",
+      "evidence_url": "https://explorecourses.stanford.edu/instructor/cgregg?academicYear=20262027",
+      "note": "Same independent-studies list. Senior project and independent work are the usual routes an undergraduate would use to do a term of work with him."
+    },
+    {
+      "signal": "PinCS lab invites anyone to email about participating in the lab",
+      "status": "likely",
+      "evidence_url": "https://pincs.stanford.edu/posts/intro/",
+      "note": "Quoted: 'We have a number of ongoing projects. Feel free to reach out to Chris to inquire about participating in the lab.' The 'reach out to Chris' text is a mailto link to cgregg@stanford.edu. Marked 'likely' rather than 'verified' because the sentence never says undergraduate -- it is open to anyone, and undergraduate relevance is my inference."
+    },
+    {
+      "signal": "Teaches the undergraduate TA / section-leader training courses (CS 198, CS 198B) and states an interest in keeping former TAs and Section Leaders teaching",
+      "status": "verified",
+      "evidence_url": "https://web.stanford.edu/~cgregg/chris-gregg/",
+      "note": "Homepage quote: 'my research interests are primarily in the Computer Science Education arena, where I am particularly interested in new teacher training, and in encouraging former Teaching Assistants, Course Assistants, and Section Leaders to continue some teaching after they leave college or their graduate programs.' CS 198/198B (Teaching Computer Science) are his standing Autumn/Winter/Spring courses per ExploreCourses. Undergraduates who have section-led are the natural population for this research."
+    },
+    {
+      "signal": "No undergraduate members, lab roster, or people page found anywhere on the lab site",
+      "status": "unknown",
+      "evidence_url": "https://pincs.stanford.edu/",
+      "note": "The PinCS site has only two pages (/posts/intro/ and /posts/projects/) and no people, members, join, or news page. Nothing lists any lab member, undergraduate or otherwise."
+    },
+    {
+      "signal": "No mention of CURIS anywhere on any page fetched",
+      "status": "unknown",
+      "evidence_url": null,
+      "note": "Searched the lab site, personal homepage, Stanford Profiles page and his CV text; the string 'CURIS' does not appear in any of them. Absence of evidence only -- this does not mean he does not take CURIS students."
+    },
+    {
+      "signal": "Stanford Profiles lists graduate advisees but no undergraduate advisees",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/christopher-gregg",
+      "note": "Under 'Stanford Advisees' the page lists a Doctoral Dissertation Reader role, eight Master's Program Advisor names, and one Doctoral (Program) advisee. Stanford Profiles does not generally enumerate undergraduate advisees, so this is not evidence against undergraduate involvement."
+    }
+  ],
+  "recruiting": {
+    "status": "open",
+    "statement": "We have a number of ongoing projects. Feel free to reach out to Chris to inquire about participating in the lab.",
+    "url": "https://pincs.stanford.edu/posts/intro/",
+    "confidence": 0.5
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "OUTREACH, not OPENING. The lab does carry an explicit standing invitation -- 'We have a number of ongoing projects. Feel free to reach out to Chris to inquire about participating in the lab.' (https://pincs.stanford.edu/posts/intro/) -- with his email as a mailto link, which is unusually direct. But it is an invitation to inquire, not a posted position or program: it names no role, no term, no application, and never says undergraduate. The CS 195 / CS 191 / CS 199 listings on ExploreCourses are registrar independent-study entries rather than an advertised opening, so they do not meet the OPENING bar either. Activity is clearly current: a SIGCSE TS 2026 Birds of a Feather and an Associate Program Chair role in February 2026, a December 2025 NeurIPS Education Program paper, a November 2025 invited talk, and a 2026-27 teaching load. That combination -- active work, an open door, no formal posting -- is exactly the cold-email case. One caveat worth passing to the student: the PinCS site has not been rebuilt since 26 March 2025 and its Projects page is empty, so the specific 'ongoing projects' are not enumerated anywhere public; a cold email should ask what the projects currently are rather than assume.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 6,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/christopher-gregg",
+    "https://profiles.stanford.edu/christopher-gregg",
+    "https://web.stanford.edu/~cgregg/",
+    "https://web.stanford.edu/~cgregg/chris-gregg/",
+    "https://web.stanford.edu/~cgregg/chris-gregg/ChrisGregg-CV.pdf",
+    "https://pincs.stanford.edu/",
+    "https://pincs.stanford.edu/posts/intro/",
+    "https://pincs.stanford.edu/posts/projects/",
+    "https://pincs.stanford.edu/index.xml",
+    "https://sigcse2026.sigcse.org/profile/chrisgregg",
+    "https://explorecourses.stanford.edu/instructor/cgregg",
+    "https://explorecourses.stanford.edu/instructor/cgregg?academicYear=20262027",
+    "https://explorecourses.stanford.edu/instructor/cgregg?academicYear=20252026",
+    "https://api.openalex.org/authors/https://orcid.org/0000-0003-1856-2661",
+    "https://api.openalex.org/works?filter=author.id:A5059629600&sort=publication_date:desc",
+    "https://doi.org/10.1145/3641555.3705088"
+  ],
+  "fetch_notes": "FETCHES. The supplied directory link https://cs.stanford.edu/people/christopher-gregg returned HTTP 404 ('The requested URL /people/christopher-gregg was not found on this server'); https://cs.stanford.edu/people/cgregg also 404'd and https://cs.stanford.edu/~cgregg/ returned 403. faculty_url therefore points at his Stanford Profiles page, which resolved 200. His personal page https://web.stanford.edu/~cgregg/ is a JS redirect to https://web.stanford.edu/~cgregg/chris-gregg/, which I fetched. https://web.stanford.edu/~cgregg/chris-gregg/pubs returned 200 but is an empty page with only the word 'Publications' -- no publication list rendered, so publication data came from the CV PDF and OpenAlex instead. The CV PDF (6 pages) was downloaded and its text extracted by zlib-decompressing the PDF streams, since pdftotext and pdftoppm are not installed on this machine; extraction was clean enough to read verbatim, and every CV quotation above was copied from that extracted text.\n\nEMAIL. cgregg@stanford.edu is literal, not guessed. It appears as a mailto: href on https://pincs.stanford.edu/ and https://pincs.stanford.edu/posts/intro/, and in plain text at the top of the CV PDF ('Email: cgregg@stanford.edu'). His homepage prints the same address obfuscated as 'Email: cgregg at stanford.edu'. The CV also prints a phone number, which I have deliberately not recorded.\n\nLAB. The PinCS lab is real and hosted at pincs.stanford.edu (HTTP 200). Note an oddity: on his personal homepage the sentence 'I run the PinCS (\"pinks\") Lab.' is commented out in the HTML (wrapped in <!-- -->), so it does not display, though the pincs.stanford.edu link is live in the page source and the lab site itself is up. The lab name is recorded as 'PinCS Lab' exactly as the site writes it; the site never expands the acronym, so I have not guessed an expansion. The site has no people, publications, news, or join page, and its /posts/projects/ page has a heading and a date but no body text -- so no lab members and no named projects could be recorded. Last build date 26 March 2025 per index.xml.\n\nSCHOLARLY APIs. OpenAlex author search filtered to the Stanford ROR (00f54p054) returned 0 results; I resolved him instead through the ORCID on his Profiles page (0000-0003-1856-2661) to OpenAlex author A5059629600 ('Chris Gregg', 20 works), which is the correct person (works match his known SIGCSE and IEEE Micro papers). His most recent OpenAlex-indexed work is 2025-02-18. The December 2025 NeurIPS Education Program paper is not in OpenAlex and is sourced solely from his own CV. Semantic Scholar returned HTTP 429 'Too Many Requests' on both attempts and contributed nothing. arXiv returned no results for 'Chris Gregg'.\n\nCOURSE-YEAR CAVEAT. ExploreCourses returned an identical 'Currently teaching' block for ?academicYear=20262027 and ?academicYear=20252026, so I could not confirm the page honors the year parameter; the CS 195 listing is present in both views either way. Stanford Profiles independently lists 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)' under his 2025-26 courses, which corroborates it.\n\nNOT VERIFIED / LEFT EMPTY. No grant, funding, or award from 2025-2026 was found on any fetched page (the CV's awards list ends at a 2024-25 Tau Beta Pi entry). No undergraduate lab members, no CURIS mention, and no formal position posting exist on any page I fetched. WebSearch was used only to locate candidate URLs (it surfaced the SIGCSE 2026 profile and ExploreCourses pages); every fact recorded above comes from a page I then fetched directly with curl."
+}

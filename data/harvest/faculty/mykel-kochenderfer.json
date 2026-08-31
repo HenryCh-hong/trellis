@@ -1,0 +1,177 @@
+{
+ "slug": "mykel-kochenderfer",
+ "name": "Mykel Kochenderfer",
+ "title": "Associate Professor of Aeronautics and Astronautics, Senior Fellow at the Stanford Institute for Human-Centered AI and Associate Professor, by courtesy, of Computer Science",
+ "department": "Department of Aeronautics & Astronautics (courtesy appointment in Computer Science)",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/mykel-kochenderfer",
+ "lab_name": "Stanford Intelligent Systems Laboratory (SISL)",
+ "lab_url": "https://sisl.stanford.edu/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Robotics",
+  "reinforcement-learning",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "decision making under uncertainty",
+  "POMDPs and belief-state planning",
+  "aircraft collision avoidance and air traffic control",
+  "safety validation and failure discovery for safety-critical autonomy",
+  "spacecraft and satellite constellation operations",
+  "autonomous vehicles and human driver behavior modeling",
+  "AI safety, LLM evaluation and red-teaming",
+  "reinforcement learning (Julia / open-source tooling)"
+ ],
+ "current_direction": [
+  "Autonomy for space operations: satellite ground-station siting, multi-spacecraft collision avoidance, deep-space science planning",
+  "Safety validation by actively hunting failures in deployed autonomy (importance sampling, PCA, diffusion-based failure samplers)",
+  "Runtime assurance and certifiable perception for vision-based aviation (landing systems, pose-estimation protection levels)",
+  "LLM/foundation-model safety: evaluation science, reasoning-failure signatures, red-teaming and evaluation reporting",
+  "Generative models (flow matching, diffusion) as machinery inside sequential decision making"
+ ],
+ "current_direction_basis": "Inferred from 2026 arXiv preprints co-authored by Kochenderfer and fetched via the arXiv API on 2026-08-31: 'Protection Levels for Vision-Based Pose Estimation' (2026-08-09), 'Semi-Decentralized Multi-Spacecraft Collision Avoidance under Communication Constraints' (2026-07-29), 'Importance Sampling and PCA for Finding Failures in Commercial Autonomous Vehicles' (2026-07-20), 'Free-Placement Optimization of Ground Station Locations for Low-Earth Orbit Satellites' (2026-06-10), 'Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting' (2026-06-08), 'How Language Models Fail: Token-Level Signatures of Committed and Persistent Reasoning Failures' (2026-06-04), and 'Simplifying Flow Matching Transformations with Low-Rank Mixture Models' (2026-06-29); plus OpenAlex 2025-2026 records for the IEEE Aerospace 2026 ground-station paper, the 2025 DASC runtime-assurance paper, and the 2025 ITSC diffusion-failure-sampler paper. The space, LLM-safety and failure-search emphases are also corroborated by current student research topics on the fetched SISL People page (e.g. 'Ground station optimization', 'Language red-teaming', 'Failure prediction in language model reasoning'). NOT drawn from the biography, which still frames the work mainly as air traffic control and collision avoidance.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Protection Levels for Vision-Based Pose Estimation",
+   "summary": "arXiv preprint submitted 2026-08-09 (cs.RO). Authors include Olivia Beyer Bruvik, Romeo Valentin, Marc R. Schlichting, Don Walker and Mykel J. Kochenderfer. Most recent Kochenderfer preprint returned by the arXiv API; part of the group's certifiable vision-based aviation autonomy line.",
+   "url": "http://arxiv.org/abs/2608.10023v1",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Semi-Decentralized Multi-Spacecraft Collision Avoidance under Communication Constraints",
+   "summary": "arXiv preprint submitted 2026-07-29 (cs.RO), by Grace Ra Kim, Mahdi Al-Husseini, Duncan Eddy and Mykel J. Kochenderfer - all listed as current SISL members on the lab People page. Evidence of the active space-operations decision-making thrust.",
+   "url": "http://arxiv.org/abs/2607.26570v1",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Importance Sampling and PCA for Finding Failures in Commercial Autonomous Vehicles",
+   "summary": "arXiv preprint submitted 2026-07-20 (cs.RO), with SISL members Hailey Warner and Duncan Eddy plus industry co-authors. Shows current work on efficiently discovering rare failures in deployed autonomous-vehicle systems.",
+   "url": "http://arxiv.org/abs/2607.18106v1",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
+   "summary": "arXiv preprint (v2) submitted 2026-06-08. Reflects the lab's newer AI-evaluation / AI-safety governance line, matching current SISL student topics such as 'AI evaluations' and 'Failure prediction in language model reasoning'.",
+   "url": "http://arxiv.org/abs/2606.09809v2",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Free-Placement Optimization of Ground Station Locations for Low-Earth Orbit Satellites",
+   "summary": "arXiv preprint submitted 2026-06-10. Directly matches the research topic listed for the lab's current undergraduate member Vedant Srinivas ('Ground station optimization'), so this subarea demonstrably involves undergraduates. A related peer-reviewed paper, 'Scalable Ground Station Selection for Large LEO Constellations', appears in OpenAlex dated 2026-03-07 at IEEE Aerospace (doi:10.1109/aero66936.2026.11519930).",
+   "url": "http://arxiv.org/abs/2606.12667v1",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "A Taxonomy and Review of Algorithms for Modeling and Predicting Human Driver Behavior",
+   "summary": "Journal article dated 2025-11-05 in Proceedings of the IEEE, per the OpenAlex works API for author A5068326377. A peer-reviewed, venue-backed 2025 output on human driver behavior modeling.",
+   "url": "https://doi.org/10.1109/jproc.2025.3617487",
+   "venue": "Proceedings of the IEEE"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "AA228/CS238: Decision Making under Uncertainty (Fall 2026)",
+   "summary": "Course site is live for Fall 2026: 'Lectures will be on Tuesdays and Thursdays, 9am to 10:20am in NVIDIA auditorium starting September 22, 2026.' Prerequisites are stated as 'basic probability (e.g., CS109) and fluency in a high-level programming language (e.g., CS106A)' - undergraduate-accessible. The SISL FAQ recommends this course to prospective lab members: 'It is also recommend to take AA228 offered in the fall quarter.'",
+   "url": "https://aa228.stanford.edu/",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab People page lists current undergraduate researchers by name and project",
+   "status": "verified",
+   "evidence_url": "https://sisl.stanford.edu/people/",
+   "note": "Independently re-verified 2026-08-31 against the live People page (HTTP 200). A case-insensitive grep for 'undergrad' returns exactly two hits, both role labels in the roster markup, extracted verbatim from the HTML: 'Vedant Srinivas' / '<div class=\"tmm_job\">Undergraduate</div>' / 'Ground station optimization', and 'Danielle Pham' / '<div class=\"tmm_job\">Undergraduate (De Anza College)</div>' / 'Aircraft state estimation'. Pham's headshot is served from .../wp-content/uploads/2026/06/danielle-pham.jpg, i.e. added to the site in June 2026, so the undergraduate presence is current rather than stale. This remains the single strongest undergraduate signal on the site - but it is proof that undergraduates HAVE been taken, NOT an advertised opening."
+  },
+  {
+   "signal": "Standing interest-registration form open to any current Stanford student (undergraduates included)",
+   "status": "likely",
+   "evidence_url": "https://sisl.stanford.edu/",
+   "note": "Held at 'likely' on independent re-check 2026-08-31; NOT upgraded. The home-page sentence is real and was re-fetched verbatim: 'If you are a Stanford student interested in becoming involved in our research, please register your interest here.' (raw href: https://forms.gle/Hsye36eXPPa8MsDB8). Two things remain unverified. (1) THE FORM CANNOT BE OPENED. It now returns HTTP 200 rather than the exit code 000 the prior record described, but the 200 is worthless: the ~34.9KB body is pure JavaScript with no <title>, no og: metadata, no FB_PUBLIC_LOAD_DATA_ blob and zero human-readable text, and a deliberately bogus short link (https://forms.gle/zzzzZZZZzzzzZZZZ9) returns a byte-identical response (34892 vs 34893 bytes). A response indistinguishable from one for a non-existent form cannot establish that this form exists, is live, or is still accepting responses. (2) The page says 'Stanford student', never 'undergraduate' - 'undergrad' does not appear anywhere on the fetched home page or FAQ. The '(undergraduates included)' in this signal's own title is an inference from the People page roster, not from the recruiting sentence itself."
+  },
+  {
+   "signal": "FAQ confirms the interest form is the intake route and that submissions are actively reviewed",
+   "status": "verified",
+   "evidence_url": "https://sisl.stanford.edu/faq/",
+   "note": "Re-verified verbatim 2026-08-31: 'Q: Can I join SISL? A: If you are a Stanford student, you can register your interest and submit your information for review at the form here. We get notified at the time of every submission, but feel free to follow up with a separate email without attachments. If you are not a Stanford student yet, you can find admissions information here.' The prior record's link correction is CONFIRMED by reading the raw anchors: the 'form here' link's href is https://sisl.stanford.edu/ (the lab home page, where the forms.gle link lives), NOT the Google Form; the second 'here' is http://aa.stanford.edu/admissions/. Nothing in this answer, or anywhere in the FAQ, uses the word 'undergraduate' (zero grep hits); every other recruiting Q&A on the page concerns Ph.D., M.S., postdoc or TA. Note the FAQ's own hedge elsewhere: 'We cannot promise a spot in the lab.'"
+  },
+  {
+   "signal": "SURF (Summer Undergraduate Research Fellowship) is the supported route for non-Stanford undergraduates - but the current cycle is CLOSED",
+   "status": "verified",
+   "evidence_url": "https://engineering.stanford.edu/SURFBayArea",
+   "note": "Upgraded to 'verified' on 2026-08-31 ONLY because this pass finally fetched the SURF program page itself, which the prior two passes never did - and what it shows is disqualifying for any 'apply now' claim. The SISL FAQ text is verbatim: 'A: We have supported external students through the SURF program in the past and will continue in the future. You send application materials to that program, not to SISL. Outside of this program, SISL does not currently have funding or capacity to support non-Stanford students. If you have a fellowship and bring your own funding, please be aware of Stanford's fees for visiting student researchers (VSRs).' Following the FAQ's SURF href redirects to https://engineering.stanford.edu/SURFBayArea (HTTP 200), which confirms the undergraduate framing literally - 'Summer Undergraduate Research Fellowship (SURF) Bay Area', 'an eight-week summer research program that will bring 15 motivated undergraduate students to Stanford Engineering' - and simultaneously shows THE CYCLE IS CLOSED AND ALREADY OVER: 'Application Window December 15, 2025 - February 3, 2026 @ 11:59pm PT' and 'Program Dates June 22, 2026 - August 14, 2026'. Today is 2026-08-31, so the 2026 program concluded 17 days ago and applications shut nearly seven months ago; no 2027 cycle is posted. Eligibility further narrows it: applicants must 'Be a currently-enrolled full-time non-Stanford undergraduate student', must 'Demonstrate a committed interest in pursuing graduate study toward a PhD in an engineering field', must be 'a rising junior or non-graduating senior', and 'International applicants are not eligible for 2026 SURF Bay Area.' So this route is real and genuinely undergraduate, but it is shut right now and it is a Stanford Engineering program, not a SISL position."
+  },
+  {
+   "signal": "Explicit constraint: no ad-hoc or unpaid internships outside established programs",
+   "status": "verified",
+   "evidence_url": "https://sisl.stanford.edu/faq/",
+   "note": "Re-verified verbatim 2026-08-31: 'Q: Can I do an unpaid internship? A: SISL cannot take on additional participants outside of established programs. However, you are welcome to contribute ideas, issues, and code to our various open source projects, such as those posted on https://github.com/sisl and https://github.com/JuliaPOMDP.' Also verbatim: 'Q: Do you take high school interns? A: Not at this time.' This is a limiting condition on the whole record: it caps any expectation of an ad-hoc undergraduate slot, and it points to open-source contribution as the lab's own stated alternative for people it cannot formally host."
+  },
+  {
+   "signal": "CURIS, senior project, or honors thesis programs",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-checked 2026-08-31 across ALL twelve pages in the SISL sitemap, not just four. 'CURIS', 'senior project', 'honors thesis' and 'honors program' return ZERO hits sitewide. Confirms the original 'unknown'. One correction to the prior record, which claimed the only 'REU' hit was a graduate student's topic string on the People page: REU is in fact described as a program on the previously unexamined /outreach/ page - see the separate outreach signal - though its application link is dead. No Stanford-undergraduate research program hosted BY SISL is advertised as open anywhere on the site."
+  },
+  {
+   "signal": "Lab /outreach/ page describes undergraduate research programs (SURF, REU) - but both application links are dead 404s",
+   "status": "likely",
+   "evidence_url": "https://sisl.stanford.edu/outreach/",
+   "note": "NEW on 2026-08-31: this page was absent from the prior record's source_urls entirely and was found by pulling the site's sitemap (https://sisl.stanford.edu/wp-sitemap-posts-page-1.xml). It is the ONLY page on sisl.stanford.edu besides /people/ that uses the word 'undergrad' (11 hits). Verbatim framing: 'Below is a snapshot of a few of the programs SISL helps support.' The undergraduate entries are verbatim: 'Summer Undergraduate Research Fellowship (SURF)... a fully funded, eight-week summer residential program that brings approximately 20 undergraduate students from across the country'; and 'Summer Undergraduate Research Program - The Research Experience for Undergraduates (REU) program is designed to give Stanford undergraduates the chance to work with faculty and their research groups for ten weeks during the summer. REU students in SISL have worked on projects ranging from building probabilistic driving models to visualization of dynamic target surveillance problems. Information about applying for this program can be found here.' This is the closest thing on the whole site to an undergraduate pathway hosted by the lab, and it is why the record is OUTREACH rather than WATCH. It is NOT an opening, for three verified reasons. (1) BOTH APPLICATION LINKS ARE DEAD: the REU 'here' resolves to https://aa.stanford.edu/student-resources/research-experience-for-undergraduates -> HTTP 404, and this page's SURF 'here' resolves to https://engineering.stanford.edu/students-academics/equity-and-inclusion-initiatives/undergraduate-programs/summer-undergraduate -> HTTP 404. (2) THE PAGE IS DEMONSTRABLY STALE: it still carries the SURF cohort size as 'approximately 20', whereas the live SURF page says 15; and it retains a program annotated '(This program is no longer offered.)' (3) The programs are run by Stanford's Office of Science Outreach / School of Engineering / the AA department - SISL only 'helps support' them. Every verb here is descriptive of past hosting ('have worked on'), never a present-tense call for applicants."
+  }
+ ],
+ "recruiting": {
+  "status": "unverified",
+  "statement": "NO undergraduate-specific opening statement exists on this page. Independently re-fetched 2026-08-31 (HTTP 200). The ONLY present-tense recruiting sentence on https://sisl.stanford.edu/ is, verbatim and in full: 'If you are a Stanford student interested in becoming involved in our research, please register your interest here. General postdoctoral research candidates can register interest here.' It says 'Stanford student', never 'undergraduate' - a case-insensitive grep for 'undergrad' returns ZERO hits on the home page, the FAQ, the Contact page, /visit/, /research/, /internal/ and /calendar/. That sentence carries two distinct Google Forms: https://forms.gle/Hsye36eXPPa8MsDB8 (Stanford students) and https://forms.gle/DV2HK8AUt32dXmgE7 (postdocs). NEITHER FORM CAN BE VERIFIED, and this pass proves why rather than merely asserting it: both short links return HTTP 200 with ~34.9KB of pure JavaScript, no <title>, no og: metadata, no FB_PUBLIC_LOAD_DATA_ (the payload a rendered public form always carries), and zero human-readable text - and a DELIBERATELY BOGUS id, https://forms.gle/zzzzZZZZzzzzZZZZ9, returns a byte-identical 200 (34892 vs 34893 bytes). The 200 therefore proves nothing about existence, live status, or whether responses are still accepted. (This corrects the prior record, which reported curl exit code 000; the failure mode today is a content-free interstitial, not a transport error. docs.google.com is reachable - a bogus /forms/d/e/ path returns a clean 404 - so this is not a network block.) The rest of the home-page prose is graduate-facing: 'Students in SISL come from a variety of departments... If you are not yet a student, but are interested in applying, please see the respective admissions pages.' The only quantified admissions statement in the FAQ is doctoral: 'Q: Are new Ph.D. students being accepted into the lab? A: Yes, on average between 1-3 students are admitted per year.' The FAQ also caps ad-hoc participation - 'SISL cannot take on additional participants outside of established programs' - and, for non-Stanford students, 'Outside of this program, SISL does not currently have funding or capacity to support non-Stanford students.' Status is 'unverified' rather than 'closed': the lab has NOT said it is refusing students, and a standing invitation does exist - it is simply not undergraduate-specific and its intake form cannot be opened from here.",
+  "url": "https://sisl.stanford.edu/",
+  "confidence": 0.35
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "OUTREACH - independently re-verified on 2026-08-31 by a third adversarial pass that re-fetched every page live and additionally examined five SISL pages no prior pass had opened. OPENING remains WRONG, on four grounds. (1) NOT UNDERGRADUATE-SPECIFIC. The sole present-tense recruiting sentence on https://sisl.stanford.edu/ is 'If you are a Stanford student interested in becoming involved in our research, please register your interest here.' The word 'undergraduate' appears NOWHERE on the home page, FAQ, Contact, /visit/, /research/, /internal/ or /calendar/ (grepped, zero hits); sitewide it occurs only as two People-page role labels and on the /outreach/ page. A generic 'Stanford student' invitation is an open door, not an undergraduate opening. (2) THE INTAKE FORM STILL CANNOT BE VERIFIED - and this pass proved it rather than assuming it. https://forms.gle/Hsye36eXPPa8MsDB8 now returns HTTP 200 (correcting the prior record's 'exit code 000'), but the body is ~34.9KB of pure JavaScript with no title, no metadata, no FB_PUBLIC_LOAD_DATA_ payload and zero readable text - and a deliberately bogus short link returns a byte-identical 200. A response identical to one for a non-existent form cannot support an 'apply now' recommendation. (3) THE ONE REAL UNDERGRADUATE ROUTE IS CURRENTLY CLOSED. The FAQ's SURF link was followed for the first time in this pass, to https://engineering.stanford.edu/SURFBayArea (HTTP 200): 'Application Window December 15, 2025 - February 3, 2026 @ 11:59pm PT'; 'Program Dates June 22, 2026 - August 14, 2026'. As of today the 2026 program ended 17 days ago and applications closed almost seven months ago, with no 2027 cycle posted. It also demands 'a committed interest in pursuing graduate study toward a PhD', is restricted to non-Stanford undergraduates, and excludes international applicants. (4) THE LAB'S OWN LANGUAGE NARROWS THE DOOR: 'SISL cannot take on additional participants outside of established programs'; 'Do you take high school interns? Not at this time'; 'Outside of this program, SISL does not currently have funding or capacity to support non-Stanford students'; and 'We cannot promise a spot in the lab.' The only quantified intake anywhere is doctoral ('on average between 1-3 students are admitted per year'). OUTREACH rather than WATCH is justified because the lab is unambiguously active and demonstrably does host undergraduates: the live People page lists 'Vedant Srinivas / Undergraduate / Ground station optimization' and 'Danielle Pham / Undergraduate (De Anza College) / Aircraft state estimation', Pham's headshot uploaded under /2026/06/; the newly found /outreach/ page states 'REU students in SISL have worked on projects ranging from building probabilistic driving models to visualization of dynamic target surveillance problems'; and AA228/CS238 is confirmed running this term ('Lectures will be on Tuesdays and Thursdays, 9am to 10:20am in NVIDIA auditorium starting September 22, 2026', prerequisites 'basic probability (e.g., CS109) and fluency in a high-level programming language (e.g., CS106A)'), with the FAQ recommending it to would-be lab members: 'It is also recommend to take AA228 offered in the fall quarter.' ACTION FOR A STUDENT: treat this as a warm outreach target, NOT an application. A Stanford undergraduate should submit the home-page interest form - opening it in a real browser first, since it cannot be confirmed live from here - take AA228 this fall, and attend lab meetings, which the FAQ explicitly invites. A non-Stanford undergraduate has no open route today: SURF is the lab's stated channel and its next cycle would be expected to open around mid-December, so this record should be re-checked then. No contactable email is on record - see the email fields, which remain null.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/mykel-kochenderfer",
+  "https://profiles.stanford.edu/mykel-kochenderfer",
+  "https://engineering.stanford.edu/people/mykel-kochenderfer",
+  "https://sisl.stanford.edu/",
+  "https://sisl.stanford.edu/people/",
+  "https://sisl.stanford.edu/contact/",
+  "https://sisl.stanford.edu/faq/",
+  "https://sisl.stanford.edu/publications/",
+  "https://aa228.stanford.edu/",
+  "https://api.openalex.org/authors?search=Mykel%20Kochenderfer",
+  "https://api.openalex.org/works?filter=author.id:A5068326377,from_publication_date:2025-01-01&sort=publication_date:desc&per-page=25",
+  "https://export.arxiv.org/api/query?search_query=au:%22Kochenderfer%22&sortBy=submittedDate&sortOrder=descending&max_results=12",
+  "https://forms.gle/Hsye36eXPPa8MsDB8",
+  "https://sisl.stanford.edu/outreach/",
+  "https://sisl.stanford.edu/visit/",
+  "https://sisl.stanford.edu/research/",
+  "https://sisl.stanford.edu/internal/",
+  "https://sisl.stanford.edu/calendar/",
+  "https://sisl.stanford.edu/wp-sitemap-posts-page-1.xml",
+  "https://forms.gle/DV2HK8AUt32dXmgE7",
+  "https://engineering.stanford.edu/SURFBayArea",
+  "https://engineering.stanford.edu/students-academics/equity-and-inclusion-initiatives/prospective-graduate-programs/summer",
+  "https://aa.stanford.edu/student-resources/research-experience-for-undergraduates"
+ ],
+ "fetch_notes": "All fetches performed 2026-08-31 via curl with a browser User-Agent. FAILURES: the supplied CS directory link https://cs.stanford.edu/people/mykel-kochenderfer returned HTTP 404 ('The requested URL /people/mykel-kochenderfer was not found on this server'), so faculty_url was set to the Stanford Profiles page instead, which returned HTTP 200 and printed the exact title given in the task. https://sisl.stanford.edu/news/ returned HTTP 404 - the site's 'News' menu item links to https://x.com/SISLaboratory, not an on-site news page, so no lab news items were harvested. https://sisl.stanford.edu/publications/ returned HTTP 200 but the rendered body contains only the heading 'Publications' with no publication list and no iframe or embed in the source, so all publication evidence came from the arXiv and OpenAlex APIs instead. The first arXiv attempt over http:// returned HTTP 000 (no bytes); retrying over https:// succeeded. EMAIL: the contact page prints the address in obfuscated form as 'E-mail: mykel (at) stanford.edu' alongside the postal address '496 Lomita Mall, Durand Building, Room 255'; the recorded value mykel@stanford.edu is that literal string de-obfuscated, not a guess or a constructed pattern. A department address, aa-admissions@lists.stanford.edu, also appears on the FAQ page but belongs to Aero/Astro admissions, not to Kochenderfer. AUTHORSHIP: Kochenderfer's authorship was verified on every arXiv item cited by reading the <author> entries in the API response, not assumed from the surname search. VENUES: the arXiv items are preprints and are labeled as such; the Proceedings of the IEEE item and the IEEE Aerospace 2026 item mentioned in the ground-station evidence summary come from OpenAlex metadata (DOI landing pages were not themselves fetched). The OpenAlex query filtered to Stanford's ROR returned 0 results because the author's last-known institutions list is ['Palo Alto University', 'BlackRock (United States)', 'Stanford University']; the unfiltered author search resolved him to OpenAlex ID A5068326377 with 585 works and 66 works dated 2025-01-01 or later. LAB MEMBERS: all names quoted come verbatim from the fetched People page. No mention of CURIS, senior projects, or honors theses was found anywhere on the fetched SISL pages.  ||| ADVERSARIAL RE-VERIFICATION 2026-08-31: re-fetched https://sisl.stanford.edu/ (200), https://sisl.stanford.edu/faq/ (200), https://sisl.stanford.edu/people/ (200), https://sisl.stanford.edu/contact/ (200), https://aa228.stanford.edu/ (200), https://profiles.stanford.edu/mykel-kochenderfer (200), https://engineering.stanford.edu/people/mykel-kochenderfer (200). EMAIL RETRACTED: the literal string 'mykel@stanford.edu' does not appear on the recorded email_source_url https://sisl.stanford.edu/contact/ - that page renders only the obfuscated 'E-mail: mykel (at) stanford.edu', and a regex sweep for any address on the page returned zero matches. The same literal string was also absent from the Stanford Profiles page (which yielded only chaussec@stanford.edu), the Engineering profile page (no addresses), and aa228.stanford.edu (which yielded only the course staff addresses mtho@stanford.edu and napoli8@stanford.edu). Because the previously recorded value was a de-obfuscation rather than a literal match, email and email_source_url are now null. FORM UNVERIFIABLE: https://forms.gle/Hsye36eXPPa8MsDB8 returns curl exit code 000; the ~8.9KB body received is Google's generic sign-in/storage-access interstitial whose only human-readable text is a login wall. docs.google.com itself is reachable from this environment (a deliberately bogus form ID returned a clean 404), so the failure is specific to this short link / an auth requirement, not a blanket network block - either way the form's live status and its content are unverified. FAQ LINK CORRECTION: the FAQ's 'Can I join SISL' answer links the word 'here' to https://sisl.stanford.edu/ , NOT directly to the Google Form as the prior record implied; the FAQ's only forms.gle link (https://forms.gle/AjRqgvcL3JguUiSV8) belongs to the separate teaching-assistant question. QUOTE CORRECTION: the prior SURF note truncated the answer before its limiting sentence, 'Outside of this program, SISL does not currently have funding or capacity to support non-Stanford students.' UNDERGRAD GREP: 'undergrad' occurs zero times on the fetched home, FAQ and Contact pages, and twice on the People page as role labels only. 'CURIS', 'senior project', 'honors thesis' and 'honors program' occur zero times on all four pages. Publication/arXiv/OpenAlex evidence from the original harvest was NOT re-fetched in this pass and is carried forward unchanged.  ||| THIRD-PASS ADVERSARIAL RE-VERIFICATION 2026-08-31 (independent; every claim below re-fetched live in this pass). RE-FETCHED 200: sisl.stanford.edu/ , /faq/ , /people/ , /contact/ , /outreach/ , /visit/ , /research/ , /internal/ , /calendar/ , wp-sitemap-posts-page-1.xml , aa228.stanford.edu/ , profiles.stanford.edu/mykel-kochenderfer , engineering.stanford.edu/SURFBayArea. COVERAGE GAP FOUND AND CLOSED: the prior record's source_urls omitted /outreach/, the only page besides /people/ that mentions undergraduates (11 hits); it was found via the sitemap. /visit/, /research/, /internal/ and /calendar/ were also opened for the first time - all return 0 hits for 'undergrad'. EMAIL RE-CONFIRMED NULL: grep for the literal string 'mykel@stanford.edu' on the recorded email_source_url https://sisl.stanford.edu/contact/ returns 0; a regex sweep for ANY address on that page returns 0 matches, and there are no mailto: hrefs. The page renders only the obfuscated 'E-mail: mykel (at) stanford.edu' beside '496 Lomita Mall, Durand Building, Room 255'. profiles.stanford.edu yields only chaussec@stanford.edu; aa228.stanford.edu yields only mtho@stanford.edu and napoli8@stanford.edu. Because a de-obfuscation is a reconstruction rather than a literal match, email and email_source_url stay null. FORM FINDING CORRECTED: contrary to the prior note, https://forms.gle/Hsye36eXPPa8MsDB8 does NOT return exit code 000 - it returns HTTP 200 with 34893 bytes. The 200 is nonetheless meaningless: the body has no <title>, no og: metadata, no FB_PUBLIC_LOAD_DATA_ blob and zero human-readable text after stripping scripts, and the CONTROL CASE https://forms.gle/zzzzZZZZzzzzZZZZ9 (an invented id) returns 34892 bytes - byte-for-byte equivalent. forms.gle serves the same content-free interstitial whether or not the form exists, so live status remains unverifiable. docs.google.com is reachable (a bogus /forms/d/e/ path returns a clean 404), confirming this is not a network block. The postdoc form https://forms.gle/DV2HK8AUt32dXmgE7 behaves identically. SURF CYCLE CHECKED FOR THE FIRST TIME: the FAQ's SURF href redirects to https://engineering.stanford.edu/SURFBayArea (200), which states 'Application Window December 15, 2025 - February 3, 2026 @ 11:59pm PT' and 'Program Dates June 22, 2026 - August 14, 2026' - i.e. closed and concluded as of today - plus eligibility 'currently-enrolled full-time non-Stanford undergraduate student', 'committed interest in pursuing graduate study toward a PhD', 'rising junior or non-graduating senior', and 'International applicants are not eligible for 2026 SURF Bay Area.' DEAD LINKS ON /outreach/: its REU link (aa.stanford.edu/student-resources/research-experience-for-undergraduates) returns HTTP 404, and its SURF link (engineering.stanford.edu/.../undergraduate-programs/summer-undergraduate) returns HTTP 404; the page also understates the cohort at 'approximately 20' where the live SURF page says 15, so /outreach/ is stale and cannot evidence an open cycle. AA228 RE-CONFIRMED live for Fall 2026 with the quoted lecture time and prerequisites. PEOPLE PAGE: the two 'Undergraduate' role labels were re-extracted from the raw markup rather than rendered text. NOT RE-CHECKED IN THIS PASS: the arXiv/OpenAlex publication evidence and all `evidence` entries except AA228 are carried forward unchanged from the original harvest and were not re-fetched here."
+}

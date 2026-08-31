@@ -1,0 +1,174 @@
+{
+  "slug": "ehsan-adeli",
+  "name": "Ehsan Adeli",
+  "title": "Assistant Professor (Research) of Psychiatry and Behavioral Sciences (Public Mental Health and Populations Sciences) and, by courtesy, of Computer Science and of Biomedical Data Science; Director, Stanford Translational AI (STAI) in Medicine and Mental Health Lab",
+  "department": "Psychiatry and Behavioral Sciences (School of Medicine); courtesy appointments in Computer Science and Biomedical Data Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/ehsan-adeli",
+  "lab_name": "Stanford Translational AI (STAI) in Medicine and Mental Health Lab",
+  "lab_url": "https://stai.stanford.edu/",
+  "email": "staiadmin@stanford.edu",
+  "email_source_url": "https://stai.stanford.edu/contact",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "computer-vision"
+  ],
+  "research_topics": [
+    "Ambient intelligence (hospital/ICU and senior-care monitoring)",
+    "3D digital humans, human motion generation and reconstruction",
+    "Video understanding and activity/gesture analysis",
+    "Computational neuroscience: brain foundation ('world') models and neural decoding",
+    "Neuroimaging analysis (structural MRI, diffusion MRI, fMRI)",
+    "Foundation models and LLMs for psychiatry and mental health",
+    "AI trustworthiness: confounders in medical studies, counterfactual generation, neuroethics",
+    "Mind & Motion: gait/mobility impairment in Parkinson's, Alzheimer's and MCI",
+    "Digital biomarkers for neurodegenerative disease"
+  ],
+  "current_direction": [
+    "Multimodal foundation models and LLM agents for psychiatry, plus their evaluation, safety and governance",
+    "Brain-MRI foundation models with built-in interpretability (sparse autoencoders, retrieval-augmented brain-MRI QA, diffusion-MRI transformers)",
+    "Conversational and socially-intelligent 3D digital humans / human motion generation",
+    "Benchmarking physical and temporal reasoning limits of vision-language and long-form video models",
+    "Ambient-intelligence clinical deployment and digital biomarkers for neurodegeneration"
+  ],
+  "current_direction_basis": "Inferred from the 2025-2026 items on https://stai.stanford.edu/publications and https://stai.stanford.edu/news-events, not from the older biography. (1) Psychiatry LLM/foundation-model push: 'Ethics, Safety, and Governance for AI in Mental Health Care' (Neuropsychopharmacology 2026, in press), 'Deterministic Hallucination Detection in Medical VQA' (MICCAI 2026), 'Ask WhAI: Probing Belief Formation in Role-Primed LLM Agents for Multi-Specialty Diagnosis' (2025), and the lab's 'Foundation Models & LLMs in Psychiatry' project page. (2) Interpretable brain-MRI foundation models: 'GeoSAE: Geometric Prior-Guided Layer-Wise Sparse Autoencoder Annotation of Brain MRI Foundation Models' (CVPR CV4Clinical 2026), 'SARAR: Shortcut-Aware 3D Brain MRI Question Answering via Retrieval-Augmented Reranking' (MLCN/MICCAI 2026, oral), 'Diffusion MRI Transformer with a Diffusion Space Rotary Positional Embedding (D-RoPE)' (CVPR 2026), 'Neural Autoregressive Modeling of Brain Aging' (MICCAI DGM 2025). (3) Conversational 3D humans: 'ViBES: A Conversational Agent with Behaviorally-Intelligent 3D Virtual Body' (CVPR 2026), 'SocialGen' (3DV 2026), 'AnyLift' (CVPR 2026), 'The Language of Motion' (CVPR 2025). (4) VLM/video reasoning benchmarks: 'QUANTIPHY: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models' (CVPR 2026), 'Re-thinking Temporal Search for Long-Form Video Understanding' (CVPR 2025), 'VideoWeave' (NeurIPS workshop 2025). (5) Ambient intelligence / digital biomarkers: 'Developing ICU Clinical Behavioral Atlas Using Ambient Intelligence and Computer Vision' (NEJM AI 2025), 'A framework of digital biomarkers for neurodegenerative diseases' (Nature Reviews Bioengineering 2026), and the May 2025 Stanford Momentum coverage 'Ambient intelligence, human impact'.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "A framework of digital biomarkers for neurodegenerative diseases",
+      "summary": "Review/framework paper led by STAI PhD student Favour Nerrise with Adeli as senior author, laying out digital biomarkers for neurodegenerative disease; co-authors include Fei-Fei Li, James Landay and Arnold Milstein. Listed under '2026' on the lab publications page.",
+      "url": "https://www.nature.com/articles/s44222-026-00433-7",
+      "venue": "Nature Reviews Bioengineering"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "ViBES: A Conversational Agent with Behaviorally-Intelligent 3D Virtual Body",
+      "summary": "CVPR 2026 paper from the lab on a conversational agent with a behaviorally-intelligent 3D virtual body; project page and a Converse3D dataset release are linked from the lab publications page.",
+      "url": "https://ai.stanford.edu/~juze/ViBES/",
+      "venue": "Computer Vision and Pattern Recognition (CVPR) 2026"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Diffusion MRI Transformer with a Diffusion Space Rotary Positional Embedding (D-RoPE)",
+      "summary": "CVPR 2026 paper on a transformer architecture for diffusion MRI with a diffusion-space rotary positional embedding. Author list on the lab page includes C. Blank, who the lab People page lists as an undergraduate student.",
+      "url": "https://arxiv.org/abs/2603.25977",
+      "venue": "Computer Vision and Pattern Recognition (CVPR) 2026"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "QUANTIPHY: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models",
+      "summary": "CVPR 2026 benchmark probing quantitative physical reasoning in vision-language models, with a dedicated Stanford project site. Co-lead authors include P. Li, listed on the lab People page as an MSc student.",
+      "url": "https://quantiphy.stanford.edu/",
+      "venue": "Computer Vision and Pattern Recognition (CVPR) 2026"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Discovering Latent Graphs with GFlowNets for Diverse Conditional Image Generation",
+      "summary": "NeurIPS 2025 paper (first author Bailey Trang, a lab PhD student) on GFlowNet-discovered latent graphs for diverse conditional image generation; Fei-Fei Li and Adeli are senior authors.",
+      "url": "https://arxiv.org/pdf/2510.22107",
+      "venue": "Neural Information Processing Systems (NeurIPS) 2025"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Developing ICU Clinical Behavioral Atlas Using Ambient Intelligence and Computer Vision",
+      "summary": "NEJM AI paper with Adeli as co-lead and corresponding author, building a clinical behavioral atlas of the ICU from ambient sensing and computer vision; co-senior authors Arnold Milstein, Fei-Fei Li and Kevin Schulman.",
+      "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400590",
+      "venue": "NEJM AI"
+    },
+    {
+      "kind": "news",
+      "year": 2025,
+      "title": "PhD Student Favour Nerrise Wins Both Top Prizes at Stanford's Inaugural 3-Minute Thesis Competition",
+      "summary": "Lab news item dated 19 Apr 2025: 'On April 17, our very own PhD student Favour Nerrise delivered an extraordinary three-minute presentation of her doctoral research and walked away with both of the competition's highest honors: the People's Choice Award and the Judges' First Prize.' Most recent dated item on the lab news page.",
+      "url": "https://stai.stanford.edu/news-events",
+      "venue": null
+    },
+    {
+      "kind": "course",
+      "year": 2025,
+      "title": "CS231n: Deep Learning for Computer Vision (Spring 2025); PSYC180/MED180: Artificial Intelligence in Medicine and Healthcare Ventures (Winter 2025)",
+      "summary": "Lab Courses page lists CS231n (Spring 2025) and the undergraduate-numbered PSYC180/MED180 (Winter 2025) among Adeli's recent teaching, plus PSYC221/BIODS227 and CS337/MED277 (Fall 2024). These are the most plausible in-person points of contact for a Stanford undergraduate.",
+      "url": "https://stai.stanford.edu/course",
+      "venue": "Stanford University"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Lab People page has a dedicated section headed 'MSc & Undergraduate Students' listing named current undergraduates: Camila Blank, Ahan Devgun, Hannah Gao, Selin Ozgursoy, Sophia Li, Holger Molin, Nihar Mudigonda, Logan Wang, David Yuan (Hannah Gao labeled 'Undergraduate and Coterm MSc').",
+      "status": "verified",
+      "evidence_url": "https://stai.stanford.edu/people",
+      "note": "Undergraduates are an established, currently-listed tier of the group alongside PhD, MSc, MD and postdoc members - the single strongest undergrad signal for this lab."
+    },
+    {
+      "signal": "People page carries an alumni heading 'Alumni (Undergraduate/MS students and Visiting Scholars)', and past members are labeled 'Undergraduate student' / 'Undergrad and MSc student' (e.g. Mark Endo, Alice Heiman, Mandy Lu, Stephen Su, Shizhe He, Eliana Randazzo Ridley, Neha Srivathsa, Aya Aburous).",
+      "status": "verified",
+      "evidence_url": "https://stai.stanford.edu/people",
+      "note": "Multi-year track record of undergraduate mentorship, not a one-off."
+    },
+    {
+      "signal": "Undergraduate members appear as paper co-authors: 'C. Blank' is an author on the CVPR 2026 D-RoPE paper and 'Camila Blank' is listed on the People page as an Undergraduate Student; 'A. Heiman' is a co-author on the MICCAI GRAIL 2024 GAMMA-PD paper and 'Alice Heiman' is listed as an undergraduate student.",
+      "status": "likely",
+      "evidence_url": "https://stai.stanford.edu/publications",
+      "note": "Name match between the publications page and the People page; the lab site does not itself state that these are the same individuals, so treat as likely rather than confirmed."
+    },
+    {
+      "signal": "PI teaches undergraduate-accessible Stanford courses: CS231n (Spring 2025) and the undergraduate-numbered PSYC180/MED180 'Artificial Intelligence in Medicine and Healthcare Ventures' (Winter 2025).",
+      "status": "verified",
+      "evidence_url": "https://stai.stanford.edu/course",
+      "note": "A realistic route to first contact for a Stanford undergrad, given the PI's stated inability to answer all cold email."
+    },
+    {
+      "signal": "No undergraduate-specific program or application route is advertised anywhere on the lab site. Grepping the fetched Openings, People, About, Contact, Courses, News and personal-homepage HTML returned ZERO matches for 'CURIS', 'undergraduate research', 'senior project', 'honors thesis' and 'summer intern'.",
+      "status": "verified",
+      "evidence_url": "https://stai.stanford.edu/openings",
+      "note": "Absence verified by search over the pages actually fetched in this task; it is not proof that no such route exists off-site."
+    },
+    {
+      "signal": "The only prospective-member statement on the PI's own homepage is addressed to graduate students and postdocs and does not mention undergraduates at all.",
+      "status": "verified",
+      "evidence_url": "https://stanford.edu/~eadeli/",
+      "note": "Quoted: 'Note to Prospective Graduate Students and Postdoctoral Fellows: Thank you for your interest in our lab. I receive a large number of inquiries each year, and while I greatly appreciate your enthusiasm, please note that I am unfortunately unable to respond to all individual emails, particularly from those who are not currently affiliated with Stanford.' Undergraduates are neither invited nor excluded; the Stanford-affiliation carve-out matters."
+    }
+  ],
+  "recruiting": {
+    "status": "open",
+    "statement": "POSTDOC-ONLY, NOT UNDERGRADUATE. The lab's Openings page lists three postdoctoral positions, all posted in 2024 and none since. The most recent (posted 04 Nov 2024, 'Postdoctoral Fellow Position in AI for Psychiatry: LLMs and Multimodal Foundation Models') states under 'Application Deadline': 'The position is open until filled, with review of applications beginning immediately.' Its REQUIRED qualifications begin 'PhD (or nearing completion) in a relevant field, such as Computer Science, Biomedical Data Science or Engineering, Neuroscience, or AI' and 'Proficiency in large language models (LLMs) and multimodal foundation models is essential.' Separately listed as merely desirable/preferred (do not read as required): 'Background in psychiatry, psychology, or mental health is highly desirable; experience in clinical or healthcare settings is a plus', 'Experience in computer vision and healthcare applications will be advantageous', and a 'Preferred Experience' block covering familiarity with mental health data types, awareness of ethical considerations in AI for mental health, and strong communication skills. The other two postings (27 Aug 2024 medical imaging / foundation models; 14 Oct 2024 3D human understanding & video) likewise require a PhD. Separately, the PI's homepage states: 'Prospective Postdocs: If your research is highly aligned with our lab's focus areas, please send me an email with your CV and a short research statement.'",
+    "url": "https://stai.stanford.edu/openings/163-postdoctoral-fellow-position-in-ai-for-psychiatry-llms-and-multimodal-foundation-models",
+    "confidence": 0.55
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "OUTREACH, not OPENING: every advertised position on https://stai.stanford.edu/openings is a postdoctoral fellowship requiring a completed or near-complete PhD, and all three were posted in 2024 with nothing added since; no undergraduate-relevant opening, CURIS listing, senior-project offer, or 'if you are a Stanford undergraduate' statement appears on any page fetched. Not WATCH either, because the lab is unambiguously active and unambiguously takes undergraduates. Activity: the publications page lists ~23 items dated 2026 (CVPR, ICLR, ICML, MICCAI, COLM, Nature Reviews Bioengineering, npj Artificial Intelligence) and ~30 dated 2025 (NeurIPS, ICCV, CVPR, ICML, NEJM AI, npj Digital Medicine, Nature Mental Health), and the site footer reads 'Copyright STAI 2026'. Undergraduate involvement: the People page maintains a live 'MSc & Undergraduate Students' section naming nine current undergraduates, plus an 'Alumni (Undergraduate/MS students and Visiting Scholars)' section. A cold email from a Stanford undergraduate is therefore reasonable, with one important caveat straight from the PI's homepage: 'I receive a large number of inquiries each year, and while I greatly appreciate your enthusiasm, please note that I am unfortunately unable to respond to all individual emails, particularly from those who are not currently affiliated with Stanford.' A currently-enrolled Stanford undergraduate is inside that carve-out; a non-Stanford student is explicitly warned. Practical route: take or TA one of his courses (CS231n Spring 2025, PSYC180/MED180 Winter 2025), or contact a current PhD student whose 2025-2026 paper matches your interest, rather than emailing the PI cold.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 8,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/ehsan-adeli",
+    "https://profiles.stanford.edu/ehsan-adeli",
+    "https://stanford.edu/~eadeli/",
+    "https://stai.stanford.edu/",
+    "https://stai.stanford.edu/about",
+    "https://stai.stanford.edu/people",
+    "https://stai.stanford.edu/publications",
+    "https://stai.stanford.edu/projects",
+    "https://stai.stanford.edu/course",
+    "https://stai.stanford.edu/news-events",
+    "https://stai.stanford.edu/news-events?start=9",
+    "https://stai.stanford.edu/openings",
+    "https://stai.stanford.edu/openings/148-openings",
+    "https://stai.stanford.edu/openings/160-openings-3",
+    "https://stai.stanford.edu/openings/163-postdoctoral-fellow-position-in-ai-for-psychiatry-llms-and-multimodal-foundation-models",
+    "https://stai.stanford.edu/contact",
+    "https://api.openalex.org/authors/https://orcid.org/0000-0002-0579-7763",
+    "https://api.openalex.org/works?filter=author.id:A5015355317,from_publication_date:2025-01-01&sort=publication_date:desc"
+  ],
+  "fetch_notes": "All facts above come from pages fetched in this task with curl + a browser User-Agent on 2026-08-31. FAILURES: the supplied CS directory link https://cs.stanford.edu/people/ehsan-adeli returned HTTP 404 ('The requested URL /people/ehsan-adeli was not found on this server'), so the CS-directory title string given in the task could not be verified; the title recorded here is the one printed on https://profiles.stanford.edu/ehsan-adeli, which reads 'Assistant Professor (Research) of Psychiatry and Behavioral Sciences (Public Mental Health and Populations Sciences) and, by courtesy, of Computer Science and of Biomedical Data Science' - note this says 'Assistant Professor (Research)' and orders the courtesy appointments differently from the task's directory string, and the profiles page itself does not print 'Director, Stanford Translational AI (STAI) Lab' (that role is stated on https://stanford.edu/~eadeli/ as 'Director of STAI Lab: Stanford Translational AI (STAI) in Medicine and Mental Health' and corroborated by the lab site). EMAIL: staiadmin@stanford.edu is a lab administrative address that appears literally in the header and footer of every STAI page and on https://stai.stanford.edu/contact; it is NOT a personal address for Prof. Adeli. No personal Stanford email for him appears in any page fetched. The only other literal address found was an obfuscated mailto on https://stanford.edu/~eadeli/ encoding 'eadeli{at}gmail.com' - a personal Gmail, recorded here only for transparency and deliberately NOT used as the contact email. The lab also lists a phone number, +1 (650) 498-0466, and address 1070 Arastradero Rd, Palo Alto, CA 94304-5990. OPENALEX CAVEAT: OpenAlex resolves ORCID 0000-0002-0579-7763 (taken from the Stanford profile page) to author A5015355317, whose last_known_institutions are wrongly listed as 'University of Michigan' / 'University of Michigan-Flint'; its 2025-2026 works nonetheless match the Stanford lab's own publication list (EchoGraph/npj Digital Medicine, UniEgoMotion/ICCV 2025, ViBES, Spherical Leech Quantization, Regularized CCA/Translational Psychiatry), so it is the right person under a mislabeled affiliation. Because of that disambiguation noise, every evidence item above is sourced from the lab's own publications page rather than from OpenAlex; OpenAlex was used only as an independent cross-check and it confirmed the 2025 items. Semantic Scholar and arXiv were not needed and were not queried. UNDERGRAD SEARCH: I grepped the fetched HTML of the Openings, People, About, Contact, Courses, News and personal-homepage pages for 'CURIS', 'undergraduate research', 'senior project', 'honors thesis' and 'summer intern' - zero matches. The undergraduate evidence is therefore roster-based (named current undergraduate members) rather than program-based. NOT VERIFIED: whether the three 2024 postdoc postings are still genuinely open (only the Nov 2024 one carries 'open until filled'); whether the undergraduates named on the People page are Stanford undergraduates specifically; whether the co-author name matches in undergrad_signals refer to the same individuals. arXiv identifiers 2603.25977, 2512.14234 and 2512.19526 were read off href attributes on the lab publications page and were not independently opened."
+}

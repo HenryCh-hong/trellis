@@ -1,0 +1,166 @@
+{
+ "slug": "dorsa-sadigh",
+ "name": "Dorsa Sadigh",
+ "title": "Associate Professor of Computer Science, of Electrical Engineering and Senior Fellow at the Stanford Institute for Human-Centered AI",
+ "department": "Computer Science; Electrical Engineering (Senior Fellow, Institute for Human-Centered Artificial Intelligence)",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/dorsa-sadigh",
+ "lab_name": "Stanford ILIAD",
+ "lab_url": "https://iliad.stanford.edu/",
+ "email": "dorsa@cs.stanford.edu",
+ "email_source_url": "https://dorsa.fyi/contact/",
+ "research_areas": [
+  "Artificial Intelligence",
+  "Human-Centered and Creative AI",
+  "Robotics",
+  "reinforcement-learning",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "Interactive robot learning (lab mission statement: 'theoretical foundations and practical algorithms for interactive robot learning')",
+  "Learning from diverse sources of data to build sample-efficient, human-aligned, interactive robot policies",
+  "Robots that coordinate with, collaborate with, compete with, or influence humans",
+  "Reinforcement learning fine-tuning of vision-language-action (VLA) policies",
+  "Cross-embodiment transfer and data-centric robot learning",
+  "Generalization evaluation for generalist robot manipulation policies",
+  "Dexterous, contact-rich manipulation",
+  "Human-robot interaction and human skill learning"
+ ],
+ "current_direction": [
+  "RL fine-tuning of pretrained vision-language-action policies for real-robot reliability",
+  "Data-centric robot learning: cross-embodiment transfer, data analogies, generated training data",
+  "Measuring and characterizing generalization of generalist manipulation policies",
+  "Scalable/gamified robot data collection and in-the-wild data flywheels",
+  "Human-facing robotics: robot coaches, skill atrophy, personalized collaboration"
+ ],
+ "current_direction_basis": "Driven by 2026 evidence collected in this task. VLA + RL fine-tuning: 'EXPO-FT' (arXiv 2605.25477, May 2026), 'EXPO: Stable Reinforcement Learning with Expressive Policies' and 'What Matters for Batch Online Reinforcement Learning in Robotics?' (both ICLR 2026 on the lab publications page), and 'Do You Really Need to Pretrain Q-Functions for Online RL Fine-Tuning?' (arXiv 2607.27203, Jul 2026 - the most recent item found). Data-centric / cross-embodiment: 'Cross-Embodiment Transfer via Behavior-Aligned Representations' and 'Physically-Grounded Data Generation via Video Diffusion Models' (ICRA 2026), plus 'Data Analogies Enable Efficient Cross-Embodiment Transfer' (arXiv 2603.06450). Generalization measurement: 'Grounding Robot Generalization in Training Data via Retrieval-Augmented VLMs' (RADAR, arXiv 2603.11426; RA-L 2026) and 'A Taxonomy for Evaluating Generalist Robot Manipulation Policies' (RA-L, January 2026). Data collection: 'RoboCade: Gamifying Robot Data Collection' (ICRA 2026) and 'Robot-Powered Data Flywheels' (preprint on lab publications page). Human-facing: 'Will People Enjoy a Robot Trainer? A Case Study with Snoopie the Pacerbot' (ICRA 2026) and 'Proximal State Nudging: Reducing Skill Atrophy from AI Assistance' (arXiv 2605.20355).",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Do You Really Need to Pretrain Q-Functions for Online RL Fine-Tuning?",
+   "summary": "arXiv preprint dated 2026-07-29 (most recent item found). Authors listed on the arXiv abs page: Perry Dong, Ron Polonsky, Dorsa Sadigh, Chelsea Finn. Abstract states that naive Q-function pretraining 'often provides little benefit over random initialization' and proposes Initialization via Policy Ensemble (IPE), which pools rollouts from multiple diverse policies to bootstrap Q-function learning, yielding an average 1.26x improvement over naive Q-function pre-training on continuous control benchmarks.",
+   "url": "https://arxiv.org/abs/2607.27203",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
+   "summary": "arXiv preprint dated 2026-05-25. Authors on the arXiv abs page: Perry Dong, Kuo-Han Hung, Tian Gao, Dorsa Sadigh, Chelsea Finn. Abstract describes a system for stable, sample-efficient RL finetuning of pretrained VLA policies, reporting 30/30 successes on manipulation tasks (routing string lights, striking a pool ball, inserting a flower into a wine bottle) within an average of 19.1 minutes of online robot data, with an open-source codebase released.",
+   "url": "https://arxiv.org/abs/2605.25477",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Grounding Robot Generalization in Training Data via Retrieval-Augmented VLMs",
+   "summary": "arXiv abs page dated 2026-03-12; authors Jensen Gao, Dorsa Sadigh, Sandy Huang, Dhruv Shah. Proposes RADAR, a two-stage framework that retrieves relevant training examples using generalist policy embeddings and then uses VLMs to classify what type of policy generalization a given evaluation task requires. OpenAlex records a journal version in IEEE Robotics and Automation Letters (2026), DOI 10.1109/lra.2026.3726331.",
+   "url": "https://arxiv.org/abs/2603.11426",
+   "venue": "arXiv preprint; IEEE Robotics and Automation Letters (RA-L) 2026 per OpenAlex"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "RoboCade: Gamifying Robot Data Collection",
+   "summary": "Listed on the ILIAD publications page as 'International Conference on Robotics and Automation (ICRA), 2026'. Authors as printed: Suvir Mirchandani*, Mia Tang*, Jiafei Duan, Jubayer Ibn Hamid, Chung Yeung Michael Cho, Dorsa Sadigh. Indicates active work on scaling robot data collection through gamified interfaces.",
+   "url": "https://iliad.stanford.edu/publications/",
+   "venue": "International Conference on Robotics and Automation (ICRA), 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Cross-Embodiment Transfer via Behavior-Aligned Representations",
+   "summary": "Listed on the ILIAD publications page as 'International Conference on Robotics and Automation (ICRA), 2026'. Authors as printed: Ajay Sridhar*, Jensen Gao*, Jonathan Yang, Jean Mercat, Suneel Belkhale, Dorsa Sadigh. Evidence of an active cross-embodiment / transfer-learning thread in the lab.",
+   "url": "https://iliad.stanford.edu/publications/",
+   "venue": "International Conference on Robotics and Automation (ICRA), 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Will People Enjoy a Robot Trainer? A Case Study with Snoopie the Pacerbot",
+   "summary": "Listed on the ILIAD publications page as 'International Conference on Robotics and Automation (ICRA), 2026'; authors as printed: Maximilian Du*, Jennifer Grannen*, Shuran Song, Dorsa Sadigh. Also appears in OpenAlex as an arXiv preprint dated 2026-04-20 (arXiv:2604.18331). Shows the continuing human-centered / HRI side of the group.",
+   "url": "https://iliad.stanford.edu/publications/",
+   "venue": "International Conference on Robotics and Automation (ICRA), 2026"
+  },
+  {
+   "kind": "news",
+   "year": 2025,
+   "title": "ProVox: Personalization and Proactive Planning for Situated Human-Robot Collaboration accepted to RA-L 2025",
+   "summary": "Most recent dated entry on the ILIAD news page, quoted verbatim: 'May 30, 2025: Our paper titled \"ProVox: Personalization and Proactive Planning for Situated Human-Robot Collaboration\" got accepted to the IEEE Robotics and Automation Letters (RA-L) 2025!' Note: the news page itself has not been updated past May 2025, so the publications page is the better activity signal.",
+   "url": "https://iliad.stanford.edu/news/",
+   "venue": "IEEE Robotics and Automation Letters (RA-L) 2025"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "2025-26 undergraduate-facing independent study offerings (CS 191, CS 191W, CS 199)",
+   "summary": "The Stanford Profiles page lists under '2025-26 Courses / Independent Studies (10)': 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', and 'Independent Work CS 199 (Aut, Win, Spr, Sum)' - all undergraduate research vehicles she is listed as offering in the current academic year.",
+   "url": "https://profiles.stanford.edu/dorsa-sadigh",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab contact page carries a dedicated 'Stanford Undergraduate or M.S. Students' section pointing to an intake form (form itself is access-gated and unreadable)",
+   "status": "verified",
+   "evidence_url": "https://iliad.stanford.edu/contact/",
+   "note": "Existence of the section VERIFIED by live fetch 2026-08-31 (HTTP 200), literal quote: 'Stanford Undergraduate or M.S. Students' / 'If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this form.' Raw HTML confirms the 'form' anchor inside that paragraph is https://forms.gle/t6BoxYo97QdduiMS8. The 'verified' status covers ONLY the existence and wording of the section, NOT that it is currently accepting applicants: the form resolves to https://docs.google.com/forms/d/e/1FAIpQLSf5-3rVeKGDENBKzdzKsqzFL23Tn8JVDn6ABKgWSOHzC12Oqg/viewform?usp=send_form and returns HTTP 401 Unauthorized, so its accepting/not-accepting state could not be checked. Eligibility as printed is CURRENT or ADMITTED Stanford undergraduates only."
+  },
+  {
+   "signal": "Lab has a documented track record of undergraduate researchers, but all of them are alumni",
+   "status": "verified",
+   "evidence_url": "https://iliad.stanford.edu/people/",
+   "note": "Re-verified by live fetch 2026-08-31. Four entries are literally labelled 'Undergraduate Student', all under the 'Other Alumni' heading: 'Undergraduate Student, 2021-2024 (Next: PhD student at Oxford)', 'Undergraduate Student, 2023-2024', 'Undergraduate Student, 2020-2022 (Next: PhD student at UC Berkeley)', 'Undergraduate Student, 2020-2021'. COUNTER-SIGNAL, confirmed by reading the page's section headings in order: the current roster is 'Faculty Members', 'PhD Students' (13 listed), and 'MS Students' (Rahul Chand only) - there is NO current undergraduate on the roster, and the most recent undergraduate stint listed ended in 2024."
+  },
+  {
+   "signal": "Listed as offering undergraduate senior-project / independent-work courses in 2025-26 (the academic year that has now ended; no 2026-27 listing published)",
+   "status": "likely",
+   "evidence_url": "https://profiles.stanford.edu/dorsa-sadigh",
+   "note": "Re-fetched 2026-08-31 (HTTP 200). Under the heading '2025-26 Courses / Independent Studies (10)' the page literally lists 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)' and 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)' - standard Stanford undergraduate research-credit vehicles. DOWNGRADED from 'verified' to 'likely' because the literal text proves only past-year listings: the newest heading on the page is '2025-26 Courses', immediately followed by 'Prior Year Courses / 2024-25 / 2023-24 / 2022-23'. As of today (2026-08-31) the 2025-26 year has ENDED and no 2026-27 section exists, so willingness to supervise undergraduates in 2026-27 is an inference from the prior year, not a fetched fact."
+  },
+  {
+   "signal": "CURIS participation",
+   "status": "unknown",
+   "evidence_url": "https://curis.stanford.edu/projects",
+   "note": "Re-checked 2026-08-31. https://curis.stanford.edu/projects returns HTTP 200 but the body is only 'CURIS You need to enable JavaScript to run this app.' - the project list is client-rendered and cannot be read by curl. grep for 'sadigh' and 'iliad' over the served HTML returned nothing, but that is NOT evidence of absence given the page renders no content at all. Genuinely unknown."
+  }
+ ],
+ "recruiting": {
+  "status": "unverified",
+  "statement": "PARTIALLY VERIFIED. The undergraduate-specific text does exist verbatim on https://iliad.stanford.edu/contact/ (re-fetched 2026-08-31, HTTP 200). Raw HTML lines 232-233: '<h3 id=\"stanford-undergraduate-or-ms-students\">Stanford Undergraduate or M.S. Students</h3>' followed by '<p>If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this <a href=\"https://forms.gle/t6BoxYo97QdduiMS8\">form</a>.</p>'. The form anchor is pinned to the undergraduate paragraph in raw HTML and is distinct from the Postdoc form (forms.gle/obCSvVqpZxHDNuGP9, line 231) and the Visiting Scholar form (forms.gle/Usj9J78dyHARZjzdA, line 235). Same page, PhD section: 'We take on new Ph.D. students each year. We ask that you do not contact us directly with regard to Ph.D. admissions until after you are admitted, as we will not be able to reply to emails from individual applicants.' No 'not taking students' language appears anywhere on the page. WHY NOT 'open': the sole call to action is 'submit this form', and that form could NOT be reached in this task. https://forms.gle/t6BoxYo97QdduiMS8?_imcp=1 302s to https://docs.google.com/forms/d/e/1FAIpQLSf5-3rVeKGDENBKzdzKsqzFL23Tn8JVDn6ABKgWSOHzC12Oqg/viewform?usp=send_form, which returns HTTP 401 Unauthorized (the direct docs.google.com viewform URL also returns 401 on its own). It is access-gated, not merely JS-rendered. Because the form is inaccessible, whether it is still accepting responses is UNVERIFIABLE from outside, and a closed or retired form would look identical from here. Eligibility as printed is narrow: 'current or admitted Stanford' undergraduates only.",
+  "url": "https://iliad.stanford.edu/contact/",
+  "confidence": 0.5
+ },
+ "opportunity_state": "OUTREACH",
+ "state_rationale": "DOWNGRADED OPENING -> OUTREACH on adversarial fact-check (2026-08-31). WHAT VERIFIED: https://iliad.stanford.edu/contact/ returned HTTP 200 and does carry a present-tense, undergraduate-specific line, quoted verbatim from raw HTML: 'Stanford Undergraduate or M.S. Students' / 'If you are a current or admitted Stanford undergraduate or M.S. student interested in research positions, please submit this form.' This is genuinely not a PhD-only page - undergraduates get their own heading and their own form, and PhD applicants are separately told not to make contact. The page is maintained (last-modified: Mon, 03 Aug 2026 02:21:35 GMT, four weeks before today). Email dorsa@cs.stanford.edu was re-confirmed as literally present on https://dorsa.fyi/contact/. WHY IT IS STILL NOT AN OPENING: the entire call to action is 'submit this form', and the form is inaccessible. https://forms.gle/t6BoxYo97QdduiMS8?_imcp=1 302s to a docs.google.com viewform URL that returns HTTP 401 Unauthorized; the direct viewform URL returns 401 as well. That is an access gate, not a rendering problem, so whether the form still accepts responses CANNOT be verified from outside - a retired or closed form would look identical. An advertised-but-unverifiable intake channel does not support an 'apply now' recommendation. CORROBORATING COUNTER-SIGNAL: the current ILIAD people roster (Faculty Members / PhD Students x13 / MS Students x1) contains no undergraduate at all; all four people labelled 'Undergraduate Student' sit under 'Other Alumni', the most recent stint ending in 2024. So the channel is advertised but recent undergraduate throughput is not visible. Also note the statement is undated and has no deadline or slot count, and eligibility is restricted to 'current or admitted Stanford' undergraduates - external applicants are routed to a separate Visiting Scholar form. WHY OUTREACH RATHER THAN WATCH: the lab is unambiguously active - the ILIAD publications page carries 11 occurrences of 2026 (ICRA 2026, ICLR 2026, RA-L 2026) and arXiv preprints run through July 2026 - and there is a real, named, undergraduate-specific contact channel plus a verified faculty email. A student should reach out (try the form, and email if it does not load) rather than treat this as a confirmed open posting.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 8,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/dorsa-sadigh",
+  "https://profiles.stanford.edu/dorsa-sadigh",
+  "https://web.stanford.edu/~dorsa/",
+  "https://dorsa.fyi/",
+  "https://dorsa.fyi/contact/",
+  "https://iliad.stanford.edu/",
+  "https://iliad.stanford.edu/contact/",
+  "https://iliad.stanford.edu/people/",
+  "https://iliad.stanford.edu/research/",
+  "https://iliad.stanford.edu/publications/",
+  "https://iliad.stanford.edu/news/",
+  "https://forms.gle/t6BoxYo97QdduiMS8",
+  "https://arxiv.org/abs/2607.27203",
+  "https://arxiv.org/abs/2605.25477",
+  "https://arxiv.org/abs/2603.11426",
+  "https://arxiv.org/abs/2603.12243",
+  "https://arxiv.org/abs/2602.08440",
+  "https://api.openalex.org/authors/A5080725225",
+  "https://api.openalex.org/works?filter=author.id:A5080725225,from_publication_date:2025-01-01",
+  "https://docs.google.com/forms/d/e/1FAIpQLSf5-3rVeKGDENBKzdzKsqzFL23Tn8JVDn6ABKgWSOHzC12Oqg/viewform?usp=send_form",
+  "https://curis.stanford.edu/projects"
+ ],
+ "fetch_notes": "FAILURES: (1) The supplied CS directory link https://cs.stanford.edu/people/dorsa-sadigh returned HTTP 404 Not Found - it does not exist. (2) https://cs.stanford.edu/people/dorsa returned HTTP 403 Forbidden. faculty_url therefore points to https://profiles.stanford.edu/dorsa-sadigh, which returned HTTP 200 and printed the exact title given in the task. (3) The arXiv Atom API (export.arxiv.org/api/query) timed out with HTTP 000 on every attempt, so paper titles, dates and authors were verified instead by curling https://arxiv.org/abs/<id> and reading citation_title / citation_author / citation_date meta tags. (4) https://forms.gle/t6BoxYo97QdduiMS8 returned HTTP 200 but resolves to a JavaScript-rendered Google deep-link interstitial; the underlying docs.google.com/forms URL was not extractable and the form's open/closed state could NOT be verified by curl. No 'no longer accepting responses' string was present. (5) The ILIAD /research/ page's topic tiles are rendered from a JS/CSS table and their labels were not extractable; the mission-statement prose was readable and is what research_topics quotes. REDIRECT: https://web.stanford.edu/~dorsa/ redirects (HTTP 200) to https://dorsa.fyi/, her personal site. EMAIL: dorsa@cs.stanford.edu appears literally in the fetched text of https://dorsa.fyi/contact/ under the 'Email' heading, alongside address '246 Gates Computer Science, 353 Jane Stanford Way, Stanford, CA 94305'. No email appears anywhere on the Stanford Profiles page (grep for any address pattern returned nothing). PUBLICATIONS: the ILIAD /publications/ page is JS-assisted but its entries are static HTML and were read directly; OpenAlex author A5080725225 reports 61 works dated 2025-01-01 or later. Note OpenAlex lists her last-known institutions as 'Google (United States)' and 'Stanford University' - the Google affiliation is from OpenAlex metadata only and was NOT confirmed on any Stanford or lab page, so it is not recorded in this profile. NEWS STALENESS: the lab /news/ page's newest dated entry is May 30, 2025; the publications page is far more current (ICRA 2026, ICLR 2026). Nothing in this file is written from memory - every field traces to a page listed in source_urls that was fetched in this task.  ===== ADVERSARIAL RE-VERIFICATION 2026-08-31 ===== (A) RECRUITING URL: https://iliad.stanford.edu/contact/ re-fetched, HTTP 200. The undergraduate statement is present verbatim and is quoted in recruiting.statement. OPENING upheld. (B) FORM RESOLUTION - improves on the earlier failed attempt. Plain curl of forms.gle/t6BoxYo97QdduiMS8 returns a JS 'DurableDeepLinkUi' interstitial with no extractable target, which is what the previous pass hit. Appending ?_imcp=1 (or ?_iipp=1), or using a non-Chrome UA, bypasses the interstitial: the link then 302s to https://docs.google.com/forms/d/e/1FAIpQLSf5-3rVeKGDENBKzdzKsqzFL23Tn8JVDn6ABKgWSOHzC12Oqg/viewform?usp=send_form, which itself 302s to accounts.google.com/ServiceLogin?service=wise. CONCLUSION: the form is real and live-routed - it does NOT 404 - but it is sign-in gated and its accepting/not-accepting state cannot be confirmed from outside. No 'no longer accepting responses' string was reachable either way. (C) FRESHNESS: HEAD on the contact page returned 'last-modified: Mon, 03 Aug 2026 02:21:35 GMT' (etag \"6a6ffb2f-209f\"), four weeks before today - the site is actively maintained. Caveat: on GitHub Pages this timestamp tracks the site build, so it does not prove the contact copy itself was edited on that date. Attempts to date the source file failed: api.github.com/repos/Stanford-ILIAD/stanford-iliad.github.io returns HTTP 404 (that repo name is wrong), and no pages repo was identified in the org listing. (D) EMAIL RE-CHECK: curl of https://dorsa.fyi/contact/ (HTTP 200) piped through grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+' returns exactly one address, 'dorsa@cs.stanford.edu'. Email and email_source_url are CONFIRMED and left unchanged. (E) UNDERGRAD SIGNALS: all three previously-'verified' signals were re-fetched and each is backed by a literal quote, so all three keep status 'verified'; two notes were corrected. Signal 2 now records the counter-signal that the CURRENT roster (Faculty / PhD Students / one MS Student) contains no undergraduate and that every undergraduate listed is an alumnus whose stint ended by 2024. Signal 3 now records that '2025-26 Courses' is the academic year that ENDED in June 2026 and that Profiles has not published 2026-27, correcting the earlier claim that these are current-year offerings. Signal 4 (CURIS) stays 'unknown' and now carries the evidence_url actually checked. (F) CONFIDENCE: lowered 0.85 -> 0.80. The statement itself verified more strongly than before (exact form ID pinned to the undergrad paragraph in raw HTML; page fresh as of 2026-08-03), but two counter-weights were newly established: the form sits behind a sign-in wall rather than merely being unreadable, and no undergraduate has appeared on the lab roster since 2024. (G) NOTHING was written from memory in this pass; every assertion above traces to a command run in this task.  ===== ADVERSARIAL FACT-CHECK 2026-08-31 (pass 2) ===== (1) RECRUITING URL https://iliad.stanford.edu/contact/ re-fetched, HTTP 200. Undergraduate statement present verbatim; anchor pinned to the undergraduate paragraph in raw HTML (line 233). HEAD shows last-modified: Mon, 03 Aug 2026 02:21:35 GMT, etag \"6a6ffb2f-209f\". (2) FORM GATE - this is the reason for the downgrade. Plain curl of forms.gle/t6BoxYo97QdduiMS8 returns HTTP 200 (JS deep-link interstitial). With ?_imcp=1 it returns 302 -> https://docs.google.com/forms/d/e/1FAIpQLSf5-3rVeKGDENBKzdzKsqzFL23Tn8JVDn6ABKgWSOHzC12Oqg/viewform?usp=send_form; following that chain ends at HTTP 401. Fetching the docs.google.com viewform URL directly also returns HTTP 401. The form requires access this task does not have, so its open/closed state is unverifiable. Per the fact-check rule, an unverifiable application channel is a downgrade. (3) EMAIL RE-CHECK: curl https://dorsa.fyi/contact/ -> HTTP 200; piped through grep -oiE '[a-z0-9._%+-]+@[a-z0-9.-]+' it returns exactly one address, 'dorsa@cs.stanford.edu', printed under the 'Email' heading. email and email_source_url CONFIRMED and left unchanged (not nulled). (4) PEOPLE PAGE re-fetched: headings in order are Faculty Members, PhD Students, MS Students, PhD/Postdoc Alumni, Other Alumni. No current undergraduate; four 'Undergraduate Student' rows all under Other Alumni (2021-2024, 2023-2024, 2020-2022, 2020-2021). (5) PROFILES re-fetched, HTTP 200: newest heading is '2025-26 Courses'; next headings are 'Prior Year Courses', '2024-25 Courses', '2023-24 Courses', '2022-23 Courses'. No 2026-27 listing exists. undergrad_signal 3 therefore downgraded verified -> likely. (6) CURIS re-checked: HTTP 200 but body is only 'CURIS You need to enable JavaScript to run this app.' - stays 'unknown'. (7) PUBLICATIONS page re-fetched: year-token counts 2024 x31, 2025 x19, 2026 x11 - lab activity through 2026 confirmed, supporting OUTREACH rather than WATCH. (8) recruiting.status open -> unverified; confidence 0.80 -> 0.50; opportunity_state OPENING -> OUTREACH. Nothing in this pass was written from memory."
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "daniel-yamins",
+  "name": "Daniel Yamins",
+  "title": "Associate Professor of Psychology and of Computer Science",
+  "department": "Psychology and Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/daniel-yamins",
+  "lab_name": "Stanford Neuroscience and Artificial Intelligence Laboratory (NeuroAILab / SNAIL)",
+  "lab_url": "https://neuroailab.stanford.edu/",
+  "email": "yamins@stanford.edu",
+  "email_source_url": "https://neuroailab.stanford.edu/contact.html",
+  "research_areas": [
+    "Artificial Intelligence",
+    "computer-vision",
+    "Human-Centered and Creative AI",
+    "Empirical Machine Learning"
+  ],
+  "research_topics": [
+    "world models / physical world modeling",
+    "3D scene understanding from video",
+    "self-supervised and zero-shot visual representation learning",
+    "computational models of sensory cortex (visual, auditory)",
+    "model-brain comparison methodology",
+    "developmentally plausible learning from egocentric infant video",
+    "speech representation via cochlear token prediction",
+    "LLM agents and theory-of-mind / social simulation"
+  ],
+  "current_direction": [
+    "Building general-purpose 'physically controllable' world models (PSI line of work)",
+    "Extracting 3D structure, segments and motion zero-shot from generative video models",
+    "Developmentally efficient learning from realistic egocentric infant video (BabyView)",
+    "Formal theory for model-brain alignment (inter-animal transforms, contravariance)",
+    "Extending the sensory-cortex modeling program from vision into audition/speech"
+  ],
+  "current_direction_basis": "Driven by the 2025-2026 items on https://neuroailab.stanford.edu/publications.html cross-checked against OpenAlex (author A5011316863, 15 works since 2025-01-01) and against live paper pages I fetched: (1) 'World Modeling with Probabilistic Structure Integration' (arXiv 2509.09737, 2025) and 'Physical Object Understanding with a Physically Controllable World Model' (CVPR 2026 Spotlight, PSI project page) establish the physically-controllable world-model thrust; (2) 'Perceptual 3D Simulation With Physical World Modeling' (CVPR 2026), 'Unified 3D Scene Understanding Through Physical World Modeling' (ICLR 2026), 'Discovering and Using Spelke Segments' (arXiv 2507.16038) and 'Taming generative video models for zero-shot optical flow extraction' (NeurIPS 2025) establish the zero-shot 3D/segment/motion-extraction thrust; (3) 'Zero-shot World Models Are Developmentally Efficient Learners' (arXiv 2604.10333, 2026) plus 'The BabyView dataset' (CCN 2025) establish the developmental-efficiency thrust; (4) 'Model-brain comparison using inter-animal transforms' (arXiv 2510.02523, CCN 2025) plus 'Contravariance Theory' (arXiv 2607.08561, 2026) establish the alignment-theory thrust; (5) 'Representing Speech Through Autoregressive Prediction of Cochlear Tokens' (Interspeech 2025) establishes the audition extension. NOT based on the older biography text on the lab's Research page or on web.stanford.edu/~yamins/, which are stale.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Perceptual 3D Simulation With Physical World Modeling",
+      "summary": "Lee W, Kotar K, Venkatesh RM, Watrous J, and Yamins D. Listed on the lab publications page as CVPR 2026; I fetched the CVPR Open Access page and its citation_title matches exactly.",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_Perceptual_3D_Simulation_With_Physical_World_Modeling_CVPR_2026_paper.html",
+      "venue": "CVPR 2026"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Physical Object Understanding with a Physically Controllable World Model",
+      "summary": "Venkatesh RM, Kotar K, Chen LN, Lee W, Ancone G, Kim S, Wheeler LT, Watrous J, Chen H, Bear D, Stojanov S, and Yamins D. Listed on the lab publications page as 'CVPR 2026 Spotlight'; the linked PSI project page fetched HTTP 200 with title 'Physical Object Understanding - PSI Blog'. Author list includes lab undergraduate Simon Kim ('Kim S').",
+      "url": "https://neuroailab.github.io/psi-website/blog/physical-object-understanding.html",
+      "venue": "CVPR 2026 (Spotlight)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Zero-shot World Models Are Developmentally Efficient Learners",
+      "summary": "Aw KL, Kotar K, Lee W, Kim S, Jedoui K, Venkatesh R, Chen LN, Frank MC, and Yamins D. Marked '(in submission)' on the lab publications page; arXiv abs page fetched HTTP 200 with matching title. Connects the world-model program to developmental data efficiency.",
+      "url": "https://arxiv.org/abs/2604.10333",
+      "venue": "arXiv preprint (in submission)"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Contravariance Theory: Strong Alignment for Minimal Solutions to Hard Tasks",
+      "summary": "Yamins D and Nayebi A. Theory paper on when task-optimized models must align with brains; arXiv abs page fetched HTTP 200 with matching title. Yamins is first author, indicating a personal theoretical thrust.",
+      "url": "https://arxiv.org/abs/2607.08561",
+      "venue": "arXiv preprint arXiv:2607.08561"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "World Modeling with Probabilistic Structure Integration",
+      "summary": "Kotar K, Lee W, Venkatesh R, Chen H, Bear D, Watrous J, Kim S, Aw KL, Chen LN, Stojanov S, Feigelis K, Thobani I, Durango A, Jedoui K, Kazemian A, and Yamins D. Marked '(arxiv only)' on the lab page; arXiv abs page fetched HTTP 200 with matching title. Near-whole-lab author list, i.e. the flagship current project (PSI).",
+      "url": "https://arxiv.org/abs/2509.09737",
+      "venue": "arXiv preprint arXiv:2509.09737"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Taming generative video models for zero-shot optical flow extraction",
+      "summary": "Kim S*, Aw KL*, Kotar K*, Eyzaguirre C, Lee W, Liu Y, Watrous J, Stojanov S, Niebles JC, Wu J, and Yamins D. Listed as NeurIPS 2025 on the lab publications page; project page fetched HTTP 200 with matching title. The starred co-first author 'Kim S' matches Simon Kim, listed on the lab People page as an undergraduate.",
+      "url": "https://neuroailab.github.io/projects/kl_tracing",
+      "venue": "NeurIPS 2025"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "Large-Scale Neural Network Modeling for Neuroscience (CS 375 / PSYCH 249)",
+      "summary": "Listed under '2025-26 Courses' on his Stanford Profiles page, offered Winter. Confirms he is actively teaching in the current academic year.",
+      "url": "https://profiles.stanford.edu/daniel-yamins",
+      "venue": "Stanford University"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "The lab People page currently lists an undergraduate as a lab member",
+      "status": "verified",
+      "evidence_url": "https://neuroailab.stanford.edu/people.html",
+      "note": "Quoted: 'Simon Kim  Undergraduate student (Computer Science) -- Simon is an undergraduate student in the Computer Science department (Artificial Intelligence track, '25) at Stanford. He is interested in vision models and how they interact with the real world. ... He joined SNAIL in September 2023.' He appears in the current-members section, not the alumni section."
+    },
+    {
+      "signal": "An undergraduate lab member is a starred co-first author on a NeurIPS 2025 paper and a co-author on a CVPR 2026 Spotlight paper",
+      "status": "verified",
+      "evidence_url": "https://neuroailab.stanford.edu/publications.html",
+      "note": "Publications page lists 'Kim S*, Aw KL*, Kotar K*, ... and Yamins D (2025). Taming generative video models for zero-shot optical flow extraction. (NeurIPS 2025)' with '*, ** = equal contribution', and 'Venkatesh RM, Kotar K, Chen LN, Lee W, Ancone G, Kim S, ... and Yamins D (2026). ... (CVPR 2026 Spotlight)'. Evidence that undergrads here do first-author-grade work, not just support work."
+    },
+    {
+      "signal": "His 2025-26 Stanford course listing includes undergraduate research mechanisms",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/daniel-yamins",
+      "note": "Under the '2025-26 Courses' heading, 'Independent Studies (17)' includes: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Reading and Special Work PSYCH 194', 'Special Laboratory Projects PSYCH 195', and 'Independent Study SYMSYS 296 (Sum)'. These are the standard Stanford enrollment vehicles for undergraduate research with a faculty sponsor."
+    },
+    {
+      "signal": "Lab alumni list includes an undergraduate/MS co-term student",
+      "status": "verified",
+      "evidence_url": "https://neuroailab.stanford.edu/people.html",
+      "note": "Quoted from Lab Alumni: 'Megumi Sano  Undergraduate/MS co-term student -- Meg is received a B.S. in Mathematical and Computational Science ('21) and a M.S. in Computer Science (Artificial Intelligence track, '22) at Stanford. ... She joined the lab in the summer of 2019.' Also 'Blue Belmont Sheffer  research assistant -- Blue is a recent graduate of the Symbolic Systems Program at Stanford University (B.17)'. Shows a repeated pattern of taking Stanford undergraduates."
+    },
+    {
+      "signal": "No CURIS listing, no 'if you are a Stanford undergraduate...' text, and no undergraduate application instructions anywhere on the lab site",
+      "status": "unknown",
+      "evidence_url": "https://neuroailab.stanford.edu/",
+      "note": "I grepped all seven pages of the lab site (index, research, people, contact, publications, computational-models-of-sensory-cortex, probing-the-nature-of-visual-representations) for 'undergrad', 'CURIS', 'join us', 'joining the lab', 'prospective', 'recruit', 'we are looking', 'opening', 'rotation', 'apply'. The only hits were biographical text in the People page bios. There is no join/openings page and no such page in the site navigation."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No formal opening was found: the lab website has no 'join us', 'openings', or 'prospective students' page, and a grep of every lab page for recruiting language returned nothing, so I cannot honestly call this OPENING. But the lab is unambiguously active and undergraduate-friendly, which rules out WATCH: the publications page carries seven 2026-dated entries and eight 2025-dated entries, OpenAlex confirms 15 works since 2025-01-01, the People page carries a photo captioned 'On the Wu Tsai Grand Staircase, Oct. 2025', the CVPR 2026 / ICLR 2026 / NeurIPS 2025 paper pages I fetched are all live, he is teaching CS 375/PSYCH 249 in Winter 2025-26, and he currently lists an undergraduate (Simon Kim, CS AI track) as a lab member who is a starred co-first author on a NeurIPS 2025 paper. His 2025-26 course listing includes Supervised Undergraduate Research CS 195, Independent Work CS 199, and Senior Project CS 191/191W. A cold email from a Stanford undergraduate is well supported here; the realistic entry path is a CS 195/199/191 independent-study arrangement rather than a posted position.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 7,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/dan-yamins",
+    "https://profiles.stanford.edu/daniel-yamins",
+    "https://neuroailab.stanford.edu/",
+    "https://neuroailab.stanford.edu/research.html",
+    "https://neuroailab.stanford.edu/people.html",
+    "https://neuroailab.stanford.edu/publications.html",
+    "https://neuroailab.stanford.edu/contact.html",
+    "https://neuroailab.stanford.edu/computational-models-of-sensory-cortex.html",
+    "https://neuroailab.stanford.edu/probing-the-nature-of-visual-representations.html",
+    "https://web.stanford.edu/~yamins/",
+    "https://web.stanford.edu/~yamins/teaching.html",
+    "https://web.stanford.edu/~yamins/contact.html",
+    "https://api.openalex.org/works?filter=author.id:A5011316863,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_Perceptual_3D_Simulation_With_Physical_World_Modeling_CVPR_2026_paper.html",
+    "https://arxiv.org/abs/2607.08561",
+    "https://arxiv.org/abs/2604.10333",
+    "https://arxiv.org/abs/2509.09737",
+    "https://neuroailab.github.io/psi-website/blog/physical-object-understanding.html",
+    "https://neuroailab.github.io/projects/kl_tracing",
+    "https://github.com/neuroailab"
+  ],
+  "fetch_notes": "FETCHED OK: profiles.stanford.edu/daniel-yamins (200, primary faculty page - title, appointments, 2025-26 courses, current research statement); neuroailab.stanford.edu and all six of its subpages (200); web.stanford.edu/~yamins/ and its subpages (200); arXiv abs pages 2607.08561, 2604.10333, 2509.09737 (all 200, titles matched the lab page citations); the CVPR 2026 Open Access page (200, citation_title matched); the two neuroailab.github.io project pages (200, titles matched); github.com/neuroailab (200). FAILED: the supplied directory link https://cs.stanford.edu/people/dan-yamins returned HTTP 404 ('The requested URL /people/dan-yamins was not found on this server'); https://cs.stanford.edu/people/yamins returned HTTP 403; https://cs.stanford.edu/directory/faculty returned HTTP 404. I therefore used the Stanford Profiles page as faculty_url. Semantic Scholar returned HTTP 429 (rate limited) and I did not retry. The arXiv Atom API returned an empty/truncated body on two attempts, so recent-publication coverage comes from OpenAlex plus the lab's own publications page, cross-verified against live paper pages. OpenAlex note: the filter last_known_institutions.ror:00f54p054 returned zero results for him; the correct author record is A5011316863 (164 works, 15 since 2025-01-01), found by unfiltered name search. EMAIL CAVEAT - read this: no page shows a plain email address. Both contact pages deliberately obfuscate it. https://neuroailab.stanford.edu/contact.html reads 'email: for Dan Yamins (scientific) : [x] @stanford.edu where x = yamins' and https://web.stanford.edu/~yamins/contact.html reads 'e: [y] @stanford.edu ... or [xy]@gmail.com, where x=\\'d\\' and y=\\'yamins\\''. I recorded yamins@stanford.edu by applying the substitution the page itself states; the literal string 'yamins@stanford.edu' does not appear in any fetched HTML. Two independent pages agree on the substitution. The same contact page gives an administrative contact by the same construction: 'for Nisa Cao (administrative) : [y] @stanford.edu where y = nisacao'. STALENESS: neuroailab.stanford.edu and web.stanford.edu/~yamins are Weebly exports (both carry 'var IS_ARCHIVE = 1'). The lab site's publications and people pages are clearly current (2026 papers, an Oct. 2025 group photo), but the lab Research page prose and the entire personal site are stale - the personal site's teaching page still says 'In Winter Quarter of 2016-17, I'll be teaching ... This will be my first class at Stanford!'. current_direction was therefore built only from 2025-2026 publications and the 2025-26 course listing, not from that prose. NO recruiting or undergraduate-application statement exists anywhere on the lab site; recruiting.status is 'unknown' rather than 'closed' because absence of a page is not a statement that the lab is closed. No grants, news page, or talks page exists on the lab site, so there are no grant/news/talk evidence items."
+}

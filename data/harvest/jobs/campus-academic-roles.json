@@ -1,0 +1,1191 @@
+[
+  {
+    "external_key": "stanford-cs-course-assistant-ms-coterm",
+    "title": "Course Assistant (CA) / Teaching Assistant (TA), Computer Science",
+    "type": "on_campus",
+    "organization": "Stanford Computer Science Department",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford CS Department website",
+    "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant",
+    "location": "Stanford, CA (Gates Computer Science Building, 353 Jane Stanford Way)",
+    "pay": null,
+    "hours_per_week": "10 hours per week (25% appointment) or 20 hours per week (50% appointment)",
+    "deadline": {
+      "value": null,
+      "confidence": 0.55,
+      "source_text": "Autumn quarter - Applications are accepted from July through August. Offers are made in mid-September. Winter quarter - Applications are accepted from late October through early-November. Offers are made in early December. Spring quarter - Applications are accepted from mid-January through mid-February. Offers are made in mid-March. Summer quarter - Applications are accepted from early May through mid-May. Offers are made in early June.",
+      "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Must submit an application; everyone must apply in order to be hired, including current and previous CAs/TAs and students who already arranged with an instructor",
+        "kind": "required",
+        "source_text": "Submit an application. Everyone must submit an application in order to be hired. This includes prospective students, current CAs/TAs, CAs/TAs from previous quarters, and students who have already made arrangements with instructors.",
+        "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+      },
+      {
+        "text": "Only graduate and coterm students are eligible for CAships",
+        "kind": "required",
+        "source_text": "Only graduate and coterm students are eligible for CAships.",
+        "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+      },
+      {
+        "text": "Coterm students must convert to the coterm graduate tuition group by the beginning of the quarter in which they hold a CAship",
+        "kind": "required",
+        "source_text": "Coterm students must convert to the coterm graduate tuition group by the beginning of the quarter in which they hold a CAship. If you are not already in the graduate tuition group and have 180+ units, you are eligible to convert.",
+        "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+      },
+      {
+        "text": "Enrollment cap of 10 units for 50% appointments; 8-20 units for 25% appointments",
+        "kind": "required",
+        "source_text": "Students hired at the 50% level (20 hours per week) have an enrollment cap of 10 units in order to ensure that students are making expeditious progress toward their degree. Students hired at the 25% level (10 hours per week) can enroll in 8-20 units.",
+        "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+      },
+      {
+        "text": "Some international graduate students must be screened by ESOL for readiness to use English in a teaching role",
+        "kind": "required",
+        "source_text": "English evaluation. Some international graduate students who wish to be appointed as TAs or CAs must first be screened by ESOL for readiness to use English in a teaching role.",
+        "source_url": "https://cs.stanford.edu/masters-course-assistant-and-research-assistant"
+      },
+      {
+        "text": "Appointment is for the full quarter; must be on campus and ready to work from the first day of class through completion of finals grading",
+        "kind": "required",
+        "source_text": "Now that you've accepted your offer, you've made a commitment to fulfill the CA position for the entire quarter. You may not subsequently withdraw from your position in order to pursue another job opportunity (e.g., drop the CAship in order to take an RA appointment). You are required to be on campus and ready to work from the first day of class through the completion of finals grading.",
+        "source_url": "https://cs.stanford.edu/cs-course-assistants"
+      },
+      {
+        "text": "I-9 / work authorization must be completed and remain valid through the full appointment period",
+        "kind": "required",
+        "source_text": "I-9 Form: This is required for all graduate students who will hold an assistantship (RAship, CAship, TAship) and should be completed within 3 days of starting your appointment. ... If you do not complete this requirement you will be terminated and will not get paid.",
+        "source_url": "https://cs.stanford.edu/cs-course-assistants"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [
+      "grading",
+      "office hours",
+      "leading review sessions or labs",
+      "course logistics",
+      "exam proctoring"
+    ],
+    "documents_required": [],
+    "research_topics": [],
+    "application_method": "Online application through the CS Department CA application portal (Stanford SSO required)",
+    "application_url": "https://caapp.cs.stanford.edu/",
+    "contact_name": "Bettina Villaroman",
+    "contact_email": "bvsantos@stanford.edu",
+    "eligibility_notes": "Graduate and coterm students only. Page states: 'Undergraduate students are not eligible to be CA's, however, do have the option to be paid Section Leaders. More information about section leading can be found on the CS198 website.' Also: 'Incoming MS CS students are not eligible to apply for CA/TA positions with the CS Department during their first quarter at Stanford.' Hiring priority order stated as: CS PhD students first, then CS MS students who were guaranteed CA funding when admitted, then CS MS students, and lastly non-CS students.",
+    "description": "The CS Department offers a limited number of Course Assistant (CA), Teaching Assistant (TA), and Research Assistant (RA) appointments. Typical CA responsibilities may include assisting with preparation for lectures or lab activities; conducting labs or review sessions; holding office hours; responding to student questions; assisting with course logistics; monitoring course websites or discussion boards; proctoring exams; and grading assignments, quizzes, exams, or projects in accordance with instructor guidance. TA responsibilities include all CA duties plus additional teaching responsibilities such as preparing for and presenting new material in class sections or labs. Appointments are made for the full quarter (Autumn Oct 1-Dec 31, Winter Jan 1-Mar 31, Spring Apr 1-Jun 30, Summer Jul 1-Sep 30).",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.92,
+    "notes": "Standing/recurring quarterly hiring program rather than a single dated posting. No pay rate is stated anywhere on the fetched page - appointments are described only by percentage (25% = 10 hrs/wk, 50% = 20 hrs/wk), so pay is left null rather than guessed. The application portal https://caapp.cs.stanford.edu/ redirects to Stanford SSO (login.stanford.edu) and could not be read without credentials. A separate ACE (Additional Calculus for Engineers) CA process exists with an earlier timeline, per the same page. Evidence fetched 2026-08-31; the page's FAQ links to AY 26-27 application dates."
+  },
+  {
+    "external_key": "stanford-cs-phd-course-assistantship",
+    "title": "Course Assistant (CA), Computer Science PhD Course Assistantship",
+    "type": "on_campus",
+    "organization": "Stanford Computer Science Department",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford CS Department website",
+    "source_url": "https://cs.stanford.edu/phd-course-assistantship",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": "10 hours per week (25% appointment) or 20 hours per week (50% appointment)",
+    "deadline": {
+      "value": null,
+      "confidence": 0.55,
+      "source_text": "Autumn quarter. Applications are accepted from late June through late July. Offers are made in early September. Winter quarter. Applications are accepted from mid-October through late October. Offers are made in early December. Spring quarter. Applications are accepted from early February through mid-February. Offers are made in early March. Summer quarter. Applications are accepted from early May through mid-May. Offers are made in early June.",
+      "source_url": "https://cs.stanford.edu/phd-course-assistantship"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Must submit the online CA application",
+        "kind": "required",
+        "source_text": "Prospective CA applicants are welcome to apply online.",
+        "source_url": "https://cs.stanford.edu/phd-course-assistantship"
+      },
+      {
+        "text": "50% appointments carry an enrollment cap of 10 units",
+        "kind": "required",
+        "source_text": "The CS Department hires 25% CA's and 50% CA's. Students hired at the 50% level have a enrollment cap of 10 units in order to ensure that students are making expeditious progress toward their degree.",
+        "source_url": "https://cs.stanford.edu/phd-course-assistantship"
+      },
+      {
+        "text": "Course Assistantship appointments are made for the full quarter",
+        "kind": "required",
+        "source_text": "Course Assistantship appointments are made for the full quarter.",
+        "source_url": "https://cs.stanford.edu/phd-course-assistantship"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [],
+    "application_method": "Online application through the CS Department CA application portal (Stanford SSO required)",
+    "application_url": "https://caapp.cs.stanford.edu/",
+    "contact_name": "Bettina Villaroman",
+    "contact_email": "bvsantos@stanford.edu",
+    "eligibility_notes": "This is the CS PhD-facing version of the CA program page. The MS/coterm CA page states CS PhD students are given first hiring priority. Application windows on this PhD page differ from the MS page (e.g. Autumn: late June through late July here, vs. July through August on the MS page).",
+    "description": "The CS Department offers a limited number of Course (CA) Assistantships. The Department hires 25% CAs and 50% CAs. A Course Assistantship is similar to a Teaching Assistantship. Appointments are made for the full quarter. Bettina Villaroman sends an email announcement to the CS MS and CS PhD mailing lists each quarter when applications go live.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.9,
+    "notes": "Standing/recurring quarterly program, not a dated posting. No pay rate stated on the page. Non-CS students can subscribe to the CA announcement list at https://mailman.stanford.edu/mailman/listinfo/cs-caships (link taken from the CS MS CA/RA page fetched in this task). Evidence fetched 2026-08-31."
+  },
+  {
+    "external_key": "stanford-cs-research-assistantship",
+    "title": "Research Assistant (RA), Computer Science Research Assistantship",
+    "type": "on_campus",
+    "organization": "Stanford Computer Science Department",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford CS Department website",
+    "source_url": "https://cs.stanford.edu/phd-research-assistantship",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": "Up to 20 hours per week during Autumn/Winter/Spring (50% maximum appointment); Summer appointments may range 10%-90%",
+    "deadline": {
+      "value": null,
+      "confidence": 0.3,
+      "source_text": null,
+      "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "RAships are available only through the request of a faculty member; positions are arranged with the individual faculty member",
+        "kind": "required",
+        "source_text": "Research Assistants (RAs) work on research projects under the supervision of a faculty member. RAs receive Research Assistantships (RAships) which are available only through the request of a faculty member.",
+        "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+      },
+      {
+        "text": "Must be enrolled full-time, 8 to 10 units, during Autumn, Winter and Spring quarters",
+        "kind": "required",
+        "source_text": "During an Academic Quarter (Autumn, Winter and Spring): Students must be enrolled full-time, 8 to 10 units, which means the max RAship they can receive is 50% (20 hours per week work expectation).",
+        "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+      },
+      {
+        "text": "At least 3 of the 8-10 units must be in CS 499 with the advisor (or equivalent with an advisor outside CS)",
+        "kind": "required",
+        "source_text": "Enrollment Requirement: At least 3 of the 8-10 unit enrollment must be in CS 499 with their advisor (or equivalent with your advisor, if aligned outside of CS faculty).",
+        "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+      },
+      {
+        "text": "Must be registered in the quarter in which paid, make satisfactory academic progress, and maintain good standing in the CS Department",
+        "kind": "required",
+        "source_text": "All student employees must meet several academic requirements before receiving a paycheck. Must be registered in the quarter in which they are paid (including Summer) Must make satisfactory academic progress Must maintain good standing in the CS Department",
+        "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+      },
+      {
+        "text": "I-9 verification is required for all graduate students holding an assistantship",
+        "kind": "required",
+        "source_text": "I-9 Verification: This is required for all graduate students who will hold an assistantship (RAship, CAship, TAship) and will only need to be completed once every 3 or 4 years or depending on the expiration date selected. ... Important Note: If a student isn't enrolled or hasn't completed the I-9 for the quarter, then their assistantship will be cancelled.",
+        "source_url": "https://cs.stanford.edu/phd-research-assistantship"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [],
+    "application_method": "Arranged directly with an individual faculty member; the RAship is initiated by faculty request, not by a central application",
+    "application_url": "https://cs.stanford.edu/phd-research-assistantship",
+    "contact_name": null,
+    "contact_email": "phdstudentservices@cs.stanford.edu",
+    "eligibility_notes": "Graduate (PhD) students. Page notes some students may receive a lower RAship percentage (10%-40%) due to other priorities/circumstances or other fellowships, and that 60%-90% RAships are only allowed in Summer quarter at advisor discretion.",
+    "description": "Research Assistants work on research projects under the supervision of a faculty member. The hiring department (the faculty member's home department) determines the pay rate used for the RAship; if the hiring department does not have a standard rate, the university minimum rate applies. A 50% RAship covers the 8-10 unit tuition rate and pays a salary disbursed as 6 paychecks over the quarter. Appointment periods: Autumn Oct 1-Dec 31, Winter Jan 1-Mar 31, Spring Apr-Jun 30, Summer Jul 1-Sep 30.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.9,
+    "notes": "Standing/recurring role arranged with individual faculty, not a dated posting. No dollar pay rate is stated; the page says only 'the hiring department ... will determine the pay rate used for the RAship. If the hiring department does not have a standard rate the university minimum rate applies.' Contact email phdstudentservices@cs.stanford.edu appears literally on the fetched page. Evidence fetched 2026-08-31."
+  },
+  {
+    "external_key": "stanford-cs198-section-leader",
+    "title": "CS198 Section Leader (CS106A / CS106B / CS106L)",
+    "type": "on_campus",
+    "organization": "Stanford CS198 Program, Computer Science Department",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "CS198 program website",
+    "source_url": "https://cs198.stanford.edu/web",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.2,
+      "source_text": null,
+      "source_url": "https://cs198.stanford.edu/web"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Responsible for teaching section, grading coursework, and assisting students in office hours for CS106A, CS106B and CS106L",
+        "kind": "required",
+        "source_text": "The CS198 program consists of ~100 undergraduate and a handful of graduate students who are responsible for teaching section, grading coursework, and assisting students in office hours for Stanford's introductory CS courses: CS106A, CS106B, and CS106L.",
+        "source_url": "https://cs198.stanford.edu/web"
+      },
+      {
+        "text": "Applicants should have completed the equivalent of CS106B/X",
+        "kind": "required",
+        "source_text": "For this round of applications, we are looking for applicants have completed the equivalent of CS106B/X... and that's you!",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      },
+      {
+        "text": "Section lead for two quarters",
+        "kind": "required",
+        "source_text": "You'll need to: Section lead for two quarters!",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      },
+      {
+        "text": "Take CS198 for 3-4 units (1st quarter only)",
+        "kind": "required",
+        "source_text": "Take CS198 for 3-4 units (1st quarter only)",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      },
+      {
+        "text": "Attend staff meetings (Monday, 5:30-6:30PM) and workshops (Mon/Wed evenings)",
+        "kind": "required",
+        "source_text": "Attend staff meetings (Monday, 5:30-6:30PM) Attend workshops (Mon/Wed evenings)",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      },
+      {
+        "text": "Fulfill all teaching, LaIR, and grading responsibilities",
+        "kind": "required",
+        "source_text": "Fulfill all teaching, LaIR, and grading responsibilities",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Section leaders from all backgrounds who can relate to students and clearly explain concepts",
+        "kind": "preferred",
+        "source_text": "We are looking for section leaders from all backgrounds who can relate to students and clearly explain concepts.",
+        "source_url": "https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf"
+      }
+    ],
+    "skills": [
+      "C++",
+      "Python",
+      "functional decomposition",
+      "algorithms",
+      "recursion",
+      "abstract data types",
+      "algorithmic analysis",
+      "data structure design"
+    ],
+    "documents_required": [],
+    "research_topics": [],
+    "application_method": "Online application on the CS198 website (application area requires Stanford sign-in); email the CS198 coordinators for details",
+    "application_url": "https://cs198.stanford.edu/web",
+    "contact_name": null,
+    "contact_email": "cs198@cs.stanford.edu",
+    "eligibility_notes": "Open to undergraduates of all majors (plus a handful of graduate students). The Stanford CS Department's CA/RA page states: 'Undergraduate students are not eligible to be CA's, however, do have the option to be paid Section Leaders. More information about section leading can be found on the CS198 website.' (source: https://cs.stanford.edu/masters-course-assistant-and-research-assistant)",
+    "description": "The CS198 program consists of ~100 undergraduate and a handful of graduate students who teach section, grade coursework, and assist students in office hours for Stanford's introductory CS courses CS106A, CS106B and CS106L. The program gives qualified undergraduate students of all majors a unique opportunity to teach as part of their Stanford experience. Section leaders cover materials such as the C++ and Python programming languages, functional decomposition, algorithms, recursion, abstract data types, algorithmic analysis, data structure design, and other fundamental elements of modern programming. Per the CS198 recruiting deck, section leaders teach a weekly 1-hour section, help students in the LaIR, grade CS106 assignments, hold IGs (individual grading meetings) with students, and grade midterms and finals.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.62,
+    "notes": "STANDING/RECURRING role, not a dated posting. IMPORTANT PROVENANCE CAVEAT: the public cs198.stanford.edu landing page (fetched 2026-08-31) contains only the program description and the cs198@cs.stanford.edu contact; everything past it (/web/auth, and the legacy /cs198/Apply.aspx which now redirects to /web) is behind Stanford SSO, so no live application window or current pay rate could be read. The requirements and duties above marked with source_url = the CS110 handouts PDF come from https://web.stanford.edu/class/cs110/handouts/cs198-section-leading-slides.pdf, which I fetched and text-extracted in this task. That deck states 'Get paid $18.50/hour (more with seniority)' and a deadline of 'Thursday, January 27th at 11:59PM PT'. The deck carries no year; January 27 last fell on a Thursday in 2022, and it names Marissa Mayer as 'Former CEO, Yahoo', so it is very likely several years old. I therefore left pay null rather than publish $18.50/hr as a current rate - a student should confirm the current rate with cs198@cs.stanford.edu. A WebSearch result summary also asserted 'Applications to section lead in Spring 2026 are now open' and repeated the $18.50/hour figure, but I could not verify either claim on a page I fetched, so neither is recorded as fact."
+  },
+  {
+    "external_key": "stanford-hume-peer-writing-tutor",
+    "title": "Undergraduate Peer Writing Tutor, Hume Center for Writing and Speaking",
+    "type": "on_campus",
+    "organization": "Hume Center for Writing and Speaking (VPUE)",
+    "university": "Stanford University",
+    "department": "Hume Center for Writing and Speaking",
+    "lab": null,
+    "pi": null,
+    "source": "Hume Center for Writing and Speaking website",
+    "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor",
+    "location": "Stanford, CA (Hume Center, Building 250, 450 Jane Stanford Way, plus satellite locations across campus)",
+    "pay": "$21.50 per hour starting rate",
+    "hours_per_week": "6 hours per week",
+    "deadline": {
+      "value": "2026-01-30",
+      "confidence": 0.9,
+      "source_text": "Applications for the 2026-2027 academic year were due on Friday, January 30th @11:59pm PT. The deadline has now passed.",
+      "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Must be a Stanford undergraduate",
+        "kind": "required",
+        "source_text": "All Stanford undergraduates are invited to apply to become Hume Center peer writing tutors (based in the Center or in a satellite location around campus).",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+      },
+      {
+        "text": "Must take the 3-credit training course PWR 195 in spring quarter, then begin tutoring the following fall",
+        "kind": "required",
+        "source_text": "During the spring quarter, new tutors take a 3-credit training course, PWR 195, and then begin tutoring the following fall. ... The Spring 2026 tutor training course, PWR195, will be held on Fridays from 9:30-11:20 a.m.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+      },
+      {
+        "text": "Must be legally eligible to work in the United States and must not exceed the hourly work limits in Administrative Guide 10.1.1",
+        "kind": "required",
+        "source_text": "Peer tutors must be legally eligible to work in the United States and must not exceed the limits on hourly work outlined in Administrative Guide 10.1.1.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+      },
+      {
+        "text": "Hired for 6 hours a week; evening and Sunday hours are strongly encouraged",
+        "kind": "required",
+        "source_text": "Starting rate is $21.50 per hour and tutors are hired for 6 hours a week. Evening and Sunday hours are strongly encouraged.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+      },
+      {
+        "text": "A Stanford instructor or professor familiar with your writing must write a brief recommendation",
+        "kind": "required",
+        "source_text": "A Stanford instructor or professor who is familiar with your writing and writing process will need to write a brief recommendation for you.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [
+      "one-to-one writing conferences",
+      "revision, editing and proofreading strategies",
+      "academic writing conventions"
+    ],
+    "documents_required": [
+      "application webform",
+      "resume",
+      "writing sample",
+      "transcript",
+      "name and contact information of a reference familiar with your writing skills and teaching abilities",
+      "brief recommendation from a Stanford instructor or professor"
+    ],
+    "research_topics": [],
+    "application_method": "Submit the application webform, resume, writing sample, and transcript; provide a reference and a brief instructor recommendation",
+    "application_url": "https://hume.stanford.edu/tutoring/become-tutor/become-peer-writing-tutor",
+    "contact_name": null,
+    "contact_email": "humecenter@stanford.edu",
+    "eligibility_notes": "Open to all Stanford undergraduates. Page states the process is competitive and that 12-15 new tutors are hired every year in February. Approximately 35 undergraduate peer writing tutors work alongside advanced graduate students and PWR Lecturers.",
+    "description": "Peer Writing Tutors offer drop-in hours in the Hume Center for Writing and Speaking (Building 250) and at several satellite locations across campus. In one-to-one conferences, writing tutors help students get started on assignments; address and overcome writer's block; apply revision, editing, and proofreading strategies; and understand academic conventions in their fields. Approximately 35 undergraduate peer writing tutors work alongside advanced graduate students and PWR Lecturers in the Hume Center and also provide writing support in PWR 1 classes.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.95,
+    "notes": "Annual recurring hiring cycle. As of the page fetched 2026-08-31, the AY 2026-2027 cycle is CLOSED - the page explicitly says 'The deadline has now passed.' The next cycle would be expected in January/February per the stated pattern ('every year in February, 12-15 new tutors are hired'), but no future date is published, so no forward-looking deadline is recorded."
+  },
+  {
+    "external_key": "stanford-hume-oral-communication-tutor",
+    "title": "Oral Communication Tutor (OCT), Hume Center for Writing and Speaking",
+    "type": "on_campus",
+    "organization": "Hume Center for Writing and Speaking (VPUE)",
+    "university": "Stanford University",
+    "department": "Hume Center for Writing and Speaking",
+    "lab": null,
+    "pi": null,
+    "source": "Hume Center for Writing and Speaking website",
+    "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor",
+    "location": "Stanford, CA (Hume Center, Building 250, 450 Jane Stanford Way)",
+    "pay": "$21.50/hour for undergraduates; $30.25/hour for graduate students (starting salary for 2026-2027)",
+    "hours_per_week": "Minimum of 4-5 hours per week; OCTs often work 4-6 hours per week",
+    "deadline": {
+      "value": "2026-02-04",
+      "confidence": 0.9,
+      "source_text": "Applications for the 2026-2027 academic year were due on Wednesday, February 4th @11:59pm PT. The deadline has now passed.",
+      "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Must be legally eligible to work in the United States and must not exceed the hourly work limits in Administrative Guide 10.1.1 and 10.2.2",
+        "kind": "required",
+        "source_text": "OCTs must be legally eligible to work in the United States and must not exceed the limits on hourly work outlined in Administrative Guide 10.1.1 and Administrative Guide 10.2.2.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+      },
+      {
+        "text": "Must complete a 2-unit training course in Spring 2026 (ORALCOMM 119: Oral Communication Tutor Teaching Practicum; Wednesdays, 3:30-5:20 p.m.) before beginning work in Autumn 2026",
+        "kind": "required",
+        "source_text": "All applicants who are offered positions as OCTs must complete a 2 unit training course in Spring 2026 (ORALCOMM 119: Oral Communication Tutor Teaching Practicum; Wednesdays, 3:30-5:20 p.m.) before they can begin work as an OCT in Autumn 2026.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+      },
+      {
+        "text": "Minimum time commitment of 4-5 hours per week",
+        "kind": "required",
+        "source_text": "Time Commitment Minimum of 4-5 hours per week. OCTs often work 4-6 hours per week.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Strong interest in oral communication, tutoring/teaching, and multimedia presentation, and the qualities of an effective tutor; prior experience is NOT required",
+        "kind": "preferred",
+        "source_text": "We look for applicants who have a strong interest in oral communication, tutoring/teaching, and multimedia presentation, and who showcase the qualities of an effective tutor. Please note that prior experience in these areas is not required.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+      },
+      {
+        "text": "Graduate students are especially encouraged to apply",
+        "kind": "preferred",
+        "source_text": "We are seeking applicants from all backgrounds and disciplines. We invite graduate students and undergraduate students to apply. Graduate students are especially encouraged to apply.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor"
+      }
+    ],
+    "skills": [
+      "public speaking",
+      "presentation structure and delivery",
+      "voice and pacing",
+      "non-verbal communication",
+      "use of visual aids",
+      "interviewing skills",
+      "managing speech anxiety"
+    ],
+    "documents_required": [
+      "application webform including a 250-400 word essay",
+      "unofficial Stanford transcript (required for undergrads only)",
+      "resume",
+      "contact information for one reference"
+    ],
+    "research_topics": [],
+    "application_method": "Submit the application webform (includes a 250-400 word essay), an unofficial Stanford transcript (undergrads only) and resume, and provide contact information for one reference",
+    "application_url": "https://hume.stanford.edu/tutoring/become-tutor/become-oral-communication-tutor",
+    "contact_name": null,
+    "contact_email": "janetak@stanford.edu",
+    "eligibility_notes": "Open to both undergraduate and graduate students, from all backgrounds and disciplines. Pay differs by level: $21.50/hour undergraduate, $30.25/hour graduate.",
+    "description": "Oral Communication Tutors (OCTs) are peer speaking tutors who support students at all stages of the oral presentation process. OCTs work with graduate and undergraduate students from a variety of academic disciplines to brainstorm, organize, and rehearse oral presentations, on issues including structure, delivery, voice, pacing, non-verbal communication, effective use of visual aids, interviewing skills, and overcoming speech anxiety. OCTs work with students during individual consultations in the Hume Center and in classes that emphasize instruction in oral presentation, e.g. PWR2 classes and WR2 seminars. There are also opportunities for interested OCTs to develop and conduct workshops.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.95,
+    "notes": "Annual recurring hiring cycle. As of the page fetched 2026-08-31, the AY 2026-2027 cycle is CLOSED - 'The deadline has now passed.' Phone number (650) 725-7667 also listed on the page next to the contact email."
+  },
+  {
+    "external_key": "stanford-hume-graduate-writing-tutor",
+    "title": "Graduate Writing Tutor, Hume Center for Writing and Speaking",
+    "type": "on_campus",
+    "organization": "Hume Center for Writing and Speaking (VPUE)",
+    "university": "Stanford University",
+    "department": "Hume Center for Writing and Speaking",
+    "lab": null,
+    "pi": null,
+    "source": "Hume Center for Writing and Speaking website",
+    "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor",
+    "location": "Stanford, CA (Hume Center, Building 250, 450 Jane Stanford Way, and other locations across campus)",
+    "pay": "$30.25 per hour starting pay",
+    "hours_per_week": "Approximately 4 hours per week, with opportunities available to work more hours",
+    "deadline": {
+      "value": "2026-01-30",
+      "confidence": 0.9,
+      "source_text": "Applications for the 2026-2027 academic year were due on Friday, January 30th @11:59pm PT. The deadline has now passed.",
+      "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Must be a Stanford graduate student",
+        "kind": "required",
+        "source_text": "All Stanford graduate students are invited to apply to become Hume Center graduate writing tutors.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor"
+      },
+      {
+        "text": "Successful applicants must take a required tutor training course in Spring 2026 (Fridays, 9:30-11:20 a.m.)",
+        "kind": "required",
+        "source_text": "Successful applicants take a required tutor training course in Spring 2026 (Fridays, 9:30-11:20 a.m.).",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor"
+      },
+      {
+        "text": "Must observe hourly limits for graduate students on RAships, TAships or fellowships (Administrative Guide 10.2.2)",
+        "kind": "required",
+        "source_text": "Hourly limits for Graduate Students on RAships, TAships, or fellowships (as shown in Administrative Guide 10.2.2): U.S. Students - Graduate students on 50% time assistantships (20 hours per week) may not be employed more than an additional 8 hours a week (all other jobs combined). International students - Students on F-1 visas are limited to a total of 20 hours of employment on campus per week, including their assistantship appointment(s) during any quarter in which they are fully enrolled.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Applicants who are passionate about writing, interested in teaching, and excited to work with other students on their writing",
+        "kind": "preferred",
+        "source_text": "We are looking for applicants who are passionate about writing, interested in teaching, and excited to work with other students on their writing. Successful candidates are chosen on the strength of their application, recommendations, and an interview.",
+        "source_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor"
+      }
+    ],
+    "skills": [
+      "one-to-one writing conferences",
+      "revision, editing and proofreading strategies",
+      "academic writing conventions across disciplines"
+    ],
+    "documents_required": [
+      "application webform",
+      "resume",
+      "contact information for one reference who can speak to your capacities or potential as a teacher and/or tutor"
+    ],
+    "research_topics": [],
+    "application_method": "Submit the application webform and resume, addressing relevant experience and qualifications and why you would like to become a Hume Center writing tutor; provide contact information for one reference",
+    "application_url": "https://hume.stanford.edu/tutoring/become-tutor/become-graduate-writing-tutor",
+    "contact_name": "Zandra Jordan (Director); Raechel Lee (Writing Programs Coordinator)",
+    "contact_email": "zljordan@stanford.edu",
+    "eligibility_notes": "Stanford graduate students in all fields. International students on F-1 visas working a 50% RAship or TAship are not eligible for any additional work hours (exception noted for the Stanford Graduate Fellowship). Approximately 20 advanced graduate students work alongside 25 undergraduate tutors and 35 Lecturers in the Hume Center.",
+    "description": "Graduate writing tutors work with graduate and undergraduate students from across the disciplines on all kinds of writing projects. In one-to-one conferences, writing tutors help students get started on assignments; address and overcome writer's block; apply revision, editing, and proofreading strategies; and understand academic conventions in their fields. Applications are accepted once a year for grad writing tutors.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.95,
+    "notes": "Annual recurring hiring cycle ('We accept applications once a year for grad writing tutors'). As of the page fetched 2026-08-31, the AY 2026-2027 cycle is CLOSED - 'The deadline has now passed.' A second contact email raechell@stanford.edu (Raechel Lee, Writing Programs Coordinator) also appears literally on the page; only one could be placed in contact_email."
+  },
+  {
+    "external_key": "stanford-ctl-graduate-teaching-consultant",
+    "title": "Graduate Teaching Consultant (GTC), Center for Teaching and Learning",
+    "type": "on_campus",
+    "organization": "Stanford Center for Teaching and Learning (CTL)",
+    "university": "Stanford University",
+    "department": "Center for Teaching and Learning",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford CTL website",
+    "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc",
+    "location": "Stanford, CA (CTL, 408 Panama Mall)",
+    "pay": "$29/hour; applicants may be eligible for a higher starting pay rate with relevant pedagogical work experience with CTL",
+    "hours_per_week": "Minimum of 10-20 hours per quarter, with a concentration of work during weeks 4-6",
+    "deadline": {
+      "value": null,
+      "confidence": 0.85,
+      "source_text": "Applications for Graduate Teaching Consultants are currently closed.",
+      "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Must be a Stanford PhD student who is eligible to work in the U.S.",
+        "kind": "required",
+        "source_text": "To be employed as a GTC you must be a Stanford PhD student who is eligible to work in the U.S.",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "At least two terms of teaching/TA experience (at Stanford or elsewhere)",
+        "kind": "required",
+        "source_text": "To be successful in this role you will bring: At least two terms of teaching/TA experience (at Stanford or elsewhere)",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "Experience with collaborative work",
+        "kind": "required",
+        "source_text": "Experience with collaborative work",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "Effective communication skills and a willingness to learn",
+        "kind": "required",
+        "source_text": "Effective communication skills and a willingness to learn",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "The ability to respond to Slack messages within one day",
+        "kind": "required",
+        "source_text": "The ability to respond to Slack messages within one day",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "An approach to teaching and learning characterized by at least some of: learner-centered practices, evidence-based methods, access and fairness, customization, growth mindset, empathy and compassion",
+        "kind": "required",
+        "source_text": "An approach to teaching and learning characterized by at least some of the following values: learner-centered practices, evidence-based methods, access and fairness, customization, growth mindset, and empathy and compassion",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Preference is given to candidates who are not entering their final year at Stanford",
+        "kind": "preferred",
+        "source_text": "Preference is given to candidates who are not entering their final year at Stanford.",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      },
+      {
+        "text": "Students who have experienced significant barriers in educational systems are strongly encouraged to apply",
+        "kind": "preferred",
+        "source_text": "Students who have experienced significant barriers in educational systems are strongly encouraged to apply.",
+        "source_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc"
+      }
+    ],
+    "skills": [
+      "teaching consultations",
+      "Small Group Feedback Sessions",
+      "microteaching",
+      "video consultations",
+      "workshop design and facilitation",
+      "evidence-based pedagogy"
+    ],
+    "documents_required": [
+      "A 150-200 word statement expressing why you want to be a Teaching Consultant and what relevant experiences, interests, background, and/or knowledge you would bring to the program",
+      "One teaching support document: teaching evaluations from Axess (aggregated 'comments report' and 'course report'), OR a brief recommendation letter from a faculty member, OR an illustrative syllabus, assignment, or lesson plan, OR a bulleted list outlining your teaching experience"
+    ],
+    "research_topics": [],
+    "application_method": "Application via CTL (applications currently closed as of the fetched page)",
+    "application_url": "https://ctl.stanford.edu/grad-teaching/consultant/become-gtc",
+    "contact_name": "Kritika Yegnashankaran, director, Academic Teaching Programs",
+    "contact_email": "kyegnashankaran@stanford.edu",
+    "eligibility_notes": "Stanford PhD students only, eligible to work in the U.S. All training time is paid work in conjunction with the position.",
+    "description": "As a CTL Graduate Teaching Consultant you share your experiences and insights about teaching with other graduate student instructors; facilitate one-on-one and group teaching consultations such as Small Group Feedback Sessions, Microteaching, and Video Consultations; design and lead teaching development workshops in collaboration with peers; develop as an instructor by learning about evidence-based teaching practices; build professional skills by collaborating with a multidisciplinary peer group; and create pedagogical resources and tools with the guidance of CTL staff. New consultants receive paid professional development in pedagogy in multiple virtual training sessions, professional training for the role, and two to three meetings per quarter.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.93,
+    "notes": "Recurring role. As of the page fetched 2026-08-31 the top line reads 'Applications for Graduate Teaching Consultants are currently closed.' No reopening date is published on the page, so deadline value is null and deadline_type is unknown rather than a guess. This role was reached from https://ctl.stanford.edu/grad-teaching/opportunities, which also lists (without their own hiring pages) tutoring jobs at the Athletic Academic Resource Center, Summer Session SARC, and the Hume Center."
+  },
+  {
+    "external_key": "stanford-libraries-weekend-library-specialist-200761",
+    "title": "Weekend Library Specialist (Part-time), Stanford Libraries",
+    "type": "on_campus",
+    "organization": "Stanford University Libraries",
+    "university": "Stanford University",
+    "department": "University Libraries (Circulation / Access Services, Cecil H. Green Library)",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford Careers (careersearch.stanford.edu, Oracle HCM requisition 200761)",
+    "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761",
+    "location": "Stanford, CA (Cecil H. Green Library) - On-site",
+    "pay": null,
+    "hours_per_week": "20 hours per week (50% appointment), Friday-Sunday schedule",
+    "deadline": {
+      "value": null,
+      "confidence": 0.7,
+      "source_text": "ExternalPostedEndDate: null (no closing date published on the requisition)",
+      "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Two-year college degree plus one or more years of experience in an academic library, or equivalent combination of education and relevant experience",
+        "kind": "required",
+        "source_text": "MINIMUM REQUIREMENTS Education and Experience: Two-year college degree plus one or more years of experience in an academic library, or equivalent combination of education and relevant experience.",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Experience with direct interaction with patrons",
+        "kind": "required",
+        "source_text": "Experience with direct interaction with patrons",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Demonstrated computer literacy with word processing, spreadsheets and communication software such as email",
+        "kind": "required",
+        "source_text": "Demonstrated computer literacy with word processing, spreadsheets and communication software such as email",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Demonstrated interpersonal and organizational skills; able to apply judgment in choosing procedures and evaluating alternatives",
+        "kind": "required",
+        "source_text": "Demonstrated interpersonal and organizational skills. Able to apply judgment in choosing procedures and evaluating alternatives",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Strong communication skills in English; record of excellent attendance",
+        "kind": "required",
+        "source_text": "Possess strong communication skills in English ... Record of excellent attendance",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Knowledge of or ability to learn call number systems and library-specific applications",
+        "kind": "required",
+        "source_text": "Knowledge of or ability to learn call number systems. Experience using or ability to learn library specific applications needed to complete tasks",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Physical: ability to push a cart weighing up to 650 lbs (initial push force up to 70 lbs), lift books up to 10 pounds, kneel and reach, and stand for many hours; work in a dusty and/or moldy environment",
+        "kind": "required",
+        "source_text": "Physical Requirements: Ability to push a cart weighing up to 650 lbs. that requires an initial push force up to 70 lbs. Ability to work in an environment that is dusty and or moldy. Ability to lift books that are up to 10 pounds. Ability to kneel and reach. Must be able to stand for many hours",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      },
+      {
+        "text": "Fixed weekend schedule: Fridays 3:45pm-7:45pm, Saturdays 9:45am-6:45pm, Sundays 12pm-9pm; overtime required at least 1 weekend per quarter",
+        "kind": "required",
+        "source_text": "Academic Year: 50% schedule: Fridays 3:45pm-7:45pm (no meal break) Saturdays 9:45a-6:45p (includes 1-hr meal break) Sundays 12p-9p (includes 1-hr meal break) ... Overtime hours will be required at least 1 weekend per quarter to help staff extra building hours for exam weeks.",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "A dependable, adaptable and communicative individual who enjoys providing excellent customer service, collaborating with colleagues, and learning new skills; comfortable working independently and takes initiative",
+        "kind": "preferred",
+        "source_text": "We are seeking a dependable, adaptable, and communicative individual who enjoys providing excellent customer service, collaborating with colleagues, and learning new skills. The ideal candidate is comfortable working independently, takes initiative, and is committed to creating a welcoming and positive experience for library users.",
+        "source_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761"
+      }
+    ],
+    "skills": [
+      "circulation transactions",
+      "public service desk staffing",
+      "library catalog navigation",
+      "stacks maintenance and shelving",
+      "Google Suite / Microsoft Outlook / Slack",
+      "scanning and digital delivery"
+    ],
+    "documents_required": [],
+    "research_topics": [],
+    "application_method": "Apply through Stanford Careers (careersearch.stanford.edu), requisition 200761",
+    "application_url": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/CX_1/job/200761",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "IMPORTANT: this is NOT a student-earmarked position. The requisition is classified 'Stanford Non Bargaining Unit', Category 'Library', Job Grade D, Contract Type 'Regular', and its minimum requirement is a two-year college degree plus one or more years of academic library experience. It is included here as the only real, publicly-fetchable Stanford Libraries hourly opening; a Stanford student who meets the minimum requirements could apply, but it is not a student assistant appointment. The posting itself references student staff separately: 'May assist with training student or hourly staff in routine service desk operations or routine collection maintenance activities.'",
+    "description": "Stanford Libraries is seeking a collaborative, dynamic, and service-oriented Weekend Library Specialist to provide frontline customer services for the Library Circulation team at the Cecil H. Green Library. This position is 50% (20 hours per week), with a Friday-Sunday schedule. The Specialist staffs public service desks, assists patrons with locating materials and navigating the library catalog, processes routine circulation transactions, backs up the Welcome Desk with visitor registration and bag inspections, supports the Media Center (microfilm, DVDs, video games), picks requested books from the stacks, processes new materials, supports collection management projects, and may retrieve and scan materials for interlibrary lending and digital delivery.",
+    "posted_at": "2026-08-19",
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.85,
+    "notes": "FETCH NOTE ON THIS CATEGORY: Stanford Libraries publishes NO public student-assistant hiring page. I fetched library.stanford.edu and its full sitemap.xml (1,216 URLs, fetched 2026-08-31) and found no jobs/employment/careers/student-employment page; library.stanford.edu/about/jobs, /jobs, /about/employment and /work-us all return HTTP 404. Stanford student hourly jobs are posted in Handshake (https://stanford.joinhandshake.com/login, per Administrative Guide 10.1.1 fetched in this task), which is authentication-gated and could not be read. The legacy careersearch.stanford.edu/jobs/... URLs surfaced by web search (e.g. 'Library Welcome Desk Attendant (Portal Monitor)') all return HTTP 404 - that site has migrated to Oracle HCM. I therefore queried the live Oracle HCM requisition API and this record is drawn from requisition 200761, ExternalPostedStartDate 2026-08-19T01:19:36+00:00. No pay range appears anywhere in the requisition's fetched external description, so pay is null - the $18-$26/hr and $26.97-$32.54/hr figures that appeared in web-search snippets came from Glassdoor and a stale 404'd posting and are NOT recorded. Administrative Guide 10.1.1 does describe library student work at Levels I-III ('Library work such as shelving, checking in materials...'), confirming student library jobs exist, but publishes no rates on the fetched page."
+  },
+  {
+    "external_key": "stanford-psychology-research-opportunities-board",
+    "title": "Undergraduate Research Assistant Openings Board, Department of Psychology",
+    "type": "on_campus",
+    "organization": "Stanford Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": null,
+    "pi": null,
+    "source": "Stanford Department of Psychology website",
+    "source_url": "https://psychology.stanford.edu/research/research-opportunities",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.3,
+      "source_text": null,
+      "source_url": "https://psychology.stanford.edu/research/research-opportunities"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Positions vary in their research topics, eligibility, compensation, and responsibilities; use the spreadsheet's filter function to find matching positions",
+        "kind": "required",
+        "source_text": "Below you will find a spreadsheet where researchers in the Department of Psychology and beyond advertise their most recent research position openings. Positions vary in their research topics, eligibility, compensation, and responsibilities. To find the perfect one for you, you can use the filter function in the spreadsheet.",
+        "source_url": "https://psychology.stanford.edu/research/research-opportunities"
+      },
+      {
+        "text": "Applicants contact the researcher directly using the 'Contact' information listed for each posting",
+        "kind": "required",
+        "source_text": "Once you have found the right position(s), you may directly contact the researcher(s) using the 'Contact' information listed on the form.",
+        "source_url": "https://psychology.stanford.edu/research/research-opportunities"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "Cognitive",
+      "Developmental",
+      "Social",
+      "Neuroscience",
+      "Clinical",
+      "Health psychology"
+    ],
+    "application_method": "Browse the live openings spreadsheet linked from the department page, then contact the listed researcher directly; subscribe to the psych-research-op listserv for new-opening notifications",
+    "application_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611",
+    "contact_name": null,
+    "contact_email": "psych-research-op@stanford.edu",
+    "eligibility_notes": "Postings on the board are individually scoped; most of the currently live ones state 'Must be a current Stanford undergraduate student' in their Candidate Eligibility field. Positions are not restricted to the Psychology department: 'While the positions do not need to be in the Department of Psychology, please note that most research experience seekers are looking for research experience related to psychology and neuroscience (broadly defined).'",
+    "description": "The Stanford Department of Psychology maintains a live, publicly readable spreadsheet on which researchers in the department and beyond advertise their most recent research position openings for undergraduates. Each row records the lab and faculty supervisor, position description, research area keywords, position involvements and skills, lab website, time commitment, compensation, application materials required, contact person, end date for the recruitment, and candidate eligibility. Postings are removed after the indicated 'End Date for This Recruitment'. Students can also sign up for the research position opening listserv to receive notifications of new openings.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.9,
+    "notes": "STANDING/RECURRING hiring board, not a dated posting - this is the department page that publishes undergraduate RA hourly postings. I fetched the linked Google Sheet as CSV on 2026-08-31: 46 total rows, of which 19 had an 'End Date for This Recruitment' on or after 2026-08-31. The two most recent live postings that state an actual hourly rate are captured as separate records in this file (Scaffolding of Cognition Team, and Language and Cognition Lab). The listserv address is written on the page in obfuscated form as 'psych-research-op [at] stanford.edu'; it is recorded here in normal form. The email address literally shown for posting recruiters is a Google Form, not an address."
+  },
+  {
+    "external_key": "stanford-psych-scaffolding-of-cognition-undergrad-ra",
+    "title": "Undergraduate Research Assistant, Scaffolding of Cognition Team (infant fMRI)",
+    "type": "on_campus",
+    "organization": "Stanford Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": "Scaffolding of Cognition Team (soc.stanford.edu)",
+    "pi": "Dr. Cameron Ellis",
+    "source": "Stanford Department of Psychology research-opportunities openings board",
+    "source_url": "https://psychology.stanford.edu/research/research-opportunities",
+    "location": "Stanford, CA (in lab)",
+    "pay": "Hourly pay $17-$19 based on prior experience (alternatively course credits or work-study)",
+    "hours_per_week": "8-15 hours per week in lab, including weekly lab meetings",
+    "deadline": {
+      "value": null,
+      "confidence": 0.6,
+      "source_text": "End Date for This Recruitment: 12/28/2072",
+      "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "A demonstrable interest in developmental cognitive neuroscience research or other questions the lab asks",
+        "kind": "required",
+        "source_text": "Successful applicants will show the following: - A demonstrable interest in developmental cognitive neuroscience research or other questions we ask",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Evidence of trustworthiness and persistence",
+        "kind": "required",
+        "source_text": "- Evidence of trustworthiness and persistence",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Computational and technical skill, usually shown through course work in computer science or data science",
+        "kind": "required",
+        "source_text": "- Computational and technical skill, usually shown through course work in computer science or data science",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "A warm personality and generous spirit",
+        "kind": "required",
+        "source_text": "- A warm personality and generous spirit",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "8-15 hours per week in lab, including weekly lab meetings",
+        "kind": "required",
+        "source_text": "Position Commitment: 8-15 hours per week in lab, including weekly lab meetings",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Must be a current Stanford undergraduate student",
+        "kind": "required",
+        "source_text": "Candidate Eligibility: Must be a current Stanford undergraduate student",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [
+      "Python",
+      "MATLAB",
+      "Bash",
+      "fMRI data collection",
+      "fMRI preprocessing",
+      "behavioral data analysis"
+    ],
+    "documents_required": [
+      "Google Form application"
+    ],
+    "research_topics": [
+      "Neuroscience",
+      "Cognitive",
+      "Developmental",
+      "infant fMRI"
+    ],
+    "application_method": "Submit the lab's Google Form application",
+    "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSeXuowmGAkYmkExjhm-kOcjXdwqFXCAMCTj_Vs-xvoRSB3q9A/viewform",
+    "contact_name": "Nicole Sahrling, Team Manager",
+    "contact_email": "sahrling@stanford.edu",
+    "eligibility_notes": "Must be a current Stanford undergraduate student (stated in the posting's Candidate Eligibility field). Posting states an RA who stays in the lab for two years can expect to gain experience understanding and writing computer code (Python, MATLAB, and/or Bash), collecting and/or analyzing fMRI and/or behavioral data, learning what it is like to do science full time, and potentially being an author on publications.",
+    "description": "Undergraduate Research Assistants will support the infant fMRI research the lab does by assisting with scans, helping with preprocessing the data, and supporting research tasks. All undergraduate research assistants are compensated for their time, either with course credits, work-study, or hourly pay of $17-$19 based on prior experience.",
+    "posted_at": "2026-07-28",
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.88,
+    "notes": "Live undergraduate RA hourly posting published on the Stanford Psychology department's research-opportunities board (department page: https://psychology.stanford.edu/research/research-opportunities), read from the department's linked openings spreadsheet exported as CSV on 2026-08-31. Row timestamp 7/28/2026 17:05:49. The recruitment 'End Date' is recorded by the poster as 12/28/2072, i.e. effectively an open/rolling recruitment rather than a real deadline, so deadline_type is 'rolling' and the deadline value is null. A phone number (650) 308 6130 is also listed for the contact on the posting. Lab website given as soc.stanford.edu; I did not separately fetch that site."
+  },
+  {
+    "external_key": "stanford-psych-langcog-codebreaker-undergrad-ra",
+    "title": "Undergraduate Research Assistant, Language and Cognition Lab (CodeBreaker help-seeking project)",
+    "type": "on_campus",
+    "organization": "Stanford Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": "Language and Cognition Lab (langcog.stanford.edu)",
+    "pi": "Dr. Michael C. Frank",
+    "source": "Stanford Department of Psychology research-opportunities openings board",
+    "source_url": "https://psychology.stanford.edu/research/research-opportunities",
+    "location": "Stanford, CA",
+    "pay": "Federal work-study at $19/hr (or course credit)",
+    "hours_per_week": "Approximately 10 hours per week",
+    "deadline": {
+      "value": "2026-12-11",
+      "confidence": 0.85,
+      "source_text": "End Date for This Recruitment: 12/11/2026",
+      "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Self-motivated and excited about topics in social learning, theory of mind, and/or cognitive science",
+        "kind": "required",
+        "source_text": "The ideal candidate will be self-motivated and excited about topics in social learning, theory of mind, and/or cognitive science.",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Strong organizational skills and an interest in running online experiments and analyzing behavioral data",
+        "kind": "required",
+        "source_text": "Strong organizational skills and an interest in running online experiments and analyzing behavioral data are important.",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Commit approximately 10 hours per week",
+        "kind": "required",
+        "source_text": "The student should expect to commit ~10 hours per week (course credit or federal work-study). Please indicate your preferred time commitment when completing the attached application.",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Must be a current Stanford undergraduate student",
+        "kind": "required",
+        "source_text": "Candidate Eligibility: Must be a current Stanford undergraduate student",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Some programming experience (e.g., R, Python) is helpful, and previous research experience is a plus, but neither is required",
+        "kind": "preferred",
+        "source_text": "Some programming experience (e.g., R, Pythons\") is helpful, and previous research experience is a plus, but neither is required.",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      }
+    ],
+    "skills": [
+      "R",
+      "Python",
+      "online experiment administration (Prolific)",
+      "data cleaning and visualization",
+      "statistical analysis",
+      "QA testing"
+    ],
+    "documents_required": [
+      "Google Form application"
+    ],
+    "research_topics": [
+      "Developmental",
+      "Cognitive",
+      "social learning",
+      "theory of mind",
+      "help-seeking behavior"
+    ],
+    "application_method": "Fill out the LangCog RA application Google Form",
+    "application_url": "https://docs.google.com/forms/d/e/1FAIpQLSf-K2aGwOkYwjh_lQvAKx267F1eT8gPU8nOUHDXrqsW681q5Q/viewform?usp=sf_link",
+    "contact_name": "Victor Moreno, Lab Manager",
+    "contact_email": "langcoglab@stanford.edu",
+    "eligibility_notes": "Open to current Stanford undergraduate students. Compensation is via course credit or federal work-study at $19/hr, so the paid route requires federal work-study eligibility.",
+    "description": "This project investigates how individuals adapt their help-seeking strategies to social partners of varying reliability. The lab designed 'CodeBreaker,' a Mastermind-style online game in which participants guess secret color codes and can request clues from a partner who may or may not respond. By varying the partner's reliability and the difficulty and stakes of each game, the team measures when people ask for help, persist on their own, or opt into harder challenges. Data will be collected from adults online. The RA will be involved in the full research cycle: helping refine and extend the experimental paradigm (configuring new game conditions and helper behaviors, piloting and QA-testing changes before launch - the game is a web app built in React/TypeScript with a Node.js backend, and most experimental changes require only editing configuration files, so deep web-development experience is not required); running online data collection with adults on Prolific (setting up and monitoring studies, handling participant communication and bonus payments, performing data-quality checks); analyzing the resulting behavioral data in R or Python; and meeting weekly with the research team.",
+    "posted_at": "2026-08-21",
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.9,
+    "notes": "Live, dated undergraduate RA posting published on the Stanford Psychology department's research-opportunities board, read from the department's linked openings spreadsheet exported as CSV on 2026-08-31. Row timestamp 8/21/2026 14:25:46; recruitment end date 12/11/2026 (recorded as a hard deadline because the board states 'Postings will be removed after the indicated End Date for This Recruitment'). The typo 'Pythons\"' appears in the original source text and is quoted verbatim."
+  },
+  {
+    "external_key": "stanford-psych-lifespan-development-lab-ra",
+    "title": "Research Assistant, Life-span Development Lab (Bing Nursery School study sessions)",
+    "type": "on_campus",
+    "organization": "Stanford Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": "Life-span Development Lab (lifespan.stanford.edu)",
+    "pi": "Dr. Laura Carstensen",
+    "source": "Stanford Department of Psychology research-opportunities openings board",
+    "source_url": "https://psychology.stanford.edu/research/research-opportunities",
+    "location": "Stanford, CA (in-person at Bing Nursery School)",
+    "pay": null,
+    "hours_per_week": "6-9 hours per week",
+    "deadline": {
+      "value": "2026-10-09",
+      "confidence": 0.85,
+      "source_text": "End Date for This Recruitment: 10/9/2026",
+      "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Experience interacting with young children",
+        "kind": "required",
+        "source_text": "The candidate should: - have experience interacting with young children",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Must be willing to undergo a Live Scan background check (lab covers the cost)",
+        "kind": "required",
+        "source_text": "- must be willing to undergo a Live Scan background check (lab covers the cost)",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Consistently available, excellent communicator, and reliable",
+        "kind": "required",
+        "source_text": "- consistently available, excellent communicator, and reliable",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Available for 2 or 3 afternoons a week (approx. 12:45pm-3:45pm) OR 2 or 3 mornings a week (approx. 8:30am-11:30am), 6-9 hrs/week in person at Bing Nursery School",
+        "kind": "required",
+        "source_text": "6-9 hrs/week, in-person at Bing Nursery School. Must be available for 2 or 3 afternoons a week (approx. 12:45pm - 3:45pm) OR 2 or 3 mornings a week (approx. 8:30am - 11:30am",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      },
+      {
+        "text": "Must be a current Stanford undergraduate student",
+        "kind": "required",
+        "source_text": "Candidate Eligibility: Must be a current Stanford undergraduate student",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Ideally at least one course completed in the developmental psychology area",
+        "kind": "preferred",
+        "source_text": "- ideally at least one course completed in developmental psychology area",
+        "source_url": "https://docs.google.com/spreadsheets/d/1Bw4jZjYlCHTII103gU_byUw_xZaHkFvZusZ2WIvin6c/edit#gid=923159611"
+      }
+    ],
+    "skills": [
+      "running study sessions with children",
+      "research with young children"
+    ],
+    "documents_required": [
+      "CV",
+      "availability",
+      "relevant experience",
+      "brief description of why you'd like to join this project"
+    ],
+    "research_topics": [
+      "Developmental"
+    ],
+    "application_method": "Email your materials to the lab manager and postdocs listed on the posting",
+    "application_url": "https://lifespan.stanford.edu/",
+    "contact_name": "Mary Rose Bell (lab manager); Anna Pot (postdoc); Claire Growney (postdoc)",
+    "contact_email": "maryrose@stanford.edu",
+    "eligibility_notes": "Must be a current Stanford undergraduate student. Posting seeks 3 students.",
+    "description": "Seeking 3 motivated Stanford students to run study sessions with children at Bing Nursery School. The candidate will gain experience conducting research with young children.",
+    "posted_at": "2026-08-26",
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.87,
+    "notes": "Live, dated undergraduate RA posting on the Stanford Psychology department's research-opportunities board, read from the department's linked openings spreadsheet exported as CSV on 2026-08-31 (the newest live row; timestamp 8/26/2026 15:35:12). NOT an hourly-paid position: compensation is stated only as 'Course credits or volunteer', so pay is null. Two additional contact emails appear literally on the posting - annapot@stanford.edu and cgrowney@stanford.edu - and applicants are told to email all three people."
+  },
+  {
+    "external_key": "stanford-memory-lab-undergraduate-ra",
+    "title": "Undergraduate Research Assistant, Stanford Memory Lab",
+    "type": "on_campus",
+    "organization": "Stanford Memory Lab, Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": "Stanford Memory Lab",
+    "pi": "Anthony D. Wagner, PhD",
+    "source": "Stanford Memory Lab website",
+    "source_url": "https://memorylab.stanford.edu/participate-positions/undergraduate-research-assistants",
+    "location": "Stanford, CA (Department of Psychology, Building 420)",
+    "pay": null,
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.85,
+      "source_text": "The Stanford Memory Lab accepts applications on a rolling basis for Undergraduate Research Assistants.",
+      "source_url": "https://memorylab.stanford.edu/participate-positions/undergraduate-research-assistants"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Students must be enrolled at Stanford University",
+        "kind": "required",
+        "source_text": "Students must be enrolled at Stanford University and plan to commit to at least two quarters in the lab.",
+        "source_url": "https://memorylab.stanford.edu/participate-positions/undergraduate-research-assistants"
+      },
+      {
+        "text": "Must plan to commit to at least two quarters in the lab",
+        "kind": "required",
+        "source_text": "Students must be enrolled at Stanford University and plan to commit to at least two quarters in the lab.",
+        "source_url": "https://memorylab.stanford.edu/participate-positions/undergraduate-research-assistants"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [
+      "data collection",
+      "data analysis"
+    ],
+    "documents_required": [],
+    "research_topics": [
+      "memory",
+      "cognitive neuroscience"
+    ],
+    "application_method": "Contact the lab by email to apply",
+    "application_url": "https://memorylab.stanford.edu/participate-positions/undergraduate-research-assistants",
+    "contact_name": null,
+    "contact_email": "wagner-lab-manager@stanford.edu",
+    "eligibility_notes": "Must be enrolled at Stanford University and commit to at least two quarters. Undergraduate students will be matched with a graduate student or postdoc mentor and work on a project relevant to their interests and expertise.",
+    "description": "The Stanford Memory Lab accepts applications on a rolling basis for Undergraduate Research Assistants. The lab is regularly seeking students to assist in data collection and analysis for ongoing projects. Undergraduate students will be matched with a graduate student or postdoc mentor and work on a project relevant to their interests and expertise.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.9,
+    "notes": "STANDING/RECURRING rolling role rather than a dated posting - the lab page states applications are accepted on a rolling basis and publishes no deadline. NO pay information appears on the lab page, so pay is null. (Separately, the same lab has a row on the Stanford Psychology openings board whose Compensation field reads 'Volunteer, but if they want to commit to the hourly requirement necessary for research units, they can consider that as well' - i.e. this role is not represented as hourly-paid.) The contact email is written on the page in obfuscated form as 'wagner-lab-manager [at] stanford.edu' and is recorded here in normal form. Lab phone 650-723-8999 also appears on the page."
+  },
+  {
+    "external_key": "stanford-culture-emotion-lab-research-assistant",
+    "title": "Research Assistant, Culture and Emotion Lab",
+    "type": "on_campus",
+    "organization": "Culture and Emotion Lab, Department of Psychology",
+    "university": "Stanford University",
+    "department": "Psychology",
+    "lab": "Culture and Emotion Lab",
+    "pi": "Professor Jeanne Tsai",
+    "source": "Culture and Emotion Lab website",
+    "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant",
+    "location": "Stanford, CA (Building 420)",
+    "pay": "Stanford undergraduate and graduate students may register for course credit (1 credit for 3 hours of work per week) or work for work-study (if eligible) at a rate of $12/hr",
+    "hours_per_week": "Minimum of six hours a week, not including the weekly lab meeting",
+    "deadline": {
+      "value": null,
+      "confidence": 0.4,
+      "source_text": null,
+      "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Minimum of a six-hour commitment a week (not including the weekly lab meeting), for at least two quarters (the first quarter is probationary)",
+        "kind": "required",
+        "source_text": "Because of the extensive training involved in becoming a research assistant, we request a minimum of a six-hour commitment a week (not including the weekly lab meeting), for at least two quarters (the first quarter is probationary).",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      },
+      {
+        "text": "Required to attend and stay for the entire weekly lab meeting",
+        "kind": "required",
+        "source_text": "In addition to the work that research assistants do on specific research projects, they are also required to contribute to the maintenance of the lab (e.g., cleaning, data management, filing, maintaining the web site) and to attend a weekly lab meeting. ... Research assistants are expected to attend and stay for the entire meeting.",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      },
+      {
+        "text": "Should have an interest in psychological science and an interest in pursuing graduate studies in psychology",
+        "kind": "required",
+        "source_text": "You do NOT need to be a Stanford student; however, you should have an interest in psychological science and an interest in pursuing graduate studies in psychology.",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      },
+      {
+        "text": "Should be intellectually curious, diligent, and conscientious; interested in culture and emotion; able to work well with others; and able to make the requisite time commitment",
+        "kind": "required",
+        "source_text": "You should be: intellectually curious, diligent, and conscientious; interested in culture and emotion; able to work well with others; and able to make the requisite time commitment.",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Previous research experience is NOT required; RAs start with responsibilities matching their level of experience",
+        "kind": "preferred",
+        "source_text": "You do NOT need to have previous research experience; however, research assistants will start with responsibilities and duties that match their levels of experience.",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      },
+      {
+        "text": "Training in computer programming, speakers of different languages, and backgrounds in anthropology, physiology, biology, and media studies are sought",
+        "kind": "preferred",
+        "source_text": "Because we use multiple methods in our research, we are also looking for research assistants who have training in computer programming, who speak different languages, and who have backgrounds in anthropology, physiology, biology, and media studies.",
+        "source_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant"
+      }
+    ],
+    "skills": [
+      "data collection and management",
+      "transcribing and coding",
+      "library research",
+      "study design",
+      "running subjects",
+      "preparing stimuli and instruments",
+      "phone screening of participants"
+    ],
+    "documents_required": [
+      "online application with short answer questions",
+      "resume",
+      "one-page essay about why you are interested in joining the lab"
+    ],
+    "research_topics": [
+      "cultural psychology",
+      "emotion"
+    ],
+    "application_method": "Submit the lab's online application (short answer questions), a resume, and a one-page essay; an interview follows review of materials",
+    "application_url": "https://culture-emotion-lab.stanford.edu/participate/research-assistant",
+    "contact_name": null,
+    "contact_email": "tsailab@gmail.com",
+    "eligibility_notes": "Open beyond Stanford students ('You do NOT need to be a Stanford student'), but compensation differs: all research assistant positions for NON-Stanford students are voluntary and unpaid. Stanford undergraduate and graduate students may register for course credit (1 credit per 3 hours/week) or work for work-study, if eligible, at $12/hr.",
+    "description": "As a research assistant in the Culture and Emotion Lab you work closely with other lab members (undergraduate and graduate students, postdoctoral fellows, visiting scholars, and Professor Tsai) on one or more current research projects. Responsibilities may include collecting and managing data; transcribing and coding; doing library research; designing studies; maintaining lab equipment; running subjects; preparing stimuli and instruments for projects; screening potential study participants over the phone; and contacting recruitment sites. RAs also contribute to lab maintenance and attend a weekly lab meeting where administrative tasks, conceptual and methodological issues in cultural psychology and emotion research, project check-ins, and paper/presentation feedback are covered, and where RAs are trained on research methods.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T02:52:52Z",
+    "extraction_confidence": 0.85,
+    "notes": "STANDING/RECURRING role published on a Stanford Psychology lab page; no application deadline or posting date appears anywhere on the fetched page, so deadline is null and deadline_type is 'rolling' based on the open-ended 'Thank you for your interest in available research assistantships' framing. PAY CAVEAT: the $12/hr work-study figure is quoted verbatim from the page as fetched on 2026-08-31, but it is well below other current Stanford student rates recorded in this file ($19-$21.50/hr), so the page may be stale; a student should confirm the rate with the lab. The contact address tsailab@gmail.com is written on the page in obfuscated form as 'tsailab [at] gmail.com' - note it is a non-Stanford Gmail address, which is what the page shows. Lab phone (650) 724 0534 also appears on the page."
+  }
+]

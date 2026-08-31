@@ -1,0 +1,920 @@
+[
+  {
+    "lab_name": "Stanford Artificial Intelligence Laboratory (SAIL)",
+    "lab_url": "https://ai.stanford.edu/",
+    "pi_names": [
+      "Carlos Guestrin"
+    ],
+    "department": null,
+    "topics": [
+      "artificial intelligence",
+      "machine learning",
+      "computer vision",
+      "NLP",
+      "robotics"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/",
+    "fetch_notes": "Director named on ai.stanford.edu homepage news (2025): 'Carlos Guestrin named as new Director of the Stanford AI Lab'; the item also states Christopher Manning was director 2018-2025. Homepage does not state a home department, so department left null."
+  },
+  {
+    "lab_name": "Stanford Natural Language Processing (NLP) Group",
+    "lab_url": "https://nlp.stanford.edu/",
+    "pi_names": [
+      "Chris Manning",
+      "Chris Potts",
+      "Dan Jurafsky",
+      "Diyi Yang",
+      "Monica Lam",
+      "Percy Liang",
+      "Tatsunori Hashimoto",
+      "Yejin Choi"
+    ],
+    "department": "Linguistics; Computer Science; Psychology; Graduate School of Education",
+    "topics": [
+      "natural language processing",
+      "computational linguistics",
+      "large language models",
+      "human-centered NLP",
+      "computational social science"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "Faculty list copied verbatim from the SAIL Research Groups card. Department string taken from nlp.stanford.edu homepage: 'We include members of the Linguistics Department, the Computer Science Department, the Psychology Department, and the Graduate School of Education'. Homepage also names Stanza and DSPy as group software."
+  },
+  {
+    "lab_name": "Stanford Vision and Learning Lab (SVL)",
+    "lab_url": "https://svl.stanford.edu/",
+    "pi_names": [
+      "Fei-Fei Li",
+      "Juan Carlos Niebles",
+      "Silvio Savarese",
+      "Jiajun Wu"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "computer vision",
+      "embodied AI",
+      "robot learning",
+      "multisensory learning",
+      "activity recognition"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "Faculty list from the SAIL Research Groups card. Department from the svl.stanford.edu contact block ('Computer Science Department, Stanford University'). Homepage lists BEHAVIOR, ObjectFolder, MOMA, PAIR and Partnership in AI-Assisted Care as projects, and links a Stanford-students-only research application survey."
+  },
+  {
+    "lab_name": "Stanford Machine Learning Group (statsml)",
+    "lab_url": "https://statsml.stanford.edu/",
+    "pi_names": [
+      "Emma Brunskill",
+      "John Duchi",
+      "Stefano Ermon",
+      "Emily Fox",
+      "Carlos Guestrin",
+      "Tatsu Hashimoto",
+      "Chelsea Finn",
+      "Jure Leskovec",
+      "Percy Liang",
+      "Tengyu Ma",
+      "Chris Re",
+      "Greg Valiant"
+    ],
+    "department": null,
+    "topics": [
+      "machine learning theory",
+      "large-scale optimization",
+      "reinforcement learning",
+      "deep learning",
+      "statistical learning theory"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "Faculty list from the SAIL Research Groups card (SAIL links this group as http://statsml.stanford.edu/). statsml.stanford.edu and ml.stanford.edu serve the same 'Machine Learning Group' site. The site's /faculty/ path 404s (GitHub Pages 'File not found'), so no department is recorded."
+  },
+  {
+    "lab_name": "Ermon Group",
+    "lab_url": "https://cs.stanford.edu/~ermon/website/",
+    "pi_names": [
+      "Stefano Ermon"
+    ],
+    "department": null,
+    "topics": [
+      "machine learning",
+      "generative models",
+      "computational sustainability",
+      "AI for social good"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "Lab name and description from the SAIL Research Groups card; site banner reads 'Ermon Group - Artificial Intelligence, Machine Learning, Computational Sustainability'. Site does not state a department, so department left null."
+  },
+  {
+    "lab_name": "Geometric Computation Group (Guibas Lab)",
+    "lab_url": "https://geometry.stanford.edu/",
+    "pi_names": [
+      "Leonidas Guibas"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "geometric computing",
+      "3D reconstruction",
+      "point cloud modeling",
+      "deep architectures for geometric data",
+      "shape analysis"
+    ],
+    "http_status": 200,
+    "source_url": "https://geometry.stanford.edu/",
+    "fetch_notes": "Site states: 'The Geometric Computing Group is part of the Computer Science Department at Stanford University' and 'headed by Professor Leonidas Guibas'. Also listed by the Stanford Robotics Center as 'Geometric Computation Group (GCG)'."
+  },
+  {
+    "lab_name": "Stanford Robotics Lab (Khatib)",
+    "lab_url": "https://robotics.stanford.edu/",
+    "pi_names": [
+      "Oussama Khatib"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "robotic manipulation",
+      "control",
+      "human motion modeling",
+      "human-centered robotics",
+      "underwater humanoid robotics"
+    ],
+    "http_status": 200,
+    "source_url": "https://robotics.stanford.edu/",
+    "fetch_notes": "Site states 'Oussama Khatib - Professor, Computer Science Department, Director, Robotics Lab'. https://cs.stanford.edu/groups/manips/ (the URL SAIL links) serves identical content; robotics.stanford.edu chosen as canonical."
+  },
+  {
+    "lab_name": "Interactive Perception and Robot Learning Lab (IPRL)",
+    "lab_url": "https://iprl.stanford.edu/",
+    "pi_names": [
+      "Jeannette Bohg"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "robotic manipulation",
+      "robot learning",
+      "interactive perception",
+      "computer vision",
+      "sensorimotor coordination"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI from the SAIL Research Groups card ('Bohg: Interactive Perception and Robot Learning (IPRL) Lab'). Department from iprl.stanford.edu: 'part of the Stanford AI Lab at the Computer Science Department'. Homepage lists 2025-2026 projects (Play2Perfect, Mixture of Frames Policy, SimToolReal, Masquerade ICRA 2026, Mobi-pi CoRL 2025)."
+  },
+  {
+    "lab_name": "Intelligent and Interactive Autonomous Systems Group (ILIAD)",
+    "lab_url": "https://iliad.stanford.edu/",
+    "pi_names": [
+      "Dorsa Sadigh"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "human-robot interaction",
+      "safe autonomy",
+      "reinforcement learning",
+      "algorithmic human-AI interaction"
+    ],
+    "http_status": 200,
+    "source_url": "https://iliad.stanford.edu/people/",
+    "fetch_notes": "People page states: 'Dorsa is an Associate Professor in the Computer Science Department. Her work is focused on the design of algorithms for AI agents and autonomous systems that safely and reliably interact with other intelligent agents including humans.' Homepage photo index runs through Winter 2026."
+  },
+  {
+    "lab_name": "PhysBAM (Fedkiw Group)",
+    "lab_url": "http://physbam.stanford.edu/",
+    "pi_names": [
+      "Ron Fedkiw"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "physics-based simulation",
+      "computer graphics",
+      "numerical methods",
+      "machine learning for continuous mathematics"
+    ],
+    "http_status": 200,
+    "source_url": "http://physbam.stanford.edu/",
+    "fetch_notes": "Site states 'Ron Fedkiw, Canon Professor, Stanford Computer Science' and lists CS205L. Site is served over http only in SAIL's link and did not redirect to https during verification."
+  },
+  {
+    "lab_name": "Stanford Logic Group",
+    "lab_url": "http://logic.stanford.edu/",
+    "pi_names": [
+      "Michael Genesereth"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "computational logic",
+      "logic programming",
+      "general game playing",
+      "computational law"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI and department from the SAIL Research Groups card ('Genesereth: Stanford Logic Group ... operating within the Stanford Computer Science Department'). CAUTION: logic.stanford.edu itself now returns only a bare index of 'Click here for ...' links (intrologic, logica, logicprogramming, ggp, complaw, etc.) with no lab content, no people and no news. Verify it is still active before relying on it."
+  },
+  {
+    "lab_name": "Computation and Cognition Lab (CoCoLab)",
+    "lab_url": "https://cocolab.stanford.edu/",
+    "pi_names": [
+      "Noah D. Goodman"
+    ],
+    "department": "Psychology (Linguistics and Computer Science by courtesy)",
+    "topics": [
+      "computational cognitive science",
+      "probabilistic programming",
+      "language and reasoning",
+      "Bayesian modeling",
+      "AI for education"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI and department wording from the SAIL Research Groups card ('Headed by Noah D. Goodman, Assistant Professor of Psychology, Linguistics (by courtesy), and Computer Science (by courtesy)'). NOTE: that SAIL card says 'Assistant Professor', which may be stale; the current rank was not confirmed on a page fetched in this task. cocolab.stanford.edu describes the research scope but names no faculty in fetched text; most recent dated item on the homepage is 2023. RATE-LIMIT NOTE: this host returned 403 once during a rapid sequential recheck, then 200 on three immediate retries - treat occasional 403s as throttling, not a dead link."
+  },
+  {
+    "lab_name": "Stanford Neuroscience and Artificial Intelligence Laboratory (NeuroAILab)",
+    "lab_url": "https://neuroailab.stanford.edu/",
+    "pi_names": [
+      "Daniel Yamins"
+    ],
+    "department": "Psychology and Computer Science",
+    "topics": [
+      "computational neuroscience",
+      "neuro-AI",
+      "sensory cortex models",
+      "visual representation learning"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI from the SAIL Research Groups card ('Yamins: NeuroAILab'); SAIL gives the surname only, first name not confirmed on a fetched page in this task. Department from neuroailab.stanford.edu: 'affiliated with the Stanford University departments of Psychology and Computer Science, as well as the Wu Tsai Neurosciences Institute and the Stanford Artificial Intelligence Laboratory (SAIL)'."
+  },
+  {
+    "lab_name": "Salisbury Robotics Lab",
+    "lab_url": "https://sr.stanford.edu/",
+    "pi_names": [
+      "J. Kenneth Salisbury",
+      "Nichols H. Blevins"
+    ],
+    "department": "Computer Science; Surgery (courtesy: Mechanical Engineering)",
+    "topics": [
+      "haptics",
+      "surgical simulation",
+      "teleoperation",
+      "medical robotics",
+      "in-hand manipulation"
+    ],
+    "http_status": 200,
+    "source_url": "https://sr.stanford.edu/",
+    "fetch_notes": "People page lists 'J. Kenneth Salisbury, Ph.D. Research Professor, Emeritus, Departments of Computer Science, Surgery, Courtesy Appointment in Department of Mechanical Engineering' and 'Nichols H. Blevins, M.D.' as PIs/clinical collaborators. WARNING: this PmWiki site carries injected spam text advertising a crypto 'AML check' service - the site appears partly compromised. SAIL still links the older mirror https://web.stanford.edu/group/sailsbury_robotx/cgi-bin/salisbury_lab/ (also 200, same spam)."
+  },
+  {
+    "lab_name": "Stanford Intelligent Systems Laboratory (SISL)",
+    "lab_url": "https://sisl.stanford.edu/",
+    "pi_names": [
+      "Mykel Kochenderfer"
+    ],
+    "department": "Aeronautics and Astronautics (Computer Science by courtesy)",
+    "topics": [
+      "decision making under uncertainty",
+      "safety validation",
+      "autonomous driving",
+      "deep reinforcement learning",
+      "aircraft collision avoidance"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "DEAD LINK FOUND: the URL SAIL publishes for this lab, https://web.stanford.edu/group/sisl/cgi-bin/wordpress/, returns HTTP 404. The live site is sisl.stanford.edu (200), also the URL linked from the Stanford Robotics Center labs page. PI from the SAIL card ('Kochenderfer: Stanford Intelligent Systems Laboratory'); title/department from the Stanford Center for AI Safety people page ('Mykel Kochenderfer, Associate Professor of Aeronautics and Astronautics and, by courtesy, Computer Science, Co-Director')."
+  },
+  {
+    "lab_name": "Stanford Machine Learning Group (Ng)",
+    "lab_url": "https://stanfordmlgroup.github.io/",
+    "pi_names": [
+      "Andrew Ng"
+    ],
+    "department": null,
+    "topics": [
+      "AI for healthcare",
+      "medical imaging",
+      "AI for climate",
+      "deep learning"
+    ],
+    "http_status": 200,
+    "source_url": "https://stanfordmlgroup.github.io/",
+    "fetch_notes": "Site states 'Professor Andrew Ng started the Stanford ML Group in 2003 ... This page describes the research directed by Professor Ng.' Applications page states they can only work with Stanford students, that Stanford students should have taken CS229 before applying, and gives ml-apply@cs.stanford.edu as the contact address (email transcribed verbatim from the page). Expects involvement of at least two quarters. No department stated on the page."
+  },
+  {
+    "lab_name": "Autonomous Systems Lab (ASL)",
+    "lab_url": "https://stanfordasl.github.io/",
+    "pi_names": [
+      "Marco Pavone"
+    ],
+    "department": "Aeronautics and Astronautics",
+    "topics": [
+      "robot foundation models",
+      "embodied AI agents",
+      "physical AI safety",
+      "optimal and learning-based control",
+      "space and autonomous-vehicle robotics"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "SAIL and the Stanford Robotics Center both link http(s)://asl.stanford.edu, which redirects (200) to stanfordasl.github.io - the canonical URL recorded here. PI from the SAIL card ('Pavone: Autonomous Systems Lab'); department from the Stanford Robotics Center team page ('Marco Pavone - Aero Astro'). Site footer reads '© 2026 Autonomous Systems Lab'."
+  },
+  {
+    "lab_name": "Christopher Re Lab",
+    "lab_url": "https://cs.stanford.edu/~chrismre/",
+    "pi_names": [
+      "Christopher Re"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "foundations of machine learning systems",
+      "weak supervision",
+      "foundation models",
+      "ML systems"
+    ],
+    "http_status": 200,
+    "source_url": "https://cs.stanford.edu/~chrismre/",
+    "fetch_notes": "Page header reads 'Department of Computer Science'; body: \"I'm a professor in the Stanford AI Lab (SAIL), the center for research on foundation models (CRFM), and the Machine Learning Group.\" Also states the lab's goal is to help students become professors, entrepreneurs and researchers."
+  },
+  {
+    "lab_name": "The Movement Lab (TML)",
+    "lab_url": "https://tml.stanford.edu/",
+    "pi_names": [
+      "C. Karen Liu"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "character animation",
+      "humanoid robotics",
+      "motion intelligence",
+      "physics-based simulation",
+      "computer graphics",
+      "biomechanics"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "tml.stanford.edu is a JavaScript single-page app: the served HTML is 737 bytes and contains only the title. PI and department were read out of the site's own JS bundle (/assets/index-CCVDOZ9A.js), which contains 'C. Karen Liu ... Professor of Computer Science at Stanford University' and 'Her research lies at the intersection of computer graphics and robotics'. Topics also corroborated by the Stanford Robotics Center 'Movement' entry."
+  },
+  {
+    "lab_name": "SNAP Group (Stanford Network Analysis Project)",
+    "lab_url": "http://snap.stanford.edu/",
+    "pi_names": [
+      "Jure Leskovec"
+    ],
+    "department": null,
+    "topics": [
+      "graph machine learning",
+      "network analysis",
+      "graph neural networks",
+      "biomedical and social network modeling"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI from the SAIL Research Groups card ('Leskovec: SNAP Group'). snap.stanford.edu is primarily a software/dataset portal (SNAP for C++, Snap.py, SNAP and BIOSNAP datasets); its people.html did not yield a department in fetched text, so department is null."
+  },
+  {
+    "lab_name": "Intelligence through Robotic Interaction at Scale Lab (IRIS)",
+    "lab_url": "https://irislab.stanford.edu/",
+    "pi_names": [
+      "Chelsea Finn"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "robot learning",
+      "meta-learning",
+      "deep reinforcement learning",
+      "self-supervised learning",
+      "robot foundation models"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI from the SAIL Research Groups card ('Finn: Intelligence through Robotic Interaction at Scale Lab'); department from the CRFM people page, which lists 'Chelsea Finn - Computer Science'. The IRIS site states it is affiliated with SAIL, the ML Group, the Stanford Robotics Center and CRFM. NOTE: the most recent dated news item on irislab.stanford.edu is 5/23/2023, so the site itself is stale even though the lab is active (it is listed on the 2024-era Stanford Robotics Center labs page)."
+  },
+  {
+    "lab_name": "Dror Lab",
+    "lab_url": "https://drorlab.stanford.edu/",
+    "pi_names": [
+      "Ron Dror"
+    ],
+    "department": null,
+    "topics": [
+      "machine learning for molecular and cellular biology",
+      "computer vision",
+      "high-performance computing",
+      "computational drug discovery"
+    ],
+    "http_status": 200,
+    "source_url": "https://drorlab.stanford.edu/people.html",
+    "fetch_notes": "People page states 'Prof. Ron Dror - Principal Investigator'. Homepage: 'a highly multidisciplinary lab whose work spans fields ranging from high-performance computing, computer vision, and machine learning to biochemistry, cell ...'. Listed by SAIL as a SAIL research group; primarily computational biology rather than core AI/HCI. No department stated on the fetched pages."
+  },
+  {
+    "lab_name": "Bejerano Lab",
+    "lab_url": "http://bejerano.stanford.edu/",
+    "pi_names": [
+      "Gill Bejerano"
+    ],
+    "department": null,
+    "topics": [
+      "human genomics",
+      "computational biology",
+      "machine learning for genotype-phenotype"
+    ],
+    "http_status": 200,
+    "source_url": "https://ai.stanford.edu/research-groups/",
+    "fetch_notes": "PI name 'Gill Bejerano' appears in the site's own navigation. Description from the SAIL Research Groups card: 'focuses on a fundamental question in Human Genomics: the relationship between geno(me)type and phenotype.' Listed by SAIL as a SAIL research group; primarily genomics rather than core AI/HCI. Several site sections are date-stamped 2017 (Rotations 9/2017, Openings 4/2017), so the site is stale."
+  },
+  {
+    "lab_name": "Stanford HCI Group",
+    "lab_url": "https://hci.stanford.edu/",
+    "pi_names": [
+      "Michael Bernstein",
+      "James Landay",
+      "Maneesh Agrawala",
+      "Sean Follmer",
+      "Diyi Yang",
+      "Christina Wodtke",
+      "Julie Stanford",
+      "Hari Subramonyam",
+      "Stu Card",
+      "Terry Winograd"
+    ],
+    "department": null,
+    "topics": [
+      "human-computer interaction",
+      "human-AI interaction",
+      "social computing",
+      "crowdsourcing",
+      "design tools"
+    ],
+    "http_status": 200,
+    "source_url": "https://hci.stanford.edu/",
+    "fetch_notes": "Faculty list transcribed from the People row of hci.stanford.edu. The site lists 2026-dated papers (CoLM 2026, CSCW 2026, PNAS 2026) and a seminar series running April-May 2026, Fridays 11:30am-12:30pm, free and open to the public, supported by the Stanford Computer Forum. Page names d.school, Brown Center for Media Innovation, Graphics, Center for Computational Social Science and OVAL Lab as partner groups. No department stated on the page."
+  },
+  {
+    "lab_name": "SHAPE Lab",
+    "lab_url": "https://shape.stanford.edu/",
+    "pi_names": [
+      "Sean Follmer"
+    ],
+    "department": "Mechanical Engineering (Design Group)",
+    "topics": [
+      "haptics",
+      "tangible interfaces",
+      "shape displays",
+      "accessibility",
+      "human-centered computing",
+      "robotics"
+    ],
+    "http_status": 200,
+    "source_url": "https://shape.stanford.edu/",
+    "fetch_notes": "Site states: 'The Stanford SHAPE Lab, directed by Prof. Sean Follmer ...' and 'The SHAPE lab is housed in the Stanford Mechanical Engineering Department's Design Group and affiliated with the Stanford Design Impact Program and the Stanford Human Computer Interaction Group.' Also listed on the Stanford Robotics Center labs page."
+  },
+  {
+    "lab_name": "Stanford Open Virtual Assistant Lab (OVAL)",
+    "lab_url": "https://oval.cs.stanford.edu/",
+    "pi_names": [
+      "Monica Lam"
+    ],
+    "department": null,
+    "topics": [
+      "conversational agents",
+      "LLM-augmented cognition systems",
+      "semantic parsing",
+      "grounded question answering",
+      "hallucination reduction"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/research/partners",
+    "fetch_notes": "PI identified from quotes attributed to 'Professor Monica Lam' on the OVAL homepage; also listed as an HAI research partner. Projects named on the site: STORM, WikiChat, Spinach, GenieWorksheets, Noora, YelpBot. Footer reads '© 2025 by Stanford Open Virtual Assistant Lab'; the newest news item is November 2024. The /team page returned no faculty text, so no department is recorded. Note ovallab.stanford.edu redirects here."
+  },
+  {
+    "lab_name": "Virtual Human Interaction Lab (VHIL)",
+    "lab_url": "https://vhil.stanford.edu/",
+    "pi_names": [
+      "Jeremy Bailenson"
+    ],
+    "department": null,
+    "topics": [
+      "virtual reality",
+      "augmented reality",
+      "media psychology",
+      "social dynamics in VR",
+      "human-AI interaction"
+    ],
+    "http_status": 200,
+    "source_url": "https://vhil.stanford.edu/",
+    "fetch_notes": "PI inferred-from-page only in the sense that the site lists 'E-mail: Bailenson@Stanford.edu' as the lab contact and Bailenson is an author on every 2026 paper listed; the site does not print a 'director' label in the fetched text. Email transcribed verbatim from the page. Recent research list is 2026-dated (PLoS One, Small Groups Research, Cognitive Science, Cyberpsychology). Address given as McClatchy Hall, 450 Jane Stanford Way. No department stated."
+  },
+  {
+    "lab_name": "Stanford Computational Imaging Lab",
+    "lab_url": "https://www.computationalimaging.org/",
+    "pi_names": [
+      "Gordon Wetzstein"
+    ],
+    "department": null,
+    "topics": [
+      "computational imaging",
+      "neural rendering",
+      "neural fields",
+      "computational displays",
+      "non-line-of-sight imaging"
+    ],
+    "http_status": 200,
+    "source_url": "https://www.computationalimaging.org/",
+    "fetch_notes": "Site states 'the Stanford Computational Imaging Lab lead by Prof. Gordon Wetzstein'. 2025 news on the homepage: Nature Methods CryoEM paper (June 26, 2025), 8 papers at ICCV 2025, 9 papers at CVPR 2025. The team page shows the title 'Associate Professor' but no department, so department is null. Lab site is on a .org domain, not stanford.edu."
+  },
+  {
+    "lab_name": "Brown Institute for Media Innovation (Stanford)",
+    "lab_url": "https://brown.stanford.edu/",
+    "pi_names": [
+      "Maneesh Agrawala",
+      "Mark Hansen"
+    ],
+    "department": "School of Engineering (Stanford side)",
+    "topics": [
+      "media technology",
+      "media innovation",
+      "data journalism tools"
+    ],
+    "http_status": 200,
+    "source_url": "https://brown.stanford.edu/about/",
+    "fetch_notes": "About page: 'Established in 2012, the David and Helen Gurley Brown Institute is a collaboration between Columbia University and Stanford University ... At Stanford, the primary focus is on media technology, and the Institute is anchored in the School of Engineering. At Columbia ... anchored in the Graduate School of Journalism.' Leadership page lists Maneesh Agrawala and Mark Hansen first (Hansen leads the Columbia side). Listed as a partner group on hci.stanford.edu. Runs annual Magic Grants; 2026 Magic Grants and 2026 Innovation Challenge listed."
+  },
+  {
+    "lab_name": "Stanford Computer Graphics Laboratory",
+    "lab_url": "https://graphics.stanford.edu/",
+    "pi_names": [],
+    "department": null,
+    "topics": [
+      "computer graphics",
+      "rendering",
+      "geometry processing"
+    ],
+    "http_status": 200,
+    "source_url": "https://graphics.stanford.edu/",
+    "fetch_notes": "INCLUDED WITH A WARNING: the site carries a banner 'Note added 4/21/20 by Marc Levoy: Except for links to People > Faculty, this web site has become outdated ... links to people other than faculty, infrastructure, and opportunities for students are likely broken or irrelevant.' No current PI list was fetched, so pi_names is empty rather than guessed. Do not route a student here for openings without checking individual faculty pages."
+  },
+  {
+    "lab_name": "Stanford Institute for Human-Centered Artificial Intelligence (HAI)",
+    "lab_url": "https://hai.stanford.edu/",
+    "pi_names": [
+      "Fei-Fei Li",
+      "John Etchemendy"
+    ],
+    "department": null,
+    "topics": [
+      "human-centered AI",
+      "AI policy",
+      "AI and society",
+      "AI education",
+      "AI Index"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/",
+    "fetch_notes": "Both leaders are labelled 'Denning Co-Director' in quotes on the HAI homepage. Homepage promotes the 2026 AI Index Report. HAI runs fellowship programs, grant programs and Student Affinity Groups (linked from /research)."
+  },
+  {
+    "lab_name": "Center for Research on Foundation Models (CRFM)",
+    "lab_url": "https://crfm.stanford.edu/",
+    "pi_names": [
+      "Percy Liang"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "foundation models",
+      "model evaluation (HELM)",
+      "transparency (FMTI)",
+      "training systems (Levanter)",
+      "AI policy"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/centers-labs",
+    "fetch_notes": "CRFM about text: 'an interdisciplinary initiative at the Stanford Institute for Human-Centered Artificial Intelligence (HAI) ... brings together a multidisciplinary group of faculty, students, researchers, and engineers spanning 10+ departments at Stanford.' The people page lists 'Percy Liang - Director, Computer Science' first, followed by faculty including Akshay Chaudhari, Carlos Guestrin, Chelsea Finn, Chris Re, Christopher Manning, Dan Boneh, Dan Ho and Dan Jurafsky."
+  },
+  {
+    "lab_name": "AI and Organizations Lab",
+    "lab_url": "https://hai.stanford.edu/centers-labs/ai-organizations-lab",
+    "pi_names": [
+      "Melissa Valentine",
+      "Michael Bernstein",
+      "Amir Goldberg",
+      "Sara Singer",
+      "Bob Sutton"
+    ],
+    "department": "Management Science & Engineering; Graduate School of Business",
+    "topics": [
+      "AI and the future of work",
+      "organizational design",
+      "human-AI teamwork",
+      "AI-enhanced collaboration"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/centers-labs",
+    "fetch_notes": "Page names 'Melissa Valentine, Associate Professor, Management Science & Engineering' as Faculty Director and lists Beth Bechky (UC Davis, affiliated), Amir Goldberg (Organizational Behavior, GSB), Sara Singer and Bob Sutton (MS&E) as core faculty; Michael Bernstein is quoted as 'Associate Professor of Computer Science, Senior Fellow, HAI'. Page states they are recruiting 'researchers at all levels - from undergraduates to PhDs and post-docs'. Contact email printed on the page: ai_and_orgs_lab@stanford.edu. The lab has no separate domain; this HAI path is its only site."
+  },
+  {
+    "lab_name": "Regulation, Evaluation, and Governance Lab (RegLab)",
+    "lab_url": "https://reglab.stanford.edu/",
+    "pi_names": [
+      "Daniel E. Ho"
+    ],
+    "department": "Law and Political Science",
+    "topics": [
+      "AI for government",
+      "algorithmic governance",
+      "administrative law and AI",
+      "public-sector machine learning"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/research/partners",
+    "fetch_notes": "Homepage news refers to 'Prof. Dan Ho' and describes RegLab partnering with New York, California and Maryland to remove obsolete legal provisions. Department from the CRFM people page, which lists 'Dan Ho - Law and Political Science'. The full first name 'Daniel E.' was NOT seen on a page fetched in this task - only 'Dan Ho'. Site has a 'Work With Us' section."
+  },
+  {
+    "lab_name": "Stanford Center for AI Safety",
+    "lab_url": "http://aisafety.stanford.edu/",
+    "pi_names": [
+      "Clark Barrett",
+      "Grace X. Gao",
+      "Mykel Kochenderfer"
+    ],
+    "department": "Computer Science; Aeronautics and Astronautics",
+    "topics": [
+      "AI safety",
+      "formal methods",
+      "safe learning and control",
+      "transparency and fairness",
+      "AI governance",
+      "human-AI interaction"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/research/partners",
+    "fetch_notes": "People page lists three Faculty Directors verbatim: 'Clark Barrett, Professor (Research) of Computer Science, Co-Director'; 'Grace X. Gao, Associate Professor of Aeronautics and Astronautics, and by courtesy, Electrical Engineering, Co-Director'; 'Mykel Kochenderfer, Associate Professor of Aeronautics and Astronautics and, by courtesy, Computer Science, Co-Director'. Affiliated faculty listed include Somil Bansal, Jose Blanchet, Emma Brunskill, David Dill, Paul Edwards, Charles Eesley and Carlos Guestrin. Site is served over http (no https redirect observed)."
+  },
+  {
+    "lab_name": "One Hundred Year Study on Artificial Intelligence (AI100)",
+    "lab_url": "https://ai100.stanford.edu/",
+    "pi_names": [],
+    "department": null,
+    "topics": [
+      "long-term AI impacts",
+      "AI and society",
+      "AI policy"
+    ],
+    "http_status": 200,
+    "source_url": "https://hai.stanford.edu/research/partners",
+    "fetch_notes": "Deliberately no Stanford PI recorded: the site states AI100 'is administered out of Stanford University and managed by a Standing Committee of AI leaders from institutions around the world, chaired by Sheila McIlraith at the University of Toronto', and that the 2026 report panel is chaired by Mike Wooldridge at Oxford. Both chairs are non-Stanford, so pi_names is left empty rather than filled with a Stanford name. Homepage says the 2026 report is 'coming soon'. This is a study/report program, not a lab that takes research students."
+  },
+  {
+    "lab_name": "Center for Artificial Intelligence in Medicine & Imaging (AIMI)",
+    "lab_url": "https://aimi.stanford.edu/",
+    "pi_names": [
+      "Curtis Langlotz"
+    ],
+    "department": null,
+    "topics": [
+      "medical AI",
+      "medical imaging",
+      "clinical machine learning",
+      "health AI datasets"
+    ],
+    "http_status": 200,
+    "source_url": "https://aimi.stanford.edu/",
+    "fetch_notes": "Homepage: 'The Stanford Center for Artificial Intelligence in Medicine and Imaging (AIMI) was established in 2018 ...' and the Director's Welcome is signed 'Read more from Curtis Langlotz'. The leadership page returned only navigation text, so no department/title was confirmed and department is null. Site advertises student research programs, an AI for Healthcare Bootcamp, summer high-school programs, an academic-year research internship and 32+ released clinical datasets. 2026 events listed (AIMI Symposium + Summit Series 2026, AI+HEALTH 2026)."
+  },
+  {
+    "lab_name": "Stanford Robotics Center (SRC)",
+    "lab_url": "https://src.stanford.edu/",
+    "pi_names": [
+      "Oussama Khatib",
+      "Steve Cousins"
+    ],
+    "department": null,
+    "topics": [
+      "robotics",
+      "manipulation",
+      "humanoids",
+      "human-robot interaction",
+      "autonomous systems"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/about-people",
+    "fetch_notes": "Team page lists 'Oussama Khatib - Director' and 'Steve Cousins - Executive Director' as the Executive Team, with an Executive Committee of Mark Cutkosky (Mechanical Eng), Allison Okamura (Mechanical Eng), Marco Pavone (Aero Astro), Dorsa Sadigh (Computer Science) and Jiajun Wu (Computer Science). Contact address and email printed on the site: 350 Jane Stanford Way, SRC-information@stanford.edu. Its /robotics-at-stanford page is the best single index of Stanford robotics labs. NOTE: robotics.sites.stanford.edu and roboticscenter.sites.stanford.edu both return HTTP 503 - use src.stanford.edu. RATE-LIMIT NOTE: this host returned a connection failure once during a rapid sequential recheck, then 200 on three immediate retries - treat occasional failures as throttling, not a dead link."
+  },
+  {
+    "lab_name": "Assistive Robotics and Manipulation Lab (ARMLab)",
+    "lab_url": "https://arm.stanford.edu/",
+    "pi_names": [
+      "Monroe Kennedy III"
+    ],
+    "department": "Mechanical Engineering (Computer Science by courtesy)",
+    "topics": [
+      "assistive robotics",
+      "collaborative robotics",
+      "mobile manipulation",
+      "human-robot collaboration",
+      "intelligent wearables"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "People page states: 'Monroe Kennedy III is an Assistant Professor of Mechanical Engineering and by courtesy, of Computer Science and a recipient of the NSF Faculty Early Career Award.' Homepage lists his graduate courses ME334, ME326 and ME314, and has an 'About and Join' section. Site CSS is cache-stamped 202608 (August 2026)."
+  },
+  {
+    "lab_name": "CHARM Lab (Collaborative Haptics and Robotics in Medicine)",
+    "lab_url": "https://charm.stanford.edu/",
+    "pi_names": [
+      "Allison Okamura"
+    ],
+    "department": "Mechanical Engineering (Design and Biomechanics Groups)",
+    "topics": [
+      "haptics",
+      "teleoperation",
+      "virtual environments",
+      "robotic manipulation",
+      "medical and rehabilitation robotics"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "Site states: 'The CHARM Lab is directed by Prof. Allison Okamura, and is part of the Design and Biomechanics Groups of the Mechanical Engineering Department. The CHARM Lab is also part of the Center for Design Research.' WARNING: this PmWiki site also carries injected crypto/'AML check' spam text at the bottom of the homepage - the site appears partly compromised. Separately, cdr.stanford.edu (Center for Design Research, referenced by this page) failed to connect during this task."
+  },
+  {
+    "lab_name": "Biomimetics and Dextrous Manipulation Lab (BDML)",
+    "lab_url": "https://bdml.stanford.edu/",
+    "pi_names": [
+      "Mark Cutkosky"
+    ],
+    "department": "Mechanical Engineering",
+    "topics": [
+      "bio-inspired robotics",
+      "dexterous manipulation",
+      "tactile sensing",
+      "soft actuators",
+      "climbing and perching robots"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "The BDML People page lists 'Faculty: Mark Cutkosky'. Department from the Stanford Robotics Center team page ('Mark Cutkosky - Mechanical Eng'). Homepage carries a June 2026 item ('BDML members on Angel Island ft. Gecko Hands!'). The PmWiki homepage renders raw template markup in places."
+  },
+  {
+    "lab_name": "Multi-Robot Systems Lab (MSL)",
+    "lab_url": "https://msl.stanford.edu/",
+    "pi_names": [
+      "Mac Schwager"
+    ],
+    "department": "Aeronautics and Astronautics",
+    "topics": [
+      "multi-robot coordination",
+      "drones and aerial robotics",
+      "game theory for robotics",
+      "perceptual and social robot intelligence"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "People page states verbatim: 'Principal Investigator - Mac Schwager, Associate Professor, Stanford University, Department of Aeronautics and Astronautics, Director of the Multi-Robot Systems Lab (MSL), Ph.D. MIT 2009'. Homepage tagline: 'Creating robots with perceptual, physical, and social intelligence.'"
+  },
+  {
+    "lab_name": "Navigation and Autonomous Vehicles Lab (NAV Lab)",
+    "lab_url": "https://navlab.stanford.edu/",
+    "pi_names": [
+      "Grace X. Gao"
+    ],
+    "department": "Aeronautics and Astronautics (Electrical Engineering by courtesy)",
+    "topics": [
+      "navigation and positioning",
+      "autonomous vehicles",
+      "space robotics",
+      "machine learning for navigation safety",
+      "formal verification"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "People page states: 'Director - Prof. Grace X. Gao, Associate Professor, James and Anna Marie Spilker Faculty Fellow, Stanford University, Department of Aeronautics and Astronautics, Department of Electrical Engineering (by courtesy), Director, Navigation and Autonomous Vehicles Laboratory ... Co-director, Stanford Center for AI Safety, Member, Stanford Robotics Center.'"
+  },
+  {
+    "lab_name": "Gradient Spaces Lab (GSL)",
+    "lab_url": "https://gradientspaces.stanford.edu/",
+    "pi_names": [
+      "Iro Armeni"
+    ],
+    "department": "Civil and Environmental Engineering",
+    "topics": [
+      "3D scene understanding",
+      "computer vision for built environments",
+      "mixed reality",
+      "data-driven design"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "About text: 'The group belongs to the Civil and Environmental Engineering Department, Stanford University, under the Schools of Engineering and Sustainability.' People page lists 'Faculty: Iro Armeni, Assistant Professor'. Homepage references a photo taken October 2024."
+  },
+  {
+    "lab_name": "Robotics and Embodied Artificial Intelligence Lab (REAL)",
+    "lab_url": "https://real.stanford.edu/",
+    "pi_names": [
+      "Shuran Song"
+    ],
+    "department": null,
+    "topics": [
+      "robot learning",
+      "embodied AI",
+      "robotic manipulation",
+      "computer vision"
+    ],
+    "http_status": 200,
+    "source_url": "https://src.stanford.edu/robotics-at-stanford",
+    "fetch_notes": "Homepage: 'We are REAL @ Stanford. We are interested in developing algorithms that enable intelligent systems to learn from their interactions with the physical world to execute complex tasks and assist people.' The lab.html faculty grid is populated from inline JSON in the page source, which contains exactly one Faculty entry: {'name': 'Shuran Song'}. No department is stated on the site, so department is null. Site links an 'Open Position' Google Doc and github.com/real-stanford."
+  },
+  {
+    "lab_name": "Piech Lab",
+    "lab_url": "https://piechlab.stanford.edu/",
+    "pi_names": [
+      "Chris Piech"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "AI for education",
+      "computing education",
+      "human-computer interaction",
+      "AI for healthcare",
+      "ethics"
+    ],
+    "http_status": 200,
+    "source_url": "https://piechlab.stanford.edu/",
+    "fetch_notes": "Site states: 'We are a research lab in the Stanford Computer Science Department. Our research is focused on using computational techniques to benefit fundamental areas of society, especially education and healthcare. Our technical disciplines span Artificial Intelligence, Human Computer Interaction, Algorithm Design, Ethics, and Educational Sciences.' Members page lists Chris Piech as Professor plus PhD students Ali Malik, Julia Markel, Allen Nie, Juliette Woodrow, Sierra Wang, Alan Cheng, and includes an M.S. and undergraduate members - so the lab does take non-PhD students. NOTE: cs.stanford.edu/people/cpiech/ and cs.stanford.edu/~cpiech/ both 404."
+  },
+  {
+    "lab_name": "Stanford Autonomous Agents Lab",
+    "lab_url": "https://www.autonomousagents.stanford.edu/",
+    "pi_names": [
+      "Nick Haber"
+    ],
+    "department": "Graduate School of Education; Computer Science",
+    "topics": [
+      "AI for education",
+      "learning technologies",
+      "curiosity and interactive learning",
+      "reinforcement learning",
+      "computational models of human learning",
+      "learning differences and autism"
+    ],
+    "http_status": 200,
+    "source_url": "https://www.autonomousagents.stanford.edu/",
+    "fetch_notes": "Contact block reads verbatim: 'nhaber at stanford dot edu - Stanford Graduate School of Education - Stanford Computer Science - 520 Galvez Mall - Stanford, CA 94305'. That is the only email form given (obfuscated), so no plain address is recorded here. Keywords listed on the site: reinforcement learning, computer vision, curiosity, interactive learning, multi-agent learning, optimal experiment design, active learning, cognitive models, childhood learning, learning differences, autism spectrum, learning technologies, assistive tech, augmented reality, mixed reality. WARNING: page footer reads '©2020 by Autonomous Agents Lab' - the site has not been dated more recently than 2020 in fetched text."
+  },
+  {
+    "lab_name": "Stanford Accelerator for Learning - AI + Education",
+    "lab_url": "https://acceleratelearning.stanford.edu/initiative/digital-learning/ai-and-education/",
+    "pi_names": [
+      "Victor Lee"
+    ],
+    "department": "Graduate School of Education",
+    "topics": [
+      "AI and education",
+      "AI literacy",
+      "AI tutoring",
+      "teacher feedback and coaching",
+      "personalized learning"
+    ],
+    "http_status": 200,
+    "source_url": "https://acceleratelearning.stanford.edu/initiative/digital-learning/ai-and-education/",
+    "fetch_notes": "Page names 'Faculty Lead: Victor Lee' and states the program 'has funded and supported over 30 interdisciplinary research projects on AI and education, leading to key insights in AI tutoring, teacher feedback and instructional coaching, AI literacy, medical education, and personalized learning for neurodiverse learners'. Programs named: AI Tinkery, CRAFT, CSET, GenAI Hub for Education, and the annual AI + Education Summit co-hosted with HAI. Department attribution to GSE comes from the Accelerator being housed at the Stanford Graduate School of Education per a WebSearch result summary, NOT from this fetched page - treat with mild caution."
+  },
+  {
+    "lab_name": "Stanford Social and Language Technologies Lab (SALT)",
+    "lab_url": "https://saltlab.stanford.edu/",
+    "pi_names": [
+      "Diyi Yang"
+    ],
+    "department": "Computer Science",
+    "topics": [
+      "socially aware NLP",
+      "human-AI interaction",
+      "large language models",
+      "computational social science",
+      "human-agent collaboration"
+    ],
+    "http_status": 200,
+    "source_url": "https://cs.stanford.edu/~diyiy/",
+    "fetch_notes": "SALT homepage: 'Stanford Social and Language Technologies (SALT) lab studies socially aware NLP. We are part of the Stanford NLP Group.' PI and department from Diyi Yang's faculty page (cs.stanford.edu/~diyiy/): 'I am an assistant professor in the Computer Science Department at Stanford, affiliated with the Stanford NLP Group, Stanford HCI Group, Stanford AI Lab (SAIL), and Stanford Human-Centered Artificial Intelligence (HAI).' Her page prints diyiy@cs.stanford.edu and points prospective students and postdocs to a 'how to get involved' page. SALT news is current: four ICML 2026 papers (5/2026), three CHI 2026 and seven ICLR 2026 papers (1/2026), two NeurIPS 2025 spotlights (11/2025)."
+  },
+  {
+    "lab_name": "Stanford Trustworthy AI Research (STAIR) Lab",
+    "lab_url": "https://stair.cs.stanford.edu/",
+    "pi_names": [
+      "Sanmi Koyejo"
+    ],
+    "department": null,
+    "topics": [
+      "trustworthy machine learning",
+      "AI evaluation and measurement",
+      "fairness",
+      "robustness",
+      "privacy and federated learning",
+      "AI for healthcare and neuroscience"
+    ],
+    "http_status": 200,
+    "source_url": "https://stair.cs.stanford.edu/team/",
+    "fetch_notes": "Team page lists 'Principal Investigator: Sanmi Koyejo'. Homepage prints the contact address sanmi@cs.stanford.edu verbatim and is footer-dated '© 2026'. Research areas quoted from the site: AI Measurement Science; Trustworthy AI and Society (fairness, robustness, privacy, federated learning); Applications (healthcare, neuroscience, scientific discovery). No department stated on the site, so department is null."
+  }
+]

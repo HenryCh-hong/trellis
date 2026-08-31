@@ -1,0 +1,1267 @@
+[
+  {
+    "external_key": "stanford-curis-summer-internship",
+    "title": "CURIS Summer Internship Program (Computer Science Undergraduate Research Internship)",
+    "type": "research_opening",
+    "organization": "Stanford Computer Science Department (CURIS)",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "curis.stanford.edu",
+    "source_url": "https://curis.stanford.edu/summer/",
+    "location": "Stanford, CA",
+    "pay": "$8,500 one-time summer stipend; $10,000 for those with financial need",
+    "hours_per_week": 40,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://curis.stanford.edu/summer/"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Must be a Stanford undergraduate and maintain undergraduate status through the summer",
+        "kind": "required",
+        "source_text": "To be eligible for CURIS, a student must maintain undergraduate status through the summer. Students who are not Stanford undergraduates are not eligible for CURIS.",
+        "source_url": "https://curis.stanford.edu/summer/"
+      },
+      {
+        "text": "Do research on campus for a full 10 weeks over the summer (40 hours/week)",
+        "kind": "required",
+        "source_text": "Do research on campus for a full 10 weeks over summer.",
+        "source_url": "https://curis.stanford.edu/summer/"
+      },
+      {
+        "text": "Participate in the poster session at the end of the summer",
+        "kind": "required",
+        "source_text": "Participate in the poster session at the end of the summer.",
+        "source_url": "https://curis.stanford.edu/summer/"
+      },
+      {
+        "text": "Fill out a progress report in the middle and at the end of the summer",
+        "kind": "required",
+        "source_text": "Fill out a progress report in the middle and at the end of the summer.",
+        "source_url": "https://curis.stanford.edu/summer/"
+      },
+      {
+        "text": "Not engage in another substantial internship, job, or volunteer opportunity without approval; CURIS is a full-time position",
+        "kind": "required",
+        "source_text": "Not engage in another substantial internship, job, or volunteer opportunity (whether funded by Stanford or otherwise) unless all mentors, supervisors, and program coordinators have approved these arrangements. CURIS is a full-time position (40 hours per week in 10 consecutive weeks).",
+        "source_url": "https://curis.stanford.edu/summer/"
+      },
+      {
+        "text": "Complete a CURIS profile and rank projects in the matching process",
+        "kind": "required",
+        "source_text": "The Summer CURIS program uses a formal matching process, where students create a profile and rank the projects they are interested in.",
+        "source_url": "https://curis.stanford.edu/summer/"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [
+      "Resume",
+      "Unofficial transcript",
+      "Project-specific statement of interest"
+    ],
+    "research_topics": [
+      "Computer science research (all CS department areas)"
+    ],
+    "application_method": "Formal matching process on the CURIS website: students create a profile (resume + unofficial transcript), submit a brief project-specific statement of interest per project, and rank projects; faculty rank applicants and CURIS assigns matches using the Gale-Shapley matching algorithm.",
+    "application_url": "https://curis.stanford.edu/summer_projects/",
+    "contact_name": "Yesenia Gallegos",
+    "contact_email": "ygallego@stanford.edu",
+    "eligibility_notes": "Stanford undergraduates only; students who are not Stanford undergraduates are not eligible. Students who flip to graduate (co-term) tuition are affected — see CURIS pages for details.",
+    "description": "The CURIS summer program is for Stanford undergraduates only. Students work with a faculty member in the CS department, joining their group for an entire summer working on a project of mutual interest. Students perform research for 10 weeks (40 hours / week) and present their work at a poster session with other CURIS participants.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.9,
+    "notes": "NO Summer 2027 deadline published as of 2026-08-31. The live curis.stanford.edu app still displays the previous cycle: 'To be considered for Summer 2026 CURIS, you must follow these deadlines' and a panel headed 'Key Application Dates (Summer 2026)'. LAST CYCLE (Summer 2026, now past) for context only: Jan 5 faculty start entering projects; Jan 27 projects due and student applications open; 'February 10: CURIS applications due - Student applications are due by 2/10, 11:59pm PT'; Feb 24 faculty and student rankings due; Feb 26 matches released; 'March 6: Student decisions due'. Summer 2026 program ran June 22 - August 28. Note the CURIS site is a JavaScript single-page app; the page text was read from the live bundle at https://curis.stanford.edu/static/js/main.038b4253.chunk.js referenced by https://curis.stanford.edu/. Stipend figures differ slightly between two places on the same site: the summer page says '$8,500, or $10,000 for those with financial need determined by the Financial Aid Office', while the fellowships page says 'all students receive a $8,000 stipend, and students may apply for additional need-based support of $1,500'."
+  },
+  {
+    "external_key": "stanford-cs-pure-paid-undergrad-research-experience",
+    "title": "PURE: Paid Undergraduate Research Experience (CS academic-year research assistantship)",
+    "type": "research_opening",
+    "organization": "Stanford Computer Science Department (CURIS)",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "curis.stanford.edu",
+    "source_url": "https://curis.stanford.edu/pure_student/",
+    "location": "Stanford, CA",
+    "pay": "Compensation through Federal Work-Study as a hired research assistant; 'Student pay is determined by Stanford pay scales and is set at Level 3'",
+    "hours_per_week": "~8-10 (equivalent of 3 units)",
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://curis.stanford.edu/pure_student/"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a currently-enrolled undergraduate student at Stanford",
+        "kind": "required",
+        "source_text": "In order to be eligible for this opportunity, students must be: a currently-enrolled undergraduate student at Stanford",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      },
+      {
+        "text": "Be eligible for Federal Work-Study (or have secured funding from a faculty member)",
+        "kind": "required",
+        "source_text": "eligible for Federal Work-Study",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      },
+      {
+        "text": "Be planning to conduct research with a CS faculty member",
+        "kind": "required",
+        "source_text": "planning to conduct research with a CS faculty member",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      },
+      {
+        "text": "Commit the equivalent of 3 units (~8-10 hours per week) to the research assistantship",
+        "kind": "required",
+        "source_text": "We expect that students will commit the equivalent of 3 units (~8-10 hours per week) of work to their research assistantship.",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      },
+      {
+        "text": "Give a final, end-of-quarter presentation to the lab group",
+        "kind": "required",
+        "source_text": "We also expect students to give a final, end-of-quarter presentation to their lab group",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Students with little or no prior research experience are especially encouraged",
+        "kind": "preferred",
+        "source_text": "We especially hope to support students who have little or no prior research experience to help them explore CS research.",
+        "source_url": "https://curis.stanford.edu/pure_student/"
+      }
+    ],
+    "skills": [],
+    "documents_required": [
+      "500-word Research Proposal",
+      "Name and contact details of your research advisors (faculty and PhD/Post-doc), with confirmation they agreed to the Research Advisor Program Expectations"
+    ],
+    "research_topics": [
+      "Computer science research in a Stanford CS research lab"
+    ],
+    "application_method": "Quarterly application via a Google Form linked from the CURIS PURE Student Guide; students first secure a research advisor and confirm Federal Work-Study (or faculty) funding, then submit a 500-word research proposal.",
+    "application_url": "https://curis.stanford.edu/pure_student/",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "Aims to support first-generation and/or low income (FLI) students. PURE positions are funded by Federal Work Study (FWS), a U.S. government program for U.S. citizens and permanent residents, available to certain groups of non-citizens. Students not eligible for FWS may still apply if a research advisor confirms they can provide their own funding. Acceptance is on a quarterly basis.",
+    "description": "A program designed to financially support undergraduate students who are interested in getting involved in CS research during the academic year, providing compensation for their work as an undergraduate research assistant in a Stanford CS research lab. Students can participate for one quarter at a time and can apply to extend their RA position to additional quarters.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.9,
+    "notes": "NO 2026-27 deadlines published as of 2026-08-31. The live page still announces 'the 2025-26 Paid Undergrad Research Experience (PURE)'. LAST CYCLE (2025-26, all now past) for context only: 'Fall 2025 Applications: Deadline: 9/26/25, 11:59 PT' (form https://forms.gle/s1cPyMgQKKmuTyeM8); 'Winter 2026 Applications: Deadline: 1/9/26, 11:59 PT' (form https://forms.gle/SPX58Rz1CEnEu7nN8); 'Spring 2026 Applications: Deadline: 4/3/26, 11:59 PT' (form https://forms.gle/JUXmLBUPz2tS6Cnv8). A comparable Autumn 2026 deadline would fall in late September 2026 but NO such date is published, so none is recorded here. No PURE-specific contact email appears on the page; general CURIS staff contacts are listed at https://curis.stanford.edu/contact/ (Yesenia Gallegos ygallego@stanford.edu, curis-mentors@cs.stanford.edu). Page text read from the live JS bundle https://curis.stanford.edu/static/js/main.038b4253.chunk.js."
+  },
+  {
+    "external_key": "stanford-curis-fellowships",
+    "title": "CURIS Fellowships (guaranteed summer research funding for students new to CS research)",
+    "type": "research_opening",
+    "organization": "Stanford Computer Science Department (CURIS)",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "curis.stanford.edu",
+    "source_url": "https://curis.stanford.edu/curis_fellowships",
+    "location": "Stanford, CA",
+    "pay": "Fellowship student's stipend is paid for by the department; 'all students receive a $8,000 stipend, and students may apply for additional need-based support of $1,500'",
+    "hours_per_week": 40,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://curis.stanford.edu/curis_fellowships"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a Stanford undergraduate",
+        "kind": "required",
+        "source_text": "All Stanford undergraduates are eligible for a CURIS Fellowship",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      },
+      {
+        "text": "Must have taken CS 106B by the time you apply",
+        "kind": "required",
+        "source_text": "but you must have taken CS 106B by the time you apply",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      },
+      {
+        "text": "Must not have prior experience working on research in a Stanford CS Lab",
+        "kind": "required",
+        "source_text": "You also must not have prior experience working on research in a Stanford CS Lab.",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      },
+      {
+        "text": "Must retain active undergraduate status during the summer (no suspension, gap year, leave of absence, or graduate tuition)",
+        "kind": "required",
+        "source_text": "Finally, to be eligible, you must retain an active undergraduate status during the summer (cannot be on suspension, cannot be taking a gap year, cannot be on a leave of absence, cannot be paying graduate tuition).",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Students who do not have prior CS research experience",
+        "kind": "preferred",
+        "source_text": "do not have prior CS research experience,",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      },
+      {
+        "text": "Students who show promise as researchers in their interests and curiosity",
+        "kind": "preferred",
+        "source_text": "show promise as researchers in their interests and curiosity, and",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      },
+      {
+        "text": "Students who will help make research accessible to a diverse group of students",
+        "kind": "preferred",
+        "source_text": "will help make research accessible to a diverse group of students.",
+        "source_url": "https://curis.stanford.edu/curis_fellowships"
+      }
+    ],
+    "skills": [
+      "CS 106B (prerequisite coursework)"
+    ],
+    "documents_required": [
+      "A PDF of your resume",
+      "A PDF of your unofficial Stanford transcript including your fall grades",
+      "A PDF containing your research essay (approximately 500 words on one of the listed research papers)"
+    ],
+    "research_topics": [
+      "Computer science research (systems, theory, HCI, graphics, biocomputation and more, per the listed research-essay reading options)"
+    ],
+    "application_method": "Google Form application with resume, unofficial transcript and a ~500-word research essay on a listed ACM/arXiv Research Highlight paper. 'A subset of applicants will be contacted for an interview in January.' Awarded fellows then enter the regular CURIS matching process with a special funded designation.",
+    "application_url": "https://forms.gle/F4RfMYkVdt9iaGn68",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "Intended for students who are just starting in research. Students accepted to the co-term who automatically switch to graduate tuition after 12 quarters, or who are graduating in June, cannot participate.",
+    "description": "CURIS Fellowships provide guaranteed funding for undergraduates to participate in summer research. A fellowship student's stipend is paid for by the department. A student awarded a CURIS fellowship then enters the matching process for the CURIS project listings with a special designation that they have received the CURIS Fellowship and are already funded, making them more attractive to the projects.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.85,
+    "notes": "IMPORTANT: the page carries a banner 'Note: The CURIS Fellowship program is not available for Summer 2026.' No Summer 2027 cycle is announced as of 2026-08-31, so no deadline is recorded. LAST PUBLISHED CYCLE for context only: 'Applications are due on January 8, 2025 so applicants have time to write a thoughtful research statement after the quarter ends.' with timeline 'January 8, 2025: Applications are due (11:59pm PT)' and 'February 3, 2025: Fellowship results announced'; the page also says 'We expect to grant 15 fellowships for the summer of 2025' and 'The recipients of Fellowships in 2024-2025 will be selected with an emphasis on students who:'. Page text read from the live JS bundle https://curis.stanford.edu/static/js/main.038b4253.chunk.js."
+  },
+  {
+    "external_key": "stanford-curis-year-round-cs-projects",
+    "title": "CURIS Year-Round Academic-Year CS Research Projects",
+    "type": "research_opening",
+    "organization": "Stanford Computer Science Department (CURIS)",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "curis.stanford.edu",
+    "source_url": "https://curis.stanford.edu/year_round_cs_projects/",
+    "location": "Stanford, CA",
+    "pay": "Varies by project: 'for enrolled units or in paid positions. Whether a project has for-credit or for-pay positions is up to the faculty member sponsoring in.'",
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": "To apply, students reach out directly to the listed contact on the project.",
+      "source_url": "https://curis.stanford.edu/year_round_cs_projects/"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Be an undergraduate or master's student at Stanford",
+        "kind": "required",
+        "source_text": "CURIS lists CS department projects involving looking for undergraduates and masters students during the academic year.",
+        "source_url": "https://curis.stanford.edu/year_round_cs_projects/"
+      },
+      {
+        "text": "Contact the listed project contact directly to apply",
+        "kind": "required",
+        "source_text": "To apply, students reach out directly to the listed contact on the project.",
+        "source_url": "https://curis.stanford.edu/year_round_cs_projects/"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "Computer science research projects across the CS department, and projects outside CS that apply CS skills"
+    ],
+    "application_method": "Browse the project listings on the CURIS site (filter to the appropriate quarter) and contact the listed project contact directly. This listing also serves as the starting point for finding a PURE research advisor.",
+    "application_url": "https://curis.stanford.edu/year_round_cs_projects/",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "Open to Stanford undergraduates and master's students during the academic year. A parallel listing, 'Projects from departments other than CS' (https://curis.stanford.edu/projects_outside_cs/), covers non-CS faculty projects looking for students with CS skills.",
+    "description": "CURIS lists CS department projects looking for undergraduates and masters students during the academic year. Program participants work with faculty and graduate students for enrolled units or in paid positions.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.75,
+    "notes": "This is a rolling project listing rather than a single-deadline program: the page states applications are made by contacting each project's listed contact directly, so no dated deadline exists. Individual project listings are behind Stanford SUNet login on the CURIS app and were not read. Page text read from the live JS bundle https://curis.stanford.edu/static/js/main.038b4253.chunk.js."
+  },
+  {
+    "external_key": "stanford-cs-independent-study-191-195-199",
+    "title": "Stanford CS Independent Study Research Courses (CS 191/191W, CS 195, CS 199, CS 294/294W)",
+    "type": "research_opening",
+    "organization": "Stanford Computer Science Department",
+    "university": "Stanford University",
+    "department": "Computer Science",
+    "lab": null,
+    "pi": null,
+    "source": "cs.stanford.edu",
+    "source_url": "https://cs.stanford.edu/research/independent-study-research",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": "All students must get prior approval from their faculty sponsor, at the very least, before signing up for any of these classes.",
+      "source_url": "https://cs.stanford.edu/research/independent-study-research"
+    },
+    "deadline_type": "rolling",
+    "requirements": [
+      {
+        "text": "Set up your own project, find a faculty sponsor, and submit a proposal (CS 191/191W)",
+        "kind": "required",
+        "source_text": "These courses are each a one-quarter research project that fulfills the Senior Project requirement. CS191W is the Writing in the Major (WiM) version of this course. Students must set up their project, find a faculty sponsor, and submit a proposal.",
+        "source_url": "https://cs.stanford.edu/research/independent-study-research"
+      },
+      {
+        "text": "Work under faculty supervision and get prior approval for your project (CS 195)",
+        "kind": "required",
+        "source_text": "Students must work under faculty supervision and get prior approval for their project.",
+        "source_url": "https://cs.stanford.edu/research/independent-study-research"
+      },
+      {
+        "text": "For CS 199/CS 399, have already taken four units of CS 195 and not be eligible for CS 191",
+        "kind": "required",
+        "source_text": "CS199 (Bachelor's) and CS399 (Master's). Are a one-quarter independent studies for students who have already taken four units of CS195 but are not eligible for CS191.",
+        "source_url": "https://cs.stanford.edu/research/independent-study-research"
+      },
+      {
+        "text": "Get prior approval from your faculty sponsor before signing up for any of these classes",
+        "kind": "required",
+        "source_text": "All students must get prior approval from their faculty sponsor, at the very least, before signing up for any of these classes.",
+        "source_url": "https://cs.stanford.edu/research/independent-study-research"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [
+      "Project proposal (for CS 191/191W)"
+    ],
+    "research_topics": [
+      "Computer science research, self-proposed or drawn from the undergraduate CS research website"
+    ],
+    "application_method": "Propose a project of your own or find and receive approval for a project listed on the undergraduate CS research website (curis.stanford.edu), obtain prior faculty-sponsor approval, then enroll in the course for the quarter.",
+    "application_url": "https://curis.stanford.edu/",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "CS 195 fulfills a CS elective (up to four units) for students not yet eligible for CS 191. CS 199 units count toward university-wide graduation requirements but not toward the CS major itself. CS 294/294W fulfills the Senior Project requirement and allows students to join a major ongoing research project.",
+    "description": "Undergraduate research at Stanford CS is often done for academic credit through independent study research courses: CS 191/191W (one-quarter research project fulfilling the Senior Project requirement), CS 195 (one-quarter research project fulfilling a CS elective, up to four units), CS 199/399 (one-quarter independent study), and CS 294/294W (research project course on a major ongoing research project).",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.85,
+    "notes": "No application deadline is published on this page: these are quarterly course enrollments arranged individually with a faculty sponsor, hence deadline_type 'rolling' with a null date. Enrollment is bounded in practice by the Registrar's quarterly study-list deadlines, but those dates are NOT stated on this page and are therefore not recorded. Page also linked from https://cs.stanford.edu/bachelors/research-opportunities."
+  },
+  {
+    "external_key": "stanford-vpue-major-grant-summer-2027",
+    "title": "VPUE Undergraduate Research Major Grant (Summer 2027)",
+    "type": "research_opening",
+    "organization": "Stanford Undergraduate Advising and Research / Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "Undergraduate Research and Independent Projects (VPUE)",
+    "lab": null,
+    "pi": null,
+    "source": "undergradresearch.stanford.edu",
+    "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major",
+    "location": "Stanford, CA",
+    "pay": "$8,500 (with a need-based supplement of $1,500 for eligible students.)",
+    "hours_per_week": "35+ (full-time, over the 10-week summer quarter)",
+    "deadline": {
+      "value": "2027-03-01",
+      "confidence": 0.95,
+      "source_text": "Application Deadline: March 1, 2027 (Mon) @ 11:59 PM (PST)",
+      "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Be a current Stanford undergraduate in good standing at the university",
+        "kind": "required",
+        "source_text": "Students must be current Stanford undergraduates in good standing at the university.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Conduct the project under a qualifying Stanford Faculty Mentor",
+        "kind": "required",
+        "source_text": "All projects supported by a VPUE undergraduate research grant must be conducted under the guidance of a qualifying Stanford Faculty Mentor.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Be in the undergraduate (not graduate) tuition group while using grant funding",
+        "kind": "required",
+        "source_text": "Students must be in the undergraduate (not graduate) tuition group while using grant funding.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Not be on a Leave of Absence while using grant funding",
+        "kind": "required",
+        "source_text": "Students may not be on a Leave of Absence (LOA) while using grant funding. Students who have been on LOA for 3 consecutive quarters prior to the funding period are not eligible (e.g., Autumn, Winter, and Spring).",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      },
+      {
+        "text": "Commit full time: 35+ hours per week over the 10-week summer quarter, and hold only one full-time summer commitment",
+        "kind": "required",
+        "source_text": "Time commitment: The Major Grant project is a full-time opportunity. Full-time engagement is defined as 35+ hours per week over the 10-week summer quarter.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      },
+      {
+        "text": "Proposal must not exceed 2,500 words",
+        "kind": "required",
+        "source_text": "Major Grant proposals should not exceed a word count of 2,500.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      },
+      {
+        "text": "Faculty mentor letter of support submitted by the letter deadline",
+        "kind": "required",
+        "source_text": "Faculty Mentor Letter Deadline: March 8, 2027 (Mon) @ 11:59 PM (PST)",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Priority given to Juniors",
+        "kind": "preferred",
+        "source_text": "Major Grants support student-driven, full-time immersive projects supported by a faculty mentor, with priority given to Juniors.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      },
+      {
+        "text": "Seniors who have not previously received a Major Grant are eligible but have lower priority",
+        "kind": "preferred",
+        "source_text": "Seniors who have not previously received a Major Grant are eligible but will have lower priority",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/major"
+      }
+    ],
+    "skills": [],
+    "documents_required": [
+      "Project proposal (max 2,500 words)",
+      "Faculty mentor letter of support",
+      "Line-item budget",
+      "IRB protocol submission proof (if human subjects research)",
+      "Animal Subjects Research Appendix (if animal subjects research)",
+      "Field contact letter (if interviewing individuals or partnering with off-campus organizations)",
+      "International Travel Safety Plan (if international travel)"
+    ],
+    "research_topics": [
+      "Research, arts, and senior synthesis projects of all disciplines"
+    ],
+    "application_method": "Online application through the VPUE Grant Application Portal; application opens January 4, 2027.",
+    "application_url": "https://vpuesubmit.stanford.edu/app/Grants/login.asp",
+    "contact_name": null,
+    "contact_email": "vpue-research@stanford.edu",
+    "eligibility_notes": "Priority given to Juniors; most Major Grants are awarded to students beginning an honors thesis, a senior project in the arts, or senior synthesis project between their junior and senior years. Frosh and Sophomores are encouraged to explore departmental funding instead. Co-terms who have not conferred their undergraduate degree may apply if the project fits their undergraduate academic trajectory; students paying graduate tuition are ineligible.",
+    "description": "Major Grants support student-driven, full-time immersive projects supported by a faculty mentor, with priority given to Juniors. Major Grants provide a 10-week stipend in support of full-time immersive Summer project commitments. Project execution: Summer 2027.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.95,
+    "notes": "Deadline is the real, currently-published 2026-27 cycle date. Page timeline verbatim: 'Application Opens: January 4, 2027 (Mon) @ 12:00 AM (PST)', 'Application Deadline: March 1, 2027 (Mon) @ 11:59 PM (PST)', 'Faculty Mentor Letter Deadline: March 8, 2027 (Mon) @ 11:59 PM (PST)', 'Project Execution: Summer 2027', 'Grant Amount: $8,500'. The page also states 'Decisions are typically made within 6 weeks' and 'Early decisions will not be considered.' contact_email vpue-research@stanford.edu is taken from the 'Contact Us' mailto link on https://undergradresearch.stanford.edu/ (site-wide), not from the Major Grant page itself."
+  },
+  {
+    "external_key": "stanford-vpue-small-grant-2026-27",
+    "title": "VPUE Undergraduate Research Small Grant (2026-27 Academic Year)",
+    "type": "research_opening",
+    "organization": "Stanford Undergraduate Advising and Research / Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "Undergraduate Research and Independent Projects (VPUE)",
+    "lab": null,
+    "pi": null,
+    "source": "undergradresearch.stanford.edu",
+    "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small",
+    "location": "Stanford, CA",
+    "pay": "Up to $1,500 (grant covers project expenses; it is not a stipend)",
+    "hours_per_week": null,
+    "deadline": {
+      "value": "2026-10-02",
+      "confidence": 0.95,
+      "source_text": "Autumn deadline: October 2, 2026 (Fri) @ 11:59 PM (PST)",
+      "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Be a current Stanford undergraduate in good standing at the university",
+        "kind": "required",
+        "source_text": "Students must be current Stanford undergraduates in good standing at the university.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Be enrolled in undergraduate classes full time (at least 12 units)",
+        "kind": "required",
+        "source_text": "Students enrolled in undergraduate classes full time (at least 12 units) are eligible for Small Grants",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+      },
+      {
+        "text": "Conduct the project under a qualifying Stanford Faculty Mentor",
+        "kind": "required",
+        "source_text": "All projects supported by a VPUE undergraduate research grant must be conducted under the guidance of a qualifying Stanford Faculty Mentor.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Proposal must not exceed 1,500 words",
+        "kind": "required",
+        "source_text": "Small Grant proposals should not exceed a word count of 1,500.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+      },
+      {
+        "text": "Upload a Research Budget Request Form with the application",
+        "kind": "required",
+        "source_text": "Research Budget Request Form: All Small Grant applicants must upload a Research Budget Request Form that is provided in the \"Budget\" section of the Small Grant application proper.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+      },
+      {
+        "text": "Apply at least one quarter in advance of the project's start date; projects are not funded retroactively",
+        "kind": "required",
+        "source_text": "You should plan to apply for funding at least one quarter in advance of your project's start date.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Projects that demonstrate a high need for funding for project execution are prioritized",
+        "kind": "preferred",
+        "source_text": "Student projects that demonstrate a high need for funding for project execution are prioritized for Small Grants.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/small"
+      }
+    ],
+    "skills": [],
+    "documents_required": [
+      "Project proposal (max 1,500 words)",
+      "Research Budget Request Form",
+      "Faculty mentor letter of support",
+      "IRB protocol submission proof (if human subjects research)",
+      "Animal Subjects Research Appendix (if animal subjects research)",
+      "Field contact letter (if applicable)",
+      "International Travel Safety Plan (if international travel)"
+    ],
+    "research_topics": [
+      "Research, arts, and senior synthesis projects of all disciplines"
+    ],
+    "application_method": "Online application through the VPUE Grant Application Portal; quarterly deadlines.",
+    "application_url": "https://vpuesubmit.stanford.edu/app/Grants/login.asp",
+    "contact_name": null,
+    "contact_email": "vpue-research@stanford.edu",
+    "eligibility_notes": "Co-terms who have not conferred their undergraduate degree may apply if the project fits their undergraduate academic trajectory; students paying graduate tuition are ineligible.",
+    "description": "Small Grants support project expenses that enable independent student-driven part-time projects year-round. Application cycles: Autumn 2026, Winter 2027, Spring 2027; project execution across the 26-27 Academic Year.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.95,
+    "notes": "Real, currently-published 2026-27 cycle. deadline.value records the NEXT upcoming deadline (Autumn). All three published quarterly deadlines verbatim: 'Autumn deadline: October 2, 2026 (Fri) @ 11:59 PM (PST)', 'Winter deadline: January 15, 2027 (Fri) @ 11:59 PM (PST)', 'Spring deadline: April 9, 2027 (Fri) @ 11:59 PM (PST)'. Also published: 'Next Application Opens: August 1, 2026 (Sat) @ 12:00 AM (PST)' and 'Faculty Mentor Letter Deadline: October 9, 2026 (Fri) @ 11:59 PM (PST)'. contact_email is from the site-wide 'Contact Us' mailto on https://undergradresearch.stanford.edu/."
+  },
+  {
+    "external_key": "stanford-chappell-lougee-scholarship-summer-2027",
+    "title": "Chappell Lougee Scholarship (Summer 2027, for Sophomores)",
+    "type": "research_opening",
+    "organization": "Stanford Undergraduate Advising and Research / Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "Undergraduate Research and Independent Projects (VPUE)",
+    "lab": null,
+    "pi": null,
+    "source": "undergradresearch.stanford.edu",
+    "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee",
+    "location": "Stanford, CA",
+    "pay": "$8,500 (with a need-based supplement of $1,500 for eligible students.)",
+    "hours_per_week": "35+ (full-time, over the 10-week summer quarter)",
+    "deadline": {
+      "value": "2026-12-01",
+      "confidence": 0.95,
+      "source_text": "Application Deadline: December 1, 2026 (Tue) @ 11:59 PM (PST)",
+      "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Be a Sophomore: enrolled in your 3rd, 4th, or 5th full-time quarter at Stanford at the time of application",
+        "kind": "required",
+        "source_text": "For the purposes of the Chappell Lougee, “Sophomore” means that you are enrolled in your 3rd, 4th, or 5th full-time quarter at Stanford at the time of application (Dec 1st deadline).",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee"
+      },
+      {
+        "text": "Be a current Stanford undergraduate in good standing at the university",
+        "kind": "required",
+        "source_text": "Students must be current Stanford undergraduates in good standing at the university.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Conduct the project under a qualifying Stanford Faculty Mentor",
+        "kind": "required",
+        "source_text": "All projects supported by a VPUE undergraduate research grant must be conducted under the guidance of a qualifying Stanford Faculty Mentor.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Not be on a Leave of Absence while using grant funding",
+        "kind": "required",
+        "source_text": "Students may not be on a Leave of Absence (LOA) while using grant funding. Students who have been on LOA for 3 consecutive quarters prior to the funding period are not eligible (e.g., Autumn, Winter, and Spring).",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee"
+      },
+      {
+        "text": "Commit full time: 35+ hours per week over the 10-week summer quarter; only one full-time summer commitment",
+        "kind": "required",
+        "source_text": "Time Commitment: The Chappell Lougee project is a full-time opportunity. Full-time engagement is defined as 35+ hours per week over the 10-week summer quarter.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee"
+      },
+      {
+        "text": "Proposal must not exceed 2,500 words",
+        "kind": "required",
+        "source_text": "Chappell Lougee proposals should not exceed a word count of 2,500.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/chappell-lougee"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [
+      "Project proposal (max 2,500 words)",
+      "Faculty mentor letter of support (due December 8, 2026)",
+      "Line-item budget",
+      "IRB protocol submission proof (if human subjects research)",
+      "Field contact letter (if applicable)",
+      "International Travel Safety Plan (if international travel)"
+    ],
+    "research_topics": [
+      "Humanities",
+      "Creative arts",
+      "Qualitative social sciences"
+    ],
+    "application_method": "Online application through the VPUE Grant Application Portal; application opens October 1, 2026.",
+    "application_url": "https://vpuesubmit.stanford.edu/app/Grants/login.asp",
+    "contact_name": null,
+    "contact_email": "vpue-research@stanford.edu",
+    "eligibility_notes": "Transfer students are eligible if (1) enrolled in their 1st or 2nd full-time quarter at Stanford at the time of application and (2) they transferred in 45-80 quarter units, not including AP credit; exceptional cases can contact Transfer UAD Dr. Ingrid Anderson (ingrida1@stanford.edu). Awarded scholars receive mentorship from current PhD students as they prepare their projects in the Spring.",
+    "description": "Chappell Lougee Scholarships support Sophomores pursuing full-time immersive projects in the humanities, creative arts, and qualitative social sciences, providing a 10-week summer stipend. Project execution: Summer 2027 (between Sophomore and Junior year).",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.95,
+    "notes": "Real, currently-published 2026-27 cycle. Timeline verbatim: 'Application Opens: October 1, 2026 (Thu) @ 12:00 AM (PST)', 'Application Deadline: December 1, 2026 (Tue) @ 11:59 PM (PST)', 'Faculty Mentor Letter Deadline: December 8, 2026 (Tue) @ 11:59 PM (PST)', 'Project Execution: Summer 2027 (between Sophomore and Junior year)', 'Scholarship Amount: $8,500'. contact_email is from the site-wide 'Contact Us' mailto on https://undergradresearch.stanford.edu/."
+  },
+  {
+    "external_key": "stanford-vpue-conference-grant-2026-27",
+    "title": "VPUE Undergraduate Research Conference Grant (26-27 Cycle)",
+    "type": "research_opening",
+    "organization": "Stanford Undergraduate Advising and Research / Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "Undergraduate Research and Independent Projects (VPUE)",
+    "lab": null,
+    "pi": null,
+    "source": "undergradresearch.stanford.edu",
+    "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference",
+    "location": "Stanford, CA",
+    "pay": "Up to $1,500",
+    "hours_per_week": null,
+    "deadline": {
+      "value": "2026-10-01",
+      "confidence": 0.9,
+      "source_text": "October | September 1, 2026 (Tue) @ 12:00 AM (PST) | October 1, 2026 (Thu) @ 11:59 PM (PST) | October 7, 2026 (Wed) @ 11:59 PM (PST)",
+      "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Have been accepted to present your own project at a professional or scholarly convening",
+        "kind": "required",
+        "source_text": "Conference Grants support students who have been accepted to *present* their own projects at professional or scholarly convenings (e.g., academic conference, film festival, dance convention, etc).",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+      },
+      {
+        "text": "The convening must have a competitive peer-reviewed selection process and attract a multi-generational body of presenters (not undergraduate-only conferences)",
+        "kind": "required",
+        "source_text": "Conference Grants support students who have been accepted to *present* at professional/scholarly convenings that have (1) competitive peer-reviewed selection processes and (2) attract a multi-generational body of presenters (not undergraduate-only conferences)",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+      },
+      {
+        "text": "Be a current Stanford undergraduate in good standing at the university",
+        "kind": "required",
+        "source_text": "Students must be current Stanford undergraduates in good standing at the university.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/eligibility-reqs"
+      },
+      {
+        "text": "Proposal must not exceed 1,500 words (not including appended materials)",
+        "kind": "required",
+        "source_text": "Conference Grant proposals should not exceed a word count of 1,500 (not including appended materials)",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+      },
+      {
+        "text": "Applications must be submitted before the first day of the conference",
+        "kind": "required",
+        "source_text": "Applications must be submitted before the first day of the conference",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+      },
+      {
+        "text": "Only one Conference Grant per academic year",
+        "kind": "required",
+        "source_text": "Students are eligible to receive only one Conference Grant per academic year",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/explore-student-grants/conference"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [
+      "Conference grant proposal (max 1,500 words)",
+      "Faculty mentor letter of support",
+      "Line-item budget",
+      "International Travel Safety Plan (if international travel)"
+    ],
+    "research_topics": [
+      "Any discipline; presenting original scholarly, research, or creative work at a conference"
+    ],
+    "application_method": "Online application through the VPUE Grant Application Portal; monthly deadlines from October through May.",
+    "application_url": "https://vpuesubmit.stanford.edu/app/Grants/login.asp",
+    "contact_name": null,
+    "contact_email": "vpue-research@stanford.edu",
+    "eligibility_notes": "Graduating seniors can apply to present at a conference that takes place within one quarter (including summer) of degree conferral. Co-terms who have not conferred their undergraduate degree may apply; students paying graduate tuition are ineligible.",
+    "description": "Conference Grants support students who have been accepted to present their own projects at professional or scholarly convenings. Deadlines are monthly (October - May); students should plan to apply at least one month in advance of the scheduled conference date.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.9,
+    "notes": "Real, currently-published '26-27 Cycle' table. deadline.value records the NEXT upcoming monthly deadline (October). All published monthly application deadlines verbatim from the table: October 1, 2026 (Thu) @ 11:59 PM (PST); November 1, 2026 (Sun); December 1, 2026 (Tue); January 1, 2027 (Fri); February 1, 2027 (Mon); March 1, 2027 (Mon); April 1, 2027 (Thu); May 1, 2027 (Sat) - each at 11:59 PM (PST), with faculty letters due on the 7th of the following week. source_text is the full October table row as it appears (Application Opens | Application Deadline | Faculty Letters Due). contact_email is from the site-wide 'Contact Us' mailto on https://undergradresearch.stanford.edu/."
+  },
+  {
+    "external_key": "stanford-vpue-stem-fellows-2026-27",
+    "title": "VPUE Stanford Undergraduate STEM Fellows Program (2026-27)",
+    "type": "research_opening",
+    "organization": "Stanford Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "Undergraduate Research and Independent Projects (VPUE)",
+    "lab": null,
+    "pi": null,
+    "source": "undergradresearch.stanford.edu",
+    "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program",
+    "location": "Stanford, CA",
+    "pay": "Stipend for summer research (Sophomore year) - amount not stated on the page",
+    "hours_per_week": null,
+    "deadline": {
+      "value": "2027-01-25",
+      "confidence": 0.85,
+      "source_text": "The 2026-27 application deadline will be Monday, January 25, 2027.",
+      "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program"
+    },
+    "deadline_type": "hard",
+    "requirements": [
+      {
+        "text": "Be nominated by a Stanford staff or faculty member",
+        "kind": "required",
+        "source_text": "Nominations for VPUE STEM Fellows open each year in early November. Stanford staff and faculty are invited to nominate sophomores and first-year transfer students who are interested in exploring a career in scientific research.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program"
+      },
+      {
+        "text": "Be a 'Sophomore': have completed a minimum of 3, maximum of 5, full-time quarters of enrollment over the entire Stanford career by the end of Autumn quarter",
+        "kind": "required",
+        "source_text": "For the purposes of the STEM Fellows program, “Sophomore” means that the student has completed a minimum of 3, maximum of 5, full-time quarters of enrollment over their entire Stanford career by the end of Autumn quarter.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program"
+      },
+      {
+        "text": "Prepare and submit an application after nomination (invitations issued in early December)",
+        "kind": "required",
+        "source_text": "Nominated students are invited to prepare an application in early December.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Centers students who have not previously had abundant access to research experiences and would benefit from a stronger academic network",
+        "kind": "preferred",
+        "source_text": "The program centers students who have not previously had abundant access to research experiences and would benefit from a stronger academic network.",
+        "source_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program"
+      }
+    ],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "STEM / scientific research across disciplines"
+    ],
+    "application_method": "Nomination-based: Stanford staff and faculty nominate sophomores and first-year transfer students (nominations open in early November); nominated students are then invited to prepare an application in early December.",
+    "application_url": "https://undergradresearch.stanford.edu/fund-your-project/research-fellowships/vpue-stem-fellows-program",
+    "contact_name": null,
+    "contact_email": "vpue-fellowships@stanford.edu",
+    "eligibility_notes": "Transfer students in their first year of study at Stanford are also eligible upon nomination by faculty or staff. Students may be nominated even if they have taken a Leave of Absence, as long as they meet the quarter-count condition.",
+    "description": "With funding from the Office of the Vice Provost of Undergraduate Education, the Stanford Undergraduate STEM Fellows Program offers community, professional development workshops, and financial support to students who are passionate about scientific research. It offers a cross-disciplinary scholarly community, a stipend for summer research (Sophomore year), mentorship from current Stanford graduate students, up to $1,000 of financial support for graduate school applications, financial support to present original research at a conference, and workshops on research culture and funding.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.9,
+    "notes": "Real, currently-published 2026-27 cycle dates, both stated in future tense on the page: 'The deadline to submit a nomination for the 2026-27 academic year will be Monday, November 30, 2026.' and 'The 2026-27 application deadline will be Monday, January 25, 2027.' deadline.value records the student application deadline; the prerequisite NOMINATION deadline is 2026-11-30. Confidence 0.85 rather than higher because the page uses 'will be', signalling the dates are planned rather than final. Stipend amount is not published on the page, so pay records only the qualitative statement."
+  },
+  {
+    "external_key": "stanford-biox-usrp",
+    "title": "Stanford Sapp Family CS Bio-X Undergraduate Summer Research Program (USRP)",
+    "type": "research_opening",
+    "organization": "Stanford Bio-X",
+    "university": "Stanford University",
+    "department": "Bio-X (interdisciplinary bioscience and bioengineering)",
+    "lab": null,
+    "pi": null,
+    "source": "biox.stanford.edu",
+    "source_url": "https://biox.stanford.edu/research/undergraduate-research",
+    "location": "Stanford, CA",
+    "pay": "Summer stipend for 10 weeks of full-time research (amount not stated on the accessible pages)",
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://biox.stanford.edu/research/undergraduate-research"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be an eligible Stanford student (open to Freshman, Sophomore, Junior, Senior and Co-term)",
+        "kind": "required",
+        "source_text": "The Bio-X USRP awards eligible Stanford Students a summer stipend for 10 weeks of full-time research, and offers a comprehensive experience including: weekly faculty talks, workshops, journal club meetings, and a culminating poster session.",
+        "source_url": "https://solo.stanford.edu/opportunities/bio-x-undergraduate-summer-research-program-2026"
+      },
+      {
+        "text": "Commit to 10 weeks of full-time research",
+        "kind": "required",
+        "source_text": "10 weeks of full-time research",
+        "source_url": "https://solo.stanford.edu/opportunities/bio-x-undergraduate-summer-research-program-2026"
+      },
+      {
+        "text": "Attend weekly faculty talks and weekly enrichment events (journal clubs, workshops, etc.)",
+        "kind": "required",
+        "source_text": "weekly faculty talks / weekly enrichment events (journal clubs, workshops, etc)",
+        "source_url": "https://solo.stanford.edu/opportunities/bio-x-undergraduate-summer-research-program-2026"
+      },
+      {
+        "text": "Participate in the culminating poster session event",
+        "kind": "required",
+        "source_text": "culminating poster session event",
+        "source_url": "https://solo.stanford.edu/opportunities/bio-x-undergraduate-summer-research-program-2026"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "Interdisciplinary biosciences and bioengineering research in Stanford laboratories"
+    ],
+    "application_method": "Online application on the Bio-X USRP cycle page (biox.stanford.edu/usrp<year>), followed by Zoom interviews for finalists.",
+    "application_url": "https://biox.stanford.edu/research/undergraduate-research",
+    "contact_name": "Bio-X Team",
+    "contact_email": "biox_undergrads@stanford.edu",
+    "eligibility_notes": "The SOLO listing for the 2026 cycle records the program as open to Freshman, Sophomore, Junior, Senior and Co-term students. Full eligibility details live on the per-cycle page (https://biox.stanford.edu/usrp2026), which is behind a Cloudflare challenge and could not be read directly in this task.",
+    "description": "The Stanford Sapp Family CS Bio-X Undergraduate Summer Research Program awards eligible Stanford students a summer stipend for 10 weeks of full-time research, and offers a comprehensive experience including weekly faculty talks, workshops, journal club meetings, and a culminating poster session. The program began in 2006 and 'has provided 1,071 undergraduate students with the opportunity to conduct hands-on and virtual research.'",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.7,
+    "notes": "NO Summer 2027 deadline published as of 2026-08-31. The Bio-X undergraduate research page states: 'Applications for the 2026 summer cycle of the Bio-X USRP have closed.' LAST CYCLE (Summer 2026, now past) for context only: 'Complete applications must be received by January 21, 2026 at 8:00 am PST' (https://biox.stanford.edu/highlight/apply-2026-stanford-sapp-family-cs-bio-x-undergraduate-summer-research-program); the SOLO listing echoes 'Applications closed on January 21, 2026'; program ran a '10-week period of full-time research (June 22nd to August 28th)' with 'Zoom interviews for the finalists will begin on February 4, 2026'. FETCHING CAVEAT: biox.stanford.edu is behind a Cloudflare challenge and returned HTTP 403 to curl; the biox pages were read through WebFetch (which returns a model-generated rendering, with the deadline/date strings above given as verbatim quotes). The SOLO mirror at solo.stanford.edu was fetched directly with curl and is the source of the eligibility, contact email and program-content bullets. Stipend amount is not stated on any page readable in this task."
+  },
+  {
+    "external_key": "stanford-tech-ethics-policy-summer-fellowships-undergrad",
+    "title": "Tech Ethics & Policy Summer Fellowships (Undergraduate track)",
+    "type": "research_opening",
+    "organization": "Stanford Ethics, Society & Technology Initiatives / McCoy Family Center for Ethics in Society, with Stanford HAI",
+    "university": "Stanford University",
+    "department": "Ethics in Society / Stanford Institute for Human-Centered Artificial Intelligence (HAI)",
+    "lab": null,
+    "pi": null,
+    "source": "ethicsinsociety.stanford.edu",
+    "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships",
+    "location": "Stanford, CA (spring course) with summer placements at partner organizations",
+    "pay": "Base stipend of $8,000 for fellows matched with an unpaid internship placement; 'Up to $2,000 in financial aid and supplemental funding are available to students who qualify.'",
+    "hours_per_week": "At least 35 for nine consecutive weeks",
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a Stanford undergraduate (all academic disciplines welcome)",
+        "kind": "required",
+        "source_text": "Undergraduates from all academic disciplines are encouraged to apply, and applicants may vary in academic interests, technical experience, and policy knowledge.",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Begin service after spring quarter classes end and no later than June 29",
+        "kind": "required",
+        "source_text": "Selected fellows are expected to begin service following the completion of spring quarter classes and no later than June 29, 2026.",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Work at least 35 hours/week for nine consecutive weeks with the host organization",
+        "kind": "required",
+        "source_text": "All fellows are required to work with their host organizations at least 35 hours/week for nine consecutive weeks.",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Enroll in the Spring Fellowship Course ETHICSOC 85 / ETHICSOC 285",
+        "kind": "required",
+        "source_text": "Enroll in Spring Fellowship Course: ETHICSOC 85/ ETHICSOC 285 Introduction to Tech Ethics and Policy Career Pathways",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Have a designated full-time professional staff member on-site as supervisor/mentor",
+        "kind": "required",
+        "source_text": "Fellows must have a designated full-time professional staff member on-site as their supervisor/mentor.",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Meet with the assigned TEP mentor at least once during Spring quarter and once during the summer, attend summer workshops, submit a final project and program evaluation, and participate in the Fall closing reception",
+        "kind": "required",
+        "source_text": "Fellows must meet with their assigned TEP mentor at least once during Spring quarter",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Strongly recommended to enroll in (or have previously taken) one of CS 182, CS 152, COMM 152A, COMM 154, or CS 121",
+        "kind": "preferred",
+        "source_text": "**We also strongly recommend students enroll in (or have previously taken) one of the following courses: CS 182: Ethics, Public Policy, and Technological Change ... CS 152: Trust and Safety Engineering ... COMM 152A: Governing Artificial Intelligence: Law, Policy, and Institutions ... COMM 154: The Politics of Algorithms ... CS 121: Equity and Governance for Artificial Intelligence",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      },
+      {
+        "text": "Prior demonstrated interest or involvement in ethics, technology, public policy and/or social impact, including related coursework",
+        "kind": "preferred",
+        "source_text": "prior demonstrated interest or involvement in the areas of ethics, technology, public policy and/or social impact, including related coursework",
+        "source_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships"
+      }
+    ],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "Technology ethics",
+      "Public policy",
+      "AI governance",
+      "Social impact of technology"
+    ],
+    "application_method": "Two-round written application followed by interviews with partner organizations during Winter Quarter; applicants indicate which partner organization they would like to interview with.",
+    "application_url": "https://ethicsinsociety.stanford.edu/undergraduate/tech-ethics-policy-summer-fellowships",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "Undergraduate track admits 20-25 fellows; co-terms are eligible to apply to both the undergraduate and graduate tracks. The graduate/co-term track is run by HAI at https://hai.stanford.edu/policy/student-opportunities/tech-ethics-policy-fellowships and requires at least one CS or symbolic systems course.",
+    "description": "Through the Tech Ethics & Policy Fellows Program, Stanford undergraduate students have the opportunity to engage in the technology field as it intersects with public policy and social impact. The program runs from April to October and includes a course on ethics, technology, and public policy, as well as a paid summer opportunity at a technology company, civil society organization, federal agency, or Congressional office. Fellows are matched with mentors from the technology, ethics, and public policy fields.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.85,
+    "notes": "NO Summer 2027 deadline published as of 2026-08-31. The page states: 'Applications are closed for Summer 2026. Check back in Fall 2026.' LAST CYCLE (Summer 2026, now past) for context only, from the page's Application Process Timeline: 'November 4, 2025 Round 1 applications open'; 'December 1, 2025 Round 1 applications due' (the prose reads 'Round 1 Applications: Due on Monday, December 1 at 11:59pm PT.'); 'February 3, 2026 Round 2 applications due' (prose: 'Round 2 Applications: Due on Wednesday, February 3 at 11:59pm PT.'); offers Jan 21 / Feb 22, 2026; spring course March 30 - June 10, 2026; summer internships begin June 22, 2026. The page notes 'In the event that the fellowship spots are filled after Round 1, applications will no longer be accepted.' CONTACT: the page gives its contact only in obfuscated form ('estinitiatives [at] stanford.edu'), so no email is recorded here; the graduate-track HAI page lists hai-policy@stanford.edu."
+  },
+  {
+    "external_key": "stanford-hai-student-research-opportunities",
+    "title": "Stanford HAI Student Research Assistant Opportunities",
+    "type": "research_opening",
+    "organization": "Stanford Institute for Human-Centered Artificial Intelligence (HAI)",
+    "university": "Stanford University",
+    "department": "Stanford HAI (programs, centers, labs and initiatives)",
+    "lab": null,
+    "pi": null,
+    "source": "hai.stanford.edu",
+    "source_url": "https://hai.stanford.edu/research/research-opportunities",
+    "location": "Stanford, CA",
+    "pay": null,
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://hai.stanford.edu/research/research-opportunities"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a Stanford student (the positions are open to Stanford students only)",
+        "kind": "required",
+        "source_text": "The Stanford Institute for Human-Centered Artificial Intelligence (HAI) is looking for research assistants with excellent analytical and organizational skills and outstanding academic credentials to support HAI. Please note that the position is open to Stanford students ONLY.",
+        "source_url": "https://hai.stanford.edu/research/research-opportunities"
+      },
+      {
+        "text": "Excellent analytical and organizational skills and outstanding academic credentials",
+        "kind": "required",
+        "source_text": "looking for research assistants with excellent analytical and organizational skills and outstanding academic credentials",
+        "source_url": "https://hai.stanford.edu/research/research-opportunities"
+      },
+      {
+        "text": "For Digital Economy Lab roles: proficiency with R or Python",
+        "kind": "required",
+        "source_text": "We are looking for students to assist with logistics of data gathering, cleaning, analyzing data using state of the art techniques, and data visualization. Proficiency with R or Python is required.",
+        "source_url": "https://hai.stanford.edu/research/research-opportunities"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "For CRFM: engineering/CS expertise to build CRFM infrastructure, or data science and policy expertise for societal efforts",
+        "kind": "preferred",
+        "source_text": "At this moment, we are looking for strong students with engineering/CS expertise to build CRFM infrastructure (e.g. the HELM benchmark for foundation models). In addition, we are looking for students with data science and policy expertise to advance our societal efforts",
+        "source_url": "https://hai.stanford.edu/research/research-opportunities"
+      }
+    ],
+    "skills": [
+      "R",
+      "Python",
+      "Data science",
+      "Data visualization",
+      "Software engineering",
+      "Policy analysis"
+    ],
+    "documents_required": [],
+    "research_topics": [
+      "Stanford Digital Economy Lab (AI and the Future of Work; Measuring the Digital Economy; Digital Platforms and Society)",
+      "Center for Research on Foundation Models (CRFM)",
+      "HAI Research for the AI Index",
+      "HAI Organizational Analytics",
+      "RAISE Health (Responsible AI for Safe and Equitable Health)",
+      "RegLab (Regulation, Evaluation, and Governance Lab)"
+    ],
+    "application_method": "The page lists open research assistant areas across HAI's programs, centers, labs and initiatives; it does not publish a single application form. For RegLab specifically the page directs students to the RegLab 'Work With Us' page.",
+    "application_url": "https://hai.stanford.edu/research/research-opportunities",
+    "contact_name": null,
+    "contact_email": null,
+    "eligibility_notes": "Open to Stanford students only (the page does not restrict by degree level, so undergraduates are included, but it does not state undergraduate-specific criteria). RegLab 'is hiring for a range of full-time and part-time positions' and points to https://reglab.stanford.edu/work-with-us/ for the most up-to-date information.",
+    "description": "Research assistant opportunities across Stanford HAI's programs, centers, labs, and initiatives, including the Stanford Digital Economy Lab, the Center for Research on Foundation Models, the AI Index, HAI Organizational Analytics, RAISE Health, and RegLab.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.65,
+    "notes": "This is a standing listing of RA openings rather than a single-deadline program: NO deadline of any kind is published on the page, and no application form URL or contact email appears anywhere in the fetched HTML (checked for mailto:, forms.gle and docs.google.com/forms links - none present). Recorded as deadline_type 'unknown' rather than 'rolling' because the page does not say applications are accepted on a rolling basis. Separately, HAI's undergraduate-facing education page (https://hai.stanford.edu/education/stanford-students) offers only the Human-Centered AI Concentration within the Symbolic Systems Program - a curricular concentration, not an application-based research program - and HAI's fellowship programs (https://hai.stanford.edu/research/fellowship-programs) are for postdocs and PhD students, except the Tech Ethics & Policy Fellowship recorded separately in this file."
+  },
+  {
+    "external_key": "stanford-sesur-summer-undergraduate-research",
+    "title": "SESUR: Sustainability, Engineering and Science - Undergraduate Research Program",
+    "type": "research_opening",
+    "organization": "Stanford Doerr School of Sustainability",
+    "university": "Stanford University",
+    "department": "Doerr School of Sustainability",
+    "lab": null,
+    "pi": null,
+    "source": "sesur.stanford.edu",
+    "source_url": "https://sesur.stanford.edu/",
+    "location": "Stanford, CA (on campus or in the field)",
+    "pay": "The stipend for summer 2026 is $8,500 for 10 weeks of full time effort. There is also a needs-based supplement of up to $1500 based on financial need record.",
+    "hours_per_week": "Full time, 10 weeks",
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://sesur.stanford.edu/"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a Stanford undergraduate (from any area of study)",
+        "kind": "required",
+        "source_text": "The Sustainability, Engineering and Science - Undergraduate Research (SESUR) Program is a 10-week summer research program for Stanford undergraduates from any area of study who want to learn more about environmental science and the planet we live on.",
+        "source_url": "https://sesur.stanford.edu/"
+      },
+      {
+        "text": "Find a faculty sponsor in Civil and Environmental Engineering, Earth and Planetary Sciences, Earth System Science, Energy Science and Engineering, Environmental Social Sciences, Geophysics, or Oceans (main campus only)",
+        "kind": "required",
+        "source_text": "Students may apply to work with any faculty member in the departments of: Civil and Environmental Engineering / Earth and Planetary Sciences / Earth System Science / Energy Science and Engineering / Environmental Social Sciences / Geophysics / Oceans (main campus only)",
+        "source_url": "https://sesur.stanford.edu/"
+      },
+      {
+        "text": "Develop the project proposal with the faculty advisor, who must approve the application",
+        "kind": "required",
+        "source_text": "You will develop the project proposal with a faculty member (and likely a graduate student or post doc) who will act as your advisor(s). Your proposed faculty research advisor must approve your application. Once you submit it online, they will receive an email notification asking for approval.",
+        "source_url": "https://sesur.stanford.edu/"
+      },
+      {
+        "text": "Research projects with travel or lab research require a contingency plan if travel or lab access is limited by University policy",
+        "kind": "required",
+        "source_text": "All research projects with travel or lab research will require a contingency plan if travel or access to labs is limited by University policy.",
+        "source_url": "https://sesur.stanford.edu/"
+      },
+      {
+        "text": "Present your work at the fall scientific symposium",
+        "kind": "required",
+        "source_text": "Students present their work at a fall scientific symposium.",
+        "source_url": "https://sesur.stanford.edu/"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Funding priority goes to current and prospective students in School of Sustainability departments and programs who have not yet received departmental funding",
+        "kind": "preferred",
+        "source_text": "Funding priority goes to current and prospective students in any of the departments and programs within the School of Sustainability who have not yet received departmental funding.",
+        "source_url": "https://sesur.stanford.edu/"
+      },
+      {
+        "text": "Freshmen and sophomores receive priority, though juniors and seniors in their first research experience will be considered",
+        "kind": "preferred",
+        "source_text": "Freshmen and sophomores receive priority, though juniors and seniors in their first research experience will be considered.",
+        "source_url": "https://sesur.stanford.edu/"
+      }
+    ],
+    "skills": [],
+    "documents_required": [
+      "Project proposal developed with the faculty advisor (submitted online, then approved by the faculty advisor)"
+    ],
+    "research_topics": [
+      "Environmental science",
+      "Earth and planetary sciences",
+      "Energy science and engineering",
+      "Geophysics",
+      "Oceans",
+      "Environmental social sciences",
+      "Civil and environmental engineering"
+    ],
+    "application_method": "Develop a proposal with a faculty advisor (choosing a posted project or proposing your own), submit online; the faculty advisor is emailed for approval.",
+    "application_url": "https://sesur.stanford.edu/your-application",
+    "contact_name": "Jenny Saltzman (SESUR director)",
+    "contact_email": "saltzman@stanford.edu",
+    "eligibility_notes": "'Coterms are unlikely to get funded.' Students who wish to conduct Honors research are directed to apply for a VPUE Major Grant instead. Students are not limited to the posted project list and are encouraged to reach out directly to faculty.",
+    "description": "A 10-week summer research program for Stanford undergraduates from any area of study who want to learn more about environmental science and the planet we live on. Students find a project - or propose one of their own - and work with a faculty member from the Doerr School of Sustainability on campus or in the field through the summer, then present at a fall scientific symposium.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.85,
+    "notes": "NO Summer 2027 deadline published as of 2026-08-31. The page does confirm a 2027 cycle is coming: 'Info Sessions for summer 2027 / in December 2026 and January 2027'. LAST CYCLE (Summer 2026, now past) for context only: 'Applications were due on Thursday February 12, 2026.' and 'SESUR is from Monday June 22 through Friday August 28, 2026.' The published stipend figure ($8,500 + up to $1,500 need-based supplement) is explicitly labelled 'for summer 2026' and may change for 2027."
+  },
+  {
+    "external_key": "stanford-summer-fellows-program-ssfp",
+    "title": "Stanford Summer Fellows Program (SSFP)",
+    "type": "research_opening",
+    "organization": "Stanford Vice Provost for Undergraduate Education (VPUE)",
+    "university": "Stanford University",
+    "department": "VPUE Programs",
+    "lab": null,
+    "pi": null,
+    "source": "summerfellows.stanford.edu",
+    "source_url": "https://summerfellows.stanford.edu/",
+    "location": "Stanford, CA (residential)",
+    "pay": "Tuition, housing, and dining are fully covered during the program and fellows receive a stipend intended to support expenses related to the summer research experience (stipend amount not stated on the page)",
+    "hours_per_week": null,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://summerfellows.stanford.edu/"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a rising sophomore or first-year transfer student at Stanford",
+        "kind": "required",
+        "source_text": "The Stanford Summer Fellows Program (SSFP) is an 8-week summer residential cohort program for rising sophomores and first-year transfers seeking to explore research, strengthen academic confidence, and build community with peers as they enter their second year at Stanford.",
+        "source_url": "https://summerfellows.stanford.edu/"
+      },
+      {
+        "text": "Enroll in a summer course that fulfills the WR 2 requirement (unless approved to take a different course)",
+        "kind": "required",
+        "source_text": "Students will be enrolled in a summer course that fulfills their WR 2 requirement, unless approved to take a different course.",
+        "source_url": "https://summerfellows.stanford.edu/"
+      },
+      {
+        "text": "Engage in introductory research with a faculty member or faculty-led group and participate in the program workshops",
+        "kind": "required",
+        "source_text": "Fellows take a course satisfying the WR2 requirement, engage in introductory research with a faculty member or faculty-led group, and participate in workshops that guide them along the research process.",
+        "source_url": "https://summerfellows.stanford.edu/"
+      }
+    ],
+    "preferred_qualifications": [],
+    "skills": [],
+    "documents_required": [],
+    "research_topics": [
+      "Introductory research with a faculty member or faculty-led group, across disciplines"
+    ],
+    "application_method": "Online application form (Stanford TFA form), with a priority round and a regular decision round.",
+    "application_url": "https://stanford.tfaforms.net/f/SSFPApplication",
+    "contact_name": null,
+    "contact_email": "flisummerfellows@stanford.edu",
+    "eligibility_notes": "8-week summer residential cohort program for rising sophomores and first-year transfers. The contact address (flisummerfellows@stanford.edu) indicates a focus on first-generation and/or low-income students, though the page itself describes the cohort as 'students from diverse backgrounds'.",
+    "description": "The Stanford Summer Fellows Program (SSFP) is an 8-week summer residential cohort program for rising sophomores and first-year transfers seeking to explore research, strengthen academic confidence, and build community with peers as they enter their second year at Stanford. Tuition, housing, and dining are fully covered and fellows receive a stipend to support expenses related to the summer research experience.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.8,
+    "notes": "NO Summer 2027 deadline published as of 2026-08-31; the live page still shows the previous cycle. LAST CYCLE (Summer 2026, now past) for context only, verbatim from the page: 'Priority Application Deadline: January 23, 2026, 11:59 PM' and 'Regular Decision Deadline: February 13, 2026, 11:59 PM', with 'Summer Quarter 2026: Students will be enrolled in a summer course that fulfills their WR 2 requirement, unless approved to take a different course.' The 'Apply Now!' link (https://stanford.tfaforms.net/f/SSFPApplication) is still present on the page but was not opened to check whether it accepts 2027 submissions."
+  },
+  {
+    "external_key": "stanford-data-science-for-social-good-student-fellows",
+    "title": "Stanford Data Science for Social Good (DSSG) Summer Program - Student Fellows",
+    "type": "research_opening",
+    "organization": "Stanford Data Science (SDS)",
+    "university": "Stanford University",
+    "department": "Stanford Data Science",
+    "lab": null,
+    "pi": null,
+    "source": "datascience.stanford.edu",
+    "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows",
+    "location": "Stanford, CA (on campus)",
+    "pay": "Students will receive a stipend for participating in the program (amount not stated on the page)",
+    "hours_per_week": 40,
+    "deadline": {
+      "value": null,
+      "confidence": 0.0,
+      "source_text": null,
+      "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+    },
+    "deadline_type": "unknown",
+    "requirements": [
+      {
+        "text": "Be a current Stanford undergraduate (currently enrolled seniors/juniors)",
+        "kind": "required",
+        "source_text": "A current undergraduate (currently enrolled seniors/juniors) at Stanford.",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      },
+      {
+        "text": "Must not have conferred your undergraduate degree (even as a coterm student) by the summer quarter",
+        "kind": "required",
+        "source_text": "Students must not have conferred their undergraduate degree (even if they are a coterm student) by the summer 2025 quarter.",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      },
+      {
+        "text": "Be proficient in a programming language such as Python or R",
+        "kind": "required",
+        "source_text": "Proficient in a programming language such as Python or R.",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      },
+      {
+        "text": "Be committed to being present at all meetings during the entire duration of the summer program (40 hrs/week)",
+        "kind": "required",
+        "source_text": "Committed to being present at all meetings during the entire duration of the summer program (40 hrs/week).",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      },
+      {
+        "text": "Be hungry to learn and grow in team data science, working with a project partner, statistics, reproducibility, and programming for data science",
+        "kind": "required",
+        "source_text": "Hungry to learn and grow in the following areas: team data science, working with a project partner, statistics, reproducibility, and programming for data science",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      },
+      {
+        "text": "Provide the contact information of a faculty member who could comment on your data science skills and knowledge",
+        "kind": "required",
+        "source_text": "Applicants should provide the contact information of a faculty member who could comment on their data science skills and knowledge.",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      }
+    ],
+    "preferred_qualifications": [
+      {
+        "text": "Fellows from all disciplines are encouraged to apply",
+        "kind": "preferred",
+        "source_text": "Fellows from all disciplines are encouraged to apply!",
+        "source_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows"
+      }
+    ],
+    "skills": [
+      "Python",
+      "R",
+      "Statistics",
+      "Reproducible research",
+      "Team data science"
+    ],
+    "documents_required": [
+      "Contact information of a faculty member who can comment on your data science skills and knowledge"
+    ],
+    "research_topics": [
+      "Data science projects with social impact in education, health, energy, public safety, transportation, economic development, international development and more"
+    ],
+    "application_method": "Online application to Stanford Data Science; select applicants are interviewed and final decisions are made in late March.",
+    "application_url": "https://datascience.stanford.edu/programs/data-science-social-good-summer-program/dssg-student-fellows",
+    "contact_name": null,
+    "contact_email": "ds4socialgood@stanford.edu",
+    "eligibility_notes": "The most recently published cycle (2025) was 'on campus and is available only for Stanford undergraduates', restricted to currently enrolled juniors and seniors who have not conferred their undergraduate degree by the summer quarter.",
+    "description": "The Data Science for Social Good summer program trains aspiring researchers to work on data science projects with social impact. Teams of student fellows spend eight to ten weeks (usually late June through late August) working full-time on a data science project with technical mentorship from Stanford researchers and advanced graduate students, working closely with a project partner from government or the nonprofit sector, culminating in a final project handoff and presentation.",
+    "posted_at": null,
+    "fetched_at": "2026-08-31T07:13:31Z",
+    "extraction_confidence": 0.65,
+    "notes": "NO Summer 2027 (or Summer 2026) deadline published as of 2026-08-31. The live student-fellows page still reads 'Applications to the 2025 Stanford Data Science for Social Good (DSSG) program are now closed.' and its eligibility text is written against 'the summer 2025 quarter', so the page appears not to have been updated since the 2025 cycle - it is unclear whether the program will run in Summer 2027. NO exact application deadline date for any recent cycle appears on the fetched pages; the only dated application deadlines visible anywhere on the site are in old news items (2022: 'Apply by Feb 14, 2022!'; 2021: 'Apply by Feb 15!'; 2020: 'Applications are due on Sunday, March 2'), all far outside the current cycle and recorded here only as historical context. Also checked: https://datascience.stanford.edu/programs lists only DSSG for undergraduates - the Stanford Data Science Scholars and Data Science Postdoctoral Fellows programs are for PhD students and postdocs."
+  }
+]

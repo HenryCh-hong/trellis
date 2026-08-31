@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Trellis design tokens
+
+   One neutral ramp, one accent, and a small set of semantic hues used only for
+   status. Everything is a CSS variable so dark mode is a token swap, never a
+   second set of components.
+   --------------------------------------------------------------------------- */
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  /* Neutrals — very slightly cool, so large white surfaces don't read yellow */
+  --color-neutral-0: oklch(1 0 0);
+  --color-neutral-25: oklch(0.9925 0.0008 265);
+  --color-neutral-50: oklch(0.982 0.0015 265);
+  --color-neutral-100: oklch(0.968 0.002 265);
+  --color-neutral-150: oklch(0.951 0.0025 265);
+  --color-neutral-200: oklch(0.927 0.003 265);
+  --color-neutral-300: oklch(0.879 0.0038 265);
+  --color-neutral-400: oklch(0.755 0.006 265);
+  --color-neutral-500: oklch(0.632 0.008 265);
+  --color-neutral-600: oklch(0.523 0.009 265);
+  --color-neutral-700: oklch(0.424 0.009 265);
+  --color-neutral-800: oklch(0.322 0.008 265);
+  --color-neutral-900: oklch(0.243 0.007 265);
+  --color-neutral-950: oklch(0.176 0.006 265);
+
+  /* Accent — one restrained indigo. Used for selection, focus, primary action,
+     and the score meter. Never for decoration. */
+  --color-accent-50: oklch(0.968 0.014 268);
+  --color-accent-100: oklch(0.936 0.03 268);
+  --color-accent-200: oklch(0.885 0.055 268);
+  --color-accent-300: oklch(0.806 0.09 268);
+  --color-accent-400: oklch(0.702 0.13 268);
+  --color-accent-500: oklch(0.618 0.156 268);
+  --color-accent-600: oklch(0.552 0.166 268);
+  --color-accent-700: oklch(0.478 0.152 268);
+  --color-accent-800: oklch(0.408 0.124 268);
+  --color-accent-900: oklch(0.338 0.094 268);
+
+  /* Semantic — status only, low chroma so a table of them stays calm */
+  --color-danger-50: oklch(0.964 0.018 25);
+  --color-danger-200: oklch(0.876 0.062 25);
+  --color-danger-500: oklch(0.618 0.176 25);
+  --color-danger-600: oklch(0.551 0.176 25);
+  --color-danger-700: oklch(0.472 0.152 25);
+
+  --color-warn-50: oklch(0.968 0.028 78);
+  --color-warn-200: oklch(0.886 0.078 78);
+  --color-warn-500: oklch(0.735 0.135 68);
+  --color-warn-600: oklch(0.652 0.132 60);
+  --color-warn-700: oklch(0.545 0.115 55);
+
+  --color-success-50: oklch(0.963 0.024 158);
+  --color-success-200: oklch(0.868 0.068 158);
+  --color-success-500: oklch(0.638 0.115 158);
+  --color-success-600: oklch(0.556 0.108 158);
+  --color-success-700: oklch(0.466 0.09 158);
+
+  --color-info-50: oklch(0.963 0.021 232);
+  --color-info-200: oklch(0.872 0.06 232);
+  --color-info-500: oklch(0.638 0.115 232);
+  --color-info-600: oklch(0.556 0.115 232);
+  --color-info-700: oklch(0.472 0.1 232);
+
+  /* Radii — moderate. Cards are 10px, controls 6-8px. Nothing pill-shaped
+     except deliberate status dots. */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.125rem;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 0.875rem;
+  --text-base--line-height: 1.375rem;
+  --text-md: 0.9375rem;
+  --text-md--line-height: 1.5rem;
+  --text-lg: 1.0625rem;
+  --text-lg--line-height: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.875rem;
+
+  --ease-out-quart: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Semantic surface variables — the only things components reference. */
+:root {
+  --bg: var(--color-neutral-0);
+  --bg-subtle: var(--color-neutral-50);
+  --bg-sunken: var(--color-neutral-100);
+  --bg-raised: var(--color-neutral-0);
+  --bg-hover: var(--color-neutral-100);
+  --bg-active: var(--color-neutral-150);
+  --bg-selected: var(--color-accent-50);
+
+  --border: var(--color-neutral-200);
+  --border-strong: var(--color-neutral-300);
+  --border-subtle: var(--color-neutral-150);
+
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-600);
+  --text-tertiary: var(--color-neutral-500);
+  --text-disabled: var(--color-neutral-400);
+  --text-inverse: var(--color-neutral-0);
+
+  --accent: var(--color-accent-600);
+  --accent-hover: var(--color-accent-700);
+  --accent-soft: var(--color-accent-50);
+  --accent-border: var(--color-accent-200);
+  --focus-ring: var(--color-accent-500);
+
+  --shadow-xs: 0 1px 2px 0 rgb(16 18 27 / 0.04);
+  --shadow-sm: 0 1px 2px 0 rgb(16 18 27 / 0.05), 0 1px 3px 0 rgb(16 18 27 / 0.04);
+  --shadow-md: 0 2px 4px -1px rgb(16 18 27 / 0.05), 0 4px 12px -2px rgb(16 18 27 / 0.08);
+  --shadow-lg: 0 8px 24px -6px rgb(16 18 27 / 0.12), 0 2px 6px -2px rgb(16 18 27 / 0.06);
+  --shadow-panel: -8px 0 32px -12px rgb(16 18 27 / 0.14);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: var(--color-neutral-950);
+  --bg-subtle: oklch(0.196 0.006 265);
+  --bg-sunken: oklch(0.155 0.006 265);
+  --bg-raised: oklch(0.215 0.007 265);
+  --bg-hover: oklch(0.235 0.007 265);
+  --bg-active: oklch(0.262 0.008 265);
+  --bg-selected: oklch(0.268 0.038 268);
+
+  --border: oklch(0.286 0.008 265);
+  --border-strong: oklch(0.352 0.009 265);
+  --border-subtle: oklch(0.246 0.007 265);
+
+  --text-primary: oklch(0.965 0.002 265);
+  --text-secondary: oklch(0.735 0.007 265);
+  --text-tertiary: oklch(0.632 0.008 265);
+  --text-disabled: oklch(0.494 0.009 265);
+  --text-inverse: var(--color-neutral-950);
+
+  --accent: var(--color-accent-400);
+  --accent-hover: var(--color-accent-300);
+  --accent-soft: oklch(0.278 0.05 268);
+  --accent-border: oklch(0.372 0.078 268);
+  --focus-ring: var(--color-accent-400);
+
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    font-feature-settings: "cv11", "ss01";
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.014em;
+    color: var(--text-primary);
+    font-weight: 590;
+  }
+
+  /* One focus treatment everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background: var(--color-accent-100);
+    color: var(--color-accent-900);
+  }
+
+  ::placeholder {
+    color: var(--text-disabled);
+  }
+}
+
+@layer utilities {
+  .text-primary { color: var(--text-primary); }
+  .text-secondary { color: var(--text-secondary); }
+  .text-tertiary { color: var(--text-tertiary); }
+  .bg-surface { background-color: var(--bg); }
+  .bg-surface-subtle { background-color: var(--bg-subtle); }
+  .bg-surface-sunken { background-color: var(--bg-sunken); }
+  .border-default { border-color: var(--border); }
+  .border-subtle { border-color: var(--border-subtle); }
+
+  /* Numeric columns: dates, scores, pay. Keeps tables from jittering. */
+  .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+  .shadow-xs { box-shadow: var(--shadow-xs); }
+  .shadow-card { box-shadow: var(--shadow-sm); }
+  .shadow-pop { box-shadow: var(--shadow-md); }
+  .shadow-panel { box-shadow: var(--shadow-panel); }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+  }
+
+  @keyframes trellis-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes trellis-slide-in {
+    from { transform: translateX(12px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes trellis-rise {
+    from { transform: translateY(4px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes trellis-shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-fade-in { animation: trellis-fade-in 140ms var(--ease-out-quart) both; }
+  .animate-slide-in { animation: trellis-slide-in 200ms var(--ease-out-quart) both; }
+  .animate-rise { animation: trellis-rise 180ms var(--ease-out-quart) both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-in,
+    .animate-rise {
+      animation: none;
+    }
+  }
+}

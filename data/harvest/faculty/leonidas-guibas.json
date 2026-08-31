@@ -1,0 +1,146 @@
+{
+  "slug": "leonidas-guibas",
+  "name": "Leonidas Guibas",
+  "title": "Paul Pigott Professor of Engineering and Professor, by courtesy, of Electrical Engineering",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://www.cs.stanford.edu/people/leonidas-guibas",
+  "lab_name": "Geometric Computation Group (Guibas Lab)",
+  "lab_url": "https://geometry.stanford.edu/",
+  "email": "guibas@cs.stanford.edu",
+  "email_source_url": "https://geometry.stanford.edu/?member=guibas",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Natural Language Processing and Speech",
+    "computer-vision",
+    "Human-Centered and Creative AI",
+    "Robotics"
+  ],
+  "research_topics": [
+    "3D generative modeling and controllable shape/asset generation",
+    "Flow matching and few-step diffusion distillation",
+    "Gaussian splatting reconstruction, editing and scene decomposition",
+    "Mesh and point-cloud representations for geometric deep learning",
+    "Spatial and multimodal reasoning in vision-language models",
+    "Geometric and topological data analysis",
+    "Pose tracking, human/humanoid motion and robot action learning"
+  ],
+  "current_direction": [
+    "Controllable and part-aware 3D asset generation, including training-free test-time spatial control",
+    "Flow-matching generative models and few-step imitation distillation for fast sampling",
+    "Direct mesh generation with equivariant, structure-aware architectures",
+    "Gaussian-splatting scene representations: continual updates, distractor removal, decomposition into primitives",
+    "Latent multimodal reasoning for spatial understanding in vision-language models"
+  ],
+  "current_direction_basis": "Inferred only from 2025-2026 items collected in this task via OpenAlex (author A5065368881, 26 works dated 2025-01-01 or later) plus arXiv abstract pages. Specifically: SpaceControl (arXiv 2512.05343, Dec 2025) for training-free test-time spatial control of 3D generation; PASTA (3DV 2026) for part-aware controllable shape generation; pi-Flow (arXiv 2510.14974, ICLR 2026) and Gaussian Mixture Flow Matching Models (arXiv 2504.05304) for flow-matching / few-step distillation; MeshFlow (2026, DOI 10.1145/3799902.3811195) for equivariant flow-matching mesh generation; SuperDec (ICCV 2025), CL-Splats (ICCV 2025), Self-Calibrating Gaussian Splatting (ICCV 2025), SplatTalk (ICCV 2025) and SpotLessSplats (ACM TOG, Mar 2025) for the Gaussian-splatting cluster; Mull-Tokens (arXiv 2512.10941, CVPR 2026 Findings) and Perspective-Aware Reasoning in Vision-Language Models (ICCV 2025) for multimodal latent spatial reasoning. NOT based on the biography text on the Stanford pages, which still emphasizes sensor networks, GPS traces and macromolecule modeling, nor on the lab's own publication list, which stops at 2024.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "MeshFlow: Mesh Generation with Equivariant Flow Matching",
+      "summary": "Generates 3D meshes directly with an equivariant flow-matching model, addressing the permutation invariance of mesh vertices and faces. Guibas is a co-author with Qi Sun, Kiyohiro Nakayama, Qixing Huang, Gordon Wetzstein and others. Publication date 2026-07-16 per OpenAlex; venue reported by Semantic Scholar as International Conference on Computer Graphics and Interactive Techniques (SIGGRAPH family).",
+      "url": "https://doi.org/10.1145/3799902.3811195",
+      "venue": "International Conference on Computer Graphics and Interactive Techniques"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Mull-Tokens: Modality-Agnostic Latent Thinking",
+      "summary": "Introduces modality-agnostic latent tokens that let a multimodal model hold intermediate reasoning state in either image or text form, improving four spatial-reasoning benchmarks by ~3% on average and up to +16% on a puzzle-solving split. arXiv comment on the fetched abstract page states 'Accepted to CVPR 2026 (Findings Track)'. arXiv posting date 2025-12-11.",
+      "url": "https://arxiv.org/abs/2512.10941",
+      "venue": "arXiv preprint; accepted to CVPR 2026 (Findings Track) per arXiv comment"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation",
+      "summary": "Modifies the output layer of a student flow model to predict a network-free policy, producing dynamic flow velocities at future substeps for fast ODE integration; reports 1-NFE FID of 2.85 on ImageNet 256^2. Lead author Hansheng Chen is a current Guibas Lab graduate student. arXiv comment on the fetched abstract page states 'ICLR 2026'. arXiv posting date 2025-10-16.",
+      "url": "https://arxiv.org/abs/2510.14974",
+      "venue": "arXiv preprint; ICLR 2026 per arXiv comment"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "SpaceControl: Introducing Test-Time Spatial Control to 3D Generative Modeling",
+      "summary": "A training-free test-time method for explicit spatial control of 3D asset generation that accepts geometric inputs from coarse primitives to detailed meshes, with a control parameter trading geometric fidelity against realism, plus an interactive real-time superquadric editing interface. Co-authored with Guibas Lab postdoc Francis Engelmann and graduate student Ian Huang. Posted 2025-12-05.",
+      "url": "https://arxiv.org/abs/2512.05343",
+      "venue": "arXiv preprint"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "SuperDec: 3D Scene Decomposition with Superquadric Primitives",
+      "summary": "Creates compact yet expressive 3D scene representations by decomposing scenes into superquadric primitives, rather than using primitives purely for photorealistic reconstruction. Published at ICCV 2025 (OpenAlex publication date 2025-10-19).",
+      "url": "https://doi.org/10.1109/iccv51701.2025.02283",
+      "venue": "IEEE International Conference on Computer Vision (ICCV) 2025"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "Geometric and Topological Data Analysis — CME 251 / CS 233 (Spring)",
+      "summary": "Listed under '2025-26 Courses' on the fetched Stanford Profiles page for Guibas. Same page's 'Current Research and Scholarly Interests' reads: 'Geometric and topological data analysis and machine learning. Algorithms for the joint analysis of collections of images, 3D models, or trajectories. 3D reconstruction.'",
+      "url": "https://profiles.stanford.edu/leonidas-guibas",
+      "venue": "Stanford University"
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Lab website lists no undergraduate members",
+      "status": "verified",
+      "evidence_url": "https://geometry.stanford.edu/",
+      "note": "The people listing on the Guibas Lab site has exactly four categories: 'Faculty' (Leonidas Guibas), 'Post Docs' (Francis Engelmann, Guandao Yang, Yang You), 'Graduate Students' (Boyang Deng, Boxiao Pan, Colton Stearns, Congyue Deng, Hansheng Chen, Ian Huang, Jihyeon Je, Lei Shu, Shengqu Cai, Yang Zheng, Yijia Weng), and 'Recent Alumni'. There is no undergraduate category."
+    },
+    {
+      "signal": "No undergraduate-facing language anywhere on the lab site",
+      "status": "verified",
+      "evidence_url": "https://geometry.stanford.edu/?member=guibas",
+      "note": "Case-insensitive grep of the fetched HTML of both the lab root page and the Guibas member page for 'undergrad', 'CURIS', 'prospective', 'recruit', 'opening', 'apply', 'senior project' and 'join us' returned zero content matches (the only 'join' hits were paper titles such as 'Joint Learning of 3D Shape Retrieval and Deformation'). The site has no news page and no join/prospective-students page; the only internal links are per-member pages and /papers/."
+    },
+    {
+      "signal": "Teaches CS 233 / CME 251 in Spring 2025-26, a 200-level course undergraduates can typically take",
+      "status": "inferred",
+      "evidence_url": "https://profiles.stanford.edu/leonidas-guibas",
+      "note": "The course offering itself is verified on the fetched Stanford Profiles page ('2025-26 Courses: Geometric and Topological Data Analysis CME 251, CS 233 (Spr)'). Whether undergraduates may enroll was NOT verified — ExploreCourses queries returned no parseable results in this task, so no enrollment restrictions were read. Treat as a possible point of contact, not a confirmed one."
+    },
+    {
+      "signal": "Department-level CS undergraduate research pathways exist (CURIS, independent study), but Guibas is not named on that page",
+      "status": "inferred",
+      "evidence_url": "https://www.cs.stanford.edu/bachelors/research-opportunities",
+      "note": "The fetched page says: 'CURIS Research ... The program for CS undergrad Summer research. Participating students will work on their projects full-time and are paid a stipend for living expenses.' and 'Undergraduate research is often done through CURIS, for academic credit, or through an informal arrangement with a professor.' and 'Throughout the year, professors have openings for undergrads to do work in their labs. They post descriptions of these projects on the site for your perusal.' A grep for 'guibas' on this page returned 0 matches, so this is a generic department pathway, not evidence of a Guibas Lab opening. The CURIS project listing itself (curis.stanford.edu) is a JavaScript app whose API returned HTTP 401 'Authentication credentials were not provided', so it could not be checked for Guibas projects."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No formal opening was found. The lab site has no join/openings/prospective-students page and contains zero occurrences of undergraduate-facing language, and it lists no undergraduate members — so OPENING is not justified. But the group is clearly and heavily active: OpenAlex reports 26 works with a publication date of 2025-01-01 or later under author A5065368881, including two dated 2026 (most recent 2026-07-16), with 2026 acceptances at CVPR 2026 Findings (Mull-Tokens), ICLR 2026 (pi-Flow) and 3DV 2026 (PASTA), and a full roster of three postdocs and eleven graduate students who could mentor a student. Guibas also teaches CS 233 / CME 251 in Spring 2025-26, giving a natural point of contact, and a direct email is published on the lab site. That combination makes a well-targeted cold email from a Stanford undergraduate reasonable, so OUTREACH rather than WATCH. Note for the student: the lab's own publication list is stale (newest entry seen is 2024), so any outreach should reference the 2025-2026 arXiv/conference work rather than the site's listings, and should probably be addressed toward a specific postdoc or graduate student's project.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 6,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/leonidas-guibas",
+    "https://www.cs.stanford.edu/people/leonidas-guibas",
+    "https://profiles.stanford.edu/leonidas-guibas",
+    "https://engineering.stanford.edu/people/leonidas-guibas",
+    "https://geometry.stanford.edu/",
+    "https://geometry.stanford.edu/?member=guibas",
+    "https://geometry.stanford.edu/members/guibas/contact.html",
+    "http://graphics.stanford.edu/~guibas/",
+    "https://www.cs.stanford.edu/bachelors/research-opportunities",
+    "https://curis.stanford.edu/",
+    "https://api.openalex.org/authors?search=Leonidas+Guibas",
+    "https://api.openalex.org/works?filter=author.id:A5065368881,from_publication_date:2025-01-01&sort=publication_date:desc&per-page=25",
+    "https://arxiv.org/abs/2512.10941",
+    "https://arxiv.org/abs/2512.05343",
+    "https://arxiv.org/abs/2510.14974",
+    "https://api.semanticscholar.org/graph/v1/paper/10.1145/3799902.3811195",
+    "https://api.semanticscholar.org/graph/v1/paper/10.1109/3dv69130.2026.00145",
+    "https://api.semanticscholar.org/graph/v1/paper/10.1109/iccv51701.2025.02283"
+  ],
+  "fetch_notes": "FAILURES: the supplied directory link https://cs.stanford.edu/people/leonidas-guibas returned HTTP 404; the working URL is the same path with the www prefix, https://www.cs.stanford.edu/people/leonidas-guibas (HTTP 200), which is what is recorded as faculty_url. https://geometry.stanford.edu/member/guibas/ and https://geometry.stanford.edu/papers/ both returned HTTP 403 Forbidden; the lab content was reached instead through the query-string routes https://geometry.stanford.edu/ and https://geometry.stanford.edu/?member=guibas (both HTTP 200). http://graphics.stanford.edu/~guibas is only a meta-refresh redirect stub pointing at geometry.stanford.edu/member/guibas. https://cs.stanford.edu/academics/curis-program and https://cs.stanford.edu/academics/undergraduate/research-opportunities both returned the CS site's 'Page Not Found'. curis.stanford.edu is a client-side JavaScript app that renders nothing to curl, and its API endpoint /api/projects returned HTTP 401 'Authentication credentials were not provided', so the CURIS project list could NOT be checked for Guibas entries. ExploreCourses queries for CS 233 returned no parseable output, so the course is recorded only from the Stanford Profiles page and its undergraduate enrollment eligibility was not verified. arXiv's API returned HTTP 000 over http and HTTP 429 'Rate exceeded' over https, so individual arXiv abstract HTML pages were fetched directly instead. EMAIL: guibas@cs.stanford.edu appears literally in fetched text on https://geometry.stanford.edu/?member=guibas ('Email: guibas@cs.stanford.edu Phone: (650) 723-0304 Office: Gates Building, 243'); the same address appears obfuscated as 'e-mail: guibas at cs.stanford.edu' on the fetched contact.html. The faculty administrator's address carriep1@stanford.edu also appears literally on both the lab member page and the Stanford Profiles page, but is not recorded as the faculty email. STALENESS: the lab's own publication list (embedded in the ?member=guibas page) has no 2025 or 2026 entries at all — the newest items seen are 2024 — so all recent evidence comes from OpenAlex, arXiv and Semantic Scholar rather than the lab site. The '2024' strings on the lab site are overwhelmingly the asset path 'lgl_2024', not publication years; the footer reads 'Copyright 2026 Guibas Laboratory'. VENUES: venue strings for MeshFlow, PASTA and SuperDec come from Semantic Scholar's publicationVenue field; OpenAlex reported no source for those conference papers. Semantic Scholar dates PASTA 2024 while its DOI (10.1109/3dv69130.2026.00145) and OpenAlex date it to 3DV 2026 — this discrepancy is unresolved, so PASTA is cited only in current_direction_basis and not as a dated evidence item. No grant, news or talk evidence was found on any fetched page."
+}

@@ -1,0 +1,255 @@
+{
+  "login_url": "https://stanford.joinhandshake.com/login",
+  "search_url_pattern": "https://stanford.joinhandshake.com/stu/jobs (job search / jobs list, authenticated). Job detail: https://stanford.joinhandshake.com/jobs/<JOB_ID> and https://stanford.joinhandshake.com/stu/jobs/<JOB_ID>. Handshake's own employer docs give the shareable job-detail form as https://app.joinhandshake.com/emp/jobs/<JOB_ID>, which students can open while logged in ('Students can view job postings using this link, even though it includes \"emp\" in the URL'). Other confirmed authenticated student routes: /postings, /stu/postings, /saved_jobs, /stu/saved_jobs, /applications, /stu/applications. VERIFICATION METHOD: logged out, every one of these paths returns HTTP 302 -> https://stanford.joinhandshake.com/login, while control paths /stu/zzzznotareal and /qqqqnope return HTTP 404. The 404-vs-302 split proves these are real authenticated routes rather than a blanket auth wall. NOT verified: which route the 'Jobs' nav item actually lands on for a logged-in Stanford student, and the query-string filter grammar (e.g. ?query=, ?job_type=) - both require a logged-in session to confirm.",
+  "auth": "Stanford SSO (SAML 2.0 / Shibboleth) plus Stanford two-step (MFA), verified end-to-end by following redirects. The Stanford Handshake login page (https://stanford.joinhandshake.com/login) presents 'Stanford University Students & Career Educators' and 'Stanford University Alumni Job Seekers' options and an 'Enter your Stanford University email' field. Its SSO link is the relative path /auth/saml/362/session/new?redirect_to_idp=true; requesting it returns HTTP 302 with Location: https://login.stanford.edu/idp/profile/SAML2/Redirect/SSO?SAMLRequest=<deflated base64 AuthnRequest>, landing on Stanford's Shibboleth IdP at login.stanford.edu. That IdP page renders 'Stanford Login' and a 'TWO-STEP DEVICE UNAVAILABLE?' link, confirming a second factor is part of the flow. Stanford UIT documents two-step as using Duo: 'Two-step authentication uses two forms of authentication to verify your identity. First, you enter your SUNet ID and password. Then you need a physical device such as your mobile phone, tablet, or landline phone to complete the login,' with Duo Push, SMS, phone call, YubiKey passcode, and U2F/FIDO2 security key as options, and re-prompting 'at least every 90 days for each computer and each browser'. Handshake additionally fronts login with Cloudflare bot checks: per Handshake's own help center, 'Handshake uses Cloudflare... to help protect the Handshake platform from bots' and users 'may encounter a brief Cloudflare verification screen when... Logging in or using the Handshake mobile app'. NET EFFECT FOR THE INTEGRATION: there is no headless/offline path to this data. The only lawful position is code that runs inside the student's own already-authenticated browser tab, after the student has personally completed SUNet + Duo (+ any Cloudflare check). We never see, handle, or replay the credential.",
+  "extractable_fields": [
+    {
+      "field": "title",
+      "verified": "yes (public share_preview)",
+      "evidence": "Rendered as <h1 class='card-heading-title'> on https://app.joinhandshake.com/jobs/8000000/share_preview -> 'Residential SOAR Specialist'. Also present in the page <title>: 'Residential SOAR Specialist | Trilogy, Inc. | Handshake'.",
+      "note": "A logged-in student page will show the same datum; the wrapping element is not verified for the logged-in SPA."
+    },
+    {
+      "field": "employer",
+      "verified": "yes (public share_preview)",
+      "evidence": "<div class='card-heading-subtitle'><a class='no-underline' href='/employers/14571'>Trilogy, Inc.</a> on the same page. Employer id recoverable from the /employers/<id> href."
+    },
+    {
+      "field": "location",
+      "verified": "yes, but NOT as a visible labeled field on the public preview",
+      "evidence": "Present only inside the data-knockout-props JSON blob on the JobSharePreview element: {\"location_names\":[\"6701 South Elizabeth Street, Chicago, Illinois 60636, United States\"],\"job_location\":{...\"city\":\"Chicago\",\"state\":\"Illinois\",\"state_abbreviation\":\"IL\",\"zipcode\":\"60636\",\"country\":\"United States\",\"latitude\":41.771705,\"longitude\":-87.655...}}.",
+      "note": "Handshake's student search docs confirm location is a first-class filter ('Filter for jobs in a specific city, state, or ZIP code', 50-mile default radius), so it is a real structured field server-side and is displayed on the logged-in job card/detail. Exact logged-in markup unverified."
+    },
+    {
+      "field": "job_type / employment_type",
+      "verified": "yes, indirectly",
+      "evidence": "The share-by-email mailto body on the public preview is prefilled with 'Title: Residential SOAR Specialist / Employer: Trilogy, Inc. / Job Type: Full-Time', proving job type is a structured attribute. Handshake's 'Searching for Jobs and Internships' (updated 2026-08-28) documents the student filter vocabulary: Employment Type = Full-time, Part-time; Job Type = Job, Internship, On Campus Student Employment, Cooperative Education, Experiential Learning, Volunteer, Fellowship, Graduate School; plus On-site/Remote/Hybrid.",
+      "note": "Not rendered as a labeled visible row on the logged-out preview."
+    },
+    {
+      "field": "pay / compensation",
+      "verified": "yes, and this is the important caveat",
+      "evidence": "On the sampled public job the pay '$22.83 /Hr.' appears ONLY as free text inside the employer-authored description HTML (<div class='ql-align-center'><strong>$22.83 /Hr.</strong></div> inside div.sanitized-html-container) - it is NOT a labeled structured field on that page.",
+      "note": "Handshake does model compensation server-side: the student filter panel has a 'Pay and Benefits' section with 'Paid (shows jobs the employer has marked as paid)', 'Unpaid', and additional compensation/benefits options. So a structured pay field exists for some postings, but MANY postings carry pay only in prose. Treat pay as best-effort and never assert a salary the page did not explicitly label."
+    },
+    {
+      "field": "description",
+      "verified": "yes (public share_preview)",
+      "evidence": "Full employer-authored HTML inside <div class='sanitized-html-container'>, containing <h2>Overview</h2>, <h2>Responsibilities</h2>, <h2>Qualifications</h2> and <ul>/<li> lists on the sampled posting.",
+      "note": "Headings are employer-authored free text, not a Handshake schema. Do NOT assume every posting has Responsibilities/Qualifications sections, and do NOT promote text under a 'Preferred' or 'Nice to have' heading into required qualifications."
+    },
+    {
+      "field": "posted_date / apply_start_date",
+      "verified": "documented, NOT observed",
+      "evidence": "Handshake's 'Job Details Page' article (updated 2026-03-31) documents 'Apply Start and Expiration Dates: The Apply Start and Expiration Dates will be listed' and 'Expiration: The expiration date and time for the job posting'. That article describes the CAREER-SERVICES (school-staff) view, not the student view.",
+      "note": "No posted/apply-start date was rendered on the logged-out public job preview I fetched. Must be confirmed against a real logged-in student job page before the extractor depends on it."
+    },
+    {
+      "field": "apply_by_date / expiration",
+      "verified": "documented, NOT observed",
+      "evidence": "Same 'Job Details Page' article: 'Expiration: The expiration date and time for the job posting'; 'The Apply Start Date and Expiration Date cannot have more than 365 days between them.'",
+      "note": "Not present on the logged-out preview. Confirm in the logged-in DOM. This is the single highest-stakes field for a student (a missed deadline is a real harm), so it should be shown with its source text and never inferred or extrapolated."
+    },
+    {
+      "field": "application_method (Apply / Quick Apply / Apply Externally)",
+      "verified": "yes, from Handshake's own current docs",
+      "evidence": "'Apply for a Job in Handshake' (updated 2026-08-16): 'Click on Apply, Apply Externally, or Quick Apply as applicable for that particular job.' The rendered button label on the logged-in job details page is therefore the reliable discriminator for which flow a posting uses.",
+      "note": "Button label is the signal. The logged-out preview shows no apply control at all ('You are viewing a preview of this job. Log in or register to view more details about this job.')."
+    },
+    {
+      "field": "job_id",
+      "verified": "yes",
+      "evidence": "Numeric id in the URL path (/jobs/8000000/share_preview) and echoed in the knockout props as locationable_id: 8000000 with locationable_type: 'Job'. Handshake docs also confirm students can search by job ID: 'Search using keywords, job titles, job IDs, or employer names'.",
+      "note": "Stable primary key - use it for dedupe rather than title+employer."
+    },
+    {
+      "field": "employer_logo_url",
+      "verified": "yes (public share_preview)",
+      "evidence": "<img src='https://joinhandshake-production.imgix.net/app/public/assets/institutions/14571/original/hs-emp-logo-data.?ixlib=rb-4.1.1&w=50&h=50...'>"
+    },
+    {
+      "field": "majors / degree levels / qualifications / work authorization / GPA",
+      "verified": "documented as filters, rendering NOT observed",
+      "evidence": "'Searching for Jobs and Internships' documents an All Filters panel with Majors, Degree Levels, and Qualifications (Match all, Major, School Year, Graduation Date, US Work Authorization, GPA), plus Employers, Labels, Industries, Job roles.",
+      "note": "These are employer 'candidate preferences'. Handshake states Quick Apply appears only when 'You meet all of the employer's specified candidate preferences'. Whether preference text is rendered on the student job page is unverified."
+    }
+  ],
+  "application_flows": [
+    {
+      "flow": "Apply (in Handshake, with documents)",
+      "button_label": "Apply",
+      "source": "https://support.joinhandshake.com/hc/en-us/articles/218693418-Apply-for-a-Job-in-Handshake (updated 2026-08-16)",
+      "when_it_appears": "Verbatim: 'Apply appears if one or more of the following are true: You don't meet all employer preferences; One or more documents are required, and you don't have them uploaded; More than one document is required; You're accessing a job via \"Saved Jobs\" that leads to an external application.'",
+      "mechanics": "Verbatim: 'Once you click Apply, a pop-up will appear with details about the application.' The student may 'Choose from your existing documents by selecting the dropdown menu', 'Select one of your two most recently added documents', or 'Upload a new document by clicking the blue button Upload New', then clicks 'Submit Application'. Confirmation: 'a green confirmation banner will appear at the top of the job details page stating \"You applied on [DATE].\"' Note also: 'If your school requires document feedback, your application won't be submitted until your Career Services center reviews your documents.'",
+      "what_our_integration_may_do": "Read the posting and prefill/suggest nothing beyond surfacing which documents are required. The student clicks Apply and Submit Application themselves.",
+      "rate_limit": "Verbatim from the same article: 'There is a daily limit of 300 applications. If you exceed this limit, your account will be automatically blocked... your account will remain blocked until it is reviewed and cleared by our Trust & Safety team.'"
+    },
+    {
+      "flow": "Quick Apply (in Handshake, one click)",
+      "button_label": "Quick Apply",
+      "source": "https://support.joinhandshake.com/hc/en-us/articles/360013861394-Jobs-Quick-Apply-in-Handshake (updated 2026-07-24)",
+      "when_it_appears": "Verbatim: 'Quick Apply is available only if all of the following conditions are met: You meet all of the employer's specified candidate preferences for the job. The application requires no documents, or only one required document (a resume). If a resume is required, you must have an approved or pending resume.'",
+      "mechanics": "Verbatim: 'If a resume is required, your most recently uploaded resume with an Approved or Pending status is selected automatically.' The student may swap it ('click the X next to the selected document') or 'Upload new document', then clicks 'Submit Application'. On success: 'a confirmation will appear at the bottom of the screen stating \"Application submitted!\"'",
+      "what_our_integration_may_do": "Surface that a posting is Quick-Apply-eligible and that the auto-selected resume may not be the right one. Never click Quick Apply or Submit Application on the student's behalf - the whole risk of Quick Apply is that it is one click away from an irreversible submission with a possibly wrong resume.",
+      "rate_limit": "Same 300/day platform limit applies."
+    },
+    {
+      "flow": "Apply Externally (employer's own ATS)",
+      "button_label": "Apply Externally",
+      "source": "https://support.joinhandshake.com/hc/en-us/articles/360043604173-Jobs-Apply-Externally (updated 2025-08-19)",
+      "when_it_appears": "Verbatim: 'Some employers may choose to collect applications in their internal tracking system rather than Handshake. If this is the case, the job posting will have a button to Apply Externally.' And from the Apply article: 'Apply Externally indicates the employer is using an external site to collect applications. Additional steps outside of Handshake are required to complete your application.'",
+      "mechanics": "An in-Handshake popup may first require up to three things: 'Review Employer Instructions', 'Submit Documents on Handshake', and 'Complete Pre-Application Questions'. Then 'click the green button Step 2: External Application'. Verbatim: 'A new browser window or tab will open with the designated application link. You'll need to follow the instructions on this site to fully submit your application.' Afterwards the job is added to 'My Jobs' with status Pending and Handshake asks 'Did you apply to this job?' - the student answers YES / NO, because 'Handshake cannot track your activity on the external site'.",
+      "what_our_integration_may_do": "Capture the external URL and the employer instructions so the student has a record, and remind them the application is NOT complete until they finish on the external site and answer the 'Did you apply to this job?' prompt. We must not auto-answer that prompt, and we must not drive the third-party ATS - that site has its own terms we have not reviewed.",
+      "caveat": "Verbatim: 'For any questions related to this application, you'll need to reach out to the employer directly, as Handshake does not have access to the external site.'"
+    }
+  ],
+  "must_not": [
+    "MUST NOT store, request, transmit, or cache the student's SUNet ID password, Duo codes, or any Stanford credential. Handshake's ToS puts this on the user: 'You are responsible for keeping your password secret and secure.' The extension must have no password field and no credential storage of any kind.",
+    "MUST NOT bypass, replay, proxy, or automate Stanford SSO/SAML or Duo two-step. No scripted login, no session-cookie exfiltration, no re-use of a SAML assertion outside the student's own browser, no 'remember my SUNet password so we can log in for you'.",
+    "MUST NOT solve, bypass, or suppress Cloudflare bot checks or CAPTCHAs. Handshake explicitly runs Cloudflare to 'Prevent the creation of fake or automated accounts' and 'Block bots from misusing the app or website'. Defeating that control is an attack on the platform, not a feature. (Note their troubleshooting even says to 'Disable any browser extensions' - so our extension must stay inert on the Cloudflare interstitial and never touch it.)",
+    "MUST NOT auto-submit any application. Never programmatically click Apply, Quick Apply, Submit Application, or Step 2: External Application, and never auto-answer the post-external 'Did you apply to this job?' prompt. Every submission is irreversible from the student's reputation standpoint and is attributed to them personally. The student reviews and clicks, always. This also protects them from the documented 300-applications/day auto-block.",
+    "MUST NOT scrape while logged out, and MUST NOT crawl Handshake server-side. Handshake's robots.txt on both app.joinhandshake.com and stanford.joinhandshake.com is 'Disallow: /' for all user agents with only a narrow allowlist (/, /access, /login, /register, /employer_registrations/new, /career_fairs/*/student_preview, /career_fairs/*/employer_preview, /events/*/share_preview, /jobs/*/share_preview, /employers, /job_role_groups, /questions, /profiles/*, /public, plus favicons). No backend job of ours may fetch Handshake pages.",
+    "MUST NOT bulk-collect. Handshake's Terms of Service, verbatim: 'Handshake takes user privacy seriously and does not permit third parties to bulk collect student data, employer data, job descriptions, or other marketplace information from our Services through the use of automated scripts (\"scraping\"), similar or other technologies or methodologies.' And: 'Creating accounts through unauthorized means, including scripts, bots, or automated crawlers is prohibited, as is collecting content through crawling, scraping, or caching of user profiles without our express consent.' This is the binding constraint on the whole design: reading the page the student is personally looking at, for that student's own use, is defensible; enumerating the job graph, walking result pages unattended, or building a shared job corpus is not.",
+    "MUST NOT use Handshake's EDU API. It is institution-scoped and issued to the school, not to students or third-party apps: access requires a Developer Portal account whose 'Username and Password [is] provided by the Handshake Support team via 1Password' and a subscription that 'needs to be approved' by Handshake Support. Stanford Career Education has not granted us this, and we must not ask a student to hand us school API credentials.",
+    "MUST NOT exfiltrate other students' data or employer contact data, or re-publish scraped job descriptions to other users. Job descriptions are explicitly named in the ToS anti-bulk-collection clause.",
+    "MUST NOT retain harvested job content beyond what the student needs for their own tracking, and must give the student a one-click way to delete it. Default to storing locally on the student's machine.",
+    "MUST NOT silently keep running. Extraction should be user-initiated and visible, with an obvious off switch, so the student always knows what is being read and when."
+  ],
+  "selector_strategy": "NO STABLE LOGGED-IN CSS SELECTORS ARE PUBLICLY VERIFIABLE, AND I AM NOT INVENTING ANY. Here is exactly what I could and could not confirm.\n\nWHAT I CONFIRMED (logged-out only): the one publicly reachable job page is the share preview, https://app.joinhandshake.com/jobs/<ID>/share_preview, which robots.txt explicitly allows. Its real markup is a legacy Rails/Knockout server-rendered page: a root <div data-knockout-class='JobSharePreview' data-component-id='JobSharePreview'> whose data-knockout-props attribute holds a JSON blob with location_names and a full job_location object (city, state, state_abbreviation, zipcode, country, lat/long, locationable_id = job id); h1.card-heading-title (title); div.card-heading-subtitle > a[href^='/employers/'] (employer name + id); div.sanitized-html-container (employer-authored description HTML); and a mailto link prefilled with Title / Employer / Job Type. There is NO JSON-LD on this page - I checked, and the count of application/ld+json script blocks is exactly 0. There are also NO aria roles at all in that region, and the only ids are 'fb-root'. So the two nicest extraction targets (JSON-LD JobPosting, ARIA landmarks) are simply absent on the page I can see.\n\nWHY THAT DOESN'T GIVE US LOGGED-IN SELECTORS: the share preview is a different, older, server-rendered page from the logged-in student job view, which is a React SPA behind SSO. Its class names (card-heading-title, preview-card) almost certainly do NOT exist in the logged-in DOM. Verifying the real logged-in selectors requires an authenticated Stanford session, which I do not have and must not obtain. Treat any 'Handshake selector' from a blog or a scraper repo as unverified too.\n\nRESILIENT STRATEGY - layered, each layer falling back to the next:\n\n1) URL and route first. Job id comes from the URL path (/jobs/<id>, /stu/jobs/<id>, /emp/jobs/<id>) - a numeric primary key, the single most stable signal on the page. Use it for identity and dedupe; never key on title+employer.\n\n2) Look for embedded state before touching the DOM. Handshake already ships structured JSON inside HTML attributes on the page we can see (data-knockout-props). On the logged-in SPA, check in order: any application/ld+json block; any data-* attribute whose value parses as JSON; the Next/Redux-style bootstrap payloads (window.__INITIAL_STATE__, __NEXT_DATA__, or a <script type='application/json'>). Parsing a JSON blob is far more durable than any CSS path. Probe for these first at integration time - do not assume which exists.\n\n3) Anchor on semantics, not styling. Take the title from the page's h1 (or the highest-level heading inside the job region), and cross-check it against document.title, which on the page I fetched was reliably '<Title> | <Employer> | Handshake'. Prefer role/aria hooks and heading hierarchy over class names. Never select on hashed or utility class names (Tailwind/CSS-modules classes churn on every deploy).\n\n4) Label-based extraction for the metadata rows. For location, job type, pay, posted date, and apply-by date, find the visible label text and read its adjacent value node, rather than hardcoding a path. Match labels case-insensitively against a synonym set drawn from Handshake's own documented vocabulary - job type against {Full-time, Part-time, Job, Internship, On Campus Student Employment, Cooperative Education, Experiential Learning, Volunteer, Fellowship, Graduate School}, work mode against {On-site, Remote, Hybrid}, dates against {Apply by, Expires, Expiration, Posted, Apply start}. This survives re-styling, which is what actually breaks scrapers.\n\n5) Application method from the button label, not the DOM position. Read the accessible name of the primary action control and match it to exactly one of Apply / Quick Apply / Apply Externally - these three strings are documented by Handshake and are the contract. If the label is none of the three, report unknown rather than guessing a flow.\n\n6) Description as a subtree, conservatively. Capture the container that holds the long-form employer HTML and keep its heading/list structure. Do not parse employer headings into a schema, and never reclassify 'Preferred'/'Nice to have' content as required.\n\n7) Fail loudly and empty. Every field gets a confidence and a provenance (which strategy produced it). If a field cannot be found, emit null and tell the student the field was not readable - never fall back to a guess or to a stale cached value. Ship a self-check that flags when extraction success drops, because Handshake will redesign and we want the extension to say 'I can't read this page anymore' instead of quietly inventing a deadline. Pay and apply-by deserve the strictest treatment: show the source text verbatim next to the parsed value.\n\n8) Read-only and in-tab. The content script reads the DOM the student is already looking at, does no background fetching, follows no pagination on its own, and never issues XHRs to Handshake endpoints.",
+  "verified_sources": [
+    {
+      "url": "https://stanford.joinhandshake.com/login",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Real Stanford entry point. https://stanford.joinhandshake.com redirects (HTTP 200 final) to /login. Page shows 'Stanford University Students & Career Educators', 'Stanford University Alumni Job Seekers', 'Enter your Stanford University email', and the SSO href /auth/saml/362/session/new?redirect_to_idp=true."
+    },
+    {
+      "url": "https://stanford.joinhandshake.com/auth/saml/362/session/new?redirect_to_idp=true",
+      "fetched": "2026-08-31",
+      "method": "curl -I",
+      "proves": "HTTP 302 -> https://login.stanford.edu/idp/profile/SAML2/Redirect/SSO?SAMLRequest=... . Confirms SAML 2.0 handoff to Stanford's Shibboleth IdP."
+    },
+    {
+      "url": "https://login.stanford.edu/idp/profile/SAML2/Redirect/SSO?execution=e1s1",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Stanford Shibboleth IdP. Page text includes 'Stanford Login', 'LOGIN HELP', and 'TWO-STEP DEVICE UNAVAILABLE?' - direct evidence a second factor is in the flow."
+    },
+    {
+      "url": "https://uit.stanford.edu/service/authentication/twostep",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Stanford two-step is Duo-based: SUNet ID + password then a physical device; Duo Push / SMS / phone call / YubiKey passcode / U2F-FIDO2 security key; re-prompt at least every 90 days per browser."
+    },
+    {
+      "url": "https://app.joinhandshake.com/robots.txt",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "'Disallow: /' for all user agents with a narrow Allow list including /jobs/*/share_preview. Identical file served at stanford.joinhandshake.com/robots.txt."
+    },
+    {
+      "url": "https://app.joinhandshake.com/jobs/8000000/share_preview",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "The only publicly reachable real job page. Yielded the actual DOM: JobSharePreview knockout root with data-knockout-props JSON (location object), h1.card-heading-title, div.card-heading-subtitle > a[href^='/employers/'], div.sanitized-html-container. Zero application/ld+json blocks; zero aria roles. Banner: 'You are viewing a preview of this job. Log in or register to view more details about this job.' Pay ('$22.83 /Hr.') appears only as free text inside the description."
+    },
+    {
+      "url": "https://stanford.joinhandshake.com/stu/jobs (and /postings, /stu/postings, /jobs/<id>, /stu/jobs/<id>, /saved_jobs, /stu/saved_jobs, /applications, /stu/applications)",
+      "fetched": "2026-08-31",
+      "method": "curl (status only)",
+      "proves": "All return HTTP 302 -> https://stanford.joinhandshake.com/login when logged out, while control paths /stu/zzzznotareal and /qqqqnope return HTTP 404. The 302-vs-404 split proves these are real authenticated routes and that nothing is readable logged out."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/218693418-Apply-for-a-Job-in-Handshake",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API (support.joinhandshake.com/api/v2/help_center/en-us/articles/218693418.json); the HTML page itself is Cloudflare-403 to curl and WebFetch",
+      "article_updated": "2026-08-16",
+      "proves": "The three apply flows and their exact button labels; the document-upload popup; the 'You applied on [DATE]' banner; the 300-applications/day limit and auto-block."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/360013861394-Jobs-Quick-Apply-in-Handshake",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-07-24",
+      "proves": "Quick Apply preconditions (meets all employer preferences; zero or one required document, resume approved-or-pending) and that the most recent resume is auto-selected."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/360043604173-Jobs-Apply-Externally",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2025-08-19",
+      "proves": "External flow: optional popup (employer instructions / documents / pre-application questions), 'Step 2: External Application', new tab to employer site, My Jobs status Pending, and the 'Did you apply to this job?' YES/NO prompt."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/218693408-Searching-for-Jobs-and-Internships",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-08-28",
+      "proves": "Student job search UI and the full filter vocabulary (Employment Type, Job Type, Location w/ radius, Pay and Benefits, On-site/Remote/Hybrid, Majors, Degree Levels, Qualifications incl. GPA and US Work Authorization, Employers, Labels, Industries, Job roles). Also that search accepts job IDs."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/17167181895063-Job-Details-Page",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-03-31",
+      "proves": "Existence of Employer / Expiration / Applicants fields and Apply Start + Expiration dates. NOTE: this documents the career-services staff view, not the student view."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/30881026715415-Share-a-Job-Posting-URL",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-08-07",
+      "proves": "Job URLs begin 'https://app.joinhandshake.com/emp/jobs/' + job ID, and 'Students can view job postings using this link, even though it includes \"emp\" in the URL', but only if 'Are logged into their Handshake account' and 'Attend a school where the job has been approved' - otherwise 'they will be redirected to the Handshake login or sign-up page'."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/34486108917271-Understanding-Cloudflare-Security-Checks-on-Handshake",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-08-03",
+      "proves": "Handshake runs Cloudflare to 'Prevent the creation of fake or automated accounts' and 'Block bots from misusing the app or website'; verification screens can appear at login. Also advises users to 'Disable any browser extensions' when checks loop."
+    },
+    {
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/31061076506391-Getting-Started-with-EDU-API",
+      "fetched": "2026-08-31",
+      "method": "Zendesk API",
+      "article_updated": "2026-07-17",
+      "proves": "The EDU API is institution-scoped and read-only, gated behind a Developer Portal (https://edu-api.joinhandshake.com:444) whose credentials are 'provided by the Handshake Support team via 1Password' and a subscription approved by Handshake Support. We have no such grant."
+    },
+    {
+      "url": "https://joinhandshake.com/legal/tos/",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Anti-bulk-collection clause naming job descriptions explicitly; prohibition on scripts/bots/automated crawlers and on 'collecting content through crawling, scraping, or caching of user profiles without our express consent'; 'You are responsible for keeping your password secret and secure.'"
+    },
+    {
+      "url": "https://careered.stanford.edu/",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Stanford Career Education is the owning office; 'Connect with Handshake - Find jobs and internship postings, event info, and coaching schedules.' Outbound Handshake links on the page: https://stanford.joinhandshake.com/edu and https://stanford.joinhandshake.com/appointments/new."
+    },
+    {
+      "url": "https://careered.stanford.edu/handshake-terms-conditions",
+      "fetched": "2026-08-31",
+      "method": "curl",
+      "proves": "Stanford's own binding Handshake terms for students: 'Your use of Stanford Career Education (CareerEd) services and the Handshake website is deemed to constitute your binding agreement to the following terms.' CareerEd disclaims responsibility for accuracy: 'Handshake may contain inaccuracies or typographical errors... CareerEd makes no representation about or guarantee of the truth, accuracy, completeness or timeliness of any such content'. Relevant to us: we must not present harvested postings as verified."
+    }
+  ],
+  "unverified_assumptions": [
+    "The logged-in student job-search and job-detail DOM. Never observed - it is behind SSO+Duo. Every CSS selector for the logged-in page is unverified, which is why selector_strategy is heuristic and layered rather than a selector list. Confirm against a real session before shipping.",
+    "Which exact route the 'Jobs' left-nav item resolves to for a Stanford student. /stu/jobs, /postings, and /stu/postings are all proven-real authenticated routes (302 vs 404 on nonsense), but which is canonical and which are legacy redirects is unknown.",
+    "The query-string grammar for search filters (keyword, location, radius, job type, pay). The filter *vocabulary* is documented; the URL parameter names are not, and I did not guess them.",
+    "Whether posted date and apply-by/expiration are rendered on the STUDENT job detail page. They are documented only for the career-services staff view and were absent from the public preview. Highest-priority thing to confirm, since a wrong deadline is the most harmful error this product could make.",
+    "Whether structured pay/compensation is exposed as a labeled field on the student page. On the posting I inspected, pay existed only as prose inside the description. A 'Paid/Unpaid' filter exists, which is not the same as a salary range.",
+    "/job-search and /explore returned HTTP 403 (Cloudflare), which is ambiguous - it proves neither that the route exists nor that it doesn't. Not treated as real routes.",
+    "Whether the logged-in SPA emits JSON-LD or a bootstrap JSON payload. The public preview has zero JSON-LD and zero aria roles; the SPA may differ. Probe at integration time rather than assuming.",
+    "That /jobs/<id>/share_preview is stable enough to rely on. It is robots-allowed today and was fetchable for the ids I probed, but it is a logged-out marketing surface, shows a reduced field set, exposes no apply control, and gives no Stanford-specific visibility. It is useful for DOM research, NOT a data source - using it to enumerate postings would be exactly the 'bulk collect ... job descriptions' the ToS prohibits.",
+    "Whether Stanford Career Education would sanction a student-run browser extension at all. I found no Stanford policy page addressing third-party tools against Handshake, and I did not contact CareerEd. Worth asking them before any distribution beyond personal use.",
+    "The 300-applications/day limit is documented as a platform limit; I did not verify how it interacts with a tool that merely reads pages (it should not, since we never submit). No Handshake documentation was found on per-session page-view rate limits for normal browsing.",
+    "Sampled exactly one live job posting (id 8000000, 'Residential SOAR Specialist', Trilogy, Inc.) for DOM structure. Field presence varies by posting; one sample is not a schema."
+  ],
+  "_meta": {
+    "generated": "2026-08-31",
+    "task": "Stanford Handshake access + ethical importer boundaries recon",
+    "fetch_notes": "support.joinhandshake.com HTML returns Cloudflare HTTP 403 to both curl and WebFetch; retrieved the same articles as JSON via the public Zendesk Help Center API (/api/v2/help_center/en-us/articles/<id>.json), which is unauthenticated and returns each article's title, body, and updated_at. careered.stanford.edu/handshake and vpge.stanford.edu/resources/handshake both 404 (CareerEd site was reorganized); used careered.stanford.edu root and /handshake-terms-conditions instead. A Wesleyan PDF on Handshake job links was image-only with no text layer and no pdftotext available, so it was discarded rather than guessed at. No Stanford student credentials were used and no authenticated page was accessed at any point."
+  }
+}

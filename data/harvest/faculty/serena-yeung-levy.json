@@ -1,0 +1,161 @@
+{
+ "slug": "serena-yeung-levy",
+ "name": "Serena Yeung-Levy",
+ "title": "Assistant Professor of Biomedical Data Science and, by courtesy, of Electrical Engineering and of Computer Science",
+ "department": "Department of Biomedical Data Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/serena-yeung",
+ "lab_name": "Medical AI and Computer Vision Lab (MARVL)",
+ "lab_url": "https://marvl.stanford.edu/",
+ "email": "syyeung@stanford.edu",
+ "email_source_url": "https://marvl.stanford.edu/",
+ "research_areas": [
+  "Artificial Intelligence",
+  "computer-vision",
+  "Human-Centered and Creative AI",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "deep learning",
+  "computer vision",
+  "visual and multimodal modeling",
+  "vision-language models (VLMs / multimodal LLMs)",
+  "applications in biomedicine and healthcare",
+  "medical and microscopy image analysis",
+  "surgical and clinical video understanding",
+  "virtual cell / cellular morphology generative modeling",
+  "biomedical vision-language datasets and benchmarks",
+  "3D human mesh recovery and human motion from video"
+ ],
+ "current_direction": [
+  "Generative 'virtual cell' models of cellular morphology (flow matching + RL)",
+  "Biomedical vision-language corpora and benchmarks mined from scientific literature",
+  "RL / test-time post-training for multimodal scientific reasoning and tool use",
+  "Efficiency and perception bottlenecks in small and accelerated multimodal models",
+  "Computer vision for surgical and clinical video (steps, errors, competencies)"
+ ],
+ "current_direction_basis": "Driven by the 2025-2026 items on https://marvl.stanford.edu/publications.html, cross-checked against OpenAlex works for author A5093429554. Virtual-cell direction: 'CellFluxV2: An Image Generative Foundation Model for Virtual Cell Modeling' (bioRxiv, Jan 2026), 'CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning' (arXiv 2026), and 'CellFlux: Simulating Cellular Morphology Changes via Flow Matching' (ICML 2025). Biomedical VLM data/benchmarks: 'BIOMEDICA' (CVPR 2025), 'MicroVQA' (CVPR 2025), 'From Panel to Pixel' (CVPR 2026), 'No Tokens Wasted' (arXiv 2025). RL/test-time training and tool use: 'PaperSearchQA ... with RLVR' (EACL 2026), 'Tool Verification for Test-Time Reinforcement Learning' (arXiv 2026), 'TTRV: Test-Time Reinforcement Learning for Vision Language Models' (arXiv 2025). Efficiency/perception limits: 'Feather the Throttle' (ICCV 2025), 'Downscaling Intelligence' (CVPR 2026), 'Do VLMs Perceive or Recall?' (CVPR 2026). Surgical/clinical video: 'Computer Vision-Based Retrieval of Steps and Errors in Laparoscopic Cholecystectomy' (medRxiv Jan 2026; OpenAlex shows an npj Digital Surgery 2026 version), 'Automated Video-Based Analysis of Surgical Meta-competencies' (medRxiv 2025), 'Enhanced Trauma Video Review With Computer Vision' (Annals of Surgery Open 2025).",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "CellFluxV2: An Image Generative Foundation Model for Virtual Cell Modeling",
+   "summary": "Lab-first-authored generative foundation model for virtual cell modeling (Yuhui Zhang, Yuchang Su, Zoe Wefers, Shiye Su, He Li, ... Emma Lundberg, Serena Yeung-Levy). Listed under 2026 on the MARVL publications page; OpenAlex records a bioRxiv posting dated 2026-01-20.",
+   "url": "https://www.biorxiv.org/content/10.64898/2026.01.19.696785v1.full.pdf",
+   "venue": "bioRxiv"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "PaperSearchQA: Learning to Search and Reason over Scientific Papers with RLVR",
+   "summary": "James Burgess, Jan Niklas Hansen, Duo Peng, Yuhui Zhang, Alejandro Lozano, Min Woo Sun, Emma Lundberg, Serena Yeung-Levy. Reinforcement learning with verifiable rewards for searching and reasoning over scientific papers; listed as EACL 2026 on the MARVL publications page and confirmed by OpenAlex (doi 10.18653/v1/2026.eacl-long.88).",
+   "url": "https://arxiv.org/pdf/2601.18207",
+   "venue": "EACL 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Computer Vision-Based Retrieval of Steps and Errors in Laparoscopic Cholecystectomy",
+   "summary": "Elaine Sui, Charlotte Egeland, Xiaohan Wang, ... Jeffrey Jopling, Serena Yeung-Levy. Surgical video understanding for retrieving operative steps and intraoperative errors; medRxiv preprint listed under 2026 on the lab page, and OpenAlex lists a 2026 npj Digital Surgery article of the same work.",
+   "url": "https://www.medrxiv.org/content/10.64898/2026.01.15.25343153v1.full.pdf",
+   "venue": "medRxiv / npj Digital Surgery"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "MicroVQA: A Multimodal Reasoning Benchmark for Microscopy-Based Scientific Research",
+   "summary": "James Burgess*, Jeffrey J Nirschl*, Laura Bravo-Sanchez*, ... Emma Lundberg, Serena Yeung-Levy. Benchmark for multimodal reasoning on microscopy-based scientific research; listed as CVPR 2025 on the MARVL publications page with project page and public benchmark.",
+   "url": "https://arxiv.org/pdf/2503.13399",
+   "venue": "CVPR 2025"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "BIOMEDICA: An Open Biomedical Image-Caption Archive, Dataset, and Vision-Language Models Derived from Scientific Literature",
+   "summary": "Alejandro Lozano, Min Woo Sun, James Burgess, ... Robert Tibshirani, Serena Yeung-Levy. Large open biomedical image-caption archive plus vision-language models trained from it; listed as CVPR 2025 on the MARVL publications page.",
+   "url": "https://arxiv.org/pdf/2501.07171",
+   "venue": "CVPR 2025"
+  },
+  {
+   "kind": "news",
+   "year": 2025,
+   "title": "Oct 2025: Serena receives an Arc Institute Ignite Award",
+   "summary": "Most recent dated item in the news list on the MARVL lab homepage, quoted verbatim: 'Oct 2025: Serena receives an Arc Institute Ignite Award.'",
+   "url": "https://marvl.stanford.edu/",
+   "venue": null
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "Generative AI and Medicine (BMDS 281 / MED 216), Spring 2025-26",
+   "summary": "Stanford Profiles lists under '2025-26 Courses': 'Generative AI and Medicine BMDS 281, MED 216 (Spr)'. The same page lists 17 independent-study listings she can supervise, including undergraduate research courses.",
+   "url": "https://profiles.stanford.edu/serena-yeung",
+   "venue": "Stanford University"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Lab homepage explicitly names advanced undergraduates as a category it takes on a rolling basis",
+   "status": "verified",
+   "evidence_url": "https://marvl.stanford.edu/",
+   "note": "Re-verified verbatim on the live page 2026-08-31 (HTTP 200). Quote: 'We have openings on a rolling basis for postdocs, rotation PhD students (already accepted to Stanford), and a limited number of MS or advanced undergraduate students.' This is the sole present-tense, undergraduate-naming recruiting sentence found anywhere in this task. Qualifiers to hold: 'a limited number' and 'advanced' - not an open-ended undergrad program. The sentence is UNDATED and its freshness could not be tested: web.archive.org returned 503 / timed out on every attempt, so no snapshot comparison was possible."
+  },
+  {
+   "signal": "People page has a standing 'Master/Undergraduate Students' section with current named members",
+   "status": "verified",
+   "evidence_url": "https://marvl.stanford.edu/people.html",
+   "note": "Re-verified on the live page 2026-08-31 (HTTP 200). Section header 'Master/Undergraduate Students' lists exactly two names: Jeffrey Heo and Christopher Polzak. The page does not say which of the two is the undergraduate, so individual status remains unverified."
+  },
+  {
+   "signal": "Defined application route for non-PhD Stanford students: a Google interest form requiring Stanford sign-in",
+   "status": "likely",
+   "evidence_url": "https://marvl.stanford.edu/people.html",
+   "note": "Quote verified verbatim on both https://marvl.stanford.edu/ and https://marvl.stanford.edu/people.html (fetched 2026-08-31): 'If you are a current student in other degree programs at Stanford, please fill out this interest form (sign-in using your Stanford email address).' Same paragraph: 'For others not currently at Stanford, we apologize if we may not have the bandwidth to respond.' DOWNGRADED from 'verified' to 'likely': the prior record's claim that the form link https://forms.gle/uyvxnM2LKR64YwEb7 'returned HTTP 200' could NOT be reproduced. Three consecutive curls returned http_code=000 with size_download=0; a single earlier attempt returned only a Google cookie/sign-in interstitial ('You must sign in to access this content'), not the form body. The form is therefore behind a Google sign-in this task cannot pass, so whether it is live and still accepting responses is UNVERIFIED. The href is confirmed present on both lab pages; its destination is not."
+  },
+  {
+   "signal": "Stanford Profiles lists her 2025-26 undergraduate research and senior-project course numbers",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/serena-yeung",
+   "note": "Re-verified on https://profiles.stanford.edu/serena-yeung 2026-08-31 (HTTP 200). Under '2025-26 Courses' -> 'Independent Studies (17)', all four strings appear literally: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)'. Being listed as an instructor of record is an availability signal, not an open slot."
+  },
+  {
+   "signal": "Lab news records undergraduate honors-thesis prizes won by lab members",
+   "status": "verified",
+   "evidence_url": "https://marvl.stanford.edu/",
+   "note": "Re-verified verbatim in the homepage news list 2026-08-31. Quotes: 'Jun 2024: Cathy declared runner-up for the Ben Wegbreit Prize for Best Undergraduate Honors Thesis in Computer Science.' and 'Jun 2021: Joy receives the Ben Wegbreit Prize for Best Undergraduate Honors Thesis in Computer Science.' Real undergrad thesis supervision, but note the whole news list stops at 'Oct 2025: Serena receives an Arc Institute Ignite Award' - roughly 10 months stale as of 2026-08-31."
+  },
+  {
+   "signal": "CURIS participation",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-checked 2026-08-31: case-insensitive grep for 'CURIS' returned 0 hits on https://marvl.stanford.edu/people.html and on https://profiles.stanford.edu/serena-yeung. No evidence either way; status stays 'unknown'."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "We have openings on a rolling basis for postdocs, rotation PhD students (already accepted to Stanford), and a limited number of MS or advanced undergraduate students. If you would like to be a postdoctoral fellow in the group, please send Serena an email including your interests and CV. If you are a Stanford PhD student interested in joining the group, please send Serena an email including your interests, CV, and transcript. If you are a current student in other degree programs at Stanford, please fill out this interest form (sign-in using your Stanford email address). For others not currently at Stanford, we apologize if we may not have the bandwidth to respond.",
+  "url": "https://marvl.stanford.edu/",
+  "confidence": 0.72
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "OPENING UPHELD after adversarial re-check on 2026-08-31. The recruiting URL on record (https://marvl.stanford.edu/) returned HTTP 200 and carries, under the heading 'Interested in Joining?', this literal sentence: 'We have openings on a rolling basis for postdocs, rotation PhD students (already accepted to Stanford), and a limited number of MS or advanced undergraduate students.' That satisfies both tests: it is present-tense open ('We have openings on a rolling basis') and it names undergraduates specifically rather than only routing prospective PhD applicants to the graduate admissions pipeline. Corroboration fetched in the same pass: a live 'Master/Undergraduate Students' section on the people page (Jeffrey Heo, Christopher Polzak), and Stanford Profiles listing her for 2025-26 'Supervised Undergraduate Research CS 195', 'Senior Project CS 191', 'CS 191W' and 'Independent Work CS 199'. The lab is unambiguously active: the publications page has a full 2026 section (CVPR 2026, EACL 2026, plus bioRxiv/medRxiv/arXiv preprints). FOUR CAVEATS THAT A STUDENT MUST SEE BEFORE APPLYING. (1) The statement is UNDATED and its freshness could not be tested - web.archive.org returned 503 / timed out on every attempt, so there is no way to tell from this task whether the sentence is current copy or long-standing boilerplate. (2) The stated undergraduate route is NOT email: the page sends postdocs and Stanford PhD students to Serena's inbox, but sends 'a current student in other degree programs at Stanford' to a Google interest form - and that form could not be reached (three curls returned http_code=000/size 0; one attempt returned only a Google 'You must sign in to access this content' interstitial), so it is unverified whether the actual application channel for undergrads still works. (3) It is scoped to people already at Stanford: 'For others not currently at Stanford, we apologize if we may not have the bandwidth to respond.' (4) The wording is hedged - 'a limited number' of 'advanced' undergraduates - and the lab news list has not been updated since Oct 2025, so the page is maintained unevenly. Confidence set to 0.72 rather than higher because the opening sentence is real and verbatim but undated, and the undergraduate application route behind it is unverifiable.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/serena-yeung",
+  "https://cs.stanford.edu/people/serena-yeung-levy",
+  "https://profiles.stanford.edu/serena-yeung",
+  "https://ai.stanford.edu/~syyeung/",
+  "https://marvl.stanford.edu/",
+  "https://marvl.stanford.edu/people.html",
+  "https://marvl.stanford.edu/publications.html",
+  "https://marvl.stanford.edu/teaching.html",
+  "https://forms.gle/uyvxnM2LKR64YwEb7",
+  "https://api.openalex.org/authors?search=Serena%20Yeung-Levy",
+  "https://api.openalex.org/works?filter=author.id:A5093429554,from_publication_date:2025-01-01&sort=publication_date:desc&per-page=15"
+ ],
+ "fetch_notes": "The supplied CS directory link https://cs.stanford.edu/people/serena-yeung returned HTTP 404 ('The requested URL /people/serena-yeung was not found on this server'), as did https://cs.stanford.edu/people/serena-yeung-levy and https://cs.stanford.edu/directory/faculty. faculty_url therefore points to https://profiles.stanford.edu/serena-yeung (HTTP 200, served the full bio, appointments, 2025-26 courses and advisee list). https://profiles.stanford.edu/serena-yeung-levy and https://med.stanford.edu/profiles/serena-yeung-levy both 404. Her older personal page https://ai.stanford.edu/~syyeung/ is live but stale (publication list ends at 2019) and was not used for current_direction; it does carry the obfuscated address 'syyeung at stanford dot edu', and the lab homepage carries a literal mailto:syyeung@stanford.edu, which is the recorded email. All four MARVL pages (index, people, publications, teaching) fetched cleanly via curl. OpenAlex author disambiguation: the correct record is A5093429554 ('Serena Yeung-Levy', Stanford / Chan Zuckerberg Initiative, 53 works); a separate A5081511803 'Serena Yeung' at University of British Columbia / Nottingham is a different person and was excluded. OpenAlex returned 34 works dated 2025-01-01 or later, and independently confirmed the 2026 dates for CellFluxV2 (bioRxiv 2026-01-20), PaperSearchQA (EACL 2026), the laparoscopic cholecystectomy work (medRxiv 2026-01-16, npj Digital Surgery 2026-07-06), iSight and Tool Verification. The arXiv API id_list queries (e.g. id_list=2503.13399) returned empty title fields in this session, so arXiv was not used as a verification source; the arXiv PDF URLs recorded here were extracted as href attributes directly from the fetched MARVL publications page and matched to their titles by position in that HTML. The recruiting statement is undated on the page, so its 'currently open' status is inferred from the words 'on a rolling basis' plus the lab's 2026 activity, not from a posted date. Some 2026-dated arXiv identifiers on the lab page (e.g. 2601.18207, 2603.21743) were taken as printed on that page. No grant amounts, no named undergraduate programs beyond course numbers, and no CURIS mention were found.\n\n--- ADVERSARIAL RE-VERIFICATION 2026-08-31 (all claims below re-fetched live in this task via curl with a browser UA) ---\nRECRUITING STATEMENT: UPHELD. https://marvl.stanford.edu/ -> HTTP 200. The sentence 'We have openings on a rolling basis for postdocs, rotation PhD students (already accepted to Stanford), and a limited number of MS or advanced undergraduate students.' is present verbatim, present-tense, and explicitly names undergraduates. opportunity_state stays OPENING. Note the sentence is undated; web.archive.org was unreachable (503/timeout) on every attempt, so staleness could NOT be tested. The lab news list independently stops at Oct 2025.\nEMAIL: UPHELD. Grep of the raw HTML at the recorded email_source_url (https://marvl.stanford.edu/) yields exactly one address, syyeung@stanford.edu, appearing twice as a literal 'mailto:syyeung@stanford.edu' href. email and email_source_url kept as-is. IMPORTANT ROUTING CAVEAT: on that page the mailto is offered to prospective postdocs and to Stanford PhD students only; undergraduates are directed to the interest form instead, so emailing directly is off the lab's stated undergraduate route. (For the record, https://profiles.stanford.edu/serena-yeung carries only klinej@stanford.edu, an administrator - not used.)\nINTEREST FORM: NOT VERIFIABLE. The prior record's claim that https://forms.gle/uyvxnM2LKR64YwEb7 'returned HTTP 200' did not reproduce: three consecutive curls returned http_code=000 with size_download=0, and the one attempt that returned a body served a Google cookie/sign-in interstitial ('You must sign in to access this content'), not the form. The href is confirmed present on both marvl pages; its destination is not. That signal was downgraded verified -> likely.\nUNDERGRAD SIGNALS RE-CHECKED: 'advanced undergraduate students' sentence - verified (live quote). 'Master/Undergraduate Students' people-page section - verified (header plus Jeffrey Heo and Christopher Polzak). CS 195 / CS 191 / CS 191W / CS 199 on Stanford Profiles - verified (all four strings literally present under 2025-26 Independent Studies (17)). Undergraduate honors-thesis prizes in lab news - verified (both quotes live; most recent is Jun 2024). Interest-form route - DOWNGRADED to likely, see above. CURIS - still unknown, grep for 'CURIS' returned 0 hits on people.html and on the Profiles page.\nEVIDENCE URLS SPOT-CHECKED: the five recorded publication PDF links (biorxiv 2026.01.19.696785, arxiv 2601.18207, medrxiv 2026.01.15.25343153, arxiv 2503.13399, arxiv 2501.07171) were each confirmed to appear as literal hrefs in the fetched HTML of https://marvl.stanford.edu/publications.html, which shows a populated 2026 section (UniT CVPR 2026, PaperSearchQA EACL 2026, Do VLMs Perceive or Recall? CVPR 2026, CellFluxV2, CellFluxRL, ArtifactLens, and others). Lab activity confirmed current."
+}

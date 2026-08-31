@@ -1,0 +1,157 @@
+{
+ "slug": "tengyu-ma",
+ "name": "Tengyu Ma",
+ "title": "Assistant Professor of Computer Science",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/tengyu-ma",
+ "lab_name": null,
+ "lab_url": "https://ai.stanford.edu/~tengyuma/",
+ "email": null,
+ "email_source_url": null,
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Natural Language Processing and Speech",
+  "reinforcement-learning",
+  "Empirical Machine Learning"
+ ],
+ "research_topics": [
+  "LLM self-play and iterative conjecturing/proving",
+  "Formal theorem proving (Lean4, Isabelle)",
+  "Automatic verification of natural-language mathematical proofs",
+  "Reinforcement learning for LLM reasoning",
+  "Chain-of-thought reasoning and inference latency",
+  "Pretraining optimizers and hyperparameter tuning",
+  "Scaling laws for language model pretraining",
+  "Deep learning theory and nonconvex optimization",
+  "Representation learning and robustness"
+ ],
+ "current_direction": [
+  "Scaling LLM self-play for formal theorem proving in Lean4",
+  "Making natural-language proofs machine-verifiable (Pseudo-Formalization + Block Verification)",
+  "RL post-training to cut reasoning latency via parallel chain-of-thought",
+  "Empirical science of pretraining: honest optimizer benchmarking and configuration-aware scaling laws",
+  "Shift from pure DL theory toward large-scale empirical LLM/reasoning research"
+ ],
+ "current_direction_basis": "Driven by the five 2025-2026 papers verified on arXiv abstract pages and listed at the top of the faculty homepage's 'Selected or Recent Work' section, whose first topic block is now titled 'Reasoning Models & RL'. Self-play/theorem-proving direction from 'STP: Self-play LLM Theorem Provers' (2025, arXiv:2502.00212) and 'Scaling Self-Play with Self-Guidance' (2026, arXiv:2604.20209, Lean4, 200 rounds of self-play). Proof-verification direction from 'Pseudo-Formalization for Automatic Proof Verification' (2026, arXiv:2605.20531). Reasoning-latency/RL direction from 'Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning' (2026, arXiv:2601.23027). Empirical-pretraining direction from 'Fantastic Pretraining Optimizers and Where to Find Them' (arXiv:2509.02046) and 'Configuration-to-Performance Scaling Law with Neural Ansatz' (2026, arXiv:2602.10300). The older self-description on the homepage ('nonconvex optimization, high-dimensional statistics') was NOT used to infer current direction.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Pseudo-Formalization for Automatic Proof Verification",
+   "summary": "Proposes Pseudo-Formalization (PF), a proof format keeping the modularity/precision of formal proofs with the flexibility of natural language; an LLM translates a proof to PF then verifies each module independently ('Block Verification'). Pareto-dominates LLM-as-judge baselines on error-finding precision and recall; releases the ArxivMathGradingBench research-level proof verification benchmark. Authors: Slim Barkallah, Luke Bailey, Kaiyue Wen, Mohammed Abouzaid, Tengyu Ma. Submitted 19 May 2026, revised 17 Jun 2026.",
+   "url": "https://arxiv.org/abs/2605.20531",
+   "venue": "arXiv preprint (cs.LO; cs.LG)"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Scaling Self-Play with Self-Guidance",
+   "summary": "Introduces Self-Guided Self-Play (SGS), where the model acts as Solver, Conjecturer and a Guide that scores synthetic problems to prevent Conjecturer reward-hacking/collapse over long training runs. Applied to formal theorem proving in Lean4; a 7B model after 200 rounds of self-play solves more problems than a 671B model at pass@4. Authors: Luke Bailey, Kaiyue Wen, Kefan Dong, Tatsunori Hashimoto, Tengyu Ma. Submitted 22 Apr 2026, revised 11 Aug 2026.",
+   "url": "https://arxiv.org/abs/2604.20209",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+   "summary": "Trains a model to act as a director that identifies parallelizable subtasks in its reasoning and spawns workers, using SFT plus a multi-stage RL algorithm with data filtering. On AIME 2024 and HMMT 2025 it matches DeepScaleR-1.5B-Preview accuracy while cutting longest-path length (a latency proxy) by 35-40%. Authors: Arvind Mahankali, Kaiyue Wen, Tengyu Ma. Submitted 30 Jan 2026.",
+   "url": "https://arxiv.org/abs/2601.23027",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Configuration-to-Performance Scaling Law with Neural Ansatz",
+   "summary": "Learns a mapping from the full training configuration to pretraining performance, parameterized by an LLM and fit on diverse open-source pretraining logs (NCPL). Achieves 20-40% lower prediction error than the configuration-agnostic Chinchilla law and generalizes to runs using up to 10x more compute than any run in its training set. Authors: Huaqing Zhang, Kaiyue Wen, Tengyu Ma. Submitted 10 Feb 2026.",
+   "url": "https://arxiv.org/abs/2602.10300",
+   "venue": "arXiv preprint"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "Fantastic Pretraining Optimizers and Where to Find Them",
+   "summary": "Systematic study of ten deep learning optimizers across four model scales (0.1B-1.2B) and data-to-model ratios, arguing that unequal hyperparameter tuning and misleading evaluation setups have inflated claimed speedups. Finds matrix-preconditioner optimizers (Muon, Soap) fastest, but speedup over well-tuned AdamW shrinks from 1.4x at 0.1B to 1.1x at 1.2B. Authors: Kaiyue Wen, David Hall, Tengyu Ma, Percy Liang. Posted to arXiv 2 Sep 2025 (rev 4 Sep 2025); the faculty homepage lists this entry under year 2026, presumably for its conference venue.",
+   "url": "https://arxiv.org/abs/2509.02046",
+   "venue": "arXiv preprint (homepage lists year 2026)"
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "Stanford Profiles lists him for undergraduate senior-project and independent-research supervision (2025-26, most recent year listed)",
+   "summary": "Official Stanford Profiles, under the heading that literally reads '2025-26 Courses', lists 'Machine Learning CS 229, STATS 229 (Spr)' and, under 'Independent Studies (10)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Spr)', 'Independent Project CS 399 (Aut, Win, Spr, Sum)', 'Research STATS 399 (Aut, Sum)' and 'Advanced Reading and Research CS 499 / CS 499P (Aut, Win, Spr, Sum)'. CS 191 and CS 191W are Stanford CS undergraduate senior-project courses, so he supervises undergraduate research. CORRECTED 2026-08-31: 2025-26 is the most recent year the page lists, not the current year - it ended June 2026, and no 2026-27 block has been published on the page yet.",
+   "url": "https://profiles.stanford.edu/tengyu-ma",
+   "venue": "Stanford Profiles"
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Listed on official Stanford Profiles, under the heading that literally reads '2025-26 Courses', for Stanford's undergraduate research courses: 'Senior Project CS 191 (Aut, Win, Spr)' and 'Writing Intensive Senior Research Project CS 191W (Spr)', alongside 'Independent Project CS 399 (Aut, Win, Spr, Sum)', 'Research STATS 399 (Aut, Sum)' and 'Advanced Reading and Research CS 499 / CS 499P (Aut, Win, Spr, Sum)'.",
+   "status": "verified",
+   "evidence_url": "https://profiles.stanford.edu/tengyu-ma",
+   "note": "Re-fetched live 2026-08-31 in the second adversarial pass (HTTP 200, curl + browser UA). Every string above appears literally on the page: the heading '2025-26 Courses', then 'Machine Learning CS 229, STATS 229 (Spr)', then 'Independent Studies (10)' listing the CS 191 / CS 191W / CS 399 / STATS 399 / CS 499 / CS 499P entries. CORRECTED IN THIS PASS: the prior version of this signal called 2025-26 'the CURRENT academic year'. It is not. As of 2026-08-31 the 2025-26 year (Sept 2025 - June 2026) has ended; it is simply the most recent year the page lists, and no 2026-27 block has appeared yet (the page's next heading is 'Prior Year Courses' -> '2022-23 Courses'). Treat this as strong RECENT evidence that he supervises undergraduate senior projects, not as proof of a live current-year slot."
+  },
+  {
+   "signal": "Dedicated 'Undergraduate Internship' section in the FAQ doc linked from his live homepage, inviting Stanford undergraduates to email him directly: 'If you are a student at Stanford, please feel free to directly email me. If you are interested in machine learning theory research, typically I would recommend you to take my course CS229M/STATS214 first because it covers many basics for ML theory research.'",
+   "status": "verified",
+   "evidence_url": "https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing",
+   "note": "Verbatim, re-verified 2026-08-31 in the second adversarial pass against the doc's plain-text export: the heading 'Undergraduate Internship' is line 11 and the quoted sentence is line 12, character-for-character. The doc is publicly readable (HTTP 200 at /edit and at /export?format=txt, full 2,883 bytes retrieved, no access wall, no 404), and the live homepage https://ai.stanford.edu/~tengyuma/ still hyperlinks this exact doc ID with the anchor text 'An FAQ for students who email the first time.' STANDING CAVEAT: the doc's line 4 reads 'Last update: Aug 2021', so this is standing policy he still points students to, not a freshly dated posting."
+  },
+  {
+   "signal": "Non-Stanford undergraduate summer internships exist but are explicitly UNFUNDED: 'My group does have a very small number of undergraduate summer intern positions for students outside Stanford every year. Unfortunately, we are not able to provide financial support, and we are only able to host people who have financial support from their home institutions.'",
+   "status": "verified",
+   "evidence_url": "https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing",
+   "note": "Verbatim, re-verified 2026-08-31 in the second adversarial pass (doc line 13). Application materials exactly as the source words them - phrased as a REQUEST, 'please email me with', followed by three bullets: 'your CV', 'your transcripts', 'some highlights of your past works/achievements in the email texts' (lines 14-17). He warns, line 18: 'Due to a large number of requests, I, unfortunately, may not be able to reply to all the emails regarding the summer intern position inquiries.' Same Aug 2021 last-update caveat. SEASON NOTE added this pass: today is 2026-08-31, so summer 2026 has passed and this channel points at summer 2027."
+  },
+  {
+   "signal": "CS229M/STATS214 is named as RECOMMENDED (not required) preparation for ML-theory research with his group. Separately, the doc lists the prerequisites for CS229T as 'linear algebra (MATH 51 or CS 205), probability theory (STATS 116, MATH 151, or CS 109), and machine learning (CS 229/STATS229 or STATS 315A)'.",
+   "status": "verified",
+   "evidence_url": "https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing",
+   "note": "Re-confirmed 2026-08-31 in the second adversarial pass. The earlier correction holds and is correct: the doc's line 34 asks 'Q: What's the prerequisite for CS229T?' and line 35 is its answer, 'linear algebra (MATH 51 or CS 205), probability theory (STATS 116, MATH 151, or CS 109), and machine learning (CS 229/STATS229 or STATS 315A)'. These are CS229T prerequisites, NOT CS 229 prerequisites. Separately, the CS229M/STATS214 mention in the Undergraduate Internship section is worded as a recommendation ('typically I would recommend'), NOT a requirement, and is scoped to machine-learning-theory research specifically."
+  },
+  {
+   "signal": "No undergraduate members are named anywhere on the group page; the roster heading is 'Current Ph.D. students and post-docs' and lists only Caroline Choi, Luke Bailey, Kaiyue Wen, Thomas Chen, Arvind Mahankali, Neil Band and Garrett Thomas.",
+   "status": "verified",
+   "evidence_url": "https://ai.stanford.edu/~tengyuma/",
+   "note": "Re-fetched live 2026-08-31 in the second adversarial pass (HTTP 200). The roster heading on the homepage reads literally 'Current Ph.D. students and post-docs' and is followed only by Caroline Choi, Luke Bailey, Kaiyue Wen, Thomas Chen, Arvind Mahankali, Neil Band and Garrett Thomas, then an 'Alumni' heading. The homepage doubles as the group page; there is no undergraduate roster anywhere on it. Recorded as a genuine counter-signal: undergrad involvement in this group is not publicly visible."
+  },
+  {
+   "signal": "CURIS (Stanford CS undergraduate summer research program) participation",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-checked again 2026-08-31 in the second adversarial pass: a case-insensitive grep for 'curis' returns 0 hits across all three pages fetched for this professor (homepage, Stanford Profiles, the FAQ doc). Not confirmed either way; deliberately left unknown rather than inferred."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "From the FAQ doc linked off his homepage, under the verbatim section heading \"Undergraduate Internship\" (a section separate from the doc's own \"Graduate school applications\" section):\n\"If you are a student at Stanford, please feel free to directly email me. If you are interested in machine learning theory research, typically I would recommend you to take my course CS229M/STATS214 first because it covers many basics for ML theory research.\"\n\"My group does have a very small number of undergraduate summer intern positions for students outside Stanford every year. Unfortunately, we are not able to provide financial support, and we are only able to host people who have financial support from their home institutions.\"\n\"If you are interested in working with us in the summer, please email me with\" followed by three bullets, verbatim: \"your CV\" / \"your transcripts\" / \"some highlights of your past works/achievements in the email texts\".\nCaveat printed in the same section: \"Due to a large number of requests, I, unfortunately, may not be able to reply to all the emails regarding the summer intern position inquiries.\"\nSeparate 'Graduate school applications' section (NOT the basis for the undergraduate classification): \"I will take new students in the foreseeable future (next few years).\"\nSTALENESS: the doc's own line 4 reads \"Last update: Aug 2021\".",
+  "url": "https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing",
+  "confidence": 0.5
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "OPENING UPHELD after a second, independent adversarial re-verification on 2026-08-31, with two currency corrections applied (see below). STEP 1 (the load-bearing test) PASSED: the recruiting URL was curled fresh in this pass and is genuinely live and publicly readable - the /edit URL returns HTTP 200 and the /export?format=txt endpoint returned the complete 2,883-byte document with no sign-in wall, no 'Request access' interstitial and no 404. The document contains, at line 11, a dedicated section heading 'Undergraduate Internship' - structurally separate from its own 'Graduate school applications' section at line 23 - and the text under it is both present-tense and undergraduate-specific. Verbatim, line 12: 'If you are a student at Stanford, please feel free to directly email me.' Verbatim, line 13: 'My group does have a very small number of undergraduate summer intern positions for students outside Stanford every year.' Verbatim, lines 14-17: 'If you are interested in working with us in the summer, please email me with' / 'your CV' / 'your transcripts' / 'some highlights of your past works/achievements in the email texts'. NONE of the downgrade triggers fire: this is not PhD-applicant-only language (the word 'undergraduate' is in the section heading and in the body, and the grad section is separate); it does not say he is closed ('I will take new students in the foreseeable future (next few years)'); it is not a generic contact page with no recruiting language; and it did not 404 or require access. CURRENCY, verified independently of the professor's own prose: his live homepage https://ai.stanford.edu/~tengyuma/ (HTTP 200 this pass) still hyperlinks this exact doc ID with the anchor text 'An FAQ for students who email the first time.', so the 2021 policy is the one he still routes students to today; he is still listed as 'Assistant Professor of Computer Science' on both the homepage and Stanford Profiles, with a current roster under the heading 'Current Ph.D. students and post-docs'; and the group is unambiguously active (five 2025-2026 arXiv papers, latest revised Aug 2026). CORRECTION 1 (currency of the course signal): the previous rationale called CS 191 / CS 191W a listing for 'the CURRENT 2025-26 academic year'. That is an overstatement as of today, 2026-08-31. The Stanford Profiles heading literally reads '2025-26 Courses', and 2025-26 ran Sept 2025 - June 2026, so it is the most recently COMPLETED academic year; no 2026-27 listing has appeared on the page yet. The listing is still strong recent evidence that he takes undergraduate senior projects - 'Senior Project CS 191 (Aut, Win, Spr)' and 'Writing Intensive Senior Research Project CS 191W (Spr)' are literal strings on the page - but it is recent, not current. CORRECTION 2 (season): the summer-internship channel is the doc's concrete application route, and today is 2026-08-31, so summer 2026 has already ended; a student acting on this now is aiming at summer 2027. The not-season-bound half of the offer is the Stanford-student line, 'please feel free to directly email me', which carries no date. WHAT A STUDENT MUST KNOW BEFORE ACTING: the FAQ's own header reads 'Last update: Aug 2021' and it still asks whether CS229T will be offered 'next year in 2023-2024', so this is standing policy he continues to link, NOT a freshly posted opening with a deadline. The route is an unsolicited cold email, not an application portal, and he states he 'may not be able to reply to all the emails'. For non-Stanford students the intern positions carry NO financial support and require funding from the home institution. No undergraduates are named on the group roster. recruiting.confidence lowered 0.55 -> 0.50 to price in the five-year staleness, the out-of-season summer channel, and the fact that the course listing is the completed rather than the current year. EMAIL: none on record and none recorded. Re-checked this pass - the homepage renders the address only as the HTML-entity-obfuscated string 'first name last name&#64;&#115;&#116;&#97;&#110;&#102;&#111;&#114;&#100;&#46;&#101;&#100;&#117;', i.e. the words 'first name last name' as an instruction plus an encoded '@stanford.edu'; an address-pattern grep over the fetched homepage and Stanford Profiles text returns nothing. email and email_source_url stay null.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 6,
+  "active": true
+ },
+ "source_urls": [
+  "https://cs.stanford.edu/people/tengyu-ma",
+  "https://www.cs.stanford.edu/people/tengyu-ma",
+  "https://ai.stanford.edu/~tengyuma/",
+  "https://profiles.stanford.edu/tengyu-ma",
+  "https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing",
+  "https://arxiv.org/abs/2605.20531",
+  "https://arxiv.org/abs/2604.20209",
+  "https://arxiv.org/abs/2602.10300",
+  "https://arxiv.org/abs/2601.23027",
+  "https://arxiv.org/abs/2509.02046",
+  "https://arxiv.org/abs/2502.00212",
+  "https://api.semanticscholar.org/graph/v1/author/search?query=Tengyu+Ma",
+  "https://api.openalex.org/authors?search=Tengyu%20Ma",
+  "https://statistics.stanford.edu/people/tengyu-ma",
+  "https://hai.stanford.edu/people/tengyu-ma"
+ ],
+ "fetch_notes": "Fetched 2026-08-31 via curl with a browser UA. DEAD LINK: the supplied directory URL https://cs.stanford.edu/people/tengyu-ma returns HTTP 404; the working CS directory page is https://www.cs.stanford.edu/people/tengyu-ma (HTTP 200) but it is a stub containing only name, title and a 'View Full Stanford Profile' link - no email, no bio. https://cs.stanford.edu/people/tengyuma/ and https://cs.stanford.edu/~tengyuma/ both redirect to the personal homepage http://ai.stanford.edu/~tengyuma/. NO SEPARATE LAB SITE: no named research group or lab website was found; the personal homepage at ai.stanford.edu/~tengyuma/ serves as the group page (current PhD students/postdocs, alumni, publications by topic, teaching, awards). It has no 'news', 'join us' or separate 'people'/'publications' pages - it is a single page with anchor sections (#bio, #students, #alumni, #publications, #teaching, #awards). EMAIL: deliberately obfuscated and NOT recorded. The homepage renders literally as 'Email: first name last name@stanford.edu' (the domain is HTML-entity encoded, the local part is the words 'first name last name' as an instruction, not an address). Because no literal address appears in any fetched text, email is null. A human can apply his stated rule to derive it; this profile does not guess it. The only literal email found anywhere was 'johncho@stanford.edu', the CS229 course coordinator named in the FAQ doc - that is NOT Tengyu Ma's address and is not recorded. API PROBLEMS: the arXiv API returned empty bodies over both http and https (export.arxiv.org/api/query, both id_list and search_query forms), so all publication metadata was verified by curling the arxiv.org/abs/<id> pages directly - titles, submission dates, author lists and abstracts above are quoted from those pages. OpenAlex returned no results when filtered to the Stanford ROR (00f54p054); the unfiltered author search returned a merged/ambiguous record (https://openalex.org/A5101821970, 'Tengyu Ma', last_known_institutions ['Hainan University', 'Stanford University']), which conflates at least two different people, so OpenAlex was NOT used for any publication data. Semantic Scholar author 1901958 ('Tengyu Ma', Stanford University, 678 papers, h-index 73) was located but papers were not pulled from it since arXiv abs pages already gave verified primary data. BLOCKED/EMPTY: https://statistics.stanford.edu/people/tengyu-ma returns HTTP 200 but the content is behind a 'Log in to view this page / Stanford Login' wall; https://hai.stanford.edu/people/tengyu-ma returns HTTP 200 but the body is JS-rendered and yielded no readable text via curl. FAQ DOC STALENESS: the student FAQ (fetched via the Google Docs txt export) is the source of every recruiting and undergraduate-internship quote and its own header reads 'Last update: Aug 2021'; it also contains a question asking whether CS229T would be offered 'next year in 2023-2024', confirming it has not been revised recently. All undergrad/recruiting quotes are verbatim from that doc. AFFILIATIONS from Stanford Profiles: 'Assistant Professor, Computer Science', 'Member, Bio-X', 'Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)'. The homepage teaching list shows 'Machine Learning (CS229), Spring 2019-2023, 2026', consistent with the Profiles 2025-26 course listing. No grants or news items were found on any fetched page, so none are recorded. || ADVERSARIAL FACT-CHECK 2026-08-31 (independent re-fetch of every load-bearing claim): (1) RECRUITING URL VERIFIED LIVE - the Google Doc returns HTTP 200 both at the /edit URL and via the /export?format=txt endpoint, which returned the complete 2,883-byte document. No sign-in wall, no 'Request access', no 404. The 'Undergraduate Internship' heading is at line 11 and the quoted undergraduate sentences are lines 12-17. The 'Graduate school applications' section is separate, so the undergrad language is NOT merely PhD-recruiting text. OPENING therefore upheld. (2) STALENESS RECONFIRMED - line 4 of the doc is 'Last update: Aug 2021' and line 33-34 still ask whether CS229T will be offered 'next year in 2023-2024'. Confidence lowered 0.6 -> 0.55 to price this in honestly. (3) HOMEPAGE LINK VERIFIED - https://ai.stanford.edu/~tengyuma/ (HTTP 200) still contains href=\"https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing\" with the anchor text 'An FAQ for students who email the first time.', which is the evidence that the 2021 policy is still the one he points students to today. (4) STANFORD PROFILES RE-VERIFIED - https://profiles.stanford.edu/tengyu-ma (HTTP 200) literally prints '2025-26 Courses' followed by 'Machine Learning CS 229, STATS 229 (Spr)' and, under 'Independent Studies (10)', 'Senior Project CS 191 (Aut, Win, Spr)' and 'Writing Intensive Senior Research Project CS 191W (Spr)'. (5) EMAIL RE-CHECKED AND LEFT NULL - grep for an address pattern over the fetched homepage HTML returns nothing (the address is HTML-entity encoded and the local part is the instruction 'first name last name'); grep over the fetched Stanford Profiles HTML also returns nothing. The only literal address in the FAQ doc is johncho@stanford.edu, the CS229 course coordinator, which is NOT Tengyu Ma's and is not recorded. (6) SIGNAL CORRECTED - the prerequisite list 'linear algebra (MATH 51 or CS 205), probability theory (STATS 116, MATH 151, or CS 109), and machine learning' was previously attributed to CS 229; the doc attributes it to CS229T. Fixed. (7) CURIS re-checked and still absent from every page fetched for this professor; left 'unknown'. || SECOND ADVERSARIAL FACT-CHECK 2026-08-31 (independent re-fetch; default stance was that the OPENING claim is wrong until a live page proves it). VERDICT: OPENING UPHELD, confidence lowered 0.55 -> 0.50, two currency overstatements corrected. (1) RECRUITING URL RE-VERIFIED LIVE AND READABLE - HTTP 200 at https://docs.google.com/document/d/1ZfCnQGOJnDIsfGQU5wSPMhe2H1N1yyBgIAh21Nh62-I/edit?usp=sharing (234,102-byte HTML) and HTTP 200 at the /export?format=txt endpoint, which returned the complete 2,883-byte plain text (content-type text/plain; charset=utf-8). No sign-in wall, no 'Request access', no 404. Line 11 is the heading 'Undergraduate Internship'; lines 12-18 are the undergraduate body; line 23 begins the SEPARATE 'Graduate school applications' section - so the undergraduate language is not merely PhD-recruiting text bleeding over. Step-1 test passed on both prongs (present-tense: 'does have', 'please feel free to directly email me'; undergraduate-specific: the heading and the word 'undergraduate' in the body). (2) STALENESS RECONFIRMED - line 4 is 'Last update: Aug 2021'; lines 32-33 still ask 'Will CS229T be offered next year in 2023-2024?'. (3) HOMEPAGE LINK RE-VERIFIED - https://ai.stanford.edu/~tengyuma/ HTTP 200, 90,551 bytes; the doc ID appears in the page and the surrounding text reads 'Email : first name last name&#64;&#115;&#116;&#97;&#110;&#102;&#111;&#114;&#100;&#46;&#101;&#100;&#117; . An FAQ for students who email the first time.' This is the affirmative evidence that the 2021 policy is still the live routing. (4) STANFORD PROFILES RE-VERIFIED - https://profiles.stanford.edu/tengyu-ma HTTP 200, 18,055 bytes; prints 'Assistant Professor of Computer Science', 'Academic Appointments: Assistant Professor, Computer Science / Member, Bio-X / Faculty Affiliate, Institute for Human-Centered Artificial Intelligence (HAI)', then '2025-26 Courses' with the CS 191 / CS 191W / CS 399 / STATS 399 / CS 499 / CS 499P entries, then 'Prior Year Courses' -> '2022-23 Courses'. CURRENCY CORRECTION APPLIED: 2025-26 is the most recent year listed and ENDED in June 2026; it is not 'the current academic year' as of 2026-08-31, and the prior record's wording to that effect has been fixed in undergrad_signals[0], the course evidence entry, and state_rationale. (5) SEASON CORRECTION APPLIED - the doc's concrete route is a summer internship; summer 2026 has already ended as of 2026-08-31, so that route now targets summer 2027. The undated half of the offer is the Stanford-student line 'please feel free to directly email me'. (6) NO CONTRARY RECRUITING LANGUAGE - grep of the homepage text for 'not taking', 'no longer', 'not accepting', 'on leave' returns no recruiting-related hits (only unrelated paper titles containing 'Beyond lazy training'), so no closure signal exists to override the doc. (7) EMAIL RE-CHECKED, LEFT NULL - no email was on record and none was added. An address-pattern grep over the de-tagged homepage and Stanford Profiles text returns zero matches; the homepage address is HTML-entity encoded with the local part written as the instruction 'first name last name'. The only literal address in the FAQ doc is johncho@stanford.edu, the CS229 course coordinator named at line 10, which is NOT Tengyu Ma's and is not recorded. (8) ROSTER SIGNAL VERIFIED - homepage heading is literally 'Current Ph.D. students and post-docs' (7 names), then 'Alumni'; no undergraduate roster. (9) CURIS re-grepped across all three fetched pages: 0 hits; left 'unknown'. (10) All five undergrad_signals marked 'verified' were re-checked against literal text in pages fetched during THIS pass and all five survived; none needed downgrading to 'likely' or 'inferred'. Publication/arXiv metadata was NOT re-fetched in this pass and is carried forward unchanged from the earlier verification."
+}

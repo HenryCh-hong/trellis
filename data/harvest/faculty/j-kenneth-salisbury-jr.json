@@ -1,0 +1,140 @@
+{
+  "slug": "j-kenneth-salisbury-jr",
+  "name": "J Kenneth Salisbury, Jr.",
+  "title": "Professor (Research) of Computer Science and of Surgery (Anatomy), Emeritus",
+  "department": "Computer Science (also Surgery (Anatomy); courtesy appointment in Mechanical Engineering per lab page)",
+  "university": "Stanford University",
+  "faculty_url": "https://www.cs.stanford.edu/people/j-salisbury",
+  "lab_name": "Salisbury Robotics Lab",
+  "lab_url": "https://sr.stanford.edu/",
+  "email": "kenneth.salisbury@gmail.com",
+  "email_source_url": "https://sr.stanford.edu/?page_id=1217",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Human-Centered and Creative AI",
+    "Robotics",
+    "reinforcement-learning",
+    "Empirical Machine Learning"
+  ],
+  "research_topics": [
+    "in-hand (within-hand) dexterous manipulation",
+    "roller graspers with steerable rolling fingertips",
+    "camera-based tactile sensing inside compliant rollers",
+    "closed-loop grasp force control and object shape reconstruction",
+    "vibratory / impact-driven part transport in grippers",
+    "haptic device design and haptic rendering",
+    "surgical simulation and medical robotics",
+    "force-controllable robot hands and arms"
+  ],
+  "current_direction": [
+    "Tactile-reactive roller graspers with cameras inside the rollers",
+    "Continuous rolling contact instead of discontinuous finger-gaiting",
+    "In-hand 6-DoF manipulation with closed-loop grasp force control",
+    "In-hand tactile object shape reconstruction",
+    "Hybrid rolling-fingertip + finger-gaiting manipulation as the stated next step"
+  ],
+  "current_direction_basis": "Driven almost entirely by evidence item 1, the 2025 IEEE T-RO paper 'Tactile-Reactive Roller Grasper' (DOI 10.1109/TRO.2025.3543324), whose fetched OpenAlex abstract states the design 'uses image processing from cameras placed inside steerable compliant rollers to track contact conditions and locations', that the same data is used 'to reconstruct object shape', that converting in-hand manipulation 'from a discontinuous process ... to a continuous process' yields a convergent control loop, and that 'hybrid rolling fingertip and finger-gaiting approaches to manipulation may be a promising future research direction' -- that last sentence is the source of the fifth phrase. Reinforced by evidence item 2 (Roller Grasper V3, IEEE T-RO 2024, full 6-DoF SE(3) in-hand manipulation), evidence item 3 (ICRA 2024 vibratory transport of grasped parts, which is the same mechanism-design-for-manipulation thread), and evidence item 5 (the lab's 'Grasper Design' project page, last modified 2024-08-07, which groups Tactile-Reactive Roller Grasper, Roller Grasper V3/V2/V1 and Curling Gripper as the current project family). Deliberately NOT based on the CS/Profiles biography, which still describes older work (PHANToM, da Vinci, PR-2, surgical simulation) and has not been rewritten to reflect the roller-grasper line.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "Tactile-Reactive Roller Grasper",
+      "summary": "IEEE Transactions on Robotics, 2025, vol. 41, pp. 1938-1955. Authors: Shenli Yuan, Shaoxiong Wang, Radhen Patel, Megha Tippur, Connor L. Yako, Mark R. Cutkosky, Edward H. Adelson, Kenneth Salisbury (Stanford + MIT). Fetched abstract: roller graspers with steerable rolling fingertips achieve 'six degree of freedom mobility and closed-loop grasp force control'; the design 'uses image processing from cameras placed inside steerable compliant rollers to track contact conditions and locations', the same data reconstructs object shape, and continuous rolling replaces discontinuous finger-gaiting to give a convergent control loop. This is the single most recent research output found for him. Confirmed independently on OpenAlex and on his Stanford Profiles publication list.",
+      "url": "https://doi.org/10.1109/TRO.2025.3543324",
+      "venue": "IEEE Transactions on Robotics"
+    },
+    {
+      "kind": "publication",
+      "year": 2024,
+      "title": "Design and Control of Roller Grasper V3 for In-Hand Manipulation",
+      "summary": "IEEE Transactions on Robotics, 2024, vol. 40, pp. 4222-4234. Authors: Shenli Yuan, Lin Shao, Yunhai Feng, Jiatong Sun, Teng Xue, Connor L. Yako, Jeannette Bohg, J. Kenneth Salisbury. Fetched abstract: a 'nonanthropomorphic robot grasper with a steerable roller on each of its four fingertips' plus a manipulation architecture (high-level waypoint planner + low-level control policy) achieving 'full 6-DoF manipulation of the grasped object in SE(3)'. Co-authored with Jeannette Bohg, indicating an active tie to Stanford's learning-based robotics group.",
+      "url": "https://doi.org/10.1109/TRO.2024.3454388",
+      "venue": "IEEE Transactions on Robotics"
+    },
+    {
+      "kind": "publication",
+      "year": 2024,
+      "title": "Vertical Vibratory Transport of Grasped Parts Using Impacts",
+      "summary": "IEEE ICRA 2024 (venue inferred from the DOI string 10.1109/ICRA57147.2024.10610769; OpenAlex returned a null source name for this record, so the venue is not independently confirmed by a fetched venue field). Authors: Connor L. Yako, J. Nowak, Shenli Yuan, Kenneth Salisbury -- i.e. led by the lab's current PhD student. Fetched abstract: uses 'impact-induced acceleration in conjunction with periodic stick-slip to successfully and quickly transport parts vertically against gravity', validated with a flexure/voice-coil vibrating surface fitted to a parallel-jaw gripper.",
+      "url": "https://doi.org/10.1109/ICRA57147.2024.10610769",
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA) 2024 -- inferred from DOI, not from a fetched venue field"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "2025-26 independent-study and senior-project course listings (CS 199, CS 191, CS 191W, CS 192, CS 399, CS 499)",
+      "summary": "His Stanford Profiles page lists, under the heading '2025-26 Courses / Independent Studies (13)', the undergraduate-facing entries 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', and 'Programming Service Project CS 192 (Aut, Win, Spr, Sum)', alongside graduate CS 399/CS 499/CPT entries. This is a course-roster listing, not a posted opening, but it is the most recent (current-academic-year) fetched signal that he is still set up to supervise Stanford undergraduate research units. Note: as of today's date (2026-08-31) the 2025-26 academic year has just ended.",
+      "url": "https://profiles.stanford.edu/6094",
+      "venue": null
+    },
+    {
+      "kind": "project",
+      "year": 2024,
+      "title": "Salisbury Robotics Lab 'Grasper Design' project page",
+      "summary": "The lab site's 'Grasper Design' page (WordPress page id 2601, last modified 2024-08-07 per the site's own REST API) is the newest-updated content page on the lab site. Its full body text is just the project family list: 'Tactile-Reactive Roller Grasper / Roller Grasper V3 / Roller Grasper V2 / Roller Grasper V1 / Curling Gripper'. The lab's 'People' page was updated the same day (2024-08-07) and lists Connor Yako as the only Current Student. Everything else on the 76-page site was last modified between 2013 and 2021.",
+      "url": "https://sr.stanford.edu/?page_id=2601",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed for undergraduate independent-study and senior-project courses in the current 2025-26 academic year",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/6094",
+      "note": "Quoted verbatim from the '2025-26 Courses' section of his Stanford Profiles page: 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Programming Service Project CS 192 (Aut, Win, Spr, Sum)'. Verified as text on the page; NOT a posted opening and NOT a statement that he is taking new students. Stanford auto-populates these independent-study rosters for many faculty, so treat this as evidence of eligibility to supervise, not of availability."
+    },
+    {
+      "signal": "Lab has a documented track record of hosting Stanford undergraduates, but all are listed as former",
+      "status": "verified",
+      "evidence_url": "https://sr.stanford.edu/?page_id=895",
+      "note": "The 'Former Students' page (and the identical roster on the 'People' page, last modified 2024-08-07) lists by name: 'Tony Pratkanis Undergraduate, Department of Computer Science', 'Aubrey Shapero Undergraduate, Department of Electrical Engineering', 'Sarah-Marie Chan Undergraduate, Design School', 'Dillon McCoy Undergraduate, Department of Computer Science', 'Marie Feng Undergraduate, Department of Computer Science', plus summer undergrads 'Derek Gaw , Undergrad (summer), Embedding haptics in movies', 'Josh Stern , Undergrad (summer), GPU-accelerated physical simulation', 'Yuka Teraguchi , Undergrad (summer), Haptics in downloadable media', 'Doug Wilson , Undergrad (summer), Rendering techniques for surgical simulation'. These individual student pages were last modified 2013-2021, so this is historical, not current."
+    },
+    {
+      "signal": "No undergraduate is listed among current lab members",
+      "status": "verified",
+      "evidence_url": "https://sr.stanford.edu/",
+      "note": "The lab's 'People' page (last modified 2024-08-07) shows exactly one person under 'Current Students': 'Connor Yako, Ph.D. Candidate, Department of Mechanical Engineering'. A separate, older 'Current Students' page (page_id=9, last modified 2021-04-28) lists four: Shenli Yuan, Connor Yako, Jerome Nowak (all PhD, Mechanical Engineering) and Sandesh Manik (M.S., Design Impact program). No undergraduates on either page."
+    },
+    {
+      "signal": "No CURIS, REU, or 'if you are a Stanford undergraduate' language anywhere on the lab site",
+      "status": "verified",
+      "evidence_url": "https://sr.stanford.edu/",
+      "note": "I pulled the full rendered body text of all 76 pages and all 6 posts via the site's WordPress REST API and regex-searched for undergrad / CURIS / senior project / prospective / join us / opening / recruit / position / apply / hiring / 'we are looking'. The only matches on 'undergrad' were the historical former-student roster entries above; every other match was an unrelated word inside project prose (e.g. 'position' in kinematics text). There is no join/openings/prospective-students page on the site at all."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": null,
+    "url": null,
+    "confidence": 0.0
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "No formal opening exists: an exhaustive text search of all 76 pages and 6 posts of sr.stanford.edu found no join / openings / prospective-students / recruiting statement of any kind, so this cannot be OPENING. It is above WATCH because there is genuine recent evidence: a 2025 IEEE Transactions on Robotics paper with him as senior author (Tactile-Reactive Roller Grasper), a 2024 T-RO paper and a 2024 ICRA paper, a current PhD student (Connor Yako) who is first author on the ICRA 2024 paper, lab project pages refreshed 2024-08-07, and a current-academic-year (2025-26) Stanford Profiles listing for CS 199 Independent Work and CS 191/191W Senior Project. A direct, personal email address for him appears on his own lab page, which makes a cold email actually deliverable. Two caveats a student must weigh: (1) he is Emeritus, and the group is small -- one current PhD student listed -- so capacity is likely very limited; (2) no undergraduate has been listed as a lab member since roughly 2013-2021, and the lab's news feed has been dead since 2013. A cold email is reasonable and low-cost, but expectations should be calibrated to an emeritus PI running a small, quiet group rather than an actively recruiting lab.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 5,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/j-salisbury",
+    "https://www.cs.stanford.edu/people/j-salisbury",
+    "https://engineering.stanford.edu/people/j-salisbury",
+    "https://profiles.stanford.edu/6094",
+    "https://sr.stanford.edu/",
+    "https://sr.stanford.edu/?page_id=9",
+    "https://sr.stanford.edu/?page_id=895",
+    "https://sr.stanford.edu/?page_id=1217",
+    "https://sr.stanford.edu/?page_id=1289",
+    "https://sr.stanford.edu/?page_id=2601",
+    "https://sr.stanford.edu/index.php?rest_route=/wp/v2/pages&per_page=100",
+    "https://sr.stanford.edu/index.php?rest_route=/wp/v2/posts&per_page=50",
+    "https://api.openalex.org/authors?search=J%20Kenneth%20Salisbury",
+    "https://api.openalex.org/works?filter=author.id:A5113614826,from_publication_date:2023-01-01",
+    "https://api.openalex.org/works?filter=raw_author_name.search:Salisbury,institutions.ror:00f54p054,from_publication_date:2025-01-01",
+    "https://api.openalex.org/works/https://doi.org/10.1109/tro.2025.3543324",
+    "https://api.openalex.org/works/https://doi.org/10.1109/tro.2024.3454388",
+    "https://api.openalex.org/works/https://doi.org/10.1109/icra57147.2024.10610769",
+    "https://api.semanticscholar.org/graph/v1/author/search?query=Kenneth%20Salisbury"
+  ],
+  "fetch_notes": "DIRECTORY LINK: the supplied link https://cs.stanford.edu/people/j-salisbury returned HTTP 404 ('The requested URL /people/j-salisbury was not found on this server'). The same path WITH the www host, https://www.cs.stanford.edu/people/j-salisbury, returns HTTP 200 and is the page I used as faculty_url. https://engineering.stanford.edu/people/j-salisbury also returns 200 with identical bio text. EMAIL: the address is written on his own lab bio page (https://sr.stanford.edu/?page_id=1217, last modified 2023-10-18) in deliberately obfuscated form -- the literal fetched string is 'kenneth dot salisbury at gmail dot com' followed by 'Administrator: (650) 732-1740'. I de-obfuscated it to kenneth.salisbury@gmail.com; a verifier should confirm the de-obfuscation is the intended reading. It is a personal gmail address, not a stanford.edu address. Separately, his Stanford Profiles page lists an 'Alternate Contact: Maria David, Administrative Associate, mdavid@cs.stanford.edu, 650 723-1740 (office)' -- that is his administrator's email, NOT his, and I did not put it in the email field. No stanford.edu email for Salisbury himself appeared on any page I fetched. LAB SITE: sr.stanford.edu is a WordPress site; I enumerated all content via its REST API (X-WP-Total: 76 pages, 6 posts) rather than crawling, so the coverage of the undergrad/recruiting search is complete for that domain. There is no 'news', 'join us', 'openings', or 'prospective students' page. The newest blog post is dated 2013-06-06; the newest modified content pages are 'People' and 'Grasper Design', both 2024-08-07. The footer reads 'Copyright (c) 2026 Salisbury Robotics Lab' but that is a dynamic WordPress year, not evidence of a 2026 update. ARXIV FAILED: every arXiv API call (http and https, several query forms) returned an empty body from this environment, so arXiv contributed nothing; the 2025/2024 papers are sourced from OpenAlex and cross-checked against the publication list on his Stanford Profiles page. SEMANTIC SCHOLAR PARTIAL: the author-search endpoint worked and returned 15 ambiguous 'Salisbury' candidates with no affiliations attached, so it could not disambiguate him; the follow-up /author/2000083/papers call returned an empty body (likely rate-limited) and contributed nothing. OPENALEX DISAMBIGUATION: OpenAlex has him split across at least five author IDs. The institution-filtered author query (last_known_institutions.ror:00f54p054) returned zero results, so I searched unfiltered and then verified each candidate work by inspecting its full author list for 'Kenneth Salisbury' + Stanford affiliation. A5113614826 is the ID carrying the recent robotics work. A broad 2025+ query on raw_author_name 'Salisbury' at Stanford returned 14 works, of which 13 belong to unrelated people (Heidi Salisbury - cardiology, Dereck Salisbury - Alzheimer's exercise research, Taylor Salisbury, Troy Salisbury); only 'Tactile-Reactive Roller Grasper' is his. No 2026 publication was found for him anywhere. LATEST EVIDENCE YEAR: set to 2026 on the strength of the fetched '2025-26 Courses' listing, but the newest actual RESEARCH output is the 2025 T-RO paper -- do not read 2026 as a 2026 publication. RESEARCH AREAS: the five research_areas were supplied by the caller from the CS directory; I did not independently verify 'reinforcement-learning' or 'Empirical Machine Learning' against any fetched page, and nothing in his 2024-2025 papers or lab pages supports those two labels. The research_topics and current_direction fields are what I could actually ground in fetched text."
+}

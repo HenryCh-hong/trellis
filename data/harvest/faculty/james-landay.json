@@ -1,0 +1,179 @@
+{
+  "slug": "james-landay",
+  "name": "James Landay",
+  "title": "Denning Director of Stanford Institute for Human-Centered AI, Anand Rajaraman and Venky Harinarayan Professor and Senior Fellow at the Stanford Institute for Human-Centered AI",
+  "department": "Computer Science",
+  "university": "Stanford University",
+  "faculty_url": "https://profiles.stanford.edu/james-landay",
+  "lab_name": "Stanford HCI Group",
+  "lab_url": "https://hci.stanford.edu/",
+  "email": "landay@stanford.edu",
+  "email_source_url": "https://www.landay.org/",
+  "research_areas": [
+    "Artificial Intelligence",
+    "Human-Computer Interaction (HCI)",
+    "Human-Centered and Creative AI",
+    "computational-education"
+  ],
+  "research_topics": [
+    "LLM-based health and physical-activity coaching",
+    "Behavior change technology (health and sustainability)",
+    "Human-centered AI and human-AI interaction",
+    "User modeling from everyday computer use",
+    "AI accessibility (blind and low-vision users)",
+    "Digital biomarkers and mobile/ubiquitous health sensing",
+    "Interaction and user interface design tools",
+    "Design metaphors and ontologies in AI-assisted design",
+    "Built environment and wellbeing"
+  ],
+  "current_direction": [
+    "LLM health coaches that preserve user agency (Bloom, GPTCoach)",
+    "Just-in-time objective inference to specialize AI interfaces",
+    "Inferring long-horizon life goals from everyday computer-use traces",
+    "Multimodal LLM agents for accessibility (blind/low-vision video)",
+    "Digital biomarkers from passive sensing for neurodegenerative disease"
+  ],
+  "current_direction_basis": "Driven by the 2025-2026 evidence collected here, not by his older biography. Two CHI 2026 papers set the frame: 'Bloom' (LLM-augmented behavior change, with Joerke/Sapkota/Brunskill/King) and 'Just-In-Time Objectives' (with Michelle Lam, Shaikh, Yang, Heer, Bernstein). The May 2026 arXiv preprint 'What Are You Really Trying to Do?' extends the coaching line from in-the-moment activity to inferred life goals. 'Making Videos Accessible... Multimodal Agent Video Player' (arXiv, Feb 2026) is the accessibility-agent thread. 'A framework of digital biomarkers for neurodegenerative diseases' (Nature Reviews Bioengineering, Apr 2026, with Fei-Fei/Adeli) is the sensing-for-health thread. CHI 2025's GPTCoach is the direct predecessor of Bloom. The Spring 2026 Stanford HCI Seminar lineup corroborates: his advisees Michelle Lam, Matthew Joerke and Nava Haghighi gave talks on exactly these topics.",
+  "evidence": [
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Just-In-Time Objectives: A General Approach for Specialized AI Interactions",
+      "summary": "CHI 2026 paper (issued 2026-04-13). Crossref-verified authors: Michelle S. Lam, Omar Shaikh, Hallie Xu, Alice Guo, Diyi Yang, Jeffrey Heer, James A. Landay, Michael S. Bernstein. OpenAlex abstract: 'Large language models promise a broad set of functions, but when not given a specific objective, they default to generic results. We demonstrate that inferring the user's in-the-moment objective, then rapidly optimizing for that singular objective, enables LLMs to produce specialized tools, interfaces, and responses.'",
+      "url": "https://doi.org/10.1145/3772318.3790713",
+      "venue": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Bloom: Designing for LLM-Augmented Behavior Change Interactions",
+      "summary": "CHI 2026 paper (issued 2026-04-13). Crossref-verified authors: Matthew Joerke, Defne Genc, Valentin Teutschbein, Shardul Sapkota, Sarah Chung, Paul Schmiedmayer, Maria Ines Campero, Abby C. King, Emma Brunskill, James A. Landay. OpenAlex abstract: 'Large language models (LLMs) offer novel opportunities to support health behavior change, yet existing work has narrowly focused on text-only interactions... we present Bloom, an application for physical activity promotion that integrates an LLM-based health coaching chatbot with existing design strategies and UI elements.'",
+      "url": "https://doi.org/10.1145/3772318.3790506",
+      "venue": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "\"What Are You Really Trying to Do?\": Co-Creating Life Goals from Everyday Computer Use",
+      "summary": "arXiv preprint dated 2026-05-01 (arXiv:2605.00497). OpenAlex-verified authors: Shardul Sapkota, Matthew Joerke, Zane Sabbagh, Omar Shaikh, Grace Wang, James A. Landay. Abstract: 'existing systems only capture what a person is doing in the moment -- not why they are doing it -- limiting these systems to surface-level support. We introduce striving co-creation, a process for inferring broader life goals from unstructured observations of co[mputer use].'",
+      "url": "https://arxiv.org/abs/2605.00497",
+      "venue": "arXiv preprint"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "Making Videos Accessible for Blind and Low Vision Users Using a Multimodal Agent Video Player",
+      "summary": "arXiv preprint dated 2026-02-04 (arXiv:2602.04104). OpenAlex-verified authors: Adriana Olmos, Anoop Kumar Sinha, Renelito Delos Santos, Ruben Rodriguez Rodriguez, James A. Landay, Sam Sepah, Philip Nelson, Shaun K. Kane. Abstract: 'we introduce a prototype that leverages a multimodal agent - powered by a novel conversational architecture using a multimodal large language model (MLLM) - to provide BLV users with an interactive, accessible video experience.'",
+      "url": "https://arxiv.org/abs/2602.04104",
+      "venue": "arXiv preprint"
+    },
+    {
+      "kind": "publication",
+      "year": 2026,
+      "title": "A framework of digital biomarkers for neurodegenerative diseases",
+      "summary": "Journal article issued 2026-04-23. Crossref-verified authors include Favour Nerrise, Narayan Schutz, Qingyu Zhao, Arnold Milstein, Kevin Schulman, Victor W. Henderson, James Landay, Li Fei-Fei, Feng Vankee Lin, Ehsan Adeli. Places Landay in the passive-sensing / digital-health-measurement line of work alongside Stanford HAI colleagues.",
+      "url": "https://doi.org/10.1038/s44222-026-00433-7",
+      "venue": "Nature Reviews Bioengineering"
+    },
+    {
+      "kind": "publication",
+      "year": 2025,
+      "title": "GPTCoach: Towards LLM-Based Physical Activity Coaching",
+      "summary": "CHI 2025 paper (issued 2025-04-25). Crossref-verified authors: Matthew Joerke, Shardul Sapkota, Lyndsea Warkenthien, Niklas Vainio, Paul Schmiedmayer, Emma Brunskill, James A. Landay. Direct predecessor of the CHI 2026 Bloom paper; establishes the LLM-health-coaching agenda that the 2026 work builds on.",
+      "url": "https://doi.org/10.1145/3706598.3713819",
+      "venue": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
+    },
+    {
+      "kind": "talk",
+      "year": 2026,
+      "title": "Spring 2026 Stanford HCI Seminar talks by Landay-advised students",
+      "summary": "The Stanford HCI Seminar page lists, for Spring 2026: '15 May Nava Haghighi, Stanford University, Toward Ontological Multiplicity in AI and Computing'; '22 May Michelle Lam, Stanford University, Just-in-Time Objectives for Specialized AI Interactions'; '29 May Matthew Joerke, Stanford University, Promoting Agency in Human-AI Interaction: Insights from AI Health Coaching'. The Stanford Profiles page lists Haghighi and Joerke as Landay's doctoral dissertation advisees and Lam as a co-advisee. Confirms the group is actively presenting this work in 2026.",
+      "url": "https://hci.stanford.edu/seminar/",
+      "venue": "Stanford HCI Seminar (CS 547), Fridays 11:30am-12:30pm PT, Gates B3"
+    },
+    {
+      "kind": "course",
+      "year": 2026,
+      "title": "2025-26 teaching: CS 147, CS 147L, CS 146",
+      "summary": "Stanford Profiles lists under '2025-26 Courses': 'Cross-platform Mobile App Development CS 147L (Aut)', 'Game Development CS 146 (Win)', 'Introduction to Human-Computer Interaction Design CS 147 (Aut)'. CS 147 is the undergraduate-facing intro HCI course the HCI Group's own connect page points undergraduates toward, making it the most natural first point of contact with Landay.",
+      "url": "https://profiles.stanford.edu/james-landay",
+      "venue": null
+    }
+  ],
+  "undergrad_signals": [
+    {
+      "signal": "Listed as supervisor for 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)' under Independent Studies on his official Stanford Profiles page",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/james-landay",
+      "note": "Quoted verbatim from the 'Independent Studies (14)' block: 'Supervised Undergraduate Research CS 195 (Aut, Win, Spr, Sum)'. This is the standard Stanford CS mechanism for undergraduate research credit and is offered in all four quarters. It confirms he is set up to supervise undergrad research, but it is a catalog affiliation, not an announcement that he currently has openings."
+    },
+    {
+      "signal": "Listed as supervisor for senior projects and undergraduate independent work",
+      "status": "verified",
+      "evidence_url": "https://profiles.stanford.edu/james-landay",
+      "note": "Same Independent Studies block lists: 'Senior Project CS 191 (Aut, Win, Spr)', 'Writing Intensive Senior Research Project CS 191W (Aut, Win, Spr)', 'Independent Work CS 199 (Aut, Win, Spr, Sum)', 'Independent Work CS 199P (Aut, Win, Spr, Sum)', and 'Independent Study SYMSYS 196 (Aut, Win, Spr, Sum)'. Direct senior-project and independent-work pathways for Stanford undergraduates."
+    },
+    {
+      "signal": "Stanford HCI Group 'connect' page has an explicit undergraduate section, but it routes undergrads to coursework rather than to lab positions",
+      "status": "verified",
+      "evidence_url": "https://hci.stanford.edu/connect",
+      "note": "Quoted: \"I'm interested in taking HCI classes as an undergraduate at Stanford... Starting from sophomore year, consider taking CS147, the Intro to HCI class at Stanford (usually taught in the Fall). If CS147 piques your interest, both the Computer Science Department and the Symbolic Systems Program offer concentrations in Human-Computer Interaction.\" Landay is listed on Stanford Profiles as teaching CS 147 in Autumn 2025-26, so this is a concrete route to him."
+    },
+    {
+      "signal": "Lab people page has an 'Undergraduates' category, but it is currently empty (HTML-commented out)",
+      "status": "verified",
+      "evidence_url": "https://hci.stanford.edu/people",
+      "note": "The raw HTML of the people page contains '<!-- <div id=\"masters\" class=\"section\"><p class=\"heading\">Masters Students, Undergraduates, Interns</p> -->' - the entire section is commented out, so no undergraduate members are currently listed for the Stanford HCI Group. The group does list 30+ named PhD and post-doc students. Treat this as a neutral-to-negative signal: the site has the category but does not publish undergrad names."
+    },
+    {
+      "signal": "Non-Stanford undergraduate interns are explicitly declined",
+      "status": "verified",
+      "evidence_url": "https://hci.stanford.edu/connect",
+      "note": "Quoted: 'Non-Stanford students interested in internships Generally speaking, we do not have the resources for non-Stanford interns. We will not respond to internship requests from students. If you have research experience in HCI, and are interested in a project related to our group's work, please have a faculty member at your university email me, and have them include an explanation of your particular qualifications for HCI research.' This matters for targeting: the undergrad pathway here is realistically Stanford-internal."
+    },
+    {
+      "signal": "No mention of CURIS anywhere on any page fetched in this task",
+      "status": "unknown",
+      "evidence_url": null,
+      "note": "Searched landay.org, profiles.stanford.edu/james-landay, hci.stanford.edu (home, people, connect, research, seminar) for 'CURIS' - zero hits. Absence of evidence only; CURIS participation is not ruled out, it is simply not documented on the pages fetched."
+    }
+  ],
+  "recruiting": {
+    "status": "unknown",
+    "statement": "No Landay-specific recruiting or 'join us' statement was found on any page fetched. The closest group-level statements on the Stanford HCI Group connect page are restrictive rather than open: 'Non-Stanford students interested in internships Generally speaking, we do not have the resources for non-Stanford interns. We will not respond to internship requests from students.' and, on graduate applications, 'Can I discuss my application with you? No. (So that the faculty can spend their time with current students, teaching, and doing research.)' The only conditionally-open statement is for post-docs, not undergraduates: 'Can I do a Post-Doc with the HCI Group? When there's a great fit, a talented student, and funding, the HCI Group sometimes has Post-Doc positions.'",
+    "url": "https://hci.stanford.edu/connect",
+    "confidence": 0.4
+  },
+  "opportunity_state": "OUTREACH",
+  "state_rationale": "OUTREACH, not OPENING. The lab is unambiguously active: two CHI 2026 papers, two 2026 arXiv preprints, a 2026 Nature Reviews Bioengineering article, a CHI 2025 paper, and three Spring 2026 HCI Seminar talks by his own advisees. Landay is also listed on his official Stanford profile as supervising 'Supervised Undergraduate Research CS 195', 'Senior Project CS 191/191W' and 'Independent Work CS 199' in all quarters, and he teaches the undergraduate gateway course CS 147 in Autumn 2025-26. That is a strong, real undergraduate pathway. But it does not meet the OPENING bar: nothing fetched is an explicit, currently-open undergraduate position or program announcement - the CS 195/191/199 entries are standing course-catalog supervision affiliations available across Stanford CS, not a posted opening. Counter-signals were also found: the HCI Group people page's 'Masters Students, Undergraduates, Interns' section is commented out (no undergrads listed), the connect page declines to discuss applications, and it explicitly refuses non-Stanford intern requests. Net: a Stanford undergraduate is well-positioned for a cold email - ideally via CS 147 or a CS 195/191 proposal anchored to the LLM-health-coaching or just-in-time-objectives line - but there is no advertised opening to point to.",
+  "lab_activity": {
+    "last_evidence_year": 2026,
+    "evidence_count": 8,
+    "active": true
+  },
+  "source_urls": [
+    "https://cs.stanford.edu/people/james-landay",
+    "https://profiles.stanford.edu/james-landay",
+    "https://www.landay.org/",
+    "https://www.landay.org/pages-sitemap.xml",
+    "https://hci.stanford.edu/",
+    "https://hci.stanford.edu/people",
+    "https://hci.stanford.edu/connect",
+    "https://hci.stanford.edu/research/",
+    "https://hci.stanford.edu/seminar/",
+    "https://api.openalex.org/authors?search=James%20A.%20Landay",
+    "https://api.openalex.org/works?filter=author.id:A5072285921,from_publication_date:2025-01-01&sort=publication_date:desc",
+    "https://api.crossref.org/works/10.1145/3772318.3790713",
+    "https://api.crossref.org/works/10.1145/3772318.3790506",
+    "https://api.crossref.org/works/10.1145/3706598.3713819",
+    "https://api.crossref.org/works/10.1145/3706598.3714327",
+    "https://api.crossref.org/works/10.1038/s44222-026-00433-7",
+    "https://api.crossref.org/works/10.1145/3710937",
+    "https://doi.org/10.1145/3772318.3790713",
+    "https://doi.org/10.1145/3772318.3790506",
+    "https://doi.org/10.1038/s44222-026-00433-7",
+    "https://arxiv.org/abs/2605.00497",
+    "https://arxiv.org/abs/2602.04104"
+  ],
+  "fetch_notes": "FAILURES: (1) The supplied CS directory link https://cs.stanford.edu/people/james-landay returned HTTP 404 ('The requested URL /people/james-landay was not found on this server'); https://cs.stanford.edu/people/landay also 404s. The working canonical faculty page is https://profiles.stanford.edu/james-landay (HTTP 200), used as faculty_url. (2) Semantic Scholar author search returned HTTP 429 'Too Many Requests' and was not used. (3) The arXiv Atom API (export.arxiv.org) returned empty/truncated responses on three attempts over both http and https, so arXiv metadata was NOT taken from arXiv directly - the two 2026 preprints were verified through OpenAlex work records instead (titles, dates, full author lists, abstracts all matched), and the arxiv.org/abs URLs recorded are the landing pages OpenAlex reports.\n\nSOURCES USED: profiles.stanford.edu (bio, title, department, 2025-26 courses, full 14-item Independent Studies list, advisee list); landay.org (Wix site; email, office address, project blurbs - note its project descriptions are dated, covering Smart Primer, Who Is Zuki, drones and buildings, with no 2025-26 content and no join/recruiting page; its sitemap has only home, cv, blog-1, videos, designing-for-behavior-change); hci.stanford.edu home/people/connect/research/seminar; OpenAlex author A5072285921 (24 works from 2025-01-01 onward); Crossref for venue and author verification.\n\nEMAIL: landay@stanford.edu appears literally as a mailto link twice on https://www.landay.org/ (rich-text block and site footer). Not guessed. A second real address, acgarza@stanford.edu, appears on both landay.org and profiles.stanford.edu as his faculty administrator Aimee C. Garza - recorded here for context but NOT used as his email.\n\nLAB CAVEAT: lab_name/lab_url point to the Stanford HCI Group (hci.stanford.edu), where Landay is listed as faculty with office 'CoDa E354'. This is a multi-faculty department group shared with Bernstein, Agrawala, Yang, Follmer, Wodtke, Winograd and others - it is NOT a Landay-only lab, and no separate Landay lab site was found. Attribute group-level statements (recruiting, connect-page policies) to the HCI Group, not to Landay personally.\n\nVENUE NOTE: OpenAlex returned null source names for the ACM conference papers; venues were confirmed independently via Crossref ('Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems' / 'Proceedings of the 2025 CHI Conference...'). Landay's authorship on every cited paper was confirmed in a Crossref or OpenAlex author list, not assumed.\n\nNOT FOUND: no grants, no 'join us'/openings page, no CURIS mention, no lab news page, and no list of current undergraduate lab members."
+}

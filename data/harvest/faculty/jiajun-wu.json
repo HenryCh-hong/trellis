@@ -1,0 +1,146 @@
+{
+ "slug": "jiajun-wu",
+ "name": "Jiajun Wu",
+ "title": "Assistant Professor of Computer Science and, by courtesy, of Psychology",
+ "department": "Computer Science",
+ "university": "Stanford University",
+ "faculty_url": "https://profiles.stanford.edu/jiajun-wu",
+ "lab_name": null,
+ "lab_url": "https://jiajunwu.com/",
+ "email": "jiajunwu@cs.stanford.edu",
+ "email_source_url": "https://jiajunwu.com/",
+ "research_areas": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "computer-vision",
+  "Human-Centered and Creative AI",
+  "Robotics"
+ ],
+ "research_topics": [
+  "physical scene understanding",
+  "generative 4D / world generation",
+  "neuro-symbolic concept learning and program-structured representations",
+  "multi-modal perception from visual, acoustic, and tactile signals",
+  "embodied AI and robot manipulation",
+  "spatial reasoning and embodied cognition in foundation models",
+  "computational cognitive science"
+ ],
+ "current_direction": [
+  "Action-conditioned, long-horizon 4D world generation",
+  "Benchmarking spatial belief and embodied cognition in foundation models",
+  "Neuro-symbolic / program-structured concepts as the abstraction layer",
+  "Training-free compositional control of diffusion generation",
+  "Contact-rich and whole-body robot manipulation data systems"
+ ],
+ "current_direction_basis": "Drawn from the 2026 and 2025 entries on his own publications page (https://jiajunwu.com/#publications), fetched 2026-08-31. 4D/world generation: WonderZoom, PerpetualWonder, NEUROK, and Choreographing a World of Dynamic Objects (all CVPR 2026), continuing WonderPlay and WorldScore (ICCV 2025). Spatial/embodied cognition benchmarks: Spatial Mental Modeling from Limited Views, ENACT, and Theory of Space (all ICLR 2026). Neuro-symbolic: Building Intelligent Agents with Neuro-Symbolic Concepts (CACM 2026) and Neuro-Symbolic Decoding of Neural Activity (ICLR 2026), plus From Programs to Poses (NeurIPS 2025). Compositional diffusion control: Product of Experts for Visual Generation (ICLR 2026) and Coupled Diffusion Sampling for Training-Free Multi-View Image Editing (CVPR 2026). Robotics: DexSkin and BEHAVIOR Robot Suite (CoRL 2025), TWIST2 (ICRA 2026), MoMaGen (ICLR 2026). NOT based on the older biography paragraph on the same page.",
+ "evidence": [
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "WonderZoom: Multi-Scale 3D World Generation",
+   "summary": "CVPR 2026 paper with Jin Cao and Hong-Xing Yu on generating 3D worlds across multiple scales; listed under 2026 on his publications page and the project page resolves (HTTP 200).",
+   "url": "https://wonderzoom.github.io/",
+   "venue": "CVPR 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Spatial Mental Modeling from Limited Views",
+   "summary": "ICLR 2026 paper probing whether models can build spatial mental models from partial observations; part of a cluster of three ICLR 2026 papers (with ENACT and Theory of Space) on spatial belief and embodied cognition in foundation models. Project page resolves (HTTP 200).",
+   "url": "https://mind-cube.github.io/",
+   "venue": "ICLR 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Product of Experts for Visual Generation",
+   "summary": "ICLR 2026 paper with Yunzhi Zhang, Carson Murtuza-Lanier, Zizhang Li and Yilun Du on composing multiple expert models for visual generation. Project page resolves (HTTP 200).",
+   "url": "https://product-of-experts.github.io/",
+   "venue": "ICLR 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2026,
+   "title": "Building Intelligent Agents with Neuro-Symbolic Concepts",
+   "summary": "CACM 2026 article with Jiayuan Mao and Joshua B. Tenenbaum; a venue signalling that the neuro-symbolic concept program is now being framed as a general agenda rather than a single paper.",
+   "url": "https://jiajunwu.com/#2026",
+   "venue": "CACM 2026"
+  },
+  {
+   "kind": "publication",
+   "year": 2025,
+   "title": "BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities",
+   "summary": "CoRL 2025 paper extending the BEHAVIOR line to real-world whole-body household manipulation; alongside DexSkin (CoRL 2025) on conformable robotic skin for contact-rich manipulation.",
+   "url": "https://behavior-robot-suite.github.io/",
+   "venue": "CoRL 2025"
+  },
+  {
+   "kind": "grant",
+   "year": 2026,
+   "title": "Computers and Thought Award, IJCAI (2026); Microsoft Research Faculty Fellowship (2026); Nvidia Academic Grant and Google Research Scholar Award (2025)",
+   "summary": "Honors & Awards list on his Stanford Profiles page shows 2026 and 2025 recognition and funding, indicating an actively resourced group.",
+   "url": "https://profiles.stanford.edu/jiajun-wu",
+   "venue": null
+  },
+  {
+   "kind": "course",
+   "year": 2026,
+   "title": "SYMSYS1/SYMSYS200/CS24/LINGUIST35/PHIL99/PSYCH35: Minds and Machines",
+   "summary": "Teaching list on his site records 'Minds and Machines, Spr 2026, Wtr 2025, 2024, Fall 2022 (with Thomas Icard)' - an undergraduate-accessible course he taught in Spring 2026.",
+   "url": "https://jiajunwu.com/#teaching",
+   "venue": null
+  }
+ ],
+ "undergrad_signals": [
+  {
+   "signal": "Explicit written pathway for Stanford undergraduates to join the group, via a Google Form, with a stated minimum commitment",
+   "status": "verified",
+   "evidence_url": "https://jiajunwu.com/",
+   "note": "Re-verified independently 2026-08-31 (second adversarial pass). Quoted verbatim from the raw served HTML of https://jiajunwu.com/, div class=\"recruit\" id=\"recruit\" (reachable in-page via the link 'Here is some information for prospective students and visitors.'): \"Current Stanford students and prospective visiting students: please fill out this form. For Stanford MS students and undergraduates, the minimum time commitment is 15 hours per week for six months.\" The block is present in the HTML source as delivered, so it does not depend on the javascript:showRecruit() toggle to exist. REQUIRED vs PREFERRED, as the source words it: the 15 hours per week for six months is stated as 'the minimum time commitment', i.e. a REQUIREMENT, not a preference. Page last-modified 17 Aug 2026, so the text is 14 days old, not stale. Form URL: https://docs.google.com/forms/d/e/1FAIpQLSeFIvksygbrsnDxU32I8htEcZ5AXS2kdklhMPRiQgAZckSA3w/viewform CAVEAT: the written pathway is verified; the form itself is NOT. It returned HTTP 401 with a Google sign-in/cookie interstitial, which is Google's default response to any anonymous fetch and therefore says nothing either way about whether it is still accepting responses."
+  },
+  {
+   "signal": "Email is explicitly discouraged as the first contact channel for students",
+   "status": "verified",
+   "evidence_url": "https://jiajunwu.com/",
+   "note": "Re-verified 2026-08-31. Literal quote from the served HTML: \"Thank you for your interest in joining my group! Due to the large number of emails I receive, I cannot respond to every email individually. Please review the information below before contacting me. Thanks.\" (Prior record truncated the trailing 'Thanks.'; corrected here.) The routing is explicit in the same block: current Stanford students are sent to the form, while 'Prospective postdocs: please email me directly with your CV' is the only group told to email. Quote is literal; the label 'discouraged as first contact' is the direct reading of it - an undergraduate should submit the form rather than cold-email."
+  },
+  {
+   "signal": "No undergraduates listed on the group roster",
+   "status": "inferred",
+   "evidence_url": "https://jiajunwu.com/",
+   "note": "Correctly held at 'inferred' on re-check 2026-08-31: this is a claim of ABSENCE and cannot be backed by a literal quote, so it must not carry 'verified'. Basis, re-fetched this pass: the Group section of https://jiajunwu.com/ prints exactly four subheadings - Postdocs, PhD Students, Affiliates, Alumni - with no undergraduate heading. Across the whole page the string 'undergrad' occurs exactly twice: once in his bio ('my undergraduate degrees at Tsinghua University') and once in the recruiting line. The undergraduate pathway exists in the recruiting text; current undergraduate members are not published."
+  },
+  {
+   "signal": "CURIS / senior project / honors thesis mention",
+   "status": "unknown",
+   "evidence_url": null,
+   "note": "Re-checked 2026-08-31 on a fresh fetch: a case-insensitive grep over the full HTML of https://jiajunwu.com/ for CURIS, 'senior project', 'honors thesis', 'undergraduate research', 'research assistant' and REU returned zero matches. Absent, not denied - no inference drawn either way."
+  }
+ ],
+ "recruiting": {
+  "status": "open",
+  "statement": "Thank you for your interest in joining my group! Due to the large number of emails I receive, I cannot respond to every email individually. Please review the information below before contacting me. Thanks. Current Stanford students and prospective visiting students: please fill out this form. For Stanford MS students and undergraduates, the minimum time commitment is 15 hours per week for six months. For visiting graduate students, the minimum length of a visit is six months. Prospective postdocs: please email me directly with your CV. Prospective graduate students: please apply through the system and list me as a potential advisor in your application. There is no need to contact me, unless you have a particular research question/idea that you would like to discuss further.",
+  "url": "https://jiajunwu.com/",
+  "confidence": 0.75
+ },
+ "opportunity_state": "OPENING",
+ "state_rationale": "UPHELD on a second, independent adversarial fact-check (2026-08-31, curl + browser UA, fetched fresh rather than trusting the prior pass). https://jiajunwu.com/ returned HTTP 200 (1,243,212 bytes) and the recruiting block was read directly out of the served HTML source (div class=\"recruit\" id=\"recruit\", raw lines 147-158), so it is server-rendered and not injected by JavaScript. It contains verbatim, in the present tense, an instruction that names undergraduates explicitly: \"Current Stanford students and prospective visiting students: please fill out this form. For Stanford MS students and undergraduates, the minimum time commitment is 15 hours per week for six months.\" This clears the OPENING bar on both required tests. (a) Present-tense open: 'please fill out this form' is a live imperative intake instruction, and a full-page scan for negative recruiting language ('not taking', 'not accepting', 'no longer', 'unable to take') returned ZERO matches. (b) Undergraduate-specific, not PhD-only: undergraduates are named by name and given their own concrete requirement, and the PhD channel is a physically separate paragraph ('Prospective graduate students: please apply through the system and list me as a potential advisor'), as is the postdoc channel. So this is not a case of a grad-admissions notice being misread as an undergraduate opening. NEW EVIDENCE this pass, which the prior review did not have: the server returns 'last-modified: Mon, 17 Aug 2026 03:32:05 GMT' - the page carrying this recruiting text was updated 14 days before today (2026-08-31). That directly answers the main threat to an OPENING claim, which is stale text left up for years, and is why confidence rises 0.70 -> 0.75. REMAINING AND UNRESOLVED CAVEAT, stated plainly: the Google Form is the only action channel an undergraduate has, and it could NOT be opened. It returns HTTP 401 behind a Google sign-in/cookie wall ('You must sign in to access this content'). Critically, that 401 is Google's DEFAULT response to any unauthenticated fetch of any Form, open or closed, so it is not evidence the form is shut - but it is also not evidence it is live. Whether the form is still accepting responses is genuinely unknown, and confidence is capped at 0.75 for that reason alone. Secondary caveat: the group roster publishes Postdocs, PhD Students, Affiliates and Alumni with no undergraduate heading, so the pathway is documented but its throughput is unproven. Lab activity is not in question: the page carries an <h4>2026</h4> publications section (21 'CVPR 2026', 16 'ICLR 2026', 12 'ICRA 2026', 3 'CACM 2026' venue strings) plus a 2025 section, and the teaching list reads 'Minds and Machines, Spr 2026, Wtr 2025, 2024, Fall 2022 (with Thomas Icard)'.",
+ "lab_activity": {
+  "last_evidence_year": 2026,
+  "evidence_count": 7,
+  "active": true
+ },
+ "source_urls": [
+  "https://jiajunwu.com/",
+  "https://cs.stanford.edu/~jiajunwu/",
+  "https://profiles.stanford.edu/jiajun-wu",
+  "https://cs.stanford.edu/people/jiajun-wu",
+  "https://docs.google.com/forms/d/e/1FAIpQLSeFIvksygbrsnDxU32I8htEcZ5AXS2kdklhMPRiQgAZckSA3w/viewform",
+  "https://wonderzoom.github.io/",
+  "https://mind-cube.github.io/",
+  "https://product-of-experts.github.io/",
+  "https://behavior-robot-suite.github.io/",
+  "https://yanjieze.com/TWIST2"
+ ],
+ "fetch_notes": "Fetched 2026-08-31 with curl + browser UA. (1) The supplied directory link https://cs.stanford.edu/people/jiajun-wu returned HTTP 404 ('The requested URL /people/jiajun-wu was not found on this server'), so faculty_url is set to https://profiles.stanford.edu/jiajun-wu, which returned 200 with the matching printed title. (2) https://cs.stanford.edu/~jiajunwu/ returns 200 and redirects to https://jiajunwu.com/, which confirms jiajunwu.com as his official Stanford-linked page; all group, publication, teaching and recruiting content comes from there. (3) No separately branded lab name or standalone lab domain is printed anywhere - he writes 'my group' and lists community affiliations (SAIL, Stanford Vision and Learning Lab, Stanford Computer Graphics Lab, Stanford Robotics Center, HAI), so lab_name is null and lab_url points at his group page. (4) There is no separate 'news' page on the site; recency was established from the dated 2026/2025 publication sections and the Stanford Profiles honors list instead. (5) Email jiajunwu@cs.stanford.edu appears literally in the fetched text of jiajunwu.com ('Email: jiajunwu@cs.stanford.edu'); it was not guessed. (6) The recruiting text is inside a JS-toggled div (javascript:showRecruit()) but is present in the served HTML and was read directly from source. (7) The Google Form returned HTTP 200 but served only a Google sign-in/consent interstitial, so its accepting/closed state could NOT be verified. (8) OpenAlex author search returned poorly disambiguated results - the top 'Jiajun Wu' record mixes Stanford/MIT with dozens of unrelated Chinese-institution affiliations - so it was NOT used for any publication claim. (9) arXiv API and Semantic Scholar API both returned HTTP 429 'Rate exceeded' / 'Too Many Requests', so no independent third-party cross-check of publications was possible; every publication listed here comes from his own publications page, with four project-page URLs independently spot-checked at HTTP 200 (wonderzoom, mind-cube, product-of-experts, yanjieze.com/TWIST2). ADVERSARIAL RE-VERIFICATION 2026-08-31 (curl + browser UA, independent of the original pass): (a) https://jiajunwu.com/ -> HTTP 200, 1,243,212 bytes; the recruiting block was located in the raw served HTML (div class=\"recruit\" id=\"recruit\") and the undergraduate sentence was quoted verbatim from it, so the OPENING claim is upheld. (b) CORRECTION to note (7) above: the Google Form now returns HTTP 401, not HTTP 200 - it serves a Google sign-in wall ('You must sign in to access this content'). Its accepting/closed state remains UNVERIFIABLE; recruiting.confidence lowered 0.8 -> 0.7 to reflect that the sole action channel could not be opened. (c) Email re-verified against its email_source_url: the literal string 'Email: jiajunwu@cs.stanford.edu' appears in the fetched text of https://jiajunwu.com/, and it is the only email address on the page. email and email_source_url kept as-is. (d) undergrad_signals audited: the roster signal was downgraded 'verified' -> 'inferred' because it is an absence claim with no literal quote to back it. The two remaining 'verified' signals are each backed by a literal quote from the fetched page. (e) 2026 recency re-confirmed on the same fetch: an <h4>2026</h4> publications section exists, with 21 'CVPR 2026', 16 'ICLR 2026', 12 'ICRA 2026' and 3 'CACM 2026' venue strings in the page text, and the teaching list shows 'Minds and Machines, Spr 2026'. SECOND ADVERSARIAL RE-VERIFICATION 2026-08-31 (independent fetch, curl + browser UA, nothing carried over on trust): (i) https://jiajunwu.com/ -> HTTP 200, 1,243,212 bytes, 'last-modified: Mon, 17 Aug 2026 03:32:05 GMT'. That header is new evidence and is the single strongest freshness signal on this record: the recruiting text is 14 days old. (ii) The recruit div was located in the RAW HTML (not a rendered DOM), confirming the undergraduate sentence is server-delivered; quoted verbatim, OPENING upheld. (iii) Negative-recruiting sweep ('not taking', 'not accepting', 'not recruiting', 'no longer', 'unable to take') returned ZERO matches page-wide. (iv) EMAIL RE-VERIFIED against email_source_url: 'Email: jiajunwu@cs.stanford.edu' appears literally in the page text, and a regex sweep for every address on the page returns that address and NO other, so there is no ambiguity about which address is his. Also mirrored in the page's JSON-LD ('\"email\":\"jiajunwu@cs.stanford.edu\"'). email and email_source_url kept. (v) The Google Form was re-tested and returns HTTP 401, not 200. Body is Google's standard sign-in/cookie interstitial ('You must sign in to access this content'). IMPORTANT INTERPRETATION: this is the default response to any unauthenticated request for any Google Form, so it is NOT evidence of closure and NOT evidence of availability - it is simply unverifiable without credentials, and is reported as such rather than resolved in either direction. (vi) undergrad_signals audited against the strict rule that 'verified' requires a literal quote: the two 'verified' signals each carry one and stand; the roster signal stays 'inferred' as an absence claim; the CURIS signal stays 'unknown'. (vii) Recency re-confirmed on this same fetch: <h4>2026</h4> and <h4>2025</h4> publication headings both present, venue-string counts CVPR 2026 x21, ICLR 2026 x16, ICRA 2026 x12, CACM 2026 x3, CoRL 2025 x7, ICCV 2025 x10, NeurIPS 2025 x14, and teaching 'Minds and Machines, Spr 2026, Wtr 2025, 2024, Fall 2022 (with Thomas Icard)'. (viii) recruiting.confidence 0.70 -> 0.75: raised only on the last-modified evidence, still capped below 0.8 because the sole action channel could not be opened."
+}

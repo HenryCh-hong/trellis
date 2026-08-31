@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Trellis — Handshake import",
+  "version": "0.1.0",
+  "description": "Import the Handshake job you are looking at into your own local Trellis instance. Reads only; never submits.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://*.joinhandshake.com/*"],
+  "action": {
+    "default_title": "Import this Handshake job into Trellis",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {}
+}
