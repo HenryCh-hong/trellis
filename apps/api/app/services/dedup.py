@@ -10,7 +10,7 @@ from __future__ import annotations
 import hashlib
 import uuid
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
@@ -18,9 +18,10 @@ from rapidfuzz import fuzz
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.change import ChangeKind, OpportunityChange
+from app.models.change import ChangeKind
 from app.models.enums import DeadlineType, OpportunityStatus, OpportunityType
 from app.models.opportunity import Opportunity, OpportunitySource, Requirement
+from app.services.lifecycle import deadline_change_summary, log_change, sync_deadline_state
 
 TITLE_MATCH_THRESHOLD = 92
 ORG_MATCH_THRESHOLD = 82
@@ -163,7 +164,7 @@ def upsert_opportunity(
     # re-running discovery is knowing what moved, and _apply overwrites it.
     before = _snapshot(opp) if outcome == "updated" else None
 
-    _apply(opp, data, source_id)
+    _apply(opp, data, source_id, now.astimezone(UTC).date())
     opp.last_checked_at = now
     if outcome != "unchanged":
         opp.last_changed_at = now
@@ -171,8 +172,8 @@ def upsert_opportunity(
         db.flush()
         removed, added = _replace_requirements(db, opp, data.get("requirements") or [])
         if outcome == "created":
-            _log(db, opp, ChangeKind.DISCOVERED, None, None, None,
-                 f"Found on {opp.source_url or 'the web'}", now, run_id)
+            log_change(db, opp, ChangeKind.DISCOVERED, None, None, None,
+                       f"Found on {opp.source_url or 'the web'}", now, run_id)
         elif before is not None:
             _log_field_changes(db, opp, before, now, run_id, added, removed)
 
@@ -192,32 +193,6 @@ def _snapshot(opp: Opportunity) -> dict[str, Any]:
     return {name: getattr(opp, name) for name, _, _ in _TRACKED}
 
 
-def _log(
-    db: Session,
-    opp: Opportunity,
-    kind: ChangeKind,
-    field: str | None,
-    old: Any,
-    new: Any,
-    summary: str,
-    now: datetime,
-    run_id: uuid.UUID | None,
-) -> None:
-    db.add(
-        OpportunityChange(
-            opportunity_id=opp.id,
-            kind=kind,
-            field=field,
-            old_value=None if old is None else str(old),
-            new_value=None if new is None else str(new),
-            summary=summary,
-            source_url=opp.source_url,
-            search_run_id=run_id,
-            noticed_at=now,
-        )
-    )
-
-
 def _log_field_changes(
     db: Session,
     opp: Opportunity,
@@ -231,23 +206,30 @@ def _log_field_changes(
         old, new = before.get(name), getattr(opp, name)
         if old == new:
             continue
-        if old is None:
+        if name == "deadline":
+            # A date that VANISHES is the case worth spelling out: rendering it
+            # as a bare "Unknown" reads as "we never knew", when the truth is
+            # that the posting used to say a date and stopped saying it.
+            summary = deadline_change_summary(old, new)
+        elif old is None:
             summary = f"{label} added: {new}"
         elif new is None:
             summary = f"{label} removed (was {old})"
         else:
             summary = f"{label} changed: {old} → {new}"
-        _log(db, opp, kind, name, old, new, summary, now, run_id)
+        log_change(db, opp, kind, name, old, new, summary, now, run_id)
 
     for text in added[:5]:
-        _log(db, opp, ChangeKind.REQUIREMENT_ADDED, "requirements", None, text,
-             f"New requirement: {text[:120]}", now, run_id)
+        log_change(db, opp, ChangeKind.REQUIREMENT_ADDED, "requirements", None, text,
+                   f"New requirement: {text[:120]}", now, run_id)
     for text in removed[:5]:
-        _log(db, opp, ChangeKind.REQUIREMENT_REMOVED, "requirements", text, None,
-             f"Requirement removed: {text[:120]}", now, run_id)
+        log_change(db, opp, ChangeKind.REQUIREMENT_REMOVED, "requirements", text, None,
+                   f"Requirement removed: {text[:120]}", now, run_id)
 
 
-def _apply(opp: Opportunity, data: dict[str, Any], source_id: uuid.UUID | None) -> None:
+def _apply(
+    opp: Opportunity, data: dict[str, Any], source_id: uuid.UUID | None, today: date
+) -> None:
     simple = (
         "title",
         "organization",
@@ -291,6 +273,9 @@ def _apply(opp: Opportunity, data: dict[str, Any], source_id: uuid.UUID | None) 
         opp.extraction_confidence = float(data["extraction_confidence"])
     if data.get("raw") is not None:
         opp.raw = data["raw"]
+    # The stored lifecycle state has to follow the dates we just wrote, or a
+    # posting that extends its deadline would stay marked expired.
+    sync_deadline_state(opp, today)
 
 
 def _replace_requirements(

@@ -7,7 +7,7 @@ import { PageHeader } from "@/components/app/page-header";
 import { SUGGESTED_INTERESTS, SUGGESTED_SKILLS, TagInput } from "@/components/app/tag-input";
 import { Button } from "@/components/ui/button";
 import { Field, Input, Select, Switch } from "@/components/ui/input";
-import { Alert, Badge, Card, SectionHeader } from "@/components/ui/primitives";
+import { Alert, Badge, Card, SectionHeader, Tooltip } from "@/components/ui/primitives";
 import { useToast } from "@/components/ui/toast";
 import { api } from "@/lib/api";
 import type { StudentProfile } from "@/lib/types";
@@ -369,9 +369,11 @@ function CourseForm({
         className="w-[96px]"
         aria-label="Term"
       />
-      <Button type="submit" size="md" disabled={!title.trim()}>
-        Add
-      </Button>
+      <Tooltip content={title.trim() ? undefined : "Give the course a title first."}>
+        <Button type="submit" size="md" disabled={!title.trim()}>
+          Add
+        </Button>
+      </Tooltip>
     </form>
   );
 }

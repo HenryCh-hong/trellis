@@ -1172,6 +1172,14 @@ def _sync_faculty_opportunity(
     db.flush()
     report.record("opportunities", created=created)
 
+    link_field = application_url_provenance(
+        opportunity.application_url, opportunity.source_url, opportunity.application_method
+    )
+    if link_field is not None:
+        existing_fields = {f.field: f for f in opportunity.fields}
+        _put_field(db, report, opportunity, existing_fields, "application_url", **link_field)
+        db.flush()
+
     labels = [*(data.get("research_areas") or []), *(data.get("research_topics") or [])]
     _sync_opportunity_topics(db, report, opportunity, labels, topics)
 
@@ -1269,6 +1277,35 @@ def _sync_requirements(
             report.record("requirements", created=created)
     db.flush()
     _prune(db, existing, keep, report, "requirements")
+
+
+def application_url_provenance(
+    application_url: str | None,
+    source_url: str | None,
+    application_method: str | None,
+) -> dict[str, Any] | None:
+    """The ``application_url`` provenance row, or ``None`` when there is no link.
+
+    Only a link the harvest recorded *as a distinct destination* earns
+    ``VERIFIED``.  When the apply URL is simply the page the posting was read
+    on, nobody wrote "apply here": the row is kept, marked INFERRED, and the
+    readiness list says "Unverified" rather than claiming we checked.
+    """
+    if not application_url:
+        return None
+    distinct = application_url != source_url
+    return {
+        "value": {"value": application_url, "application_method": application_method},
+        "confidence": 1.0 if distinct else 0.4,
+        "certainty": Certainty.VERIFIED if distinct else Certainty.INFERRED,
+        "method": ExtractionMethod.SOURCE if distinct else ExtractionMethod.HEURISTIC,
+        "source_text": (
+            application_method
+            if distinct
+            else "No separate apply link; this is the page the posting was read on."
+        ),
+        "source_url": source_url,
+    }
 
 
 def _put_field(
@@ -1432,6 +1469,11 @@ def _load_posting(
         source_text=pay.text,
         source_url=source_url,
     )
+    link_field = application_url_provenance(
+        opportunity.application_url, source_url, application_method
+    )
+    if link_field is not None:
+        _put_field(db, report, opportunity, existing_fields, "application_url", **link_field)
     _put_field(
         db,
         report,

@@ -10,13 +10,15 @@ from app.api import serializers as ser
 from app.api.deps import current_profile_optional, get_session
 from app.core.config import get_settings
 from app.models.application import Application
-from app.models.enums import OpportunityStatus, OpportunityType
+from app.models.enums import ConfidenceState, OpportunityStatus, OpportunityType
 from app.models.opportunity import Opportunity, OpportunityTopic
 from app.models.ops import Reminder, SearchRun
 from app.models.research import Faculty, FacultyTopic
 from app.models.user import StudentProfile
 from app.schemas import entities as E
+from app.services import feedback as fb
 from app.services.applications import blocking_reasons
+from app.services.readiness import CTA_CONTINUE, CTA_REVIEW
 
 router = APIRouter(tags=["overview"])
 
@@ -50,9 +52,25 @@ def overview(
             needs_onboarding=True,
         )
 
-    opportunities = list(
-        db.scalars(
-            select(Opportunity).options(
+    # Held rows are deliberately absent from every panel here. The Overview is
+    # the page that answers "what should I do next?", and something we could
+    # barely read is never the answer — it is reachable from the opportunities
+    # list under its own honest label instead.
+    #
+    # Rows you hid are absent for the same reason and are restored the same way:
+    # this page has no filters of its own, so it shows what you have not put
+    # away, and the opportunities list is where hidden rows are counted and
+    # brought back.
+    signals = fb.feedback_for_profile(db, profile)
+    hidden = {
+        oid for oid, row in signals.items() if row.signal.value == "hidden"
+    }
+    opportunities = [
+        o
+        for o in db.scalars(
+            select(Opportunity)
+            .where(Opportunity.confidence_state == ConfidenceState.OK)
+            .options(
                 selectinload(Opportunity.matches),
                 selectinload(Opportunity.source),
                 selectinload(Opportunity.lab),
@@ -65,7 +83,8 @@ def overview(
                 .selectinload(FacultyTopic.topic),
             )
         ).unique()
-    )
+        if o.id not in hidden
+    ]
 
     apps = {
         a.opportunity_id: a
@@ -86,10 +105,16 @@ def overview(
             profile_id=profile.id,
             application=apps.get(o.id),
             has_reminder=o.id in reminder_ids,
+            feedback=signals.get(o.id),
         )
         for o in opportunities
     ]
     by_id = {i.id: i for i in items}
+
+    # "Already applied" is your word for it, not a pipeline state: no
+    # Application row is invented, the pipeline bar below is unaffected, and the
+    # row stays in the opportunities list. It just stops being offered as work.
+    parked = fb.excluded_from_todo(signals)
 
     leads_all = sorted(
         [
@@ -134,7 +159,9 @@ def overview(
                 blocking=blocking,
                 resume_ready=app.resume_id is not None,
                 application_id=app.id,
-                cta="Review application" if not blocking else "Finish preparing",
+                # The same two labels the panel and the kit page use, so one
+                # application never carries three different verbs.
+                cta=CTA_REVIEW if not blocking else CTA_CONTINUE,
             )
         )
 
@@ -142,7 +169,7 @@ def overview(
     # next?" — an empty panel in the most valuable slot on the page helps nobody.
     # These are the two things a student would actually regret missing, in order.
     def _candidate(item, reason: str, cta: str) -> None:
-        if len(actions) >= 5 or item.has_application:
+        if len(actions) >= 5 or item.has_application or item.id in parked:
             return
         if item.status not in (OpportunityStatus.NEW.value, OpportunityStatus.SAVED.value):
             return
@@ -199,6 +226,7 @@ def overview(
             and i.days_until_deadline is not None
             and i.days_until_deadline >= 0
             and i.status not in ("archived", "rejected")
+            and i.id not in parked
         ],
         key=lambda i: i.deadline,
     )
@@ -209,11 +237,24 @@ def overview(
         # never makes a distant deadline look imminent.
         due_soon = upcoming[:5]
 
+    # "Best matches" is a recommendation, and a closed door is not one. An
+    # expired row is still reachable everywhere else — it just may not be
+    # offered here as something to go and do.
     best = sorted(
-        [i for i in items if i.status in ("new", "saved")],
+        [
+            i
+            for i in items
+            if i.status in ("new", "saved")
+            and i.deadline_state != "expired"
+            and i.id not in parked
+        ],
         key=lambda i: -(i.fit_score or 0),
     )[:8]
 
+    # Exactly what you pointed at, newest first. Not a recommendation and not
+    # scored differently — a shortcut back to the rows you said you liked.
+    liked = [i for i in items if i.feedback and i.feedback.signal == "interested"]
+    interested = sorted(liked, key=lambda i: i.feedback.created_at, reverse=True)[:6]  # type: ignore[union-attr]
 
     recent = sorted(
         [i for i in items if i.first_seen_at],
@@ -235,6 +276,7 @@ def overview(
         action_needed=actions[:6],
         due_soon=due_soon[:8],
         best_matches=best,
+        interested=interested,
         research_leads=leads,
         recent_discoveries=recent,
         pipeline=[

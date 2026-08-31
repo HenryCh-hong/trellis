@@ -13,6 +13,7 @@ from app.models.application import (
     ResumeRecommendation,
 )
 from app.models.change import ChangeKind, OpportunityChange
+from app.models.feedback import OpportunityFeedback
 from app.models.opportunity import (
     ExtractedField,
     Opportunity,
@@ -66,6 +67,7 @@ __all__ = [
     "LabSignal",
     "Opportunity",
     "OpportunityChange",
+    "OpportunityFeedback",
     "OpportunityMatch",
     "OpportunitySource",
     "OpportunityTopic",

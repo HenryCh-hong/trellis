@@ -17,6 +17,7 @@ import { Alert, SegmentedControl } from "@/components/ui/primitives";
 import { api, ApiError } from "@/lib/api";
 import { cn } from "@/lib/utils";
 import type {
+  ConfidenceState,
   EligibilityState,
   OpportunityDetail,
   OpportunityFacets,
@@ -40,6 +41,25 @@ export interface OpportunityFilters {
   campus: string;
   eligibility: EligibilityState | "";
   minFit: number;
+  /**
+   * Which side of the discovery confidence gate to look at. Two values, not
+   * three: you are either reading what Trellis recommends, or you are reading
+   * exactly the rows it could barely extract. Mixing them would put an
+   * unreadable row next to a real posting with nothing to tell them apart.
+   */
+  confidence: ConfidenceState;
+  /**
+   * Expired deadlines are hidden by default. Not deleted, not unreachable —
+   * one click brings them back, and anything you saved or applied to stays
+   * visible regardless.
+   */
+  showExpired: boolean;
+  /**
+   * Rows you hid yourself. Out of the default view, counted at the foot of the
+   * list, and back with one click — the same bargain as `showExpired`, except
+   * this one is a decision you made rather than one time made for you.
+   */
+  showHidden: boolean;
   sort: SortKey;
 }
 
@@ -85,6 +105,11 @@ const TYPE_LABEL: Record<OpportunityType, string> = {
   research_outreach: "Outreach",
 };
 
+export const CONFIDENCE_LABEL: Record<ConfidenceState, string> = {
+  ok: "Recommended",
+  held: "Low-confidence, not recommended",
+};
+
 export const ELIGIBILITY_LABEL: Record<EligibilityState, string> = {
   eligible: "Eligible",
   likely_eligible: "Likely eligible",
@@ -112,6 +137,9 @@ export const DEFAULT_FILTERS: OpportunityFilters = {
   campus: "",
   eligibility: "",
   minFit: 0,
+  confidence: "ok",
+  showExpired: false,
+  showHidden: false,
   sort: "recommended",
 };
 
@@ -127,6 +155,9 @@ const PARAM: Record<keyof OpportunityFilters, string> = {
   campus: "campus",
   eligibility: "elig",
   minFit: "min",
+  confidence: "conf",
+  showExpired: "expired",
+  showHidden: "hidden",
   sort: "sort",
 };
 
@@ -152,6 +183,9 @@ export function parseFilters(sp: ReadonlySearchParams): OpportunityFilters {
     campus: read(PARAM.campus),
     eligibility: member(read(PARAM.eligibility), ELIGIBILITIES),
     minFit: Number.isFinite(min) && min > 0 && min <= 100 ? min : 0,
+    confidence: read(PARAM.confidence) === "held" ? "held" : DEFAULT_FILTERS.confidence,
+    showExpired: read(PARAM.showExpired) === "1",
+    showHidden: read(PARAM.showHidden) === "1",
     sort: member(read(PARAM.sort), SORTS) || DEFAULT_FILTERS.sort,
   };
 }
@@ -168,6 +202,9 @@ export function filtersToQuery(f: OpportunityFilters): string {
   if (f.campus) sp.set(PARAM.campus, f.campus);
   if (f.eligibility) sp.set(PARAM.eligibility, f.eligibility);
   if (f.minFit > 0) sp.set(PARAM.minFit, String(f.minFit));
+  if (f.confidence !== DEFAULT_FILTERS.confidence) sp.set(PARAM.confidence, f.confidence);
+  if (f.showExpired) sp.set(PARAM.showExpired, "1");
+  if (f.showHidden) sp.set(PARAM.showHidden, "1");
   if (f.sort !== DEFAULT_FILTERS.sort) sp.set(PARAM.sort, f.sort);
   const s = sp.toString();
   return s ? `?${s}` : "";
@@ -238,6 +275,17 @@ export function FilterBar({
     chips.push({ key: "eligibility", label: ELIGIBILITY_LABEL[filters.eligibility] });
   }
   if (filters.minFit > 0) chips.push({ key: "minFit", label: `Fit ${filters.minFit}+` });
+  // A chip rather than a silent flag: showing expired rows changes what the
+  // list means, so it has to be visible and removable like any other filter.
+  if (filters.showExpired) chips.push({ key: "showExpired", label: "Including expired" });
+  // Same reasoning: looking at rows you put away changes what the list means,
+  // so it is a visible, removable filter rather than a silent mode.
+  if (filters.showHidden) chips.push({ key: "showHidden", label: "Including hidden" });
+  if (filters.confidence === "held") {
+    chips.push({ key: "confidence", label: CONFIDENCE_LABEL.held });
+  }
+
+  const heldCount = facets.confidence?.find((c) => c.value === "held")?.count ?? 0;
 
   return (
     <div className={cn("border-t border-[var(--border-subtle)]", className)}>
@@ -361,6 +409,31 @@ export function FilterBar({
         >
           Filters{activeSecondary > 0 ? ` · ${activeSecondary}` : ""}
         </button>
+
+        {/* Only ever offered when there is something behind it, and it says
+            what it is rather than hiding behind a word like "other". A held row
+            was not judged a bad opportunity — too little of its page could be
+            read to put a recommendation on it. */}
+        {(heldCount > 0 || filters.confidence === "held") && (
+          <button
+            type="button"
+            onClick={() => set("confidence", filters.confidence === "held" ? "ok" : "held")}
+            aria-pressed={filters.confidence === "held"}
+            title={
+              "Pages Trellis could barely read: no deadline, pay, hours, qualifications " +
+              "or way to apply came off them. Nothing was deleted — they are just not " +
+              "recommended, and they are not scored."
+            }
+            className={cn(
+              "h-7 shrink-0 rounded-[var(--radius-sm)] border px-2 text-xs transition-colors",
+              filters.confidence === "held"
+                ? "border-[var(--accent-border)] bg-[var(--accent-soft)] text-[var(--color-accent-700)]"
+                : "border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--bg-hover)]",
+            )}
+          >
+            Low-confidence{heldCount > 0 ? ` · ${heldCount}` : ""}
+          </button>
+        )}
 
         <div className="ml-auto flex items-center gap-1.5">
           <span className="hidden text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)] sm:inline">

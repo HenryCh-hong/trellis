@@ -11,9 +11,11 @@ import {
   compareLeads,
   interestSlug,
   isLeadSort,
+  isLeadState,
   leadSearchText,
   slugsOverlap,
 } from "@/components/app/research/format";
+import { LEAD_STATE_LABEL } from "@/components/app/indicators";
 import { LeadCard } from "@/components/app/research/lead-card";
 import { LeadTable } from "@/components/app/research/lead-table";
 import { Input, Select } from "@/components/ui/input";
@@ -145,7 +147,7 @@ export function ResearchClient({
         label: "Opportunity state",
         items: facets.states.map((s) => ({
           value: s.value,
-          label: s.value === "opening" ? "Opening" : s.value === "outreach" ? "Outreach" : "Watch",
+          label: isLeadState(s.value) ? LEAD_STATE_LABEL[s.value] : s.value,
           count: countFor("state", (l) => l.lead_state === s.value),
         })),
       },

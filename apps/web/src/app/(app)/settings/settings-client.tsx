@@ -13,6 +13,7 @@ import {
   ExternalLink,
   SectionHeader,
   SegmentedControl,
+  Tooltip,
 } from "@/components/ui/primitives";
 import { useToast } from "@/components/ui/toast";
 import { api } from "@/lib/api";
@@ -216,6 +217,13 @@ export function SettingsClient({
                   className="max-w-[220px]"
                   aria-label="Type DELETE to confirm"
                 />
+                <Tooltip
+                  content={
+                    confirmText === "DELETE"
+                      ? undefined
+                      : "Type DELETE in the box first — this erases your profile, resumes and saved opportunities for good."
+                  }
+                >
                 <Button
                   variant="danger"
                   disabled={confirmText !== "DELETE" || deleting}
@@ -238,6 +246,7 @@ export function SettingsClient({
                 >
                   Delete everything
                 </Button>
+                </Tooltip>
               </div>
             </div>
           </Card>

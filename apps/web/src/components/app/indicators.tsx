@@ -13,6 +13,7 @@ import { Badge, Dot, Tooltip } from "@/components/ui/primitives";
 import { cn, formatDate, relativeDays } from "@/lib/utils";
 import type {
   Certainty,
+  DeadlineState,
   DeadlineType,
   EligibilityState,
   LeadState,
@@ -20,6 +21,7 @@ import type {
   OpportunityType,
   Recommendation,
   RequirementMatchState,
+  SourceStatus,
   Urgency,
 } from "@/lib/types";
 
@@ -136,6 +138,7 @@ const URGENCY: Record<Urgency, { tone: string; dot: string }> = {
 export function DeadlineCell({
   deadline,
   type,
+  state,
   urgency,
   days,
   certainty,
@@ -143,12 +146,41 @@ export function DeadlineCell({
 }: {
   deadline: string | null;
   type: DeadlineType;
+  /** The recorded lifecycle. Only "expired" changes what is rendered. */
+  state?: DeadlineState;
   urgency: Urgency;
   days: number | null;
   certainty?: Certainty;
   compact?: boolean;
 }) {
   const u = URGENCY[urgency] ?? URGENCY.unknown;
+
+  // Expired is a closed door, and it must not look like an emergency. An
+  // overdue-but-live row is still red and still says how late it is, because
+  // it is the thing to hurry at; an expired one is struck through and grey,
+  // because hurrying will not help. The date is still legible either way —
+  // "did I miss it, and by how much?" is the question this cell answers.
+  if (state === "expired") {
+    return (
+      <Tooltip
+        content={
+          deadline
+            ? `Expired. The posting said ${formatDate(deadline, { year: true })}; that date has passed. Kept so you can still see it.`
+            : "Expired. Kept so you can still see it."
+        }
+      >
+        <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+          <Dot className="bg-[var(--color-neutral-400)]" />
+          <span className="text-xs tnum text-[var(--text-tertiary)] line-through decoration-[var(--text-tertiary)]/60">
+            {deadline ? formatDate(deadline) : "—"}
+          </span>
+          <span className="text-2xs font-medium uppercase tracking-[0.04em] text-[var(--text-tertiary)]">
+            Expired
+          </span>
+        </span>
+      </Tooltip>
+    );
+  }
 
   if (type === "rolling" && !deadline) {
     return (
@@ -180,6 +212,40 @@ export function DeadlineCell({
         <CertaintyMark certainty={certainty} showLabel={false} />
       )}
     </span>
+  );
+}
+
+/**
+ * The posting is not on its source any more.
+ *
+ * Deliberately not a deletion and deliberately not silent: the row stays, and
+ * this says why the link may 404. It is only ever rendered from a recorded
+ * `source_status`, which the backend writes only when the source itself
+ * answered — never when a fetch failed.
+ */
+export function SourceStatusBadge({
+  status,
+  checkedAt,
+  compact,
+}: {
+  status: SourceStatus;
+  checkedAt?: string | null;
+  /** Narrow spelling for a table row. Same fact, same tooltip, less width. */
+  compact?: boolean;
+}) {
+  if (status !== "gone") return null;
+  return (
+    <Tooltip
+      content={
+        checkedAt
+          ? `Source no longer available. It was checked on ${formatDate(checkedAt)} and this posting was not in its results. The record is kept; the link may no longer work.`
+          : "Source no longer available. The source was checked and this posting was not in its results. The record is kept; the link may no longer work."
+      }
+    >
+      <Badge tone="warn" className={compact ? "h-[16px] text-[10px]" : undefined}>
+        {compact ? "Not listed" : "Source no longer available"}
+      </Badge>
+    </Tooltip>
   );
 }
 
@@ -300,8 +366,21 @@ const LEAD: Record<LeadState, { label: string; tone: "accent" | "info" | "neutra
   watch: {
     label: "Watch",
     tone: "neutral",
-    help: "Little recent activity or no undergraduate involvement found. Keep an eye on it.",
+    help: "Recent work is there, but nothing we could read says an undergraduate can join right now.",
   },
+  unknown: {
+    label: "Unknown",
+    tone: "neutral",
+    help: "Not enough could be read to say. Deliberately not upgraded to give you something to click.",
+  },
+};
+
+/** The one place a lead state is spelled for a human. */
+export const LEAD_STATE_LABEL: Record<LeadState, string> = {
+  opening: LEAD.opening.label,
+  outreach: LEAD.outreach.label,
+  watch: LEAD.watch.label,
+  unknown: LEAD.unknown.label,
 };
 
 export function LeadStateTag({ state }: { state: LeadState }) {

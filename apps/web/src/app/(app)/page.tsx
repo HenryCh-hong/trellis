@@ -68,6 +68,7 @@ async function OverviewContent() {
   const actions = overview.action_needed.slice(0, 5);
   const dueSoon = [...overview.due_soon].sort(byDeadline).slice(0, 6);
   const leads = overview.research_leads.slice(0, 6);
+  const interested = overview.interested;
   // Lab leads only — this is the figure /research shows.
   const leadCount = overview.counts.lab_leads;
 
@@ -103,6 +104,25 @@ async function OverviewContent() {
             }
           />
         </section>
+
+        {/* Only rendered when you have actually marked something. An empty
+            "Interested" panel would be the page inventing a habit you do not
+            have yet. */}
+        {interested.length > 0 && (
+          <section className="min-w-0">
+            <SectionHeader
+              title="You marked interested"
+              count={interested.length}
+              description="Your own shortlist. Nothing here was chosen for you, and clearing the mark on a row takes it straight back out."
+              action={<SectionLink href="/opportunities">All opportunities</SectionLink>}
+            />
+            <OpportunityTable
+              items={interested}
+              variant="match"
+              empty={null}
+            />
+          </section>
+        )}
 
         <section className="min-w-0">
           <SectionHeader

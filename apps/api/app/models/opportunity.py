@@ -21,14 +21,18 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base, Timestamps, UUIDPk
 from app.models.enums import (
     Certainty,
+    ConfidenceState,
+    DeadlineState,
     DeadlineType,
     EligibilityState,
     ExtractionMethod,
+    LeadState,
     OpportunityStatus,
     OpportunityType,
     RequirementKind,
     RequirementMatch,
     SourceKind,
+    SourceStatus,
 )
 from app.models.user import enum_col
 
@@ -135,6 +139,15 @@ class Opportunity(UUIDPk, Timestamps, Base):
     deadline_type: Mapped[DeadlineType] = mapped_column(
         enum_col(DeadlineType, "deadline_type"), default=DeadlineType.UNKNOWN, nullable=False
     )
+    #: The lifecycle state. ``deadline_type`` is what the posting said;
+    #: this is where the posting has got to, including EXPIRED once a stated
+    #: date has passed. Written by app/services/lifecycle.py, never on read.
+    deadline_state: Mapped[DeadlineState] = mapped_column(
+        enum_col(DeadlineState, "deadline_state"),
+        default=DeadlineState.UNKNOWN,
+        nullable=False,
+        index=True,
+    )
     deadline_confidence: Mapped[float] = mapped_column(Float, default=0.0, nullable=False)
     deadline_certainty: Mapped[Certainty] = mapped_column(
         enum_col(Certainty, "certainty"), default=Certainty.UNKNOWN, nullable=False
@@ -167,9 +180,47 @@ class Opportunity(UUIDPk, Timestamps, Base):
     last_changed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     is_stale: Mapped[bool] = mapped_column(default=False, nullable=False)
 
+    #: Whether the posting is still on the source that produced it. Rows are
+    #: never deleted when a posting disappears — history is the product.
+    source_status: Mapped[SourceStatus] = mapped_column(
+        enum_col(SourceStatus, "source_status"),
+        default=SourceStatus.LIVE,
+        nullable=False,
+        index=True,
+    )
+    #: When ``source_status`` last changed, so the badge can say when we looked.
+    source_status_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
     extraction_confidence: Mapped[float] = mapped_column(Float, default=0.0, nullable=False)
+    #: Set by app/services/confidence.py at upsert time.  ``HELD`` rows are kept
+    #: in full but stay out of the default list, the Overview and match scoring
+    #: until a later run reads their page well enough to promote them.
+    confidence_state: Mapped[ConfidenceState] = mapped_column(
+        enum_col(ConfidenceState, "confidence_state"),
+        default=ConfidenceState.OK,
+        nullable=False,
+        index=True,
+    )
+    #: One short, specific sentence naming what was missing.  Rendered verbatim,
+    #: so it may never be a category label like "low quality".
+    confidence_reason: Mapped[str | None] = mapped_column(Text)
+    confidence_state_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     notes: Mapped[str | None] = mapped_column(Text)
     raw: Mapped[dict] = mapped_column(JSONB, default=dict, nullable=False)
+
+    # Research leads only.  NULL means "never classified" -- distinct from
+    # LeadState.UNKNOWN, which is a *conclusion* ("we read the pages and still
+    # cannot say").  Programme-level openings (CURIS, VPUE grants) carry no
+    # faculty and are never run through the classifier, so they stay NULL and
+    # fall back to the type-derived state.
+    lead_state: Mapped[LeadState | None] = mapped_column(
+        enum_col(LeadState, "lead_state"), index=True
+    )
+    # The specific, sourced signals that produced ``lead_state``.  Persisted
+    # rather than recomputed so the reason survives a reload even if the lab
+    # page changes underneath us.
+    lead_state_signals: Mapped[list[dict]] = mapped_column(JSONB, default=list, nullable=False)
+    lead_state_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
     source: Mapped[OpportunitySource | None] = relationship(back_populates="opportunities")
     faculty: Mapped[Faculty | None] = relationship(lazy="selectin")

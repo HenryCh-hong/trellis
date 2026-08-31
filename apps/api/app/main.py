@@ -18,6 +18,28 @@ logger = logging.getLogger("trellis")
 settings = get_settings()
 
 
+def _sweep_lifecycle_on_boot() -> None:
+    """Mark deadlines that lapsed while the API was not running.
+
+    Expiry has to happen without anyone remembering to trigger it, so it runs
+    here as well as at both ends of a discovery run. A database that is not up
+    yet must not stop the API from starting — the next run or the /lifecycle/
+    sweep route will catch up.
+    """
+    from app.db.session import session_scope
+    from app.services.lifecycle import sweep_expired
+
+    try:
+        with session_scope() as db:
+            report = sweep_expired(db)
+        if report.changed:
+            logger.info(
+                "lifecycle sweep on boot | expired=%d revived=%d", report.expired, report.revived
+            )
+    except Exception as exc:
+        logger.warning("lifecycle sweep on boot skipped: %s: %s", type(exc).__name__, exc)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     from app.llm.factory import get_llm
@@ -29,6 +51,7 @@ async def lifespan(app: FastAPI):
         provider.is_reasoning_capable,
         settings.database_url.rsplit("/", 1)[-1],
     )
+    _sweep_lifecycle_on_boot()
     yield
     get_queue().shutdown()
 

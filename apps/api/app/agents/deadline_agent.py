@@ -8,12 +8,14 @@ posting" rather than an unsourced date.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date
+from datetime import UTC, date, datetime
 
 from app.agents.base import Agent, AgentContext, AgentOutcome
+from app.models.change import ChangeKind
 from app.models.enums import Certainty, DeadlineType, ExtractionMethod
 from app.models.opportunity import ExtractedField, Opportunity
 from app.services.extractors import classify_deadline_type, extract_deadline
+from app.services.lifecycle import deadline_change_summary, log_change, sync_deadline_state
 
 URGENT_DAYS = 3
 SOON_DAYS = 14
@@ -81,11 +83,14 @@ class DeadlineAgent(Agent[DeadlineRequest, DeadlineResult]):
             notes.append("Page reads as a hard deadline but states no date.")
 
         if not ctx.dry_run:
+            previous = opp.deadline
             opp.deadline = found.value
             opp.deadline_type = deadline_type
             opp.deadline_confidence = found.confidence
             opp.deadline_certainty = found.certainty
             opp.deadline_source_text = found.source_text
+            sync_deadline_state(opp, ctx.today)
+            self._note_deadline_change(ctx, opp, previous, found.value)
             self._record_field(ctx, opp, found, payload.source_url)
 
         return AgentOutcome(
@@ -98,6 +103,29 @@ class DeadlineAgent(Agent[DeadlineRequest, DeadlineResult]):
                 urgency=urgency_for(found.value, deadline_type, ctx.today),
             ),
             notes=notes,
+        )
+
+    def _note_deadline_change(
+        self, ctx: AgentContext, opp: Opportunity, previous: date | None, current: date | None
+    ) -> None:
+        """Record a deadline we had, and no longer have (or that moved).
+
+        Only fires when ``previous`` was a real date. A first date on a row is
+        either part of the "Discovered" entry or already logged by the upsert,
+        so logging it again here would print the same fact twice.
+        """
+        if opp.id is None or previous is None or previous == current:
+            return
+        log_change(
+            ctx.db,
+            opp,
+            ChangeKind.DEADLINE,
+            "deadline",
+            previous,
+            current,
+            deadline_change_summary(previous, current),
+            datetime.now(UTC),
+            ctx.search_run_id,
         )
 
     def _record_field(

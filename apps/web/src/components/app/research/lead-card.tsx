@@ -80,6 +80,7 @@ export function LeadCard({ lead }: { lead: ResearchLead }) {
             <DeadlineCell
               deadline={lead.deadline}
               type="unknown"
+              state={lead.deadline_state}
               urgency={lead.urgency}
               days={null}
               compact

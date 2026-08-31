@@ -65,10 +65,25 @@ class SearchRun(UUIDPk, Timestamps, Base):
         ARRAY(String), default=list, nullable=False
     )
     documents_fetched: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+
+    # The run's honest ledger.  Every document the run looked at lands in exactly
+    # one of these buckets, so the six numbers add up to what was actually seen
+    # and the student can tell "we found nothing" apart from "we threw things
+    # away".  Naming them separately rather than folding them into one "skipped"
+    # is the whole point: "not an opening" and "too thin to trust" are different
+    # facts with different remedies.
     created_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     updated_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     unchanged_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    #: Rows re-checked this run whose stated deadline has already passed.
+    expired_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    #: Extractions kept but withheld from the list by the confidence gate.
+    held_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    #: Documents the relevance gate judged not to be openings at all.
     skipped_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    #: Documents matching something the student has already rejected, so they
+    #: were never re-offered.  Not a failure — a preference being honoured.
+    suppressed_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
 
     error: Mapped[str | None] = mapped_column(Text)
     steps: Mapped[list[dict]] = mapped_column(JSONB, default=list, nullable=False)

@@ -3,9 +3,15 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 import { CertaintyMark, LeadStateTag, ScoreMeter } from "@/components/app/indicators";
+import { DirectionList } from "@/components/app/research/direction-list";
 import { EvidenceTimeline } from "@/components/app/research/evidence-timeline";
 import { ExpandableText } from "@/components/app/research/expandable-text";
+import { FitPanel } from "@/components/app/research/fit-panel";
 import { matchingBackground } from "@/components/app/research/format";
+import {
+  LeadStateSignals,
+  WhyNowPanel,
+} from "@/components/app/research/lead-state-panel";
 import { LabProfileSkeleton } from "@/components/app/research/skeletons";
 import { OutreachPanel } from "@/components/app/research/outreach-panel";
 import {
@@ -112,24 +118,37 @@ async function LabProfile({ facultyId }: { facultyId: string }) {
         )}
       </header>
 
-      {/* Current direction — inferred from recent work only, and said so. */}
       <section className="mt-7">
-        <SectionHeader title="Current research direction" />
-        {faculty.current_direction.length === 0 ? (
+        <SectionHeader
+          title="Why this state"
+          description="The specific signals behind the tag above, each with the page it was read from."
+        />
+        <LeadStateSignals signals={context.lead_state_signals} />
+      </section>
+
+      <section className="mt-8">
+        <SectionHeader title="Why now?" />
+        <WhyNowPanel whyNow={context.why_now} />
+      </section>
+
+      {/* Current direction — inferred from recent work only, and said so. Each
+          row opens onto the dated items that support it; a direction nothing
+          recent supports is not listed at all. */}
+      <section className="mt-8">
+        <SectionHeader
+          title="Current research direction"
+          count={context.directions.length}
+          description="Open a line to see which recent work it rests on."
+        />
+        {context.directions.length === 0 ? (
           <Alert tone="neutral">
-            No recent work could be read for this lab, so we will not guess at its current
-            direction. An older biography is not evidence of what it is doing now.
+            {faculty.current_direction.length === 0
+              ? "No recent work could be read for this lab, so we will not guess at its current direction. An older biography is not evidence of what it is doing now."
+              : "Nothing published inside the recency window supports the directions on record, so none are shown. Unsupported is not the same as true."}
           </Alert>
         ) : (
           <>
-            <ul className="space-y-1.5">
-              {faculty.current_direction.map((d) => (
-                <li key={d} className="flex gap-2 text-sm leading-relaxed">
-                  <span className="mt-[7px] size-1 shrink-0 rounded-full bg-[var(--accent)]" />
-                  <span>{d}</span>
-                </li>
-              ))}
-            </ul>
+            <DirectionList directions={context.directions} />
             <div className="mt-3 flex items-start gap-2">
               <CertaintyMark certainty={faculty.current_direction_certainty} />
               {faculty.current_direction_basis && (
@@ -152,45 +171,43 @@ async function LabProfile({ facultyId }: { facultyId: string }) {
         <EvidenceTimeline evidence={context.evidence} thisYear={thisYear} />
       </section>
 
-      {context.overlap.length > 0 && (
+      {/* Three groups, and each one is allowed to be empty: "we found nothing"
+          is an answer the student needs, and the strongest reason not to
+          spend half an hour on a lab. */}
+      {context.fit ? (
         <section className="mt-8">
-          <SectionHeader title="Why this matches you" />
-          <div className="space-y-2.5">
-            {context.overlap.map((o) => (
-              <Card key={`${o.topic}-${o.evidence_title}`} className="p-3">
-                <div className="flex flex-wrap items-baseline gap-2">
-                  <Badge tone="accent">{o.topic}</Badge>
-                  <span className="text-xs text-[var(--text-secondary)]">{o.why}</span>
-                </div>
-                {o.evidence_title && (
-                  <p className="mt-1.5 text-xs text-[var(--text-tertiary)]">
-                    {o.evidence_year ? `${o.evidence_year} · ` : ""}
-                    {o.evidence_url ? (
-                      <ExternalLink href={o.evidence_url}>{o.evidence_title}</ExternalLink>
-                    ) : (
-                      o.evidence_title
-                    )}
-                  </p>
-                )}
-              </Card>
-            ))}
-          </div>
-          {background.length > 0 && (
-            <div className="mt-3 rounded-[var(--radius-md)] border border-[var(--border-subtle)] bg-[var(--bg-subtle)] p-3">
-              <div className="text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)]">
-                From your profile
-              </div>
-              <ul className="mt-1.5 space-y-1">
-                {background.map((b) => (
-                  <li key={b.label} className="text-xs text-[var(--text-secondary)]">
-                    <span className="text-[var(--text-primary)]">{b.label}</span>
-                    {b.detail && <span className="text-[var(--text-tertiary)]"> — {b.detail}</span>}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <SectionHeader
+            title="Why this matches you"
+            description="Read from your profile and the resumes you uploaded. Nothing else."
+          />
+          <FitPanel fit={context.fit} />
         </section>
+      ) : (
+        context.overlap.length > 0 && (
+          <section className="mt-8">
+            <SectionHeader title="Why this matches you" />
+            <div className="space-y-2.5">
+              {context.overlap.map((o) => (
+                <Card key={`${o.topic}-${o.evidence_title}`} className="p-3">
+                  <div className="flex flex-wrap items-baseline gap-2">
+                    <Badge tone="accent">{o.topic}</Badge>
+                    <span className="text-xs text-[var(--text-secondary)]">{o.why}</span>
+                  </div>
+                  {o.evidence_title && (
+                    <p className="mt-1.5 text-xs text-[var(--text-tertiary)]">
+                      {o.evidence_year ? `${o.evidence_year} · ` : ""}
+                      {o.evidence_url ? (
+                        <ExternalLink href={o.evidence_url}>{o.evidence_title}</ExternalLink>
+                      ) : (
+                        o.evidence_title
+                      )}
+                    </p>
+                  )}
+                </Card>
+              ))}
+            </div>
+          </section>
+        )
       )}
 
       <section className="mt-8">

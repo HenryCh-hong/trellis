@@ -30,6 +30,7 @@ from app.models.enums import (
 from app.models.opportunity import ExtractedField, Opportunity, OpportunitySource
 from app.services import taxonomy
 from app.services.extractors import (
+    ApplicationMethod,
     classify_deadline_type,
     extract_application_method,
     extract_contact,
@@ -201,6 +202,7 @@ class WebExtractionAgent(Agent[ExtractionRequest, ExtractionResult]):
             ("deadline", deadline),
             ("pay", pay),
             ("eligibility", eligibility),
+            ("application_url", _application_url_evidence(data["application_url"], doc.url, method)),
         ):
             provenance.append({"field": key, **source_field.as_field()})
 
@@ -282,6 +284,39 @@ class WebExtractionAgent(Agent[ExtractionRequest, ExtractionResult]):
             score += 0.1
         score += 0.15 * deadline_confidence
         return round(min(score, 1.0), 3)
+
+
+def _application_url_evidence(
+    apply_url: str | None, page_url: str | None, method: ApplicationMethod | None
+) -> Evidenced[str]:
+    """Provenance for the apply link, which decides whether we may say "Verified".
+
+    The link is ``SOURCE`` only when the page pointed somewhere: a link we read
+    out of the markup, or a mailto address the posting gave.  Falling back to
+    the page we were already on is an inference — nobody wrote "apply here" —
+    so it is recorded as such and the UI says "Unverified" instead.
+    """
+    if not apply_url:
+        return Evidenced[str](value=None, confidence=0.0, method=ExtractionMethod.HEURISTIC)
+    if page_url and apply_url == page_url:
+        return Evidenced[str](
+            value=apply_url,
+            confidence=0.4,
+            method=ExtractionMethod.HEURISTIC,
+            source_text="No apply link on the page; this is the posting's own URL.",
+            source_url=page_url,
+        )
+    return Evidenced[str](
+        value=apply_url,
+        confidence=1.0,
+        method=ExtractionMethod.SOURCE,
+        source_text=(
+            f"Read from the posting as the {method.value.replace('_', ' ')} route to apply."
+            if method is not None and method is not ApplicationMethod.UNKNOWN
+            else "Read from the posting as the link to apply."
+        ),
+        source_url=page_url,
+    )
 
 
 def persist_provenance(

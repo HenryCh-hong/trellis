@@ -44,6 +44,12 @@ export function ReminderDialog({
   );
   const [reminder, setReminder] = React.useState<ReminderItem | null>(null);
   const [busy, setBusy] = React.useState(false);
+  const [apple, setApple] = React.useState<{
+    available: boolean;
+    reason: string;
+    needs_permission: boolean;
+  } | null>(null);
+  const [appleResult, setAppleResult] = React.useState<string | null>(null);
   const [shortcut, setShortcut] = React.useState<{
     payload: unknown;
     instructions: string;
@@ -67,10 +73,30 @@ export function ReminderDialog({
         }
       })
       .catch(() => undefined);
+    // Ask before offering the button: an integration that cannot run should say
+    // why rather than fail when pressed.
+    api.reminders
+      .appleAvailability()
+      .then((a) => !cancelled && setApple(a))
+      .catch(() => !cancelled && setApple({ available: false, reason: "Could not reach the Trellis API.", needs_permission: false }));
+
     return () => {
       cancelled = true;
     };
   }, [open, opportunity.id]);
+
+  async function sendToApple(id: string) {
+    setBusy(true);
+    try {
+      const res = await api.reminders.sendToApple(id);
+      setAppleResult(res.note);
+      toast.push(res.note, "success");
+    } catch (error) {
+      toast.push(error instanceof Error ? error.message : "Could not add them", "error");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   const parsedOffsets = React.useMemo(() => parseOffsets(offsets), [offsets]);
 
@@ -175,6 +201,43 @@ export function ReminderDialog({
 
           {reminder && (
             <>
+              <PanelSection title="Apple Reminders">
+                {apple === null ? (
+                  <p className="text-xs text-[var(--text-tertiary)]">Checking…</p>
+                ) : apple.available ? (
+                  <>
+                    <p className="mb-2 text-xs leading-relaxed text-[var(--text-secondary)]">
+                      Adds {reminder.offsets_days.length} reminder
+                      {reminder.offsets_days.length === 1 ? "" : "s"} to a “Trellis” list in the
+                      Reminders app on this Mac — one per alert. They sync to your iPhone through
+                      iCloud.
+                    </p>
+                    {appleResult ? (
+                      <Alert tone="success">{appleResult}</Alert>
+                    ) : (
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        loading={busy}
+                        onClick={() => void sendToApple(reminder.id)}
+                      >
+                        Add to Apple Reminders
+                      </Button>
+                    )}
+                  </>
+                ) : (
+                  <Alert tone="neutral" title="Not available here">
+                    {apple.reason}
+                    {apple.needs_permission && (
+                      <span className="mt-1 block">
+                        Approve Trellis under System Settings → Privacy &amp; Security → Reminders,
+                        then try again.
+                      </span>
+                    )}
+                  </Alert>
+                )}
+              </PanelSection>
+
               <PanelSection title="Add it to your calendar">
                 <p className="mb-2 text-xs leading-relaxed text-[var(--text-secondary)]">
                   Downloads a calendar file with {reminder.offsets_days.length} alert
@@ -192,11 +255,10 @@ export function ReminderDialog({
                 </a>
               </PanelSection>
 
-              <PanelSection title="Apple Reminders">
+              <PanelSection title="Apple Shortcut (for another device)">
                 <Alert tone="neutral" className="mb-2">
-                  Trellis cannot write into Apple Reminders directly — no local web app can
-                  without you granting an automation access. This gives you the payload for a
-                  Shortcut you install once.
+                  Only needed if you want these on a machine that is not running Trellis. On this
+                  Mac, use the button above.
                 </Alert>
                 {!shortcut ? (
                   <Button

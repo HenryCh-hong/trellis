@@ -7,6 +7,10 @@ import { useRouter } from "next/navigation";
 import { DeadlineCell, StatusPill, statusLabel } from "@/components/app/indicators";
 import { PageHeader } from "@/components/app/page-header";
 import { ReviewPanel } from "@/components/app/application/review-panel";
+import {
+  ReadinessList,
+  ReadinessSummary,
+} from "@/components/app/application/readiness-list";
 import { Button } from "@/components/ui/button";
 import { Checkbox, Select, Textarea } from "@/components/ui/input";
 import {
@@ -22,6 +26,7 @@ import type {
   ApplicationAnswerItem,
   ApplicationKit,
   OpportunityStatus,
+  ReadinessItem,
   ResumeItem,
 } from "@/lib/types";
 import { cn, formatDateTime, hostOf } from "@/lib/utils";
@@ -38,6 +43,18 @@ const MOVE_TARGETS: Record<string, OpportunityStatus[]> = {
   archived: ["preparing"],
 };
 
+/** Where "Continue preparation" sends you for each readiness row. Deadline and
+ *  application link are facts, not tasks, so they have no destination. */
+const ANCHORS: Record<string, string> = {
+  resume: "kit-resume",
+  questions: "kit-questions",
+  sensitive: "kit-sensitive",
+};
+
+function jumpable(item: ReadinessItem): boolean {
+  return item.key in ANCHORS || item.key.startsWith("document:");
+}
+
 export function KitClient({
   initial,
   resumes,
@@ -53,11 +70,36 @@ export function KitClient({
 
   const opp = kit.opportunity;
 
-  const fromProfile = kit.answers.filter((a) => !a.is_sensitive && a.source === "profile");
-  const needsInput = kit.answers.filter(
-    (a) => !a.is_sensitive && a.source !== "profile",
+  // Grouped by the stored category, so the screen shows exactly what Trellis
+  // was allowed to do with each question. The one display rule on top: a
+  // profile field the profile cannot actually answer belongs with the
+  // questions you have to fill in, not under "From your profile".
+  const fromProfile = kit.answers.filter(
+    (a) => a.category === "safe_profile_field" && Boolean(a.answer),
   );
-  const sensitive = kit.answers.filter((a) => a.is_sensitive);
+  const needsInput = kit.answers.filter(
+    (a) =>
+      a.category === "safe_generative" ||
+      a.category === "unknown" ||
+      (a.category === "safe_profile_field" && !a.answer),
+  );
+  const sensitive = kit.answers.filter((a) => a.category === "sensitive");
+
+  function jumpTo(item: ReadinessItem) {
+    const id = ANCHORS[item.key] ?? (item.key.startsWith("document:") ? "kit-documents" : null);
+    if (!id) return;
+    const node = document.getElementById(id);
+    node?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function onPrimary() {
+    if (kit.readiness.ready) {
+      setReviewOpen(true);
+      return;
+    }
+    const next = kit.readiness.items.find((i) => i.state !== "ready" && jumpable(i));
+    if (next) jumpTo(next);
+  }
 
   async function patch(body: Record<string, unknown>, message?: string) {
     setBusy(true);
@@ -107,6 +149,7 @@ export function KitClient({
                   <DeadlineCell
                     deadline={opp.deadline}
                     type={opp.deadline_type}
+                    state={opp.deadline_state}
                     urgency={opp.urgency}
                     days={opp.days_until_deadline}
                   />
@@ -125,7 +168,7 @@ export function KitClient({
             </Card>
 
             {/* Resume */}
-            <section>
+            <section id="kit-resume" className="scroll-mt-20">
               <SectionHeader
                 title="Recommended resume"
                 description="Trellis picks from what you uploaded. It never rewrites a resume."
@@ -208,7 +251,7 @@ export function KitClient({
             </section>
 
             {/* Documents */}
-            <section>
+            <section id="kit-documents" className="scroll-mt-20">
               <SectionHeader title="Required documents" count={kit.documents.length} />
               <div className="space-y-2">
                 {kit.documents.map((doc) => (
@@ -248,7 +291,7 @@ export function KitClient({
             </section>
 
             {/* Questions */}
-            <section>
+            <section id="kit-questions" className="scroll-mt-20">
               <SectionHeader title="Questions" count={kit.answers.length} />
 
               {fromProfile.length > 0 && (
@@ -284,6 +327,18 @@ export function KitClient({
                               Draft — check it
                             </Badge>
                           )}
+                          {/* Quiet, not alarming: an unrecognised question is
+                              simply one Trellis did not touch. */}
+                          {a.category === "unknown" && (
+                            <span className="ml-2 text-2xs text-[var(--text-tertiary)]">
+                              Trellis did not recognise this one
+                            </span>
+                          )}
+                          {a.category === "safe_profile_field" && (
+                            <span className="ml-2 text-2xs text-[var(--text-tertiary)]">
+                              Not in your profile yet
+                            </span>
+                          )}
                         </label>
                         <Textarea
                           defaultValue={a.answer ?? ""}
@@ -301,14 +356,14 @@ export function KitClient({
               )}
 
               {sensitive.length > 0 && (
-                <div>
+                <div id="kit-sensitive" className="scroll-mt-20">
                   <h4 className="mb-1.5 text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)]">
                     Only you can answer these
                   </h4>
                   <Alert tone="neutral" className="mb-2">
-                    Trellis never answers work-authorisation, demographic, disability,
-                    veteran-status or self-identification questions for you, and never reuses an
-                    answer unless you say so.
+                    Trellis never answers work-authorisation, visa, demographic, disability,
+                    veteran-status, criminal-history or legal-attestation questions for you, and
+                    never reuses an answer unless you say so.
                   </Alert>
                   <div className="space-y-3">
                     {sensitive.map((a) => (
@@ -394,37 +449,35 @@ export function KitClient({
 
               <div className="mb-3">
                 <div className="mb-1.5 text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)]">
-                  Before you apply
+                  Application readiness
                 </div>
-                {kit.blocking.length === 0 ? (
-                  <p className="text-xs text-[var(--color-success-700)]">
-                    Everything Trellis can check is ready.
-                  </p>
-                ) : (
-                  <ul className="space-y-1">
-                    {kit.blocking.map((b) => (
-                      <li key={b} className="flex gap-1.5 text-xs text-[var(--text-secondary)]">
-                        <span className="mt-[6px] size-1 shrink-0 rounded-full bg-[var(--color-warn-500)]" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                {/* The same server-computed list the opportunity panel shows.
+                    Rows that still need work jump to the section that fixes them. */}
+                <ReadinessList readiness={kit.readiness} onJump={jumpTo} canJump={jumpable} />
+                <div className="mt-2.5 border-t border-[var(--border-subtle)] pt-2.5">
+                  <ReadinessSummary readiness={kit.readiness} />
+                </div>
               </div>
 
-              <Button
-                variant="primary"
-                className="w-full"
-                onClick={() => setReviewOpen(true)}
-              >
-                Review what will be submitted
+              <Button variant="primary" className="w-full" onClick={onPrimary}>
+                {kit.readiness.cta}
               </Button>
+              {!kit.readiness.ready && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="mt-1.5 w-full"
+                  onClick={() => setReviewOpen(true)}
+                >
+                  See what would be submitted
+                </Button>
+              )}
               <p className="mt-2 text-2xs leading-relaxed text-[var(--text-tertiary)]">
                 Trellis never submits an application. You review the exact payload, approve it, and
                 submit on the site yourself.
               </p>
 
-              {kit.approved_at && kit.blocking.length === 0 ? (
+              {kit.approved_at && kit.readiness.ready ? (
                 <Alert tone="success" className="mt-3">
                   Approved {formatDateTime(kit.approved_at)}. Editing anything above clears this.
                 </Alert>

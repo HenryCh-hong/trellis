@@ -240,10 +240,31 @@ async function opportunityGroup(page) {
     // is about the table rendering every row it is given.
     await page.goto(`${WEB}/opportunities?focus=all`, { waitUntil: "networkidle" });
     await page.getByText(/\d+ (tracked|of \d+ shown)/).first().waitFor({ timeout: 15000 });
-    const title = sql(`select title from opportunities order by created_at limit 1`);
+    // Expired rows are deliberately withheld from the default view, so a row
+    // that renders must be a live one. Picking any row would test the wrong thing.
+    const title = sql(
+      `select title from opportunities where deadline_state is distinct from 'expired' order by created_at limit 1`,
+    );
     const shown = await page.getByText(title.slice(0, 40), { exact: false }).count();
     assert(shown > 0, `"${title.slice(0, 40)}" not found in the rendered table`);
-    return `${total} in DB; a known row renders`;
+
+    // And the withholding is real: an expired row is absent until asked for.
+    const expired = sql(
+      `select title from opportunities where deadline_state = 'expired' order by created_at limit 1`,
+    );
+    if (expired) {
+      const hidden = await page.getByText(expired.slice(0, 40), { exact: false }).count();
+      assert(hidden === 0, `expired "${expired.slice(0, 40)}" is showing in the default view`);
+      // Brought back the way a person would: the "Show them" affordance next to
+      // the count, not a URL only this script knows about.
+      const show = page.getByRole("button", { name: /show them/i }).first();
+      assert(await show.count(), "nothing on screen offers to show the expired rows");
+      await show.click();
+      await page.waitForTimeout(1800);
+      const back = await page.getByText(expired.slice(0, 40), { exact: false }).count();
+      assert(back > 0, `expired "${expired.slice(0, 40)}" cannot be brought back into view`);
+    }
+    return `${total} in DB; a live row renders, an expired row is withheld and recoverable`;
   });
 
   await check("deadline sort puts real upcoming dates first and overdue last", async () => {
@@ -275,10 +296,19 @@ async function opportunityGroup(page) {
     await page.goto(`${WEB}/opportunities`, { waitUntil: "networkidle" });
     await page.waitForTimeout(2000);
     const body = await page.locator("body").innerText();
-    assert(
-      body.includes(`${focused.total} of ${all.total} shown`),
-      "the header does not say how much is being hidden",
-    );
+    const header = /(\d+) of (\d+) shown/.exec(body);
+    assert(header, "the header does not say how much is being hidden");
+    const [, visible, scope] = header.map(Number);
+    assert(Number(scope) === all.total, `the header counts ${scope} against a real total of ${all.total}`);
+    assert(Number(visible) <= all.total, "the header shows more rows than exist");
+    // Anything subtracted from the total has to be named, not silently dropped.
+    const withheld = Number(scope) - Number(visible);
+    if (withheld > 0) {
+      assert(
+        /expired hidden|hidden by you/.test(body),
+        `${withheld} rows are missing from the count with no stated reason`,
+      );
+    }
     return `${focused.total} of ${all.total}, every row explains why it is there`;
   });
 
@@ -342,6 +372,8 @@ async function reminderGroup(page) {
     const id = sql(`
       select o.id from opportunities o
       where o.deadline is not null
+        and o.deadline >= current_date
+        and o.deadline_state is distinct from 'expired'
         and not exists (select 1 from reminders r where r.opportunity_id = o.id)
       order by o.deadline limit 1`);
     assert(id, "every dated opportunity already has a reminder");
@@ -410,17 +442,27 @@ async function researchGroup(page) {
       where url is not null and url like 'http%'
       order by random() limit 5`).split("\n").filter(Boolean);
     assert(urls.length >= 3, "not enough evidence URLs to sample");
+    // A DOI is checked WITHOUT following the redirect on purpose. doi.org answers
+    // 404 for a DOI that was never registered and 30x for one that was, so the
+    // redirect itself is the proof. Following it instead measures whether ACM's
+    // bot filter is in a good mood, which says nothing about whether we made the
+    // citation up. Everything else is fetched normally and must answer 2xx.
     const codes = [];
     for (const u of urls) {
+      const isDoi = /^https?:\/\/(dx\.)?doi\.org\//i.test(u);
       const code = execFileSync("bash", [
         "-lc",
-        `curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0' -m 25 -L '${u.replace(/'/g, "")}' || echo 000`,
+        `curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0' -m 25 ${isDoi ? "" : "-L"} '${u.replace(/'/g, "")}' || echo 000`,
       ], { encoding: "utf8" }).trim();
-      codes.push(`${code} ${u.slice(0, 60)}`);
+      const good = isDoi ? /^3/.test(code) || /^2/.test(code) : /^2/.test(code);
+      codes.push(`${good ? "ok" : "BAD"} ${code} ${u.slice(0, 58)}`);
     }
-    const ok = codes.filter((c) => c.startsWith("2")).length;
-    assert(ok >= 3, `only ${ok}/${codes.length} evidence URLs resolved:\n      ${codes.join("\n      ")}`);
-    return `${ok}/${codes.length} sampled evidence URLs return 200`;
+    const ok = codes.filter((c) => c.startsWith("ok")).length;
+    assert(
+      ok === codes.length,
+      `${codes.length - ok}/${codes.length} evidence URLs do not resolve:\n      ${codes.join("\n      ")}`,
+    );
+    return `${ok}/${codes.length} sampled evidence URLs resolve (DOIs verified as registered)`;
   });
 
   await check("a lab profile shows current direction with an honest certainty", async () => {
@@ -526,6 +568,118 @@ async function honestyGroup(page) {
   });
 }
 
+
+/* ------------------------------------------- the daily loop's hard promises */
+
+async function loopGroup(page) {
+  head("Daily loop — does it ever manufacture an action?");
+
+  await check("a lead is only an OPENING when a source says so, in words", async () => {
+    const rows = sql(`
+      select o.id || '|' || o.lead_state || '|' || coalesce(o.lead_state_signals::text,'[]')
+      from opportunities o where o.lead_state is not null`).split("\n").filter(Boolean);
+    assert(rows.length > 0, "no lead has a stored state");
+    let openings = 0;
+    for (const row of rows) {
+      const [id, state, raw] = row.split("|");
+      const signals = JSON.parse(raw);
+      // Every signal must cite a page. A claim with no source is a claim we invented.
+      for (const sig of signals) {
+        assert(sig.source_url, `${state} lead ${id.slice(0, 8)} has a signal with no source URL`);
+      }
+      if (state !== "opening") continue;
+      openings += 1;
+      const quoted = signals.some(
+        (sig) => /statement|invite|addresses undergraduates/i.test(sig.label || "") && (sig.detail || "").length > 20,
+      );
+      assert(quoted, `lead ${id.slice(0, 8)} is an OPENING with no quoted statement behind it`);
+    }
+    return `${rows.length} leads, ${openings} openings, every signal sourced`;
+  });
+
+  await check("a lab with nothing current is never upgraded into an action", async () => {
+    // The rule the spec is strictest about: no promoting UNKNOWN/WATCH to
+    // OUTREACH just so the screen has a button on it.
+    const bad = sql(`
+      select count(*) from opportunities o
+      where o.lead_state in ('outreach','opening')
+        and not exists (
+          select 1 from research_evidence e
+          where e.faculty_id = o.faculty_id and e.year >= ${new Date().getFullYear() - 2})`);
+    assert(Number(bad) === 0, `${bad} actionable leads have no evidence in the last 2 years`);
+
+    // And a lab we know is unreachable must not be offered as outreach.
+    const retired = sql(`
+      select count(*) from opportunities o
+      join lab_signals ls on ls.faculty_id = o.faculty_id
+      -- a *person* having left, not a 'retired form': the loose word matches
+      -- ordinary prose about stale Google Forms and says nothing about the PI.
+      where o.lead_state = 'outreach'
+        and ls.statement ~* '(retired from (teaching|stanford)|no longer at stanford|has left stanford|is emeritus)'`);
+    assert(Number(retired) === 0, `${retired} outreach leads point at someone who has left`);
+    return "no lead is actionable without current evidence and a live contact route";
+  });
+
+  await check("an expired deadline refuses a reminder, and says why", async () => {
+    const id = sql(`select id from opportunities where deadline_state='expired' order by deadline desc limit 1`);
+    if (!id) return "no expired opportunity in the corpus to check";
+    await page.goto(`${WEB}/opportunities?focus=all&expired=1&id=${id}`, { waitUntil: "networkidle" });
+    await page.waitForTimeout(2500);
+    const btn = page.getByRole("button", { name: /add reminder/i }).first();
+    assert(await btn.count(), "no reminder control on the expired opportunity");
+    assert(await btn.isDisabled(), "an expired deadline still offers to remind you about it");
+    const body = await page.locator("body").innerText();
+    assert(/passed|expired/i.test(body), "the panel does not say the deadline has passed");
+    return "refused, with the reason on screen";
+  });
+
+  await check("hiding one opportunity does not bury its whole topic", async () => {
+    const before = await (await fetch(`${API}/api/opportunities?focus=interests&limit=200`)).json();
+    const target = before.items.find((i) => (i.relevance_reason || "").length > 0);
+    if (!target) return "no explained row to test against";
+    const peers = before.items.filter(
+      (i) => i.id !== target.id && i.relevance_reason === target.relevance_reason,
+    );
+    await fetch(`${API}/api/opportunities/${target.id}/feedback`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ signal: "not_relevant" }),
+    });
+    try {
+      const after = await (await fetch(`${API}/api/opportunities?focus=interests&limit=200`)).json();
+      for (const peer of peers) {
+        const still = after.items.find((i) => i.id === peer.id);
+        assert(still, `hiding one row removed a sibling sharing "${target.relevance_reason}"`);
+      }
+      return `hid 1 row; ${peers.length} sharing its reason stayed`;
+    } finally {
+      await fetch(`${API}/api/opportunities/${target.id}/feedback`, { method: "DELETE" });
+    }
+  });
+
+  await check("every claim on the research page carries a link", async () => {
+    const id = sql(`select faculty_id from opportunities where lead_state='opening' and faculty_id is not null limit 1`);
+    assert(id, "no opening lead with a faculty record");
+    const detail = await (await fetch(`${API}/api/research/faculty/${id}`)).json();
+    const ctx = detail.research || detail;
+    for (const sig of ctx.lead_state_signals || []) {
+      assert(sig.source_url, `signal "${sig.label}" has no source link`);
+    }
+    for (const dir of ctx.directions || []) {
+      for (const ev of dir.evidence || []) {
+        assert(ev.source_url || ev.url, `direction "${dir.label}" cites evidence with no link`);
+      }
+    }
+    const fit = detail.fit;
+    if (fit) {
+      for (const item of fit.strong_overlap || []) {
+        assert(item.evidence, `overlap "${item.label}" is asserted with no evidence`);
+      }
+    }
+    return `${(ctx.lead_state_signals || []).length} signals, ${(ctx.directions || []).length} directions, all linked`;
+  });
+}
+
 /* ------------------------------------------------------------------- main */
 
 const GROUPS = {
@@ -537,6 +691,7 @@ const GROUPS = {
   research: researchGroup,
   discovery: discoveryGroup,
   honesty: honestyGroup,
+  loop: loopGroup,
 };
 
 const wanted = process.argv.slice(2);

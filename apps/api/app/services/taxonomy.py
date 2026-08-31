@@ -1053,7 +1053,14 @@ _TOPIC_ALIAS_EXTRA: dict[str, str] = {
     "multimodal ai": "multimodal-learning",
     "multimodal": "multimodal-learning",
     "ai agents": "llm-agents",
+    "ai agent": "llm-agents",
     "agents": "llm-agents",
+    "agent": "llm-agents",
+    "agentic": "llm-agents",
+    "agentic ai": "llm-agents",
+    "autonomous agents": "llm-agents",
+    "language agents": "llm-agents",
+    "llm agents": "llm-agents",
     "llms": "large-language-models",
     "llm": "large-language-models",
     "foundation models": "large-language-models",
@@ -1061,14 +1068,78 @@ _TOPIC_ALIAS_EXTRA: dict[str, str] = {
     "human-computer interaction": "hci",
     "ai + education": "ai-for-education",
     "ai and education": "ai-for-education",
+    "ai education": "ai-for-education",
+    "ai for education": "ai-for-education",
+    "ai in education": "ai-for-education",
+    "education": "ai-for-education",
     "education technology": "ai-for-education",
+    "educational technology": "ai-for-education",
+    "edtech": "ai-for-education",
+    "computational education": "ai-for-education",
+    "cs education": "ai-for-education",
+    "computer science education": "ai-for-education",
+    "computing education": "ai-for-education",
     "ml systems": "ml-systems",
     "rl": "reinforcement-learning",
     "cv": "computer-vision",
+    "nlp": "nlp",
     "natural language processing": "nlp",
+    "computational linguistics": "nlp",
     "alignment": "ai-safety-alignment",
     "ai safety": "ai-safety-alignment",
 }
+
+
+# Words that describe the SHAPE of the work rather than its subject. "part-time"
+# is not a research topic and must never be resolved as one: a student who types
+# it wants a job with few hours, and answering with a robotics lab would be a
+# wrong answer dressed up as a clever one. Kept deliberately narrow — only
+# employment-shape phrasing lives here, because a broad word like "research" or
+# "lab" reads as a subject at least as often as a category ("Research Assistant,
+# Culture and Emotion Lab" is an on-campus job).
+_KIND_ALIAS_EXTRA: dict[str, tuple[str, ...]] = {
+    "part-time": ("part_time", "on_campus"),
+    "part time": ("part_time", "on_campus"),
+    "parttime": ("part_time", "on_campus"),
+    "on-campus": ("on_campus", "part_time"),
+    "on campus": ("on_campus", "part_time"),
+    "campus job": ("on_campus", "part_time"),
+    "campus jobs": ("on_campus", "part_time"),
+    "student job": ("on_campus", "part_time"),
+    "student jobs": ("on_campus", "part_time"),
+    "job": ("on_campus", "part_time"),
+    "jobs": ("on_campus", "part_time"),
+    "hourly": ("on_campus", "part_time"),
+    "work-study": ("on_campus", "part_time"),
+    "work study": ("on_campus", "part_time"),
+}
+
+#: Human wording for a resolved kind, so the UI can say what it narrowed to.
+KIND_LABEL: dict[str, str] = {
+    "on_campus": "On-campus",
+    "part_time": "Part-time",
+    "research_opening": "Research opening",
+    "research_outreach": "Research outreach",
+}
+
+
+def resolve_kinds(value: str | None) -> tuple[str, ...]:
+    """Opportunity types a query asks for, or ``()`` when it asks for none.
+
+    Matching is phrase-based rather than substring-based so "part-time research
+    assistant" narrows to jobs while "apartment" never does.
+    """
+    if not value:
+        return ()
+    text = str(value)
+    out: list[str] = []
+    for alias, kinds in _KIND_ALIAS_EXTRA.items():
+        if find_phrase(text, alias) is None:
+            continue
+        for kind in kinds:
+            if kind not in out:
+                out.append(kind)
+    return tuple(out)
 
 
 def resolve_topic(value: str | None) -> str | None:
@@ -1076,6 +1147,11 @@ def resolve_topic(value: str | None) -> str | None:
         direct = _TOPIC_ALIAS_EXTRA.get(" ".join(value.lower().split()))
         if direct:
             return direct
+        # A query that is nothing but a shape word has already been answered by
+        # resolve_kinds(); guessing a topic for it as well would bury the honest
+        # answer under a lab that has nothing to do with hours.
+        if normalize(value) in _KIND_ALIAS_EXTRA:
+            return None
     if not value:
         return None
     raw = str(value).strip()
@@ -1208,6 +1284,8 @@ _RELATED_PAIRS: tuple[tuple[str, str], ...] = (
     ("human-ai-interaction", "human-centered-and-creative-ai"),
     ("hci", "human-centered-and-creative-ai"),
     ("ai-for-education", "computational-education"),
+    ("ai-for-education", "computer-science-education"),
+    ("llm-agents", "embodied-ai"),
     ("multimodal-learning", "computer-vision"),
     ("multimodal-learning", "large-language-models"),
     ("computer-vision", "vision-graphics-area"),
@@ -1236,6 +1314,28 @@ def related_slugs(slug: str | None) -> set[str]:
     if not slug:
         return set()
     return {slug} | _RELATED.get(slug, set())
+
+
+# Department-level areas that almost every lab in the school carries. True of
+# the lab, but useless as an explanation to a student — "Artificial
+# Intelligence" is the answer for everybody — so callers fall back to these only
+# when nothing more specific matched, and never report one as a gap.
+GENERIC_TOPICS: frozenset[str] = frozenset(
+    {
+        "artificial-intelligence",
+        "machine-learning",
+        "machine-learning-area",
+        "empirical-machine-learning",
+        "human-centered-and-creative-ai",
+        "ai-society-area",
+        "human-centered-area",
+        "systems-area",
+        "vision-graphics-area",
+        "language-speech-area",
+        "robotics-embodied-area",
+        "ai-science-health-area",
+    }
+)
 
 
 def topics_related(a: str | None, b: str | None) -> bool:

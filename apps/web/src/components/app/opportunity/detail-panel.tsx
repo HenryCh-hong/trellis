@@ -13,13 +13,16 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import {
+  DeadlineCell,
   EligibilityTag,
   ScoreMeter,
+  SourceStatusBadge,
   StatusPill,
   TypeTag,
   statusLabel,
 } from "@/components/app/indicators";
 import { AboutSection } from "./about-section";
+import { PanelFeedbackControls } from "./feedback-controls";
 import { MaterialsSection } from "./materials-section";
 import { MatchSection } from "./match-section";
 import { RequirementsSection } from "./requirements-section";
@@ -30,10 +33,12 @@ import { Select } from "@/components/ui/input";
 import { PanelSection, SidePanel } from "@/components/ui/panel";
 import { Alert, Badge, ExternalLink, Skeleton, Tooltip } from "@/components/ui/primitives";
 import { ReminderDialog } from "@/components/app/reminder-dialog";
+import { ReadinessList, ReadinessSummary } from "@/components/app/application/readiness-list";
 import { useToast } from "@/components/ui/toast";
 import { api, ApiError } from "@/lib/api";
 import { hostOf } from "@/lib/utils";
 import type {
+  ApplicationReadiness,
   OpportunityDetail,
   OpportunityListItem,
   OpportunityStatus,
@@ -78,6 +83,19 @@ export function OpportunityPanel({
   const toast = useToast();
   const [busy, setBusy] = React.useState<Busy>(null);
   const [reminderOpen, setReminderOpen] = React.useState(false);
+  // Readiness is computed server-side and reported up by the body, so the
+  // footer's call to action and the readiness list are the same answer. It is
+  // stored with the id it was computed for: arrowing to the next row then
+  // *has* no readiness rather than briefly showing the previous row's.
+  const [loaded, setLoaded] = React.useState<{
+    id: string;
+    readiness: ApplicationReadiness;
+  } | null>(null);
+  const readiness = loaded?.id === item.id ? loaded.readiness : null;
+  const handleReadiness = React.useCallback(
+    (id: string, value: ApplicationReadiness) => setLoaded({ id, readiness: value }),
+    [],
+  );
 
   const changeStatus = React.useCallback(
     async (next: OpportunityStatus) => {
@@ -160,6 +178,17 @@ export function OpportunityPanel({
           <TypeTag type={item.type} />
           <StatusPill status={item.status} />
           <EligibilityTag state={item.eligibility} />
+          {/* The deadline belongs at the top of the panel, in the one component
+              that knows how an expired date is allowed to look. */}
+          <DeadlineCell
+            deadline={item.deadline}
+            type={item.deadline_type}
+            state={item.deadline_state}
+            urgency={item.urgency}
+            days={item.days_until_deadline}
+            certainty={item.deadline_certainty}
+          />
+          <SourceStatusBadge status={item.source_status} checkedAt={item.source_status_at} />
           {item.is_new && <Badge tone="accent">New</Badge>}
           <span className="ml-auto">
             <ScoreMeter score={item.fit_score} confidence={item.fit_confidence} size="lg" />
@@ -181,22 +210,26 @@ export function OpportunityPanel({
           <Button
             variant="primary"
             size="sm"
-            loading={busy === "prepare"}
+            // With a kit already in flight the label depends on what the server
+            // says is outstanding, so the button waits rather than guessing.
+            loading={busy === "prepare" || readiness === null}
             onClick={() => void prepare()}
           >
-            {item.has_application ? "Open application" : "Prepare application"}
+            {readiness?.cta ?? "Continue preparation"}
           </Button>
           <Tooltip
             content={
-              item.deadline
-                ? undefined
-                : "No deadline was found on the source page, so there is no date to remind you about."
+              item.deadline_state === "expired"
+                ? "That deadline has already passed, so there is nothing left to remind you about."
+                : item.deadline
+                  ? undefined
+                  : "No deadline was found on the source page, so there is no date to remind you about."
             }
           >
             <Button
               variant="ghost"
               size="sm"
-              disabled={!item.deadline}
+              disabled={!item.deadline || item.deadline_state === "expired"}
               onClick={() => setReminderOpen(true)}
             >
               {item.has_reminder ? "Reminder \u00b7 export" : "Add reminder"}
@@ -221,7 +254,19 @@ export function OpportunityPanel({
         </div>
       }
     >
-      <DetailBody key={item.id} id={item.id} onPatch={onPatch} />
+      {/* Above the fetched body on purpose: what you said about this row is
+          already in hand, so it renders instantly and never sits behind a
+          skeleton. */}
+      <PanelSection title="Your call on this one">
+        <PanelFeedbackControls item={item} onPatch={onPatch} />
+      </PanelSection>
+
+      <DetailBody
+        key={item.id}
+        id={item.id}
+        onPatch={onPatch}
+        onReadiness={handleReadiness}
+      />
       {reminderOpen && (
         <ReminderDialog
           key={`reminder-${item.id}`}
@@ -240,9 +285,11 @@ export function OpportunityPanel({
 function DetailBody({
   id,
   onPatch,
+  onReadiness,
 }: {
   id: string;
   onPatch: (id: string, patch: Partial<OpportunityListItem>) => void;
+  onReadiness: (id: string, readiness: ApplicationReadiness) => void;
 }) {
   const toast = useToast();
   const [detail, setDetail] = React.useState<OpportunityDetail | null>(null);
@@ -259,7 +306,9 @@ function DetailBody({
     api.opportunities
       .get(id)
       .then((d) => {
-        if (!cancelled) setDetail(d);
+        if (cancelled) return;
+        setDetail(d);
+        onReadiness(id, d.readiness);
       })
       .catch((err: unknown) => {
         if (cancelled) return;
@@ -270,7 +319,7 @@ function DetailBody({
     return () => {
       cancelled = true;
     };
-  }, [id, attempt]);
+  }, [id, attempt, onReadiness]);
 
   const rematch = React.useCallback(async () => {
     setRematching(true);
@@ -317,6 +366,12 @@ function DetailBody({
 
   return (
     <>
+      <PanelSection title="Application readiness">
+        <ReadinessList readiness={detail.readiness} />
+        <div className="mt-2.5 border-t border-[var(--border-subtle)] pt-2.5">
+          <ReadinessSummary readiness={detail.readiness} />
+        </div>
+      </PanelSection>
       <MatchSection
         match={detail.match}
         onRematch={() => void rematch()}

@@ -37,13 +37,42 @@ async function run(mode) {
       target: { tabId: tab.id },
       files: ["content.js"],
     });
-    const items = (payload?.items ?? []).filter((j) => j.title);
-    if (items.length === 0) {
+    // The content script reports its own failure rather than resolving empty, so
+    // a Handshake markup change surfaces as an error the student can act on
+    // instead of a button that appears to do nothing.
+    if (payload?.error) {
       say(
-        "Nothing readable found. If this is a search page, open a job first — the fields we need are on the job page.",
+        `Could not read this page: ${escapeHtml(payload.error)}. ` +
+          "Handshake may have changed its markup — the extension needs updating.",
         "err",
       );
       return;
+    }
+
+    const raw = payload?.items ?? [];
+    const items = raw.filter((j) => j.title);
+    if (items.length === 0) {
+      say(
+        raw.length > 0
+          ? "Found entries on this page but could not read a title from any of them. " +
+              "That usually means Handshake changed its markup."
+          : "Nothing readable found. If this is a search page, open a job first — " +
+              "the fields we need are on the job page.",
+        "err",
+      );
+      return;
+    }
+
+    // Say plainly which fields came back empty, so a partial extraction is not
+    // mistaken for a complete one.
+    const missing = ["employer", "location", "job_type", "pay", "apply_by"].filter(
+      (k) => items.every((j) => j[k] === null || j[k] === undefined),
+    );
+    if (missing.length) {
+      say(
+        `${items.length} job(s) read. Not found on this page: ${missing.join(", ")}. ` +
+          "Those stay empty rather than being guessed.",
+      );
     }
     extracted = items;
     render();

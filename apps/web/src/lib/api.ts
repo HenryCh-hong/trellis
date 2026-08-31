@@ -8,10 +8,14 @@
 import type {
   ApplicationKit,
   DataSourceInfo,
-  Overview,
-  OpportunityDetail,
+  FeedbackReason,
+  FeedbackSignal,
   OpportunityChangeItem,
+  OpportunityDetail,
+  OpportunityFeedback,
   OpportunityListResponse,
+  OutreachDraft,
+  Overview,
   ProvenanceInfo,
   ReminderItem,
   ReminderProviderInfo,
@@ -170,6 +174,18 @@ export const api = {
       apiFetch<OpportunityDetail>(`/api/opportunities/${id}/rematch`, {
         method: "POST",
       }),
+    /** Record what you said about one opportunity. Re-posting replaces it. */
+    feedback: (
+      id: string,
+      payload: { signal: FeedbackSignal; reason?: FeedbackReason; note?: string },
+    ) =>
+      apiFetch<OpportunityFeedback>(`/api/opportunities/${id}/feedback`, {
+        method: "POST",
+        body: JSON.stringify(payload),
+      }),
+    /** Undo. The row is deleted, so nothing of it survives in the ranking. */
+    clearFeedback: (id: string) =>
+      apiFetch<void>(`/api/opportunities/${id}/feedback`, { method: "DELETE" }),
   },
 
   research: {
@@ -179,6 +195,8 @@ export const api = {
         { query },
       ),
     faculty: (id: string) => apiFetch<ResearchContext>(`/api/research/faculty/${id}`),
+    outreach: (id: string) =>
+      apiFetch<OutreachDraft>(`/api/research/faculty/${id}/outreach`),
     topics: () =>
       apiFetch<{ slug: string; label: string; parent_slug: string | null; count: number }[]>(
         "/api/research/topics",
@@ -256,6 +274,15 @@ export const api = {
     remove: (id: string) => apiFetch<void>(`/api/reminders/${id}`, { method: "DELETE" }),
     providers: () => apiFetch<ReminderProviderInfo[]>("/api/reminders/providers"),
     icsUrl: (id: string) => `${API_BASE}/api/reminders/${id}/export.ics`,
+    appleAvailability: () =>
+      apiFetch<{ available: boolean; reason: string; needs_permission: boolean }>(
+        "/api/reminders/apple/availability",
+      ),
+    sendToApple: (id: string) =>
+      apiFetch<{ created: { title: string; alert_on: string }[]; note: string }>(
+        `/api/reminders/${id}/apple`,
+        { method: "POST" },
+      ),
     shortcut: (id: string) =>
       apiFetch<Record<string, unknown>>(`/api/reminders/${id}/shortcut`),
   },

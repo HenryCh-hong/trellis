@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import select
@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 from app.api import serializers as ser
 from app.api.deps import get_session
 from app.models.enums import SearchKind
+from app.models.ops import SearchRun
 from app.models.user import (
     ProfileResearchInterest,
     ProfileSkill,
@@ -117,6 +118,20 @@ def onboard(
     return {"profile": ser.profile_out(db, profile).model_dump(mode="json"), "run_ids": run_ids}
 
 
+def _sweep_step(db: Session, run: SearchRun, today: date) -> None:
+    """Run the expiry sweep and, if anything moved, say so on the run."""
+    from app.services.lifecycle import sweep_expired
+    from app.services.runs import record_step
+
+    report = sweep_expired(db, today, run_id=run.id)
+    if not report.changed:
+        return
+    detail = f"{report.expired} deadline(s) have now passed and were marked expired"
+    if report.revived:
+        detail += f"; {report.revived} were extended and are live again"
+    record_step(run, "expiry-check", detail + ".", db=db)
+
+
 def _run_discovery(run_id: str, kind: str) -> dict[str, object]:
     """Background entry point. Owns its own session — the request's is gone."""
     import logging
@@ -128,6 +143,7 @@ def _run_discovery(run_id: str, kind: str) -> dict[str, object]:
     from app.db.session import session_scope
     from app.models.enums import RunStatus
     from app.models.ops import SearchRun
+    from app.services.lifecycle import sweep_expired
     from app.services.runs import finish_run
 
     with session_scope() as db:
@@ -137,6 +153,11 @@ def _run_discovery(run_id: str, kind: str) -> dict[str, object]:
         profile = db.scalars(select(StudentProfile)).first()
         ctx = AgentContext(db=db, search_run_id=run.id, profile_id=profile.id if profile else None)
         try:
+            # Before, so the run starts from an honest picture of what has
+            # already lapsed; and again after, so a posting discovered today
+            # with a date that is already past is marked in the same run
+            # rather than looking live until the next one.
+            _sweep_step(db, run, ctx.today)
             if kind == SearchKind.RESEARCH.value:
                 outcome = ResearchDiscoveryAgent().run(
                     ctx, ResearchRequest(profile=profile, run=run)
@@ -145,6 +166,7 @@ def _run_discovery(run_id: str, kind: str) -> dict[str, object]:
                 outcome = OpportunitySearchAgent().run(
                     ctx, SearchRequest(profile=profile, run=run)
                 )
+            sweep_expired(db, ctx.today, run_id=run.id)
             return {"status": run.status.value, "result": str(outcome.result)}
         except Exception as exc:
             # Commit the failure explicitly. Re-raising would unwind

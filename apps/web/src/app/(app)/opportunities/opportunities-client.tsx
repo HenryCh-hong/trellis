@@ -15,6 +15,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import {
   DeadlineCell,
   ScoreMeter,
+  SourceStatusBadge,
   StatusPill,
   TypeTag,
 } from "@/components/app/indicators";
@@ -29,11 +30,13 @@ import {
   type OpportunityFilters,
 } from "@/components/app/filter-bar";
 import { OpportunityPanel } from "@/components/app/opportunity/detail-panel";
+import { RowFeedbackControls } from "@/components/app/opportunity/feedback-controls";
 import { PageHeader } from "@/components/app/page-header";
 import { Button } from "@/components/ui/button";
 import { EmptyState, Tooltip } from "@/components/ui/primitives";
 import { useToast } from "@/components/ui/toast";
 import { api } from "@/lib/api";
+import { isHidden, sortAdjustment } from "@/lib/feedback";
 import { cn, hostOf } from "@/lib/utils";
 import type {
   EligibilityState,
@@ -92,11 +95,33 @@ function haystackOf(item: OpportunityListItem): string {
     .toLowerCase();
 }
 
+/**
+ * Expired rows are hidden by default — but only the untouched ones.
+ *
+ * A deadline that has passed is noise in a list of things to do, so it leaves
+ * the default view. The test is `status === "new"`: the moment you save one,
+ * archive it or start an application, you have touched it, and it stays
+ * exactly where you left it. Hiding something you acted on would be the app
+ * quietly losing your work, and the record is the whole point of keeping it.
+ */
+function hiddenAsExpired(item: OpportunityListItem): boolean {
+  return (
+    item.deadline_state === "expired" && item.status === "new" && !item.has_application
+  );
+}
+
 function matchesFilters(
   item: OpportunityListItem,
   f: OpportunityFilters,
   haystack: string,
 ): boolean {
+  // First and unconditional: a held row was one Trellis could barely read, and
+  // it may never appear beside a real posting with nothing to distinguish it.
+  if (item.confidence_state !== f.confidence) return false;
+  // Second: something you put away stays away, whatever else is on. Counted at
+  // the foot of the list and one click from coming back.
+  if (!f.showHidden && isHidden(item)) return false;
+  if (!f.showExpired && hiddenAsExpired(item)) return false;
   if (f.focus === "interests" && !item.matches_interests) return false;
   if (f.type && item.type !== f.type) return false;
   if (f.status && item.status !== f.status) return false;
@@ -163,7 +188,13 @@ const WORKABLE_ELIGIBILITY: EligibilityState[] = ["eligible", "likely_eligible"]
  */
 function recommendedTier(item: OpportunityListItem): number {
   const dead =
-    item.status === "rejected" || item.status === "archived" || item.urgency === "overdue";
+    item.status === "rejected" ||
+    item.status === "archived" ||
+    item.urgency === "overdue" ||
+    item.deadline_state === "expired" ||
+    // You told us you already applied. It stays in the list, but it is no
+    // longer work, so it does not compete with what still is.
+    item.feedback?.signal === "already_applied";
   if (dead || item.eligibility === "ineligible") return 2;
   if (
     ACTIONABLE_URGENCY.includes(item.urgency) &&
@@ -174,11 +205,22 @@ function recommendedTier(item: OpportunityListItem): number {
   return 1;
 }
 
+/**
+ * Fit, plus the bounded nudge from what you said about *this* row.
+ *
+ * Mirrors `sort_adjustment` in the API so a reload cannot reorder the list.
+ * The score itself is never touched — only its place in this one ordering —
+ * which is why "Sort by fit" below still uses the raw number.
+ */
+function adjustedFit(item: OpportunityListItem): number {
+  return (item.fit_score ?? -1) + sortAdjustment(item);
+}
+
 function byRecommended(a: OpportunityListItem, b: OpportunityListItem): number {
   const ta = recommendedTier(a);
   const tb = recommendedTier(b);
   if (ta !== tb) return ta - tb;
-  const fit = byFit(a, b);
+  const fit = adjustedFit(b) - adjustedFit(a);
   if (fit !== 0) return fit;
   return byDeadline(a, b);
 }
@@ -388,13 +430,53 @@ export function OpportunitiesClient({
     [filters, toast],
   );
 
-  const filtered = visible.length !== items.length;
-  const description =
-    items.length === 0
+  // Every count on this screen describes the side of the confidence gate you
+  // are actually looking at. Counting across both would mean "12 of 15 shown"
+  // where the three missing rows are ones the product refuses to recommend.
+  const inScope = items.filter((i) => i.confidence_state === filters.confidence);
+  const held = filters.confidence === "held";
+  const filtered = visible.length !== inScope.length;
+
+  // How many rows this view is hiding *only* because they expired — measured
+  // with every other filter still applied, so the number is a promise about
+  // what "Show them" would actually add.
+  const expiredHidden = React.useMemo(() => {
+    if (filters.showExpired) return 0;
+    return items.filter(
+      (item) =>
+        hiddenAsExpired(item) &&
+        matchesFilters(
+          item,
+          { ...filters, showExpired: true },
+          haystacks.get(item.id) ?? "",
+        ),
+    ).length;
+  }, [items, filters, haystacks]);
+
+  // Same measurement for rows you put away yourself: with every other filter
+  // still applied, so "Show them" adds exactly this many.
+  const hiddenByYou = React.useMemo(() => {
+    if (filters.showHidden) return 0;
+    return items.filter(
+      (item) =>
+        isHidden(item) &&
+        matchesFilters(
+          item,
+          { ...filters, showHidden: true },
+          haystacks.get(item.id) ?? "",
+        ),
+    ).length;
+  }, [items, filters, haystacks]);
+
+  const expiredNote = expiredHidden > 0 ? ` · ${expiredHidden} expired hidden` : "";
+  const hiddenNote = hiddenByYou > 0 ? ` · ${hiddenByYou} hidden by you` : "";
+  const description = held
+    ? `${visible.length} held back — not recommended`
+    : inScope.length === 0
       ? "Nothing discovered yet"
       : filtered
-        ? `${visible.length} of ${items.length} shown${total > items.length ? ` · ${total} total` : ""}`
-        : `${items.length} tracked${total > items.length ? ` of ${total}` : ""}`;
+        ? `${visible.length} of ${inScope.length} shown${hiddenNote}${expiredNote}${total > inScope.length ? ` · ${total} total` : ""}`
+        : `${inScope.length} tracked${total > inScope.length ? ` of ${total}` : ""}`;
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
@@ -412,7 +494,33 @@ export function OpportunitiesClient({
       </PageHeader>
 
       <div ref={scrollRef} className="scrollbar-thin min-h-0 flex-1 overflow-y-auto">
-        {items.length === 0 ? (
+        {held && (
+          // Stated in full at the top of the view rather than implied by a
+          // label, because the student is about to read rows the product
+          // deliberately declined to recommend and deserves to know why.
+          <p className="border-b border-[var(--border-subtle)] bg-[var(--bg-subtle)] px-5 py-2 text-xs leading-relaxed text-[var(--text-secondary)]">
+            These are postings Trellis found but could barely read — no deadline, pay, hours,
+            qualifications or way to apply came off the page. Nothing was deleted and nothing
+            was guessed; they are simply not scored and not recommended. If a later run reads
+            one properly it moves back into your list on its own.
+          </p>
+        )}
+        {inScope.length === 0 ? (
+          held ? (
+            <EmptyState
+              title="Nothing is being held back"
+              body="Every opportunity Trellis has found extracted well enough to stand on its own. This view fills up only when a page reads too thinly to recommend."
+              action={
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => setFilters({ ...filters, confidence: "ok" })}
+                >
+                  Back to your list
+                </Button>
+              }
+            />
+          ) : (
           <EmptyState
             title="No opportunities yet"
             body="Nothing has been discovered for your profile so far. Run a search from the Overview page, or paste the URL of a posting you already found."
@@ -422,10 +530,11 @@ export function OpportunitiesClient({
               </Button>
             }
           />
+          )
         ) : visible.length === 0 ? (
           <EmptyState
             title="Nothing matches these filters"
-            body={`All ${items.length} opportunities were filtered out. Loosen a filter — the fit threshold and the eligibility filter are the two that hide the most.`}
+            body={`All ${inScope.length} opportunities were filtered out. Loosen a filter — the fit threshold and the eligibility filter are the two that hide the most.`}
             action={
               <Button
                 variant="secondary"
@@ -443,10 +552,13 @@ export function OpportunitiesClient({
                 <tr>
                   <Th className="w-20">Score</Th>
                   <Th>Opportunity</Th>
-                  <Th className="w-36">Type</Th>
-                  <Th className="w-44">Deadline</Th>
+                  <Th className="w-32">Type</Th>
+                  <Th className="w-40">Deadline</Th>
                   <Th className="w-28">Status</Th>
-                  <Th className="w-28">Source</Th>
+                  <Th className="w-24">Source</Th>
+                  <Th className="w-[116px] text-right">
+                    <span className="sr-only">Your call on this one</span>
+                  </Th>
                 </tr>
               </thead>
               <tbody>
@@ -458,6 +570,7 @@ export function OpportunitiesClient({
                     cursored={index === cursor}
                     showRelevance={filters.focus === "all"}
                     onOpen={() => openRow(item.id)}
+                    onPatch={patchItem}
                   />
                 ))}
               </tbody>
@@ -470,10 +583,53 @@ export function OpportunitiesClient({
                   item={item}
                   selected={item.id === selectedId}
                   onOpen={() => openRow(item.id)}
+                  onPatch={patchItem}
                 />
               ))}
             </ul>
           </>
+        )}
+
+        {!held && (hiddenByYou > 0 || filters.showHidden) && (
+          // The count is stated where the omission happens, with one click to
+          // reverse it. A list that silently drops rows is the thing this
+          // product is not allowed to be.
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-[var(--border-subtle)] bg-[var(--bg-subtle)] px-5 py-2">
+            <span className="text-xs text-[var(--text-tertiary)]">
+              {filters.showHidden
+                ? "Showing the opportunities you hid. Each one still carries the tag that says so, and clearing it puts the row back."
+                : `${hiddenByYou} opportunit${hiddenByYou === 1 ? "y" : "ies"} hidden by you. Nothing was deleted, and discovery will not resurface ${hiddenByYou === 1 ? "it" : "them"} as new.`}
+            </span>
+            <Button
+              variant="link"
+              size="xs"
+              onClick={() => setFilters({ ...filters, showHidden: !filters.showHidden })}
+            >
+              {filters.showHidden ? "Hide them again" : "Show them"}
+            </Button>
+          </div>
+        )}
+
+        {!held && (expiredHidden > 0 || filters.showExpired) && (
+          // The omission is stated where it happens, at the end of the list,
+          // with the exact count and one click to undo it. Hiding something
+          // without saying so is the thing this product is not allowed to do.
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-[var(--border-subtle)] bg-[var(--bg-subtle)] px-5 py-2">
+            <span className="text-xs text-[var(--text-tertiary)]">
+              {filters.showExpired
+                ? "Showing opportunities whose deadline has already passed. They are kept for the record — nothing is ever deleted."
+                : `${expiredHidden} opportunit${expiredHidden === 1 ? "y" : "ies"} ${
+                    expiredHidden === 1 ? "is" : "are"
+                  } hidden because the deadline has passed. Anything you saved or applied to is still shown.`}
+            </span>
+            <Button
+              variant="link"
+              size="xs"
+              onClick={() => setFilters({ ...filters, showExpired: !filters.showExpired })}
+            >
+              {filters.showExpired ? "Hide expired" : "Show them"}
+            </Button>
+          </div>
         )}
       </div>
 
@@ -523,12 +679,14 @@ function Row({
   cursored,
   showRelevance,
   onOpen,
+  onPatch,
 }: {
   item: OpportunityListItem;
   selected: boolean;
   cursored: boolean;
   showRelevance: boolean;
   onOpen: () => void;
+  onPatch: (id: string, patch: Partial<OpportunityListItem>) => void;
 }) {
   return (
     <tr
@@ -536,7 +694,7 @@ function Row({
       aria-current={selected ? "true" : undefined}
       onClick={onOpen}
       className={cn(
-        "h-11 cursor-pointer border-b border-[var(--border-subtle)]",
+        "group h-11 cursor-pointer border-b border-[var(--border-subtle)]",
         "transition-colors duration-100",
         selected
           ? "bg-[var(--bg-selected)]"
@@ -552,7 +710,18 @@ function Row({
             "before:absolute before:inset-y-0 before:left-0 before:w-0.5 before:bg-[var(--accent)] before:content-['']",
         )}
       >
-        <ScoreMeter score={item.fit_score} confidence={item.fit_confidence} />
+        {item.confidence_state === "held" ? (
+          // A held row carries no score by construction: its match was removed
+          // when it was held, because a fit number computed from a page we
+          // could not read is a confident-looking guess.
+          <Tooltip content="Not scored — too little came off the page to judge fit against you.">
+            <span className="text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)]">
+              Not scored
+            </span>
+          </Tooltip>
+        ) : (
+          <ScoreMeter score={item.fit_score} confidence={item.fit_confidence} />
+        )}
       </td>
 
       <td className="px-3">
@@ -567,7 +736,16 @@ function Row({
           </span>
         </div>
         <div className="flex items-center gap-1.5 truncate text-xs leading-[16px] text-[var(--text-tertiary)]">
-          <span className="truncate">{subtitleOf(item) || "—"}</span>
+          <span className="truncate">
+            {item.confidence_state === "held"
+              ? item.confidence_reason || subtitleOf(item) || "—"
+              : subtitleOf(item) || "—"}
+          </span>
+          <SourceStatusBadge
+            status={item.source_status}
+            checkedAt={item.source_status_at}
+            compact
+          />
           {item.relevance_reason && showRelevance && (
             // Makes the focus filter interrogable: you can see why a row is here
             // rather than trusting that it belongs.
@@ -588,6 +766,7 @@ function Row({
         <DeadlineCell
           deadline={item.deadline}
           type={item.deadline_type}
+          state={item.deadline_state}
           urgency={item.urgency}
           days={item.days_until_deadline}
           certainty={item.deadline_certainty}
@@ -603,6 +782,12 @@ function Row({
           {hostOf(item.source_url) || item.source?.name || "—"}
         </span>
       </td>
+
+      <td className="px-3 text-right">
+        <div className="flex justify-end">
+          <RowFeedbackControls item={item} onPatch={onPatch} />
+        </div>
+      </td>
     </tr>
   );
 }
@@ -611,18 +796,20 @@ function CompactRow({
   item,
   selected,
   onOpen,
+  onPatch,
 }: {
   item: OpportunityListItem;
   selected: boolean;
   onOpen: () => void;
+  onPatch: (id: string, patch: Partial<OpportunityListItem>) => void;
 }) {
   return (
-    <li data-oid={item.id}>
+    <li data-oid={item.id} className="flex items-center">
       <button
         onClick={onOpen}
         aria-current={selected ? "true" : undefined}
         className={cn(
-          "flex w-full items-center gap-3 px-4 py-2.5 text-left",
+          "flex min-w-0 flex-1 items-center gap-3 px-4 py-2.5 text-left",
           selected
             ? "border-l-2 border-[var(--accent)] bg-[var(--bg-selected)] pl-[14px]"
             : "active:bg-[var(--bg-hover)]",
@@ -641,10 +828,16 @@ function CompactRow({
             <span className="truncate text-xs text-[var(--text-tertiary)]">
               {subtitleOf(item) || hostOf(item.source_url)}
             </span>
+            <SourceStatusBadge
+              status={item.source_status}
+              checkedAt={item.source_status_at}
+              compact
+            />
             <span className="shrink-0">
               <DeadlineCell
                 deadline={item.deadline}
                 type={item.deadline_type}
+                state={item.deadline_state}
                 urgency={item.urgency}
                 days={item.days_until_deadline}
                 certainty={item.deadline_certainty}
@@ -653,8 +846,21 @@ function CompactRow({
             </span>
           </div>
         </div>
-        <ScoreMeter score={item.fit_score} confidence={item.fit_confidence} />
+        {item.confidence_state === "held" ? (
+          <span className="shrink-0 text-2xs uppercase tracking-[0.05em] text-[var(--text-tertiary)]">
+            Not scored
+          </span>
+        ) : (
+          <ScoreMeter score={item.fit_score} confidence={item.fit_confidence} />
+        )}
       </button>
+      {/* Outside the button on purpose: its undo is itself a button, and one
+          may never be nested inside another. */}
+      {item.feedback && (
+        <span className="shrink-0 pr-4">
+          <RowFeedbackControls item={item} onPatch={onPatch} compact />
+        </span>
+      )}
     </li>
   );
 }

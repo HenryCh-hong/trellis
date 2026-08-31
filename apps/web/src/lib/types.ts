@@ -28,6 +28,17 @@ export type OpportunityStatus =
 
 export type DeadlineType = "hard" | "rolling" | "unknown";
 
+/**
+ * The RECORDED lifecycle of a deadline, as opposed to `DeadlineType`, which is
+ * only what the posting said. "expired" is a state the backend wrote down on a
+ * particular day and logged as a change — not an adjective computed on read,
+ * which is why it can be trusted to hide a row.
+ */
+export type DeadlineState = "hard" | "rolling" | "unknown" | "expired";
+
+/** Whether the posting is still on the source it came from. Never deleted. */
+export type SourceStatus = "live" | "gone";
+
 export type Urgency =
   | "overdue"
   | "urgent"
@@ -44,8 +55,38 @@ export type EligibilityState =
 
 export type RequirementKind = "required" | "preferred" | "inferred";
 export type RequirementMatchState = "matched" | "partial" | "missing" | "unknown";
-export type LeadState = "opening" | "outreach" | "watch";
+/** Four states, in descending order of evidence. "unknown" is a conclusion
+ *  ("we read the pages and still cannot say"), never a placeholder. */
+export type LeadState = "opening" | "outreach" | "watch" | "unknown";
+/** Which side of the discovery confidence gate a row is on. */
+export type ConfidenceState = "ok" | "held";
 export type Recommendation = "apply" | "strong_apply" | "consider" | "skip" | "reach_out";
+
+/**
+ * What you said about one opportunity. Deliberately four verbs, not a rating:
+ * every one of them is reversible and every one applies to that row alone.
+ */
+export type FeedbackSignal =
+  | "interested"
+  | "not_relevant"
+  | "already_applied"
+  | "hidden";
+
+/** Why something was not relevant. Recorded for analysis; never a filter. */
+export type FeedbackReason =
+  | "wrong_topic"
+  | "wrong_job_type"
+  | "too_far"
+  | "not_qualified"
+  | "not_interested";
+
+export interface OpportunityFeedback {
+  signal: FeedbackSignal;
+  /** Only ever set alongside "not_relevant" — the API rejects it elsewhere. */
+  reason: FeedbackReason | null;
+  note: string | null;
+  created_at: string;
+}
 export type ExtractionMethod = "source" | "regex" | "heuristic" | "llm" | "user";
 
 export interface EvidencedField<T = unknown> {
@@ -127,6 +168,7 @@ export interface OpportunityListItem {
   hours_note: string | null;
   deadline: string | null;
   deadline_type: DeadlineType;
+  deadline_state: DeadlineState;
   deadline_certainty: Certainty;
   days_until_deadline: number | null;
   urgency: Urgency;
@@ -138,6 +180,9 @@ export interface OpportunityListItem {
   topics: TopicRef[];
   first_seen_at: string | null;
   last_checked_at: string | null;
+  source_status: SourceStatus;
+  /** When `source_status` last changed — i.e. when we looked and it was gone. */
+  source_status_at: string | null;
   is_new: boolean;
   has_application: boolean;
   application_id: string | null;
@@ -146,6 +191,15 @@ export interface OpportunityListItem {
   matches_interests: boolean;
   /** Why, in your own words — so the filter can be interrogated. */
   relevance_reason: string | null;
+  /**
+   * "held" means so little came off the page that recommending it would be a
+   * guess. The row is kept in full and reachable, never deleted.
+   */
+  confidence_state: ConfidenceState;
+  /** What was missing, in one sentence. Only ever set on a held row. */
+  confidence_reason: string | null;
+  /** Your own signal on this row, or null when you have said nothing. */
+  feedback: OpportunityFeedback | null;
 }
 
 export interface ResearchEvidenceItem {
@@ -208,14 +262,94 @@ export interface TopicOverlap {
   evidence_url: string | null;
 }
 
+/** An interest the student named that this lab's recent work demonstrably touches. */
+export interface FitOverlapItem {
+  label: string;
+  kind: "interest" | "keyword";
+  /** A whole sentence citing the dated artefact it was read from. */
+  evidence: string;
+  source_url: string | null;
+}
+
+/**
+ * Something the student already has. Only ever a profile row or a line of a
+ * resume they uploaded — never a claim assembled on their behalf.
+ */
+export interface FitBackgroundItem {
+  label: string;
+  kind: "resume_line" | "coursework" | "experience" | "skill";
+  detail: string | null;
+  /** The uploaded resume this was read from. Always set when `verbatim`. */
+  resume: string | null;
+  /** `detail` is the student's own words, character for character. */
+  verbatim: boolean;
+}
+
+export interface FitGapItem {
+  label: string;
+  /** True only for a stated hard requirement the student does not meet. */
+  blocking: boolean;
+  note: string;
+}
+
+export interface FitBreakdown {
+  strong_overlap: FitOverlapItem[];
+  relevant_background: FitBackgroundItem[];
+  potential_gaps: FitGapItem[];
+  resumes_read: string[];
+  /** Set when there was no readable resume, so a short list is never silent. */
+  background_note: string | null;
+}
+
+/** One specific, sourced reason a lead is in the state it is in. */
+export interface LeadStateSignal {
+  key: string;
+  label: string;
+  certainty: Certainty;
+  source_url: string | null;
+  detail: string | null;
+}
+
+export interface DirectionEvidence {
+  id: string;
+  year: number | null;
+  kind: ResearchEvidenceItem["kind"];
+  title: string;
+  url: string | null;
+  /** Which words this item and the direction actually share. Derived, never written. */
+  why: string;
+}
+
+/**
+ * A current direction and the recent work backing it. A direction with no
+ * surviving supporting evidence is absent from the list, never present-and-empty.
+ */
+export interface DirectionClaim {
+  direction: string;
+  certainty: Certainty;
+  evidence: DirectionEvidence[];
+}
+
+/** Null when no real timing signal was found. The UI says so rather than inventing one. */
+export interface WhyNow {
+  statement: string;
+  evidence_ids: string[];
+  certainty: Certainty;
+}
+
 export interface ResearchContext {
   faculty: FacultyRef;
   lab: LabRef | null;
   lead_state: LeadState;
+  lead_state_signals: LeadStateSignal[];
+  directions: DirectionClaim[];
+  why_now: WhyNow | null;
   evidence: ResearchEvidenceItem[];
   signals: LabSignalItem[];
   topics: TopicRef[];
   overlap: TopicOverlap[];
+  /** Null when there is no student profile to compare against. */
+  fit: FitBreakdown | null;
   suggested_next_step: string | null;
   opening_statement: string | null;
   opening_source_url: string | null;
@@ -249,6 +383,8 @@ export interface OpportunityDetail extends OpportunityListItem {
   fields: Record<string, EvidencedField>;
   research: ResearchContext | null;
   resume_recommendations: ResumeRecommendationItem[];
+  /** "Can I apply right now?" — the same computation the kit page renders. */
+  readiness: ApplicationReadiness;
   notes: string | null;
 }
 
@@ -268,6 +404,7 @@ export interface ResearchLead {
   signals: LabSignalItem[];
   status: OpportunityStatus;
   deadline: string | null;
+  deadline_state: DeadlineState;
   urgency: Urgency;
 }
 
@@ -286,6 +423,36 @@ export interface ResearchFacets {
 
 /* -------------------------------------------------------------- applications */
 
+export type ReadinessState = "ready" | "attention" | "blocked" | "unknown";
+export type LinkVerification = "verified" | "unverified" | "not_found";
+
+export interface ReadinessItem {
+  key: string;
+  label: string;
+  state: ReadinessState;
+  detail: string;
+  note: string | null;
+}
+
+/**
+ * The one answer to "Can I apply right now?", computed server-side so the
+ * opportunity panel and the kit page cannot disagree. `cta` is only ever
+ * "Continue preparation" or "Review application" — Trellis never submits, so
+ * it never offers "Apply".
+ */
+export interface ApplicationReadiness {
+  ready: boolean;
+  cta: string;
+  cta_action: "prepare" | "review";
+  items: ReadinessItem[];
+  blocking: string[];
+  application_link: LinkVerification;
+  application_link_note: string | null;
+  application_url: string | null;
+  has_application: boolean;
+  application_id: string | null;
+}
+
 export interface ApplicationDocumentItem {
   id: string;
   kind: string;
@@ -298,6 +465,12 @@ export interface ApplicationDocumentItem {
   source_text: string | null;
 }
 
+export type AnswerCategory =
+  | "safe_profile_field"
+  | "safe_generative"
+  | "sensitive"
+  | "unknown";
+
 export interface ApplicationAnswerItem {
   id: string;
   question: string;
@@ -305,6 +478,8 @@ export interface ApplicationAnswerItem {
   answer: string | null;
   source: "profile" | "user" | "llm_draft";
   profile_field: string | null;
+  /** What Trellis is allowed to do with this question. */
+  category: AnswerCategory;
   is_sensitive: boolean;
   sensitive_category: string | null;
   reuse_approved: boolean;
@@ -335,6 +510,7 @@ export interface ApplicationKit {
   documents: ApplicationDocumentItem[];
   answers: ApplicationAnswerItem[];
   known_profile_fields: { key: string; label: string; value: string | null }[];
+  readiness: ApplicationReadiness;
   blocking: string[];
   ready: boolean;
   prepared_at: string | null;
@@ -487,6 +663,8 @@ export interface Overview {
   action_needed: ActionItem[];
   due_soon: OpportunityListItem[];
   best_matches: OpportunityListItem[];
+  /** The rows you marked interested, newest first. Your choice, not a ranking. */
+  interested: OpportunityListItem[];
   research_leads: ResearchLead[];
   recent_discoveries: OpportunityListItem[];
   pipeline: PipelineStage[];
@@ -514,9 +692,17 @@ export interface SearchRunSummary {
   trigger: string;
   started_at: string | null;
   finished_at: string | null;
+  /**
+   * The run ledger. Every document a run looked at lands in exactly one of
+   * these, so "we found nothing" and "we withheld things" never look alike.
+   */
   created_count: number;
   updated_count: number;
   unchanged_count: number;
+  expired_count: number;
+  held_count: number;
+  skipped_count: number;
+  suppressed_count: number;
   documents_fetched: number;
   sources_attempted: string[];
   error: string | null;
@@ -571,10 +757,20 @@ export interface OpportunityFacets {
   sources: { value: string; label: string; count: number }[];
   topics: { value: string; label: string; count: number }[];
   departments: { value: string; count: number }[];
+  /**
+   * The only facet counted across both sides of the gate, because it is the
+   * control that crosses it. Every other count describes the recommended set.
+   */
+  confidence: { value: ConfidenceState; label: string; count: number }[];
 }
 
 export interface OpportunityListResponse extends Paginated<OpportunityListItem> {
   facets: OpportunityFacets;
+  /**
+   * How many rows these same filters matched but were dropped for being
+   * hidden. Sent so the omission can be stated with a number and undone.
+   */
+  hidden_count: number;
 }
 
 export interface DataSourceInfo extends SourceRef {
@@ -603,6 +799,7 @@ export type ChangeKind =
   | "application_url"
   | "recruiting_status"
   | "lead_state"
+  | "expired"
   | "disappeared"
   | "reappeared";
 
@@ -618,4 +815,22 @@ export interface OpportunityChangeItem {
   source_url: string | null;
   noticed_at: string;
   seen: boolean;
+}
+
+export interface OutreachCitation {
+  label: string;
+  detail: string;
+  source_url: string | null;
+  side: "research" | "student";
+}
+
+export interface OutreachDraft {
+  subject: string | null;
+  body: string | null;
+  word_count: number;
+  research_citations: OutreachCitation[];
+  student_citations: OutreachCitation[];
+  /** Set when Trellis will not draft. Shown instead of an email, never beside one. */
+  refusal: string | null;
+  todos: string[];
 }

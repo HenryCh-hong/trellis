@@ -112,7 +112,7 @@ export function isLeadSort(v: string): v is LeadSort {
   return v === "match" || v === "recent" || v === "opening";
 }
 
-const STATE_RANK: Record<LeadState, number> = { opening: 0, outreach: 1, watch: 2 };
+const STATE_RANK: Record<LeadState, number> = { opening: 0, outreach: 1, watch: 2, unknown: 3 };
 
 const byMatch = (a: ResearchLead, b: ResearchLead) =>
   (b.fit_score ?? -1) - (a.fit_score ?? -1);
@@ -131,7 +131,7 @@ export function compareLeads(sort: LeadSort) {
 }
 
 export function isLeadState(v: string): v is LeadState {
-  return v === "opening" || v === "outreach" || v === "watch";
+  return v === "opening" || v === "outreach" || v === "watch" || v === "unknown";
 }
 
 /* ------------------------------------------------------ topic matching */

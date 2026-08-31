@@ -10,6 +10,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, Timestamps, UUIDPk
 from app.models.enums import (
+    AnswerCategory,
     AnswerSource,
     DocumentKind,
     DocumentStatus,
@@ -100,10 +101,16 @@ class ApplicationDocument(UUIDPk, Timestamps, Base):
 class ApplicationAnswer(UUIDPk, Timestamps, Base):
     """A question the application form asks.
 
-    ``is_sensitive`` covers demographic, work-authorization, disability,
-    veteran-status and self-identification questions.  Those are never
-    auto-filled or drafted: ``source`` must be ``user`` and ``reuse_approved``
-    must be explicitly set.  See docs/privacy.md.
+    ``category`` is the four-way classification from
+    :func:`app.services.applications.classify_question` and is what decides
+    whether software may touch the answer at all.  ``is_sensitive`` is the
+    single bit the submission gate reads; it is written from ``category`` and
+    the two can never disagree.
+
+    A ``SENSITIVE`` question — work authorisation, visa status, demographics,
+    disability, veteran status, criminal history, age, self-identification or
+    a legal attestation — is never auto-filled or drafted: ``source`` must be
+    ``user`` and ``reuse_approved`` must be explicitly set.  See docs/privacy.md.
     """
 
     __tablename__ = "application_answers"
@@ -118,6 +125,11 @@ class ApplicationAnswer(UUIDPk, Timestamps, Base):
         enum_col(AnswerSource, "answer_source"), default=AnswerSource.USER, nullable=False
     )
     profile_field: Mapped[str | None] = mapped_column(String(120))
+    category: Mapped[AnswerCategory] = mapped_column(
+        enum_col(AnswerCategory, "answer_category"),
+        default=AnswerCategory.UNKNOWN,
+        nullable=False,
+    )
     is_sensitive: Mapped[bool] = mapped_column(default=False, nullable=False)
     sensitive_category: Mapped[str | None] = mapped_column(String(60))
     reuse_approved: Mapped[bool] = mapped_column(default=False, nullable=False)

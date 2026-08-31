@@ -8,7 +8,12 @@ from typing import Any
 
 from pydantic import Field
 
-from app.schemas.common import OpportunityListItem, ResumeRecommendationItem, Schema
+from app.schemas.common import (
+    ApplicationReadiness,
+    OpportunityListItem,
+    ResumeRecommendationItem,
+    Schema,
+)
 
 # --------------------------------------------------------------------- profile
 
@@ -186,6 +191,8 @@ class ApplicationAnswerItem(Schema):
     answer: str | None = None
     source: str = "user"
     profile_field: str | None = None
+    #: AnswerCategory — what Trellis is allowed to do with this question.
+    category: str = "unknown"
     is_sensitive: bool = False
     sensitive_category: str | None = None
     reuse_approved: bool = False
@@ -222,6 +229,7 @@ class ApplicationKit(Schema):
     documents: list[ApplicationDocumentItem] = Field(default_factory=list)
     answers: list[ApplicationAnswerItem] = Field(default_factory=list)
     known_profile_fields: list[KnownField] = Field(default_factory=list)
+    readiness: ApplicationReadiness
     blocking: list[str] = Field(default_factory=list)
     ready: bool = False
     prepared_at: datetime | None = None
@@ -298,9 +306,16 @@ class SearchRunSummary(Schema):
     trigger: str
     started_at: datetime | None = None
     finished_at: datetime | None = None
+    # The six buckets every document the run looked at lands in, plus the
+    # feedback-suppression count. Reported in full so "we found nothing" and
+    # "we threw things away" can never look like the same run.
     created_count: int = 0
     updated_count: int = 0
     unchanged_count: int = 0
+    expired_count: int = 0
+    held_count: int = 0
+    skipped_count: int = 0
+    suppressed_count: int = 0
     documents_fetched: int = 0
     sources_attempted: list[str] = Field(default_factory=list)
     error: str | None = None
@@ -323,6 +338,9 @@ class Overview(Schema):
     action_needed: list[ActionItem] = Field(default_factory=list)
     due_soon: list[OpportunityListItem] = Field(default_factory=list)
     best_matches: list[OpportunityListItem] = Field(default_factory=list)
+    #: Things you marked interested. Small, and only ever what you chose
+    #: yourself — the Overview never promotes a row you did not point at.
+    interested: list[OpportunityListItem] = Field(default_factory=list)
     research_leads: list[Any] = Field(default_factory=list)
     recent_discoveries: list[OpportunityListItem] = Field(default_factory=list)
     pipeline: list[PipelineStage] = Field(default_factory=list)
@@ -359,6 +377,21 @@ class DiscoverIn(Schema):
 
 class ImportUrlIn(Schema):
     url: str
+
+
+# -------------------------------------------------------------------- feedback
+
+
+class FeedbackIn(Schema):
+    """interested | not_relevant | already_applied | hidden.
+
+    ``reason`` is accepted only alongside ``not_relevant``; anything else is a
+    400 rather than a silently dropped field.
+    """
+
+    signal: str
+    reason: str | None = None
+    note: str | None = None
 
 
 # ------------------------------------------------------------------- reminders

@@ -106,6 +106,7 @@ export function ActionNeeded({ items }: { items: ActionItem[] }) {
                       <DeadlineCell
                         deadline={o.deadline}
                         type={o.deadline_type}
+                        state={o.deadline_state}
                         urgency={o.urgency}
                         days={o.days_until_deadline}
                         certainty={o.deadline_certainty}

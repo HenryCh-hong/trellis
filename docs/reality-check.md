@@ -8,14 +8,14 @@ real API and asserts against Postgres after a full page reload;
 screen and reports any that are wired to nothing. Both are committed and
 re-runnable.
 
-Last run: 2026-08-31. **25/25** audit checks pass, twice consecutively (the
-suite restores everything it touches, so it is repeatable and never leaves test
-data in the real profile). **322** interactive controls checked, **0** inert,
-**0** broken links. `tsc`, `eslint --max-warnings 0` and `ruff` all clean.
+Last run: 2026-09-01. **30/30** audit checks pass. **1060** interactive
+controls checked, **0** inert, **0** disabled without a stated reason. **234**
+backend tests pass. `tsc`, `eslint --max-warnings 0` and `ruff` all clean.
 
 ```bash
-cd apps/web && node audit.mjs              # 24 checks
+cd apps/web && node audit.mjs              # 30 checks, incl. the daily-loop rules
 cd apps/web && node interaction-audit.mjs  # every button on every screen
+cd apps/api && python -m pytest -q         # 234 tests
 ```
 
 ---
@@ -72,9 +72,27 @@ extraction confidence 0.55 and shown as such.
 **Research "current direction"** — an inference from recent evidence, labelled
 **Inferred** with the basis listed. It is not the lab's own words.
 
-**Apple Reminders** — Trellis produces the Shortcut payload and the setup recipe;
-it cannot write into Apple Reminders directly, and the UI says so. The `.ics`
-path needs no setup and is the default.
+**Apple Reminders** — now a real integration, verified end to end on this Mac.
+Trellis runs locally, so the backend drives the Reminders app through
+AppleScript. `POST /api/reminders/{id}/apple` created three real reminders in a
+"Trellis" list for a real Stanford deadline (Bing Nursery School RA, 9 Oct 2026)
+with alerts on 2, 6 and 8 Oct, read back from the Reminders app to confirm.
+
+Three bugs were found only by inspecting the result rather than trusting the
+success return, each of which silently broke it:
+
+1. Setting date components inside `tell application "Reminders"` dispatches them
+   to Reminders, which does not implement them — `osascript` hung until killed.
+2. Reading `id of` the new reminder forces an iCloud round trip and hangs the
+   same way.
+3. **Reminders overwrites `remind me date` with `due date` when both are set**,
+   which collapsed every lead-time alert onto the deadline itself — precisely
+   the thing a reminder exists to prevent. Only the alert date is set now, and
+   the deadline is carried in the title and note.
+
+Limits, both surfaced in the UI: it needs the API running on the same Mac
+(a hosted deployment cannot do it), and macOS gates Reminders behind a
+permission prompt on first use.
 
 ---
 
@@ -89,16 +107,69 @@ path needs no setup and is the default.
   **updated rather than duplicated**. Two real bugs were found and fixed doing
   this (see `docs/interaction-audit.md`). The synthetic record was then deleted —
   it is not real Handshake data and does not sit in the UI.
-- *Handshake side — `MANUAL VERIFICATION REQUIRED`.* The extension has **not**
-  been run against a live logged-in Handshake page, because that needs a real
-  SUNet login plus Duo. Its extraction logic is unit-tested against
-  hand-authored fixtures (7/7). No fake import was created to paper over this.
+- *Extraction against real Handshake markup — verified.* Handshake's own
+  `robots.txt` explicitly allows `/jobs/*/share_preview`, so the extractor was
+  run against three real public job pages (8000000, 9000000, 7500000). It read
+  **title, employer, location, description and job id** correctly from all
+  three. `job_type`, `pay`, `posted_at`, `apply_by` and `application_method`
+  came back `null` — honest, because the logged-out preview genuinely does not
+  render them. Notably job 8000000 carries "$22.83 /Hr." as prose inside the
+  description and `pay` stayed `null`, which is the behaviour the tests pin: a
+  rate the page never labelled is not asserted as the pay.
+  The pages were not committed as fixtures — Handshake's terms name job
+  descriptions specifically in their anti-bulk-collection clause.
+- *Logged-in path — `MANUAL VERIFICATION REQUIRED`.* The extension has **not**
+  been run against a live logged-in Handshake page; that needs SUNet plus Duo.
+  The fields only visible when signed in are therefore unverified. A markup
+  change now surfaces as an explicit error in the popup, and a partial
+  extraction names which fields came back empty, rather than a button that
+  appears to do nothing.
 
 **Applying to anything** — by design. Trellis opens the application page and
 stops. Handshake Quick Apply, external ATS, SSO, CAPTCHA and Duo are never
 automated.
 
 **Apple Shortcut installation** — one-time, done by you in the Shortcuts app.
+
+---
+
+## Daily loop — added 2026-09-01
+
+Verified against the real corpus (28 faculty, 187 evidence rows, 91
+opportunities), not fixtures.
+
+- **Four lead states, and the discipline not to inflate them.** Every lead is
+  `opening` / `outreach` / `watch` / `unknown` with stored signals, each
+  carrying a source URL — asserted for all 28 by `audit.mjs`. 7 openings, all
+  backed by a quoted statement naming undergraduates; four of those quotes were
+  re-fetched from the live pages on 2026-09-01 and found verbatim. The rule
+  that mattered: Shuran Song's lab reads *"POSTDOC ONLY — not an undergraduate
+  opening"* and stays `outreach`, and Eric Roberts (retired from Stanford in
+  2017) is `watch` with that reason shown, not an outreach lead invented to
+  give the screen a button.
+- **Per-direction evidence and "why now?".** Directions expand to the dated work
+  they rest on. "Why now?" appears only with a real signal behind it and says
+  what it is ("3 of their 2025–2026 items are on Robotics"); otherwise it says
+  no timing signal was found.
+- **Fit, from the student's own material.** Strong overlap / relevant
+  background / potential gaps, with resume lines quoted verbatim and the file
+  named. Gaps are stated plainly ("No Robotics in your profile or resumes").
+- **Outreach drafts, composed not generated.** 100–160 words assembled only
+  from a dated publication of that lab and the student's own profile and resume
+  text, with both sides listed underneath. Tests forbid the failure that
+  matters: the draft may never claim the student read, enjoyed or admired
+  anything, may never name a skill they do not have, and a course listing may
+  never be called a paper. With no recent work that connects, or nothing real
+  on file about the student, it refuses and says which — rather than sending a
+  template to a named professor. Nothing is ever sent.
+- **Deadline lifecycle.** `expired` is a stored state written only by the sweep,
+  logged once to the change log, hidden by default with the count always shown
+  ("87 of 91 shown · 4 expired hidden") and one click to restore. An expired
+  deadline refuses a reminder and the tooltip says why.
+- **Feedback that nudges, not filters.** Hiding one row costs it 20 points of
+  sort position; siblings sharing its reason stay — asserted by `audit.mjs`.
+- **Intent-aware search.** "nlp" surfaces labs whose titles never contain it;
+  "part-time" restricts to jobs; "barista" honestly returns nothing.
 
 ---
 
@@ -129,5 +200,13 @@ Nothing known. Everything found broken during this pass was fixed — see
 - **20 of 28 faculty records** carry single-pass extraction confidence; 8 went
   through adversarial re-verification. Recorded in `data/harvest/manifest.json`
   and surfaced in Settings.
-- **Deadline coverage.** Only 11 of 91 opportunities have a dated deadline. The
-  rest are genuinely rolling or unstated, not missing data.
+- **Deadline coverage.** Only 31 of 91 opportunities have a dated deadline (4 of
+  them now expired). The rest are genuinely rolling or unstated, not missing
+  data.
+- **The `unknown` lead state has no live example.** The code path is tested, but
+  all 28 faculty have dated evidence inside the window and a readable contact
+  route, so nothing in the real corpus renders as `unknown`. Correct for this
+  data; unexercised in the UI.
+- **Apple Reminders on another Mac.** Verified on this machine only. The first
+  call on a new machine hits the macOS permission prompt, which is a real
+  manual step.

@@ -25,11 +25,11 @@ from app.models.user import StudentProfile
 from app.schemas import entities as E
 from app.services.applications import (
     TransitionError,
-    blocking_reasons,
     create_kit,
     known_profile_fields,
     transition,
 )
+from app.services.readiness import readiness_for
 
 router = APIRouter(tags=["applications"])
 
@@ -46,6 +46,8 @@ def _load(db: Session, application_id: uuid.UUID, profile: StudentProfile) -> Ap
             selectinload(Application.opportunity).selectinload(Opportunity.source),
             selectinload(Application.opportunity).selectinload(Opportunity.faculty),
             selectinload(Application.opportunity).selectinload(Opportunity.lab),
+            # Readiness reads the application-link provenance off these.
+            selectinload(Application.opportunity).selectinload(Opportunity.fields),
         )
     ).first()
     if app is None:
@@ -57,7 +59,9 @@ def _kit(db: Session, app: Application, profile: StudentProfile) -> E.Applicatio
     today = datetime.now(UTC).date()
     opp = app.opportunity
     resume = db.get(Resume, app.resume_id) if app.resume_id else None
-    blocking = blocking_reasons(app, today)
+    # One computation, shared with the opportunity panel, so the two screens
+    # cannot disagree about whether this application can go out.
+    readiness = readiness_for(db, opportunity=opp, application=app, today=today)
     return E.ApplicationKit(
         id=app.id,
         status=app.status.value,
@@ -92,6 +96,7 @@ def _kit(db: Session, app: Application, profile: StudentProfile) -> E.Applicatio
                 answer=a.answer,
                 source=a.source.value,
                 profile_field=a.profile_field,
+                category=a.category.value,
                 is_sensitive=a.is_sensitive,
                 sensitive_category=a.sensitive_category,
                 reuse_approved=a.reuse_approved,
@@ -101,8 +106,9 @@ def _kit(db: Session, app: Application, profile: StudentProfile) -> E.Applicatio
             for a in sorted(app.answers, key=lambda a: a.order_index)
         ],
         known_profile_fields=[E.KnownField(**f) for f in known_profile_fields(profile)],
-        blocking=blocking,
-        ready=not blocking,
+        readiness=ser.readiness_out(readiness),
+        blocking=readiness.blocking,
+        ready=readiness.ready,
         prepared_at=app.prepared_at,
         approved_at=app.approved_at,
         submitted_at=app.submitted_at,
@@ -137,6 +143,7 @@ def list_applications(
             selectinload(Application.events),
             selectinload(Application.opportunity).selectinload(Opportunity.matches),
             selectinload(Application.opportunity).selectinload(Opportunity.source),
+            selectinload(Application.opportunity).selectinload(Opportunity.fields),
         )
     ).unique()
     return [_kit(db, app, profile) for app in rows]

@@ -21,6 +21,12 @@ class ChangeKind(StrEnum):
     APPLICATION_URL = "application_url"
     RECRUITING_STATUS = "recruiting_status"
     LEAD_STATE = "lead_state"
+    #: The extraction was too thin to recommend, so the row was held back.
+    HELD = "held"
+    #: A held row re-extracted well and is back in the list.
+    PROMOTED = "promoted"
+    #: A stated deadline lapsed. Written once, by the lifecycle sweep.
+    EXPIRED = "expired"
     DISAPPEARED = "disappeared"
     REAPPEARED = "reappeared"
 

@@ -22,5 +22,10 @@
       }
       return { mode: "job", items: [mod.extractJob(document, location.href)] };
     })
-    .catch((error) => ({ mode: MODE, items: [], error: String(error) }));
+    .catch((error) => ({
+      mode: MODE,
+      items: [],
+      // Surfaced in the popup. Silence here would look like a broken button.
+      error: error && error.message ? error.message : String(error),
+    }));
 })();

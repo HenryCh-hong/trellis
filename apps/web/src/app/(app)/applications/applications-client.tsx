@@ -235,6 +235,7 @@ export function ApplicationsClient({ initial }: { initial: ApplicationKit[] }) {
                                 <DeadlineCell
                                   deadline={kit.opportunity.deadline}
                                   type={kit.opportunity.deadline_type}
+                                  state={kit.opportunity.deadline_state}
                                   urgency={kit.opportunity.urgency}
                                   days={kit.opportunity.days_until_deadline}
                                   compact

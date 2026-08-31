@@ -4,7 +4,11 @@ import { OpportunitiesClient } from "./opportunities-client";
 import { PageHeader } from "@/components/app/page-header";
 import { Alert, TableSkeleton } from "@/components/ui/primitives";
 import { api, ApiError } from "@/lib/api";
-import type { OpportunityFacets, OpportunityListResponse } from "@/lib/types";
+import type {
+  OpportunityFacets,
+  OpportunityListItem,
+  OpportunityListResponse,
+} from "@/lib/types";
 
 export const metadata: Metadata = { title: "Opportunities · Trellis" };
 
@@ -14,6 +18,7 @@ const EMPTY_FACETS: OpportunityFacets = {
   sources: [],
   topics: [],
   departments: [],
+  confidence: [],
 };
 
 /**
@@ -28,13 +33,25 @@ export default async function OpportunitiesPage() {
   let error: string | null = null;
 
   let savedFocus: "interests" | "all" = "interests";
+  let heldItems: OpportunityListItem[] = [];
 
   try {
-    const [list, profile] = await Promise.all([
-      api.opportunities.list({ limit: PAGE_SIZE, offset: 0 }),
+    // Two requests rather than one `confidence=all`, because the API's default
+    // is what the product recommends and the held rows are a deliberate,
+    // separate ask. They are loaded up front so the toggle is instant, but the
+    // client never mixes them into a single view.
+    const [list, held, profile] = await Promise.all([
+      // `include_hidden` so the client can state how many rows you put away
+      // and bring them back without a round trip. The API's own default still
+      // omits them — hidden means hidden for anything that just asks for a list.
+      api.opportunities.list({ limit: PAGE_SIZE, offset: 0, include_hidden: true }),
+      api.opportunities
+        .list({ limit: PAGE_SIZE, offset: 0, confidence: "held", include_hidden: true })
+        .catch(() => null),
       api.profile.get().catch(() => null),
     ]);
     data = list;
+    heldItems = held?.items ?? [];
     // Server-held, so the view follows the student to another browser or
     // machine rather than living in one tab's localStorage.
     const stored = profile?.preferences?.opportunityFocus;
@@ -64,7 +81,7 @@ export default async function OpportunitiesPage() {
   return (
     <Suspense fallback={<ListSkeleton />}>
       <OpportunitiesClient
-        initialItems={data.items}
+        initialItems={[...data.items, ...heldItems]}
         facets={data.facets ?? EMPTY_FACETS}
         total={data.total}
         savedFocus={savedFocus}

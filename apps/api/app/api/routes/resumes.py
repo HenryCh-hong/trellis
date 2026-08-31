@@ -22,7 +22,7 @@ from app.api.deps import current_profile_optional, current_user, get_session
 from app.core.config import get_settings
 from app.core.security import sha256_b64
 from app.models.resume import Resume, ResumeHighlight
-from app.models.user import StudentProfile, User
+from app.models.user import Experience, ProfileSkill, StudentProfile, User
 from app.schemas import entities as E
 from app.services import resume_parser
 
@@ -197,6 +197,29 @@ def delete_resume(resume_id: uuid.UUID, db: Session = Depends(get_session)) -> N
     resume = db.get(Resume, resume_id)
     if resume is None:
         return
+
+    # Skills and experiences read out of this file go with it. The foreign key
+    # is ON DELETE SET NULL, so without this they survive as rows that claim to
+    # be "from your resume" while quoting a file that no longer exists — which
+    # is how a profile ends up asserting a course the student never listed.
+    #
+    # Only rows this file created are removed. Anything the student typed
+    # themselves is theirs, even if the same skill also appeared in the resume.
+    for skill in db.scalars(
+        select(ProfileSkill).where(
+            ProfileSkill.resume_id == resume.id,
+            ProfileSkill.origin == "resume",
+        )
+    ):
+        db.delete(skill)
+    for experience in db.scalars(
+        select(Experience).where(
+            Experience.resume_id == resume.id,
+            Experience.origin == "resume",
+        )
+    ):
+        db.delete(experience)
+
     path = get_settings().resume_dir / resume.storage_path
     path.unlink(missing_ok=True)
     db.delete(resume)

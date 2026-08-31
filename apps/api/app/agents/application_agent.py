@@ -4,6 +4,11 @@ The hard rule this module enforces: a sensitive question is never answered,
 drafted, or prefilled by software. Not from the profile, not by the model, not
 "helpfully" left as a suggestion. The student answers it, every time, unless
 they have explicitly chosen to reuse a previous answer.
+
+The permission comes from the stored ``AnswerCategory`` and nowhere else.
+Only ``SAFE_PROFILE_FIELD`` is prefilled and only ``SAFE_GENERATIVE`` is
+drafted, so a question we did not recognise (``UNKNOWN``) is left for the
+student rather than answered on a hunch.
 """
 
 from __future__ import annotations
@@ -20,36 +25,14 @@ from sqlalchemy import select
 from app.agents.base import Agent, AgentContext, AgentOutcome
 from app.llm.base import LLMUnavailable
 from app.models.application import Application, ApplicationAnswer, ApplicationEvent
-from app.models.enums import AnswerSource, DocumentStatus, OpportunityType
+from app.models.enums import AnswerCategory, AnswerSource, DocumentStatus
 from app.models.resume import Resume
 from app.services.applications import (
     blocking_reasons,
+    classify_question,
     known_profile_fields,
-    profile_answer,
-    sensitivity_of,
-)
-
-# Questions we ask for every application, plus type-specific ones. Real forms
-# add their own; these are the ones a student can usefully prepare in advance.
-BASE_QUESTIONS: tuple[str, ...] = (
-    "Full name",
-    "Email",
-    "University",
-    "Major",
-    "Expected graduation year",
-    "How many hours per week are you available?",
-)
-
-RESEARCH_QUESTIONS: tuple[str, ...] = (
-    "Which of this lab's projects interests you most, and why?",
-    "What relevant coursework or projects have you completed?",
-    "When could you start, and for how many quarters?",
-)
-
-JOB_QUESTIONS: tuple[str, ...] = (
-    "Why are you interested in this role?",
-    "Describe relevant experience for this position.",
-    "What is your availability during the week?",
+    planned_questions,
+    profile_field_value,
 )
 
 
@@ -83,48 +66,42 @@ class ApplicationPrepAgent(Agent[PrepRequest, PrepResult]):
         warnings: list[str] = []
 
         existing = {a.question.strip().lower() for a in app.answers}
-        questions = list(BASE_QUESTIONS)
-        questions += (
-            list(RESEARCH_QUESTIONS)
-            if opp is not None
-            and opp.type in (OpportunityType.RESEARCH_OPENING, OpportunityType.RESEARCH_OUTREACH)
-            else list(JOB_QUESTIONS)
-        )
-        # Anything the posting itself demanded that is not a document.
-        for req in opp.requirements if opp is not None else []:
-            if req.category == "question":
-                questions.append(req.text)
+        questions = planned_questions(opp)
 
         created = 0
         drafted = 0
         for index, question in enumerate(questions):
             if question.strip().lower() in existing:
                 continue
-            is_sensitive, category = sensitivity_of(question)
+            kind = classify_question(question)
             answer = ApplicationAnswer(
                 application_id=app.id,
                 question=question,
                 order_index=index,
-                is_sensitive=is_sensitive,
-                sensitive_category=category,
+                category=kind.category,
+                is_sensitive=kind.is_sensitive,
+                sensitive_category=kind.sensitive_category,
             )
-            if is_sensitive:
-                # No value, no draft, no source other than the student.
+            # Only a SAFE_PROFILE_FIELD is ever filled in by software. SENSITIVE
+            # is off limits by law and by policy; UNKNOWN is off limits because
+            # we do not know what is being asked, and a guess at an unread
+            # question is exactly the kind of fabrication rule 1 forbids.
+            value = (
+                profile_field_value(profile, kind.profile_field)
+                if kind.may_prefill_from_profile and kind.profile_field
+                else None
+            )
+            if value:
+                answer.answer = value
+                answer.source = AnswerSource.PROFILE
+                answer.profile_field = kind.profile_field
+                answer.field_key = kind.profile_field
+                answer.needs_user_input = False
+            else:
                 answer.answer = None
                 answer.source = AnswerSource.USER
                 answer.needs_user_input = True
                 answer.reuse_approved = False
-            else:
-                value, field_key = profile_answer(profile, question)
-                if value:
-                    answer.answer = value
-                    answer.source = AnswerSource.PROFILE
-                    answer.profile_field = field_key
-                    answer.field_key = field_key
-                    answer.needs_user_input = False
-                else:
-                    answer.source = AnswerSource.USER
-                    answer.needs_user_input = True
             ctx.db.add(answer)
             created += 1
 
@@ -177,9 +154,12 @@ class ApplicationPrepAgent(Agent[PrepRequest, PrepResult]):
 
         count = 0
         for answer in app.answers:
-            if answer.is_sensitive or answer.answer or not answer.needs_user_input:
+            # Only an open, essay-shaped question is drafted. A SENSITIVE one is
+            # never drafted, and an UNKNOWN one is not either: we cannot write an
+            # answer to a question we have not understood.
+            if answer.category is not AnswerCategory.SAFE_GENERATIVE:
                 continue
-            if len(answer.question) < 25:  # short factual fields, not essays
+            if answer.answer or not answer.needs_user_input:
                 continue
             prompt = json.dumps(
                 {

@@ -8,7 +8,7 @@ are applied once rather than per route.
 from __future__ import annotations
 
 import uuid
-from datetime import date
+from datetime import UTC, date, datetime
 from typing import Any
 
 from sqlalchemy import func, select
@@ -19,12 +19,14 @@ from app.agents.research_agent import lead_state_for
 from app.models.application import Application, ResumeRecommendation
 from app.models.enums import (
     Certainty,
+    FeedbackSignal,
     LeadState,
     OpportunityStatus,
     OpportunityType,
     RequirementKind,
     SignalKind,
 )
+from app.models.feedback import OpportunityFeedback
 from app.models.opportunity import ExtractedField, Opportunity, OpportunityMatch
 from app.models.ops import Reminder, SearchRun
 from app.models.research import Faculty
@@ -32,28 +34,15 @@ from app.models.resume import Resume
 from app.models.user import StudentProfile
 from app.schemas import common as S
 from app.schemas import entities as E
-from app.services import taxonomy
+from app.services import directions, fit, search, taxonomy
+from app.services import outreach as outreach_service
+from app.services.readiness import Readiness, readiness_for
 
 NEW_WINDOW_DAYS = 7
 
-# Department-level areas that almost every lab carries. True, but useless as an
-# explanation, so they are only used when nothing more specific matched.
-GENERIC_TOPICS = frozenset(
-    {
-        "artificial-intelligence",
-        "machine-learning",
-        "machine-learning-area",
-        "empirical-machine-learning",
-        "human-centered-and-creative-ai",
-        "ai-society-area",
-        "human-centered-area",
-        "systems-area",
-        "vision-graphics-area",
-        "language-speech-area",
-        "robotics-embodied-area",
-        "ai-science-health-area",
-    }
-)
+#: Re-exported so the name stays importable from here, where it was defined
+#: before the fit breakdown needed the same list.
+GENERIC_TOPICS = taxonomy.GENERIC_TOPICS
 
 
 def interest_slugs(profile: StudentProfile | None) -> set[str]:
@@ -78,6 +67,29 @@ def _match_for(opp: Opportunity, profile_id: uuid.UUID | None) -> OpportunityMat
     if profile_id is None:
         return opp.matches[0]
     return next((m for m in opp.matches if m.profile_id == profile_id), None)
+
+
+def search_explain(intent: search.SearchIntent | None) -> S.SearchExplain | None:
+    """What the server understood the query to mean.
+
+    Returned alongside the results so an ordering the student did not expect can
+    be interrogated rather than guessed at — "part-time" narrowing to jobs and
+    "agents" reaching LLM Agents are both decisions worth showing.
+    """
+    if intent is None:
+        return None
+    return S.SearchExplain(
+        query=intent.query,
+        terms=list(intent.terms),
+        topics=[
+            S.SearchTopicHit(slug=hit.slug, label=hit.label, tier=hit.tier, weight=hit.weight)
+            for hit in sorted(
+                intent.topics.values(), key=lambda h: (-h.weight, h.label.lower())
+            )
+        ],
+        types=list(intent.kinds),
+        notes=list(intent.notes),
+    )
 
 
 def source_ref(opp: Opportunity) -> S.SourceRef | None:
@@ -193,6 +205,7 @@ def opportunity_item(
     has_reminder: bool = False,
     wanted_slugs: set[str] | None = None,
     profile_for_relevance: StudentProfile | None = None,
+    feedback: OpportunityFeedback | None = None,
 ) -> S.OpportunityListItem:
     match = _match_for(opp, profile_id)
     faculty = opp.faculty
@@ -207,6 +220,11 @@ def opportunity_item(
     is_new = bool(
         first_seen and (today - first_seen.date()).days <= NEW_WINDOW_DAYS
     ) and opp.status == OpportunityStatus.NEW
+    # Something you hid is never "new" again. Re-running discovery re-reads the
+    # page and may well log what changed on it, but it may not walk the row back
+    # onto the screen wearing the badge that means "you have not seen this".
+    if feedback is not None and feedback.signal == FeedbackSignal.HIDDEN:
+        is_new = False
 
     return S.OpportunityListItem(
         id=opp.id,
@@ -225,9 +243,14 @@ def opportunity_item(
         hours_note=opp.hours_note,
         deadline=opp.deadline,
         deadline_type=opp.deadline_type.value,
+        # The RECORDED state, not a recomputation: "expired" is a thing that
+        # happened to this row on a particular day, and the change log says so.
+        deadline_state=opp.deadline_state.value,
         deadline_certainty=opp.deadline_certainty.value,
         days_until_deadline=days_until(opp.deadline, today),
         urgency=urgency_for(opp.deadline, opp.deadline_type, today),
+        source_status=opp.source_status.value,
+        source_status_at=opp.source_status_at,
         eligibility=opp.eligibility.value,
         fit_score=match.fit_score if match else None,
         fit_confidence=match.confidence if match else None,
@@ -246,6 +269,20 @@ def opportunity_item(
         has_reminder=has_reminder,
         matches_interests=relevance is not None,
         relevance_reason=relevance,
+        confidence_state=opp.confidence_state.value,
+        confidence_reason=opp.confidence_reason,
+        feedback=feedback_out(feedback),
+    )
+
+
+def feedback_out(row: OpportunityFeedback | None) -> S.FeedbackOut | None:
+    if row is None:
+        return None
+    return S.FeedbackOut(
+        signal=row.signal.value,
+        reason=row.reason.value if row.reason else None,
+        note=row.note,
+        created_at=row.created_at,
     )
 
 
@@ -413,21 +450,135 @@ def _next_step(state: LeadState, faculty: Faculty) -> str:
             f"No advertised opening. A short, specific email to {target} referencing one "
             "recent paper is the realistic path here."
         )
-    return "Little recent activity found. Worth watching rather than contacting right now."
+    if state == LeadState.WATCH:
+        return (
+            "Recent work is there, but nothing on any page we could read says an "
+            "undergraduate can join right now. Worth watching rather than contacting."
+        )
+    return (
+        "Too little could be read about this lab to advise anything. Check the sources "
+        "below yourself before spending time on an email."
+    )
+
+
+def fit_breakdown(
+    db: Session,
+    faculty: Faculty,
+    profile: StudentProfile | None,
+    *,
+    opportunity: Opportunity | None = None,
+    match: OpportunityMatch | None = None,
+) -> S.FitBreakdown | None:
+    """The student side of the match, shaped for the wire.
+
+    Every string in here was built by :mod:`app.services.fit` from a profile row
+    or a line of an uploaded resume; nothing is composed on this side.
+    """
+    breakdown = fit.build_fit(db, faculty, profile, opportunity=opportunity, match=match)
+    if breakdown is None:
+        return None
+    return S.FitBreakdown(
+        strong_overlap=[
+            S.FitOverlapItem(
+                label=p.label, kind=p.kind, evidence=p.evidence, source_url=p.source_url
+            )
+            for p in breakdown.strong_overlap
+        ],
+        relevant_background=[
+            S.FitBackgroundItem(
+                label=p.label,
+                kind=p.kind,
+                detail=p.detail,
+                resume=p.resume,
+                verbatim=p.verbatim,
+            )
+            for p in breakdown.relevant_background
+        ],
+        potential_gaps=[
+            S.FitGapItem(label=p.label, blocking=p.blocking, note=p.note)
+            for p in breakdown.potential_gaps
+        ],
+        resumes_read=list(breakdown.resumes_read),
+        background_note=breakdown.background_note,
+    )
+
+
+def lead_state_signals(opp: Opportunity) -> list[S.LeadStateSignalItem]:
+    """The classifier's own reasons, as persisted. Never re-derived here."""
+    return [
+        S.LeadStateSignalItem(
+            key=str(row.get("key", "")),
+            label=str(row.get("label", "")),
+            certainty=str(row.get("certainty", "unknown")),
+            source_url=row.get("source_url"),
+            detail=row.get("detail"),
+        )
+        for row in (opp.lead_state_signals or [])
+        if row.get("key") and row.get("label")
+    ]
+
+
+def direction_items(claims: list[directions.DirectionClaim]) -> list[S.DirectionClaimItem]:
+    """Directions paired with the recent items that support them.
+
+    Computed rather than stored: :mod:`app.services.directions` reads
+    ``faculty.evidence``, which every caller has already loaded, so this costs
+    no extra query and cannot disagree with the evidence timeline beside it.
+    """
+    return [
+        S.DirectionClaimItem(
+            direction=claim.direction,
+            certainty=claim.certainty.value,
+            evidence=[
+                S.DirectionEvidenceItem(
+                    id=support.evidence.id,
+                    year=support.evidence.year,
+                    kind=support.evidence.kind.value,
+                    title=support.evidence.title,
+                    url=support.evidence.url,
+                    why=support.why,
+                )
+                for support in claim.evidence
+            ],
+        )
+        for claim in claims
+    ]
+
+
+def why_now_item(
+    faculty: Faculty, today: date, claims: list[directions.DirectionClaim]
+) -> S.WhyNowItem | None:
+    signal = directions.why_now(faculty, today=today, claims=claims)
+    if signal is None:
+        return None
+    return S.WhyNowItem(
+        statement=signal.statement,
+        evidence_ids=[e.id for e in signal.evidence],
+        certainty=signal.certainty.value,
+    )
 
 
 def research_context(
-    opp: Opportunity, profile: StudentProfile | None
+    db: Session,
+    opp: Opportunity,
+    profile: StudentProfile | None,
+    *,
+    today: date | None = None,
 ) -> S.ResearchContext | None:
     faculty = opp.faculty
     if faculty is None:
         return None
     state = lead_state_for(opp)
     statement, statement_url = _opening_statement(faculty)
+    day = today or datetime.now(UTC).date()
+    claims = directions.direction_claims(faculty, today=day)
     return S.ResearchContext(
         faculty=faculty_ref(faculty),
         lab=lab_ref(opp.lab or (faculty.labs[0] if faculty.labs else None)),
         lead_state=state.value,
+        lead_state_signals=lead_state_signals(opp),
+        directions=direction_items(claims),
+        why_now=why_now_item(faculty, day, claims),
         evidence=[evidence_item(e) for e in faculty.evidence][:15],
         signals=[signal_item(s) for s in faculty.signals],
         topics=[
@@ -436,6 +587,13 @@ def research_context(
             if t.topic is not None
         ][:12],
         overlap=topic_overlap(faculty, profile),
+        fit=fit_breakdown(
+            db,
+            faculty,
+            profile,
+            opportunity=opp,
+            match=_match_for(opp, profile.id if profile else None),
+        ),
         suggested_next_step=_next_step(state, faculty),
         opening_statement=statement if state == LeadState.OPENING else None,
         opening_source_url=statement_url if state == LeadState.OPENING else None,
@@ -485,6 +643,32 @@ def extracted_fields(db: Session, opportunity_id: uuid.UUID) -> dict[str, S.Evid
     }
 
 
+def readiness_out(readiness: Readiness) -> S.ApplicationReadiness:
+    """The readiness dataclass as the one shape both screens render."""
+    link = readiness.link
+    return S.ApplicationReadiness(
+        ready=readiness.ready,
+        cta=readiness.cta,
+        cta_action=readiness.cta_action,
+        items=[
+            S.ReadinessItem(
+                key=row.key,
+                label=row.label,
+                state=row.state.value,
+                detail=row.detail,
+                note=row.note,
+            )
+            for row in readiness.rows
+        ],
+        blocking=list(readiness.blocking),
+        application_link=(link.verification.value if link else "not_found"),
+        application_link_note=(link.note if link else None),
+        application_url=(link.url if link else None),
+        has_application=readiness.has_application,
+        application_id=readiness.application_id,
+    )
+
+
 def opportunity_detail(
     db: Session,
     opp: Opportunity,
@@ -493,6 +677,7 @@ def opportunity_detail(
     profile: StudentProfile | None,
     application: Application | None = None,
     has_reminder: bool = False,
+    feedback: OpportunityFeedback | None = None,
 ) -> S.OpportunityDetail:
     profile_id = profile.id if profile else None
     base = opportunity_item(
@@ -503,6 +688,7 @@ def opportunity_detail(
         has_reminder=has_reminder,
         wanted_slugs=interest_slugs(profile),
         profile_for_relevance=profile,
+        feedback=feedback,
     )
     match = _match_for(opp, profile_id)
     assessments = {
@@ -532,8 +718,11 @@ def opportunity_detail(
         extraction_confidence=opp.extraction_confidence,
         match=match_detail(match),
         fields=extracted_fields(db, opp.id),
-        research=research_context(opp, profile),
+        research=research_context(db, opp, profile),
         resume_recommendations=resume_recommendations(db, opp.id),
+        readiness=readiness_out(
+            readiness_for(db, opportunity=opp, application=application, today=today)
+        ),
         notes=opp.notes,
     )
 
@@ -564,6 +753,7 @@ def research_lead(
         signals=[signal_item(s) for s in faculty.signals if s.kind == SignalKind.UNDERGRAD_PRESENCE][:3],
         status=opp.status.value,
         deadline=opp.deadline,
+        deadline_state=opp.deadline_state.value,
         urgency=urgency_for(opp.deadline, opp.deadline_type, today),
     )
 
@@ -674,6 +864,10 @@ def run_summary(run: SearchRun) -> E.SearchRunSummary:
         created_count=run.created_count,
         updated_count=run.updated_count,
         unchanged_count=run.unchanged_count,
+        expired_count=run.expired_count,
+        held_count=run.held_count,
+        skipped_count=run.skipped_count,
+        suppressed_count=run.suppressed_count,
         documents_fetched=run.documents_fetched,
         sources_attempted=list(run.sources_attempted or []),
         error=run.error,
@@ -704,3 +898,24 @@ def certainty_of(value: float, has_source: bool) -> Certainty:
     if value > 0:
         return Certainty.INFERRED
     return Certainty.UNKNOWN
+
+
+def outreach_citation(item: outreach_service.Citation) -> S.OutreachCitationItem:
+    return S.OutreachCitationItem(
+        label=item.label,
+        detail=item.detail,
+        source_url=item.source_url,
+        side=item.side,
+    )
+
+
+def outreach_draft(draft: outreach_service.OutreachDraft) -> S.OutreachDraftOut:
+    return S.OutreachDraftOut(
+        subject=draft.subject,
+        body=draft.body,
+        word_count=draft.word_count,
+        research_citations=[outreach_citation(c) for c in draft.research_citations],
+        student_citations=[outreach_citation(c) for c in draft.student_citations],
+        refusal=draft.refusal,
+        todos=list(draft.todos),
+    )

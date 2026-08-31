@@ -154,3 +154,46 @@ def export_shortcut(
         "instructions": export.instructions,
         "shortcut_recipe": SHORTCUT_RECIPE,
     }
+
+
+@router.get("/reminders/apple/availability")
+def apple_availability() -> dict[str, object]:
+    """Can this machine write to Reminders right now?
+
+    Asked before the button is shown, so an unavailable integration says why
+    instead of failing when the student presses it.
+    """
+    from app.reminders.apple_reminders import availability
+
+    state = availability()
+    return {
+        "available": state.available,
+        "reason": state.reason,
+        "needs_permission": state.needs_permission,
+    }
+
+
+@router.post("/reminders/{reminder_id}/apple")
+def send_to_apple_reminders(
+    reminder_id: uuid.UUID,
+    db: Session = Depends(get_session),
+    profile: StudentProfile = Depends(current_profile),
+) -> dict[str, object]:
+    """Create the alerts in the Reminders app on this Mac."""
+    from app.reminders.apple_reminders import AppleRemindersProvider, AppleRemindersUnavailable
+
+    reminder = db.get(Reminder, reminder_id)
+    if reminder is None or reminder.profile_id != profile.id:
+        raise HTTPException(status_code=404, detail="Reminder not found.")
+
+    try:
+        export = AppleRemindersProvider().export(_payload_for(db, reminder))
+    except AppleRemindersUnavailable as exc:
+        # 409, not 500: the request was fine, the environment is not ready.
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+    reminder.provider = ReminderProviderKind.APPLE_REMINDERS
+    reminder.status = ReminderStatus.EXPORTED
+    reminder.exported_at = datetime.now(UTC)
+    db.flush()
+    return {"created": export.payload["created"], "note": export.instructions}

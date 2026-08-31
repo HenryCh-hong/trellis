@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { SUGGESTED_INTERESTS, SUGGESTED_SKILLS, TagInput } from "@/components/app/tag-input";
 import { Button } from "@/components/ui/button";
 import { Checkbox, Field, Input } from "@/components/ui/input";
-import { Alert, Card } from "@/components/ui/primitives";
+import { Alert, Card, Tooltip } from "@/components/ui/primitives";
 import { api } from "@/lib/api";
 import type { SearchRunSummary } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -381,15 +381,17 @@ export function OnboardingClient() {
         )}
 
         <div className="mt-6 flex items-center justify-between">
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            disabled={step === 0}
-            onClick={() => setStep((s) => Math.max(0, s - 1))}
-          >
-            Back
-          </Button>
+          <Tooltip content={step === 0 ? "This is the first step." : undefined}>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              disabled={step === 0}
+              onClick={() => setStep((s) => Math.max(0, s - 1))}
+            >
+              Back
+            </Button>
+          </Tooltip>
           <div className="flex items-center gap-2">
             {step === 3 && files.length === 0 && (
               <Button type="button" variant="ghost" size="sm" onClick={next}>

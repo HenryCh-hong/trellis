@@ -11,6 +11,7 @@ Two invariants this module exists to hold:
 
 from __future__ import annotations
 
+import re
 import uuid
 from dataclasses import dataclass
 from datetime import UTC, datetime
@@ -24,9 +25,11 @@ from app.models.application import (
     ApplicationEvent,
 )
 from app.models.enums import (
+    AnswerCategory,
     DocumentKind,
     DocumentStatus,
     OpportunityStatus,
+    OpportunityType,
     WorkAuthorization,
 )
 from app.models.opportunity import Opportunity
@@ -121,7 +124,8 @@ def known_profile_fields(profile: StudentProfile) -> list[dict[str, str | None]]
     return fields
 
 
-def _best_resume(db: Session, opportunity: Opportunity) -> uuid.UUID | None:
+def best_resume(db: Session, opportunity: Opportunity) -> uuid.UUID | None:
+    """The resume a kit would attach: the ranked pick, else the default, else the first."""
     from app.models.application import ResumeRecommendation
 
     row = db.scalars(
@@ -154,7 +158,7 @@ def create_kit(db: Session, profile: StudentProfile, opportunity: Opportunity) -
         status=S.PREPARING,
         prepared_at=datetime.now(UTC),
     )
-    app.resume_id = _best_resume(db, opportunity)
+    app.resume_id = best_resume(db, opportunity)
     db.add(app)
     db.flush()
 
@@ -277,12 +281,40 @@ def transition(
     return app
 
 
+# --------------------------------------------------------------------------- #
+# Question classification
+#
+# Every question an application form asks lands in exactly one of four
+# categories, and the category — not a guess at the call site — decides what
+# software is allowed to do with it.  See :class:`AnswerCategory`.
+# --------------------------------------------------------------------------- #
+
+
+def _phrase(term: str) -> re.Pattern[str]:
+    """A whole-word matcher for one phrase.
+
+    Substring matching is not safe here: ``"age"`` is inside "language" and
+    "race" is inside "embrace", so a plain ``in`` test flags "What programming
+    languages do you know?" as an age question.  Words may be joined by spaces
+    or hyphens on a real form, so "self-identify" and "self identify" are the
+    same phrase.
+    """
+    body = r"[\s\-]+".join(re.escape(word) for word in re.split(r"[\s\-]+", term) if word)
+    return re.compile(rf"(?<!\w){body}(?!\w)", re.I)
+
+
 @dataclass(slots=True)
 class SensitiveRule:
     category: str
     terms: tuple[str, ...]
 
+    @property
+    def patterns(self) -> tuple[re.Pattern[str], ...]:
+        return tuple(_phrase(t) for t in self.terms)
 
+
+# Order matters: the first rule that matches names the category, so the
+# specific legal categories come before the catch-all attestation rule.
 SENSITIVE_RULES: tuple[SensitiveRule, ...] = (
     SensitiveRule(
         "work_authorization",
@@ -299,50 +331,309 @@ SENSITIVE_RULES: tuple[SensitiveRule, ...] = (
             "sponsorship",
             "sponsor",
             "visa",
+            "visa status",
             "immigration",
+            "immigration status",
             "i-9",
             "citizenship",
             "permanent resident",
+            "green card",
+            "f-1",
+            "j-1",
+            "h-1b",
+            "cpt",
+            "curricular practical training",
+            "optional practical training",
         ),
     ),
-    SensitiveRule("race_ethnicity", ("race", "ethnicity", "hispanic", "latino")),
-    SensitiveRule("gender", ("gender", "sex", "pronoun")),
-    SensitiveRule("disability", ("disability", "disabled", "accommodation")),
-    SensitiveRule("veteran", ("veteran", "military service", "protected veteran")),
-    SensitiveRule("criminal_history", ("felony", "conviction", "criminal", "background check")),
-    SensitiveRule("age", ("date of birth", "age", "birthdate")),
-    SensitiveRule("self_identification", ("self-identify", "self identification", "voluntary disclosure", "eeo")),
+    SensitiveRule(
+        "race_ethnicity",
+        ("race", "ethnicity", "ethnic origin", "national origin", "hispanic", "latino"),
+    ),
+    SensitiveRule("gender", ("gender", "gender identity", "sex", "pronoun", "pronouns")),
+    SensitiveRule(
+        "disability",
+        ("disability", "disabilities", "disabled", "accommodation", "accommodations"),
+    ),
+    SensitiveRule(
+        "veteran", ("veteran", "veterans", "military service", "protected veteran", "armed forces")
+    ),
+    SensitiveRule(
+        "criminal_history",
+        ("felony", "conviction", "convicted", "criminal", "background check", "arrest record"),
+    ),
+    SensitiveRule(
+        "age", ("date of birth", "age", "birthdate", "birth date", "over 18", "at least 18")
+    ),
+    SensitiveRule(
+        "self_identification",
+        (
+            "self-identify",
+            "self-identification",
+            "voluntary disclosure",
+            "voluntary self-identification",
+            "eeo",
+            "eeoc",
+            "equal employment opportunity",
+            "affirmative action",
+            "demographic",
+            "demographics",
+        ),
+    ),
+    SensitiveRule(
+        "legal_attestation",
+        (
+            "certify",
+            "i certify",
+            "attest",
+            "attestation",
+            "under penalty of perjury",
+            "affirm",
+            "acknowledge and agree",
+            "legally binding",
+            "signature",
+            "electronic signature",
+            "e-signature",
+            "consent to a background check",
+        ),
+    ),
+)
+
+_SENSITIVE_PATTERNS: tuple[tuple[str, tuple[re.Pattern[str], ...]], ...] = tuple(
+    (rule.category, rule.patterns) for rule in SENSITIVE_RULES
 )
 
 
+@dataclass(slots=True)
+class ProfileFieldRule:
+    """A question that is answerable from the student's own profile."""
+
+    key: str
+    terms: tuple[str, ...]
+
+    @property
+    def patterns(self) -> tuple[re.Pattern[str], ...]:
+        return tuple(_phrase(t) for t in self.terms)
+
+
+PROFILE_FIELD_RULES: tuple[ProfileFieldRule, ...] = (
+    ProfileFieldRule("full_name", ("full name", "your name", "first and last name", "legal name")),
+    ProfileFieldRule("email", ("email", "e-mail", "email address")),
+    ProfileFieldRule("university", ("university", "school", "institution", "college")),
+    ProfileFieldRule("campus", ("campus",)),
+    ProfileFieldRule("major", ("major", "field of study", "course of study")),
+    ProfileFieldRule("degree", ("degree", "degree program", "degree programme")),
+    ProfileFieldRule(
+        "graduation_year",
+        ("graduation", "graduation year", "expected grad", "class year", "year of graduation"),
+    ),
+    ProfileFieldRule(
+        "hours_per_week",
+        (
+            "hours per week",
+            "how many hours",
+            "hours are you available",
+            "availability",
+            "weekly availability",
+        ),
+    ),
+    ProfileFieldRule("gpa", ("gpa", "grade point average")),
+)
+
+_PROFILE_PATTERNS: tuple[tuple[str, tuple[re.Pattern[str], ...]], ...] = tuple(
+    (rule.key, rule.patterns) for rule in PROFILE_FIELD_RULES
+)
+
+# Cues that mark an open, essay-shaped question — the only kind the model is
+# ever allowed to draft, and even then the draft is the student's to edit.
+GENERATIVE_CUES: tuple[str, ...] = (
+    "why are you",
+    "why do you",
+    "why this",
+    "why our",
+    "why us",
+    "and why",
+    "describe",
+    "tell us",
+    "tell me",
+    "explain",
+    "elaborate",
+    "discuss",
+    "in your own words",
+    "what interests you",
+    "what excites you",
+    "what motivates you",
+    "what makes you",
+    "what relevant",
+    "what do you hope",
+    "what are you hoping",
+    "how would you",
+    "what would you",
+    "walk us through",
+    "give an example",
+    "share an example",
+    "cover letter",
+    "personal statement",
+    "statement of purpose",
+    "research statement",
+    "essay",
+    "which of",
+)
+
+_GENERATIVE_PATTERNS: tuple[re.Pattern[str], ...] = tuple(_phrase(c) for c in GENERATIVE_CUES)
+
+
+@dataclass(frozen=True, slots=True)
+class QuestionClass:
+    """What one question is, and therefore what may be done with it."""
+
+    category: AnswerCategory
+    reason: str
+    sensitive_category: str | None = None
+    profile_field: str | None = None
+
+    @property
+    def is_sensitive(self) -> bool:
+        return self.category is AnswerCategory.SENSITIVE
+
+    @property
+    def may_prefill_from_profile(self) -> bool:
+        return self.category is AnswerCategory.SAFE_PROFILE_FIELD
+
+    @property
+    def may_draft(self) -> bool:
+        return self.category is AnswerCategory.SAFE_GENERATIVE
+
+    @property
+    def needs_review(self) -> bool:
+        """Everything except a straight profile field is the student's to confirm."""
+        return self.category is not AnswerCategory.SAFE_PROFILE_FIELD
+
+
+def classify_question(question: str) -> QuestionClass:
+    """Sort one application question into the four categories.
+
+    Sensitivity is tested first and wins outright: "What is your visa status?"
+    is a visa question, not a profile field, even though the profile happens to
+    hold a work-authorisation value.  Anything unrecognised is UNKNOWN, which
+    is deliberately the *cautious* end of the scale — it is never prefilled and
+    never drafted, so a question we have not seen before defaults to the
+    student answering it.
+    """
+    text = (question or "").strip()
+    if not text:
+        return QuestionClass(AnswerCategory.UNKNOWN, "Empty question — only you can answer it.")
+
+    for category, patterns in _SENSITIVE_PATTERNS:
+        for pattern in patterns:
+            if pattern.search(text):
+                return QuestionClass(
+                    AnswerCategory.SENSITIVE,
+                    "Legally sensitive: Trellis never answers, drafts or prefills this.",
+                    sensitive_category=category,
+                )
+
+    for key, patterns in _PROFILE_PATTERNS:
+        for pattern in patterns:
+            if pattern.search(text):
+                return QuestionClass(
+                    AnswerCategory.SAFE_PROFILE_FIELD,
+                    "Answered from your profile.",
+                    profile_field=key,
+                )
+
+    for pattern in _GENERATIVE_PATTERNS:
+        if pattern.search(text):
+            return QuestionClass(
+                AnswerCategory.SAFE_GENERATIVE,
+                "Open-ended: Trellis may draft from your own material, and you review it.",
+            )
+
+    return QuestionClass(
+        AnswerCategory.UNKNOWN,
+        "Trellis does not recognise this question, so it is left for you to answer.",
+    )
+
+
 def sensitivity_of(question: str) -> tuple[bool, str | None]:
-    lowered = question.lower()
-    for rule in SENSITIVE_RULES:
-        if any(term in lowered for term in rule.terms):
-            return True, rule.category
-    return False, None
+    """The yes/no view of :func:`classify_question`, for the submission gate."""
+    result = classify_question(question)
+    return result.is_sensitive, result.sensitive_category
 
 
-def profile_answer(profile: StudentProfile, question: str) -> tuple[str | None, str | None]:
-    """Map a plain question onto a trusted profile field, or return nothing."""
-    lowered = question.lower()
+def profile_field_value(profile: StudentProfile, key: str) -> str | None:
+    """One profile field as the string a form would receive."""
     user = profile.user
-    table: list[tuple[tuple[str, ...], str, str | None]] = [
-        (("full name", "your name", "first and last"), "full_name", user.display_name if user else None),
-        (("email",), "email", user.email if user else None),
-        (("university", "school", "institution"), "university", profile.university),
-        (("major", "field of study"), "major", profile.major),
-        (("degree",), "degree", profile.degree),
-        (("graduation", "expected grad", "class year"), "graduation_year", str(profile.graduation_year) if profile.graduation_year else None),
-        (("hours per week", "availability", "hours are you available"), "hours_per_week",
-         f"{profile.hours_per_week_min}-{profile.hours_per_week_max}" if profile.hours_per_week_min else None),
-    ]
-    for terms, key, value in table:
-        if any(t in lowered for t in terms) and value:
-            return value, key
-    if "gpa" in lowered and profile.gpa is not None and profile.gpa_is_public:
-        return f"{profile.gpa:.2f}", "gpa"
-    return None, None
+    if key == "full_name":
+        return user.display_name if user else None
+    if key == "email":
+        return user.email if user else None
+    if key == "university":
+        return profile.university
+    if key == "campus":
+        return profile.campus
+    if key == "major":
+        return profile.major
+    if key == "degree":
+        return profile.degree
+    if key == "graduation_year":
+        return str(profile.graduation_year) if profile.graduation_year else None
+    if key == "hours_per_week":
+        if profile.hours_per_week_min and profile.hours_per_week_max:
+            return f"{profile.hours_per_week_min}-{profile.hours_per_week_max}"
+        return None
+    if key == "gpa":
+        # A private GPA stays private even though the profile holds it.
+        if profile.gpa is not None and profile.gpa_is_public:
+            return f"{profile.gpa:.2f}"
+        return None
+    return None
+
+
+# --------------------------------------------------------------------------- #
+# The question set a kit is built from
+# --------------------------------------------------------------------------- #
+
+# Asked on every application, plus type-specific ones. Real forms add their
+# own; these are the ones a student can usefully prepare in advance.
+BASE_QUESTIONS: tuple[str, ...] = (
+    "Full name",
+    "Email",
+    "University",
+    "Major",
+    "Expected graduation year",
+    "How many hours per week are you available?",
+)
+
+RESEARCH_QUESTIONS: tuple[str, ...] = (
+    "Which of this lab's projects interests you most, and why?",
+    "What relevant coursework or projects have you completed?",
+    "When could you start, and for how many quarters?",
+)
+
+JOB_QUESTIONS: tuple[str, ...] = (
+    "Why are you interested in this role?",
+    "Describe relevant experience for this position.",
+    "What is your availability during the week?",
+)
+
+
+def planned_questions(opportunity: Opportunity | None) -> list[str]:
+    """Exactly the questions :class:`ApplicationPrepAgent` would create.
+
+    Shared with the readiness summary so an opportunity with no kit yet can
+    report what preparing one will actually ask, instead of a placeholder.
+    """
+    is_research = opportunity is not None and opportunity.type in (
+        OpportunityType.RESEARCH_OPENING,
+        OpportunityType.RESEARCH_OUTREACH,
+    )
+    questions = list(BASE_QUESTIONS)
+    questions += list(RESEARCH_QUESTIONS if is_research else JOB_QUESTIONS)
+    for req in opportunity.requirements if opportunity is not None else []:
+        if req.category == "question":
+            questions.append(req.text)
+    return questions
 
 
 def work_authorization_label(value: WorkAuthorization) -> str:
